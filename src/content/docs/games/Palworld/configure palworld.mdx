@@ -29,3 +29,53 @@ You can edit all the settings in Palworld by creating a WorldOptions.sav file. U
 4. Once stopped, on the left, navigate to `Management` then `File Manager`.
 5. Navigate to `Pal/Saved/SaveGames/0/YOURWORLDFILE` and drag the `WorldOptions.sav` into the save folder with your LevelMeta.sav and Level.sav.
 6. After you have uploaded the file, start the server. 
+
+## Palworld Settings List
+Here is a list of all the settings inside the PalworldSettings.ini file as well as what they do.
+
+| Parameter                          | Description                                                                                                                                         |
+|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| AdminPassword                      | Password used to obtain administrative privileges on the server.                                                                                     |
+| AllowConnectPlatform               | Specify which platforms are allowed to connect. Steam or Xbox (Default value is Steam)                                                              |
+| BaseCampMaxNumInGuild              | Max BaseCamp count per guild. Default is 3. (MAX 10) Larger value will increase system load                                                         |
+| BaseCampWorkerMaxNum               | Max pals per basecamp (MAX 50) Larger value will increase system load                                                                               |
+| bEnableInvaderEnemy                | Enable Invader                                                                                                                                      |
+| bIsUseBackupSaveData               | Enable world backup Disk load will be increased when enabled                                                                                        |
+| bShowPlayerList                    | Enable player list when the press ESC key                                                                                                           |
+| BuildObjectDamageRate              | Damage to Structure Multiplier                                                                                                                      |
+| BuildObjectDeteriorationDamageRate | Structure Deterioration Rate                                                                                                                        |
+| CollectionDropRate                 | Gatherable Items Multiplier                                                                                                                         |
+| CollectionObjectHpRate             | Gatherable Objects Health Multiplier                                                                                                                |
+| CollectionObjectRespawnSpeedRate   | Gatherable Objects Respawn Interval                                                                                                                 |
+| DayTimeSpeedRate                   | Day time speed                                                                                                                                      |
+| DeathPenalty                       | Death Penalty None : No drops, Item : Drop all items except equipment, ItemAndEquipment : Drop all items, All : Drop all items and all Pals on team |
+| EnemyDropItemRate                  | Dropped Items Multiplier                                                                                                                            |
+| ExpRate                            | EXP rate                                                                                                                                           |
+| GuildPlayerMaxNum                  | Max Player Number of Guilds                                                                                                                         |
+| LogFormatType                      | Log format Text or Json                                                                                                                             |
+| NightTimeSpeedRate                 | Night time speed                                                                                                                                    |
+| PalAutoHPRegeneRate                | Pal Auto Health Regeneration Rate                                                                                                                   |
+| PalAutoHpRegeneRateInSleep         | Pal Sleep Health Regeneration Rate (Health Regeneration Rate in Palbox)                                                                             |
+| PalCaptureRate                     | Pal capture rate                                                                                                                                    |
+| PalDamageRateAttack                | Damage from Pals Multiplier                                                                                                                         |
+| PalDamageRateDefense               | Damage to Pals Multiplier                                                                                                                           |
+| PalEggDefaultHatchingTime          | Time (h) to incubate Massive Egg. Note: Other eggs also require time to incubate.                                                                   |
+| PalSpawnNumRate                    | Pal Appearance Rate *Note: Affects game performance                                                                                                 |
+| PalStaminaDecreaceRate             | Pal Stamina Reduction Rate                                                                                                                          |
+| PalStomachDecreaceRate             | Pal Hunger Depletion Rate                                                                                                                           |
+| PlayerAutoHPRegeneRate             | Player Auto Health Regeneration Rate                                                                                                                |
+| PlayerAutoHpRegeneRateInSleep      | Player Sleep Health Regeneration Rate                                                                                                               |
+| PlayerDamageRateAttack             | Damage from Player Multiplier                                                                                                                       |
+| PlayerDamageRateDefense            | Damage to Player Multiplier                                                                                                                         |
+| PlayerStaminaDecreaceRate          | Player Stamina Reduction Rate                                                                                                                       |
+| PlayerStomachDecreaceRate          | Player Hunger Depletion Rate                                                                                                                        |
+| PublicIP                           | Explicitly specify an external public IP in the community server settings                                                                           |
+| PublicPort                         | Explicitly specify the external public port in the community server configuration. (This setting does not change the server's listen port.)        |
+| RCONEnabled                        | Enable RCON                                                                                                                                         |
+| RCONPort                           | Port Number for RCON                                                                                                                                |
+| RESTAPIEnabled                     | Enable REST API                                                                                                                                     |
+| RESTAPIPort                        | Listen port for REST API                                                                                                                            |
+| ServerDescription                  | Server description                                                                                                                                  |
+| ServerName                         | Server name                                                                                                                                         |
+| ServerPassword                     | Password required for server login                                                                                                                  |
+| ServerPlayerMaxNum                 | Maximum number of players that can join the server                                                                                                  |
