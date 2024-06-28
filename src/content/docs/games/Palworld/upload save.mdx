@@ -14,23 +14,34 @@ If you get stuck at any time, Game Host Bros offers free world transfers. Just r
 :::caution
 If you're moving from a local Co-op save file, the host will have to start fresh. The saved data only applies to the externally connected players.
 :::
+:::danger
+You cannot transfer Xbox saves from the cloud to a dedicated server.
+:::
 
 ## Transfer from another Palworld dedicated server
 
 1. On your existing server, navigate to `PAL/Save/Savegame/0` and backup the folder with random numbers and letters.
 2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Palworld server.
 3. In the Game Host Bros panel go to `Management > File Manager`
-4. Once there navigate to `PAL/Save/Savegame/0`
-5. You will see a folder with a random number like 723687123871537817253, you need to copy your existing world data into that folder.
+4. Once there navigate to `PAL/Save/Savegames/0`
+5. Delete the default save folder (It should have a random number like this 723687123871537817243).
+6. Upload your existing folder and take note of the folder id/name. 
+7. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`
+8. Replace the id/name with your existing folder name.
+9. Start your server.
 
 The folder with random numbers on your server must stay how it is. You only delete what is inside and then copy your existing world files in.
 
 ## Transfer from a Palworld Co-op save
 
-1. Go to `Appdata\Local\PAL\Saved\SaveGames` on your local computer and backup the file (You may need to allow hidden folders under (View))
+1. Go to `Appdata\Local\PAL\Saved\SaveGames` on your local computer and backup the folder (You may need to allow hidden folders under (View))
 2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Palworld server.
 3. In the Game Host Bros panel go to `Management > File Manager`
-4. Once there navigate to `PAL/Save/Savegame/0`
-5. You will see a folder with a random number like 723687123871537817253, you need to copy your existing world data into that folder.
+4. Once there navigate to `PAL/Save/Savegames/0`
+5. Delete the default save folder (It should have a random number like this 723687123871537817243).
+6. Upload your existing folder and take note of the folder id/name. 
+7. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`
+8. Replace the id/name with your existing folder name.
+9. Start your server.
 
 The folder with random numbers on your server must stay how it is. You only delete what is inside and then copy your existing world files in.
