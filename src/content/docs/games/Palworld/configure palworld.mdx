@@ -12,9 +12,9 @@ Your server MUST be stopped before making changes to this file otherwise they wo
 :::
 
 ## Editing PalWorldSettings.ini
-Editing your PalWorldSettings.ini file is the fastest way to modify basic settings on your Palworld server, however some things such as BaseCampWorkerMaxNum will not work using this method (Use the WorldOptions.sav method below)
+Editing your PalWorldSettings.ini file is the fastest way to modify basic settings on your Palworld server. Some settings such as BaseCampMaxNumInGuild=20 will need to be added to your PalWorldSettings.ini manually.
 
-1. Firstly, login to the [GameHostBros Panel](https://panel.gamehostbros.com/) and once there, select your Palworld Service
+1. Firstly, login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and once there, select your Palworld Service
 2. Once on your Palworld Service, ensure you stop it before proceeding.
 3. Once stopped, on the left, navigate to `Management` then `File Manager`.
 4. Navigate to `/Pal/Saved/Config/WindowsServer/PalWorldSettings.ini`.
@@ -24,7 +24,7 @@ Editing your PalWorldSettings.ini file is the fastest way to modify basic settin
 You can edit all the settings in Palworld by creating a WorldOptions.sav file. Using this file will allow you to modify everything, but it will overwrite anything inside PalWorldSettings.ini. This also means if you change the server settings by our panel it will no longer work.
 
 1. Generate a `WorldOptions.sav` file using the settings you want from [here](https://palworldoptions.com/) (We suggest importing your PalWorldSettings.ini file).
-2. Login to the [GameHostBros Panel](https://panel.gamehostbros.com/) and once there, select your Palworld Service.
+2. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and once there, select your Palworld Service.
 3. Once on your Palworld Service, ensure you stop it before proceeding.
 4. Once stopped, on the left, navigate to `Management` then `File Manager`.
 5. Navigate to `Pal/Saved/SaveGames/0/YOURWORLDFILE` and drag the `WorldOptions.sav` into the save folder with your LevelMeta.sav and Level.sav.
