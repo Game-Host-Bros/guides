@@ -20,23 +20,6 @@ Editing your PalWorldSettings.ini file is the fastest way to modify basic settin
 4. Navigate to `/Pal/Saved/Config/WindowsServer/PalWorldSettings.ini`.
 5. After you have made the changes you want, start the server. 
 
-## Editing WorldOptions.sav (Advanced)
-
-:::danger
-Using this file will allow you to modify everything, but it will overwrite anything inside PalWorldSettings.ini. This also means if you change the server settings in our panel it will no longer work and you **MUST** update them though WorldOptions.sav.
-
-You also must fill out all the options such as IP, Port, RCON, password etc. correctly otherwise your server will not be discoverable/joinable.
-
-If you're using an **Xbox** server you cannot use this file.
-:::
-
-1. Generate a `WorldOptions.sav` file using the settings you want from [here](https://palworldoptions.com/) (We suggest importing your PalWorldSettings.ini file).
-2. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and once there, select your Palworld Service.
-3. Once on your Palworld Service, ensure you stop it before proceeding.
-4. Once stopped, on the left, navigate to `Management` then `File Manager`.
-5. Navigate to `Pal/Saved/SaveGames/0/YOURWORLDFILE` and drag the `WorldOptions.sav` into the save folder with your `LevelMeta.sav` and `Level.sav`.
-6. After you have uploaded the file, start the server. 
-
 ## Palworld Settings List
 Here is a list of all the settings inside the PalworldSettings.ini file as well as what they do.
 
@@ -86,3 +69,20 @@ Here is a list of all the settings inside the PalworldSettings.ini file as well 
 | ServerName                         | Server name                                                                                                                                         |
 | ServerPassword                     | Password required for server login                                                                                                                  |
 | ServerPlayerMaxNum                 | Maximum number of players that can join the server                                                                                                  |
+
+## Editing WorldOptions.sav (Advanced)
+
+:::danger
+Using this file will allow you to modify everything, but it will overwrite anything inside PalWorldSettings.ini. This also means if you change the server settings in our panel it will no longer work and you **MUST** update them though WorldOptions.sav.
+
+You also must fill out all the options such as IP, Port, RCON, password etc. correctly otherwise your server will not be discoverable/joinable.
+
+If you're using an **Xbox** server you cannot use this file.
+:::
+
+1. Generate a `WorldOptions.sav` file using the settings you want from [here](https://palworldoptions.com/) (We suggest importing your PalWorldSettings.ini file).
+2. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and once there, select your Palworld Service.
+3. Once on your Palworld Service, ensure you stop it before proceeding.
+4. Once stopped, on the left, navigate to `Management` then `File Manager`.
+5. Navigate to `Pal/Saved/SaveGames/0/YOURWORLDFILE` and drag the `WorldOptions.sav` into the save folder with your `LevelMeta.sav` and `Level.sav`.
+6. After you have uploaded the file, start the server. 
