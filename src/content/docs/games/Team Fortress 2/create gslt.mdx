@@ -1,0 +1,22 @@
+---
+title: How To Create A GSLT For Team Fortress 2 (Steam Game Server Login Token)
+description: Learn how to create a GSLT for your TF2 server.
+sidebar:
+  label: Create GSLT
+  badge:
+    text: Important
+    variant: caution
+---
+
+Here is how you create a GSLT for TF2 and add it to your server. This is **required** by Valve to be displayed in the server list.
+
+1. Go [here](https://steamcommunity.com/dev/managegameservers) and login with your Steam account.
+2. Under `App ID` enter `440` for TF2, then name the memo anything you want. 
+3. Visit [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Counter Strike 2 server.
+4. Go to `Configuration > Startup Parameters`.
+5. Enter your token under `Game Server Login Token (GSLT)`. 
+6. Click `Console` in the sidebar and then restart your server.
+
+:::note
+Each TF2 server you run requires its own GSLT.
+:::
