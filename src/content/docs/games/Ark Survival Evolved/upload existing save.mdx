@@ -1,0 +1,43 @@
+---
+title: How To Upload Existing Worlds To Your Ark Survival Evolved Server
+description: Learn how to upload existing worlds to your Ark Survival Evolved server.
+tableOfContents: true
+sidebar:
+  label: Upload Existing Save
+---
+
+Here is how to upload existing saves to your Ark Surival Evolved Server.
+
+## How To Find Your Existing Ark Survival Evolved Saves
+
+First you'll need to locate your existing world, follow these steps to do this.
+
+1. Open Steam and navigate to your `Library`.
+2. Right-Click Ark Survival Evolved and hover `Manage > Browse Local Files`.
+3. Navigate to `ShooterGame\Saved\SavedArksLocal`.
+4. Find the `.arktribe` `.arkprofile` and `TheIsland.ark` files.
+
+:::tip
+If you want to upload your settings aswell, they'll be located in `ShooterGame\Saved\Config\WindowsNoEditor`. You'll need to copy `Game.ini` and `GameUserSettings.ini`
+:::
+
+Note that `.arkprofile` will say `LocalPlayer.ark`, after uploading, you'll have to change this to [YourSteamID64.arkprofile].
+
+## How To Upload Your Existing Ark Survival Evolved Saves
+
+There are two methods to do this, you can either use our `Management > File Manager` or `SFTP`, we cover both methods [here](https://guides.gamehostbros.com/getting-started/uploading-files/).
+
+1. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/)
+2. Click `System > Console` and `Stop` your server.
+2. Find your SFTP details under `System > SFTP Details` and connect to your server via `SFTP`.
+3. After connecting to your server, navigate to `/ShooterGame/Saved/SavedArks`.
+4. As you're uploading existing saves, you can go ahead and `Delete` everything in there.
+5. Select the `.arktribe` `.arkprofile` and `TheIsland.ark` files. And `Upload` them to `/ShooterGame/Saved/SavedArks`.
+6. Rename `LocalPlayer.arkprofile` to [YourSteamID64.arkprofile] for example it should now be `76561198106341655.arkprofile`.
+7. Start your server.
+
+:::tip
+If you're uploading a different `Map`, make sure `Server Map` is set correctly in `Configuration > Startup Parameters`.
+:::
+
+If you're having trouble. Please contact a Bro in our [Discord](https://discord.gg/FN4XgbAwzr).
