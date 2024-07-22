@@ -1,0 +1,41 @@
+---
+title: How To Pregenerate Chunks On Your Minecraft Server
+description: Learn how to pregenerate chunks on your Minecraft Server
+tableOfContents: true
+sidebar:
+  label: Preloading Chunks
+---
+
+This is what you do if you want to preload chunks on your Minecraft Server.
+
+## Installing A Pregeneration Plugin
+
+1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Stop your server.
+3. Go to `Tools > Plugin Manager`.
+4. Search for the Plugin you want to install, for this example we'll be using `Chunky`.
+5. Click `Install` and Start your server.
+
+
+## Preloading Chunks Using Chunky
+
+Now that you've installed Chunky, this is how you begin preloading chunks.
+
+1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Go to `System > Console`.
+3. Set a radius to preload chunks, by typing `chunky radius <radius>`.
+4. To start the generation type `chunky start <world name>`.
+
+By default `world` will generate the overworld, while `world_nether` and `world_the_end` will generate their respective zones.
+ 
+Now Chunky will begin pregeneration, you can track the progress through the server Console.
+
+:::danger
+Preloading chunks will use a lot of server resources, it may temporarily cause performance issues if you have a large world with a lot of entities.
+:::
+
+:::tip
+Did you know? You can use a Plugin alongside Chunky such as `ChunkyBorder` if you want to limit the worldborder to your preloaded chunks.
+:::
+
+If you get stuck at any time, you can reach out to us on [Discord](https://discord.gg/FN4XgbAwzr).
