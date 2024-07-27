@@ -15,7 +15,9 @@ The first thing you need to do is to install Metamod Source and CounterStrikeSha
 2. In the left-hand menu, click `Configuration > Startup Parameters` and toggle on the setting `Enable Modding`.
 3. Restart the server.
 
-Everything you require to install mods and plugins on your CS2 server is now configured and ready to use. Everything will be automatically updated once your server restarts.
+Everything you require to install mods and plugins on your CS2 server is now configured and ready to use. Everything will be automatically updated once your server restarts. 
+
+If you disable this setting, your `/game/csgo/addons` folder will be renamed to disable any plugins from loading. If you re-enable modding it will install a fresh version of CS# and Metamod without affecting the plugins or configs you previously installed in the renamed addons folder. This is good for testing if a plugin has broken your server. You will need to manually restore your plugins by renaming the addons folder if you do this, or simply contact a bro.
 
 ## Installing Plugins
 
