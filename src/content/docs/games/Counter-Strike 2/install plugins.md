@@ -1,32 +1,29 @@
 ---
 title: How To Install Plugins On CS2
-description: Learn how to install plugins your server.
+description: In this guide, you will learn how to install Metamod, CounterStrikeSharp and plugins on your CS2 dedicated server.
 sidebar:
   label: Install Plugins
 ---
 
-Using our Mod Manager, you can get Metamod, CounterStrikeSharp and some plugins installed on your CS2 server with a single click.
-
-:::danger
-Metamod and CounterStrikeSharp both must be installed before any other plugin.
-:::
+At Game Host Bros, you can get Metamod, CounterStrikeSharp and some plugins installed on your CS2 server with a single click.
 
 ## Installing Metamod & CounterStrikeSharp
 
-The first thing you need to do is to install Metamod Source. This is the base foundation that most plugins use.
+The first thing you need to do is to install Metamod Source and CounterStrikeSharp. You can install it by simply enabling modding in our Game Panel.
 
-1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/).
-2. Select your server.
-3. In the left-hand menu, click `Tools > Mod Manager`.
-4. Look for `Metamod Source` & `CounterStrikeSharp`.
-![Game Host Bros Mod Manager Screenshot](../../../../assets/guide-images/mod-manager.png)
-5. Click the Install buttons for both then restart the server.
+1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your CS2 server.
+2. In the left-hand menu, click `Configuration > Startup Parameters` and toggle on the setting `Enable Modding`.
+3. Restart the server.
 
-At Game Host Bros, we automatically update Metamod & CounterStrikeSharp every time your server starts.
+Everything you require to install mods and plugins on your CS2 server is now configured and ready to use. Everything will be automatically updated once your server restarts.
 
 ## Installing Plugins
 
 We have some CounterStrikeSharp plugins already added to our 1-click Mod Manager.
+
+:::danger
+The `Enable Modding` toggle must be enabled before any other plugins.
+:::
 
 1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/).
 2. Select your server.
@@ -278,3 +275,12 @@ input[type="search"]:not(:placeholder-shown) {
 |[BOTiki](https://github.com/jackson-tougher/cs2_BOTiki)|Gameplay|Add or remove bots depending on the number of players|
 |[Admin List](https://github.com/Quake1011/Admin-List)|Administration|Simple admin list plugin|
 |[CS2 Hide Lower Body Plugin](https://github.com/dran1x/CS2-HideLowerBody)|Gameplay|Hide player's lower body by using the command !legs|
+
+## Setting a custom Metamod & CounterStrikeSharp version. (Advance Settings)
+
+By default, when you've turned on `Enable Modding`, we will keep Metamod and CounterStrikeSharp up to date with the latest version when your server starts. However there are times where you might need to run an older version for compatibility reasons.
+
+Here are the settings you need to change under `Configuration > Startup Parameters` if you want to run a specific version.
+
+- `CounterStrikeSharp Version` can be set the release version such as `v258`. You can view all the version numbers [here](https://github.com/roflmuffin/CounterStrikeSharp/releases)
+- `Metamod Version` can be set using the build number such as `1293`. You can view all the version numbers [here](https://www.metamodsource.net/downloads.php?branch=dev)
