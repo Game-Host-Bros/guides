@@ -1,0 +1,69 @@
+---
+title: How To Setup Custom Roles In Enshrouded
+description: Learn how you can add custom roles, groups and permissions such as Admin, VIP, Friends and more.
+sidebar:
+  label: Server Roles
+---
+
+In this guide you will learn how to setup custom permissions and groups for your Enshrouded server. This is designed for **advance users** who need granular control of their server.
+
+:::danger
+If you only need to add admins to your server, the Game Host Bros Game Panel will handle that for you. You can read how to [add admins to Enshrouded here.](/games/enshrouded/server-roles/)
+:::
+
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Enshrouded server.
+2. Go to `Management > File Manager` and open the file `enshrouded_server.json`.
+3. Under the `userGroups` section, add the roles you require. 
+
+Here is an example of how your userGroups section should look like with multiple roles. There are some groups added already by our panel such as the Admin and Everyone group. If you want to delete this admin group then you must go to `Configuration > Startup Parameters` and set `Admin Password` so its blank.
+
+```json title="enshrouded_server.json"
+{
+    "name": "Enshrouded Server",
+    "ip": "0.0.0.0",
+    "userGroups": [
+        {
+            "name": "Admin",
+            "password": "Randomized password 01",
+            "canKickBan": true,
+            "canAccessInventories": true,
+            "canEditBase": true,
+            "canExtendBase": true,
+            "reservedSlots": 1
+        },
+        {
+            "name": "Friend",
+            "password": "Randomized password 02",
+            "canKickBan": false,
+            "canAccessInventories": true,
+            "canEditBase": true,
+            "canExtendBase": true,
+            "reservedSlots": 3
+        },
+        {
+            "name": "Everyone",
+            "password": "Randomized password 03",
+            "canKickBan": false,
+            "canAccessInventories": false,
+            "canEditBase": false,
+            "canExtendBase": false,
+            "reservedSlots": 0
+        }
+    ]
+}
+```
+
+:::danger
+Passwords must be unique for each group otherwise your server will crash when it starts up.
+:::
+
+### Permissions and Descriptions
+Here is a list of all the enshrouded role permissions and what they do. The only settings for each are `true` or `false` except for `reservedSlots`.
+
+| Permission            | Description                                                                                     |
+|-----------------------|-------------------------------------------------------------------------------------------------|
+| `canKickBan`          | Allows kicking and banning other players.                                                       |
+| `canAccessInventories`| Allows accessing chests and other containers.                                                   |
+| `canEditBase`         | Allows making changes to player bases.                                                          |
+| `canExtendBase`       | Allows extending player bases.                                                                  |
+| `reservedSlots`       | Reserves slots for the specified user group, ensuring they can join even if the server is full. |
