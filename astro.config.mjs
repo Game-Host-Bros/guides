@@ -41,6 +41,10 @@ export default defineConfig({
       collapsed: false,
       autogenerate: { directory: 'games', collapsed: true }
     }, {
+      label: 'Troubleshooting',
+      collapsed: false,
+      autogenerate: { directory: 'troubleshooting' }
+    }, {
       label: 'Account',
       collapsed: true,
       autogenerate: {
