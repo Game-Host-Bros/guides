@@ -30,6 +30,8 @@ export default defineConfig({
       discord: 'https://discord.gg/FN4XgbAwzr',
       github: 'https://github.com/Game-Host-Bros',
       youtube: 'https://www.youtube.com/@GameHostBros',
+      facebook: 'https://www.facebook.com/gamehostbros/',
+      'x.com': 'https://x.com/gamehostbros',
     },
     sidebar: [{
       label: 'Getting Started',
