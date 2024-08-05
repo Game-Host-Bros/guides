@@ -1,0 +1,40 @@
+---
+title: How To Configure Your Minecraft Server
+description: Learn how to configure your Minecraft Server
+tableOfContents: true
+sidebar:
+  label: Configure Your Server
+---
+
+It's common to enable flight in Minecraft, change difficulty, toggle pvp, change motd and much more. To change Minecraft server settings you'll have to edit a file named `server.properties`. Alternatively, for more advanced users, you can make yourself [OP](https://guides.gamehostbros.com/games/minecraft/adding-admins/) and make many of these changes via in-game commands.
+
+## How To Configure Your Minecraft Server
+
+1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Stop your server.
+3. Go to `Management > File Manager`.
+4. Open `server.properties`.
+5. Edit the settings you want to change.
+6. Start your server.
+
+# Minecraft Server Settings
+
+| Setting                          | Default             | Description                                                                                                  |
+|----------------------------------|---------------------|--------------------------------------------------------------------------------------------------------------|
+| allow-flight                     | false               | Allows users to use flight on the server while in Survival mode.                                             |
+| difficulty                       | easy                | Defines the difficulty (such as damage dealt by mobs and the way hunger and poison affect players) of the server. |
+| enable-command-block             | false               | Enables command blocks.                                                                                       |
+| enforce-whitelist                | false               | Enforces the whitelist on the server.                                                                         |
+| gamemode                         | survival            | Defines the mode of gameplay.                                                                                 |
+| hardcore                         | false               | Server difficulty is ignored and set to hard and players are set to spectator mode if they die.               |
+| level-name                       | world               | The "level-name" value is used as the world name and its folder name.                                         |
+| level-seed                       | blank               | Sets a world seed for the player's world, as in Singleplayer. The world generates with a random seed if left blank. |
+| level-type                       | minecraft:normal    | Determines the world preset that is generated.                                                                |
+| max-players                      | 20                  | The maximum number of players that can play on the server at the same time.                                   |
+| motd                             | A Minecraft Server  | This is the message that is displayed in the server list of the client.                     |
+| player-idle-timeout              | 0                   | If non-zero, players are kicked from the server if they are idle for more than that many minutes.             |
+| pvp                              | true                | Enables Player versus Player combat.                                                                          |
+
+These are the most commonly changed Minecraft server settings. A full list can be found [Here](https://minecraft.fandom.com/wiki/Server.properties).
+
+If you get stuck at any time, you can reach out to us on [Discord](https://discord.gg/FN4XgbAwzr).
