@@ -38,11 +38,11 @@ export default defineConfig({
       }
     }, {
       label: 'Game Guides',
-      collapsed: false,
-      autogenerate: { directory: 'games', collapsed: true }
+      collapsed: true,
+      autogenerate: { directory: 'games' }
     }, {
       label: 'Troubleshooting',
-      collapsed: false,
+      collapsed: true,
       autogenerate: { directory: 'troubleshooting' }
     }, {
       label: 'Account',
