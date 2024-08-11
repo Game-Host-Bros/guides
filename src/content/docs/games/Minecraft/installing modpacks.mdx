@@ -15,7 +15,21 @@ This is what you do if you need to install a Modpack to your Minecraft Java Edit
 3. Stop your server.
 4. Go to `Tools > Modpack Manager`.
 5. Select the Modpack and version you want to install.
-6. Enable `Format` (READ NOTE) and install the Modpack.
+6. Enable `Format` and install the Modpack.
+
+:::danger
+Enabling Format will wipe your server to make sure all of the server versions are correct to run the Modpack, If you have any data you wish to keep, make a backup!
+:::
+
+## Manually Checking Version Compatibility
+
+Some modpacks won't have a premade server.zip to download and may not work, and even if it does it may not have all the required files, an easy way to tell if this is the case is if the downloaded modpack includes a .jar file, it's usually named something like `forge-1.16.5-36.2.39.jar`. Forge being the modloader, and 1.16.5 being the game version. To install the correct minecraft game and modloader version as specified by the modpacks website, follow these instructions.
+
+1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Select your server.
+3. Go to `Configuration > Advanced`.
+4. Under Install Different Edition, select the compatible version.
+5. Enable `Format` and click `Install Different Edition`.
 
 :::danger
 Enabling Format will wipe your server to make sure all of the server versions are correct to run the Modpack, If you have any data you wish to keep, make a backup!
@@ -23,7 +37,7 @@ Enabling Format will wipe your server to make sure all of the server versions ar
 
 ## Manually Installing Modpacks To Your Server
 
-These are the next steps after you've downloaded your Modpack of choice, do note that some modpacks may have a Client and Server version, in this case make sure you've downloaded the Server files. We recommend a launcher such as Prism Launcher to install Modpacks to your game client.
+These are the next steps after you've downloaded your Modpack of choice and have made sure the version is compatible, We recommend a launcher such as Prism Launcher to install Modpacks to your game client.
 
 1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/).
 2. Stop your server and delete everything in `File Manager`.
@@ -31,18 +45,18 @@ These are the next steps after you've downloaded your Modpack of choice, do note
 4. Upload your Modpack.zip to the server (If it's not .zip extract it first).
 5. In the panel go to `File Manager` and decompress the file.
 6. Go into `Configuration > Startup Parameters` and make sure `Server Jar File` matches the .jar file from the Modpack, if it contains one.
-7. Start your server to download the required files.
+7. Start your server and select the default java version.
 8. Restart your server.
 
-Why the restart? It's to make sure the server ports are set correctly in your server settings as many files get generated after the initial launch, you won't be able to connect unless you do this.
+Why the restart? It's to make sure the server ports are set correctly in your server settings as some files get generated after the initial launch, if they aren't already included in the modpack download you won't be able to connect unless you do this.
 
-## Troubleshooting
+### Troubleshooting
 
 `Mismatched Mods?` Most Modpacks will also need to be installed locally on your game-client. When trying to connect to your server, if you have any problems such as mismatched mods. You can either, download the Mods and install them manually to the server and your client, or if you have Mods the server doesn't, you can delete them from your game files and try to connect again. Deleting the problem Mods on the server and Client will be the easiest solution.
 
 `Version Compatibilty` Make sure to double-check for version compatibility and Mod dependencies on the Mod website if you're having trouble connecting, also make sure to reinstall the correct Minecraft version under 
 Advanced in the panel, be sure to click Format if you haven't already deleted everything in File Manager.
 
-`Connection Refused?` If you've just manually installed a Modpack and can't connect to your server, and your error message is just refused connection with no information, first try restarting your server.
+`Connection Refused?` If you've just manually installed a Modpack and can't connect to your server, and your error message is just refused connection with no information, first try restarting your server, also make sure to watch the server console as the server starts to make sure it's correctly installed and starting properly.
 
 If you get stuck at any time, you can reach out to us on [Discord](https://discord.gg/FN4XgbAwzr).
