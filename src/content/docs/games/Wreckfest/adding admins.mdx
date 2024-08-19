@@ -1,0 +1,44 @@
+---
+title: How to Add Admins on Your Wreckfest Server
+description: Step-by-step guide on how to grant admin privileges to players on your Wreckfest dedicated server.
+tableOfContents: true
+sidebar:
+  label: Adding Admins
+---
+
+Managing a Wreckfest server can be a big responsibility, especially when you’re focused on creating an enjoyable racing experience for everyone. One way to share the load is by granting admin privileges to trusted players. Admins can help manage the server, enforce rules, and keep gameplay running smoothly.
+
+:::tip
+Only grant admin privileges to players you trust, as admins have significant control over your server.
+:::
+
+In this guide, we'll show you how to add admins to your Wreckfest server by editing the server configuration file. This method ensures that admin privileges are automatically granted each time the server starts, making it easier to maintain consistent server management.
+
+### How to Find Your Steam ID
+
+If you're unsure of a player's Steam ID, you can easily find it by visiting [SteamID.io](https://steamid.io/). Simply input the player’s Steam profile URL or username, and the site will provide the corresponding SteamID64, which you can use in your configuration file.
+
+### Steps to Add Admins on Your Wreckfest Server
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and navigate to your Wreckfest server.
+2. Go to `Management > File Manager`.
+3. Open the `server_config.cfg` file.
+4. **Locate the Admin and Moderator Sections**:
+   - Look for the line that begins with `#admin_steam_ids=`. This is where you’ll add the Steam IDs of the players you want to grant admin privileges to.
+   - Similarly, find the line that begins with `#op_steam_ids=` to add Steam IDs for moderator privileges.
+5. **Add the Steam IDs**:
+   - Remove the `#` at the beginning of the line to uncomment it.
+   - Enter the Steam IDs of the players you wish to grant admin or moderator privileges to, separated by commas. For example:
+     ```
+     admin_steam_ids=12345678912345678,12345678912345678
+     op_steam_ids=12345678912345678,12345678912345678
+     ```
+
+6. After adding the necessary Steam IDs, save the `server_config.cfg` file to apply the changes.
+7. Restart Your Server
+
+:::tip
+You may also want to set `owner_disabled=1` otherwise the first person who joins the server gets admin permissions.
+:::
+
+By following these steps, you can ensure that your Wreckfest server is well-managed and that you have reliable support in keeping the gameplay fair and fun for everyone.
