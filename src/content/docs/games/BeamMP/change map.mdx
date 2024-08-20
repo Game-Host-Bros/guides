@@ -1,0 +1,55 @@
+---
+title: How To Change Your BeamMP Server Map
+description: Learn how to change your server map on your BeamMP server.
+tableOfContents: false
+sidebar:
+  label: Change Map
+---
+
+Whether you're looking to explore new terrains or just want a different environment for your players, this guide will walk you through the steps to change the server map on your BeamMP server using the Game Host Bros Panel. By following these instructions, you'll be able to quickly switch to any of the stock maps that come with BeamMP or even set a custom map of your choice.
+
+
+## Using Default Maps
+Here is how you can use some of the default maps that come with BeamMP.
+
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your BeamMP server.
+2. Go to `Configuration > Startup Parameters`.
+3. Find the `Map` setting and enter your desired map filepath.
+4. Restart your server.
+
+Here is a list of the stock maps that come with BeamMP and their filepath.
+
+| Map Name             | Filepath                                  |
+|----------------------|-------------------------------------------|
+| Gridmap V2           | /levels/gridmap_v2/info.json              |
+| Automation Test Track| /levels/automation_test_track/info.json   |
+| East Coast USA       | /levels/east_coast_usa/info.json          |
+| Hirochi Raceway      | /levels/hirochi_raceway/info.json         |
+| Italy                | /levels/italy/info.json                   |
+| Jungle Rock Island   | /levels/jungle_rock_island/info.json      |
+| Industrial           | /levels/industrial/info.json              |
+| Small Island         | /levels/small_island/info.json            |
+| Smallgrid            | /levels/smallgrid/info.json               |
+| Utah                 | /levels/utah/info.json                    |
+| West Coast USA       | /levels/west_coast_usa/info.json          |
+| Driver Training      | /levels/driver_training/info.json         |
+| Derby                | /levels/derby/info.json                   |
+
+
+:::note
+This setting will override anything you have manually set inside your ServerConfig.toml file.
+:::
+
+## Uploading Custom Maps
+To use custom maps on your BeamMP server, you'll need to upload them via SFTP. Follow these steps:
+
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your BeamMP server.
+2. Access your server files using SFTP. If you're unfamiliar with SFTP, check out our [SFTP guide](https://guides.gamehostbros.com/getting-started/uploading-files/) for detailed instructions.
+3. Upload your custom map files to the `/levels/` directory on your server.
+4. After uploading, go to `Configuration > Startup Parameters` in the Game Host Bros Panel.
+5. Find the `Map` setting and enter the filepath for your custom map, e.g., `/levels/custom_map_name/info.json`.
+6. Restart your server to apply the changes.
+
+:::note
+Ensure your custom map files are correctly placed in the `/levels/` directory and that the `info.json` file exists in the map folder.
+:::
