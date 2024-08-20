@@ -27,11 +27,10 @@ We have some CounterStrikeSharp plugins already added to our 1-click Mod Manager
 The `Enable Modding` toggle must be enabled before any other plugins.
 :::
 
-1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/).
-2. Select your server.
-3. In the left-hand menu, click `Tools > Mod Manager`.
-4. Look for the plugin you want to install.
-5. Click the Install button then restart the server.
+1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your CS2 server.
+2. In the left-hand menu, click `Tools > Mod Manager`.
+3. Look for the plugin you want to install.
+4. Click the Install button then restart the server.
 
 You can check if the plugin is loaded by typing `css_plugins list` into the console. If you manually need to install a plugin, the most common folder you need to upload them to is `/game/csgo/addons/counterstrikesharp/plugins`.
 
