@@ -36,7 +36,7 @@ Enabling Format will wipe your server to make sure all of the server versions ar
 
 ## Manually Installing Modpacks To Your Server
 
-These are the next steps after you've downloaded your Modpack of choice and have made sure the version is compatible, We recommend a launcher such as Prism Launcher to install Modpacks to your game client.
+These are the next steps after you've downloaded your Modpack of choice and have made sure the version is compatible, We recommend a launcher such as Prism Launcher to install Modpacks to your game client. Also, if the Modpack has a server pack that doesn't contain a `.jar` file, be sure to change the server to the correct version before proceeding, you can do this by following [these steps](https://guides.gamehostbros.com/games/minecraft/changing-versions).
 
 1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/).
 2. Stop your server and delete everything in `File Manager`.
@@ -55,6 +55,8 @@ Why the restart? It's to make sure the server ports are set correctly in your se
 
 `Version Compatibilty` Make sure to double-check for version compatibility and Mod dependencies on the Mod website if you're having trouble connecting, also make sure to reinstall the correct Minecraft version under 
 Advanced in the panel, be sure to click Format if you haven't already deleted everything in File Manager.
+
+`Immediate Crashing` This may be because the server may have an incorrect java version, the default is a recommendation that is usually correct, but can be wrong from time to time, if you have an odd issue like this follow [these steps](https://guides.gamehostbros.com/games/minecraft/change-java-version/) and cycle through versions, if none of them work start by trying the other troubleshooting steps to rule out possible causes.
 
 `Connection Refused?` If you've just manually installed a Modpack and can't connect to your server, and your error message is just refused connection with no information, first try restarting your server, also make sure to watch the server console as the server starts to make sure it's correctly installed and starting properly.
 
