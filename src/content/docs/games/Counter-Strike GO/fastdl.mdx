@@ -1,11 +1,11 @@
 ---
-title: How To Setup FastDL For Your CSS Server
-description: Learn how to setup FastDL for your CSS server.
+title: How To Setup FastDL For Your CSGO Server
+description: Learn how to setup FastDL for your CSGO server.
 sidebar:
   label: FastDL
 ---
 
-By default, Counter Strike Source will slowly download files directly from the server itself, this can be slow for players who are trying to connect to your server. Game Host Bros offers FastDL so players can download the files faster. By default it will sync all custom files inside the `/cstrike/`directory on your server.
+By default, Counter Strike GO will slowly download files directly from the server itself, this can be slow for players who are trying to connect to your server. Game Host Bros offers FastDL so players can download the files faster. By default it will sync all custom files inside the `/csgo/`directory on your server.
 
 ## How To Sync Your FastDL
 
@@ -13,6 +13,6 @@ By default, Counter Strike Source will slowly download files directly from the s
 2. On the left-hand side, go to `Tools > FastDL`.
 3. Click `Sync FastDL`.
 4. Copy the address to your FastDL it looks something like this: `http://lonestar.gamehostbros.com/a8341d7b`
-5. Open your `server.cfg`, located in `cstrike/cfg/server.cfg`.
+5. Open your `server.cfg`, located in `csgo/cfg/server.cfg`.
 6. Add or update `sv_downloadurl "http://lonestar.gamehostbros.com/a8341d7b"` into your server.cfg (Replace the URL with your unique FastDL url)
 7. Restart your server.
