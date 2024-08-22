@@ -5,6 +5,9 @@ sidebar:
   label: Adding Admins
 ---
 
+
+## Becoming An Admin
+
 Managing player permissions—including granting administrative privileges or banning players—is essential for maintaining a healthy gaming environment. Valheim uses a file called `adminlist.txt` to handle player permissions.
 
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
@@ -14,3 +17,67 @@ Managing player permissions—including granting administrative privileges or ba
 5. Here, find the file named `adminlist.txt`.
 6. Add a new entry on its own line in SteamID64 format. You can get your SteamID from [here](https://steamid.io/). It should look like this: `76561198072786081`.
 7. Restart your server.
+
+## Enabling Console
+
+The Valheim in-game console is disabled by default, here are the steps to enable it if you wish to use Admin commands while playing on your server.
+
+1. Open Steam
+2. Navigate to `Library`
+3. `Right-click` Valheim and enter properties.
+4. Type `-console` in launch options.
+5. Close the window and start your game.
+
+## Using Admin Commands
+
+After setting yourself as Admin and adding `-console` as a launch option you'll now be able to open and use the in-game console, here's how.
+
+1. [Connect](https://guides.gamehostbros.com/games/valheim/connect-to-your-server/) to your Valheim Server.
+2. Press `f5` to open Console.
+3. Type `devcommands` to enable admin commands.
+
+## Multiplayer Command List
+
+Now that commands are enabled here's a list of Valheim Multiplayer commands.
+
+| Command                     | Description                                    |
+|-----------------------------|------------------------------------------------|
+| ban [SteamID]        | Bans the player                                |
+| banned                      | Shows the banned players                       |
+| help                        | Lists available commands                       |
+| kick [SteamID]       | Kicks the player                               |
+| lodbias [1-5]               | Sets the render distance for the server        |
+| noportals                   | Disables portals for the server                |
+| ping                        | Measures your latency to the server            |
+| save                        | Saves the server                               |
+| skiptime [seconds]          | Skips ahead in seconds                         |
+| sleep                       | Skips to next morning                          |
+| unban [SteamID]      | Unbans the player                              |
+
+
+Here are all the commands available in a Multiplayer Valheim server, commands such as `god`, `heal`, `freefly` and more are only available in singleplayer.
+
+## Fun Commands
+
+| Command           | Description                     |
+|-------------------|---------------------------------|
+| blowkiss          | Blows kiss                      |
+| bow               | Bows                            |
+| challenge         | Try if you dare!                |
+| cheer             | Woohoo!                         |
+| comehere          | Follow me!                      |
+| cower             | Show your fear                  |
+| cry               | T_T                             |
+| dance             | Dances                          |
+| despair           | When you enter the swamp        |
+| headbang          | Headbangs                       |
+| kneel             | Kneels                          |
+| laugh             | Hahas                           |
+| nonono            | No?                             |
+| point             | Yes, you!                       |
+| roar              | Fear me!                        |
+| s [message]       | Shouts your message             |
+| shrug             | Hmm                             |
+| sit               | Rests your legs                 |
+| wave              | Waves                           |
+
