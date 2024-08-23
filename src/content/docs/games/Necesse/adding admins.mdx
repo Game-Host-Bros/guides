@@ -1,0 +1,81 @@
+---
+title: How To Add Admins To Your Necesse Server
+description: Learn how to become an Admin on your Necesse Server
+sidebar:
+  label: Adding Admins
+---
+
+## Becoming An Admin
+
+Many server settings can be changed by settings via console, such as `Difficulty`, `Invincibility`, `Give` and much more. The process to become an Admin is short and simple, here are the steps.
+
+1. [Connect](https://guides.gamehostbros.com/games/necesse/connect-to-server/) to your server
+2. While on your server log into the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+3. Go to `System > Console`.
+4. Type `Permissions set [YourName] Owner`.
+
+This guide uses Owner as an example as it has more permissions, the other possible roles are `User`, `Moderator`, `Admin`, `Owner` and finally `Server`, to use in-game commands follow the steps below.
+
+## Using Commands
+
+The input process will be the same for all commands, finding and executing commands is done like this.
+
+1. [Connect](https://guides.gamehostbros.com/games/necesse/connect-to-server/) to your server.
+2. Open chat with `Enter` and input your command of choice, for example, `/kick [Name]`, for example `/pm [player]` sends a private message to the specified user.
+
+:::tip
+Did you know? Some commands can be input with `list` added to display all possible inputs, take `/deathpenalty list` for example.
+:::
+
+## Command List
+
+| Command                                          | Permissions | Description                                                                                               | Cheats |
+|--------------------------------------------------|-------------|------------------------------------------------------------------------------------------------------|--------|
+| /allowcheats                                    | Owner       | Enables cheats on this world (NOT REVERSIBLE!)                                                | Yes    |
+| /ban <authentication/name>                       | Admin       | Bans a player                                                                                         |        |
+| /bans                                           | Admin       | Lists all current bans                                                                                 |        |
+| /buff [<player>] <buff> [<seconds>]             | Admin       | Gives buff to player                                                                                 | Yes    |
+| /clearall [<global>]                            | Admin       | Clears all entities                                                                                  | Yes    |
+| /clearmobs [<global> [<type>]]                  | Admin       | Clears mobs on the specified level.                           | Yes    |
+| /clearevents [<global> [<type>]]                | Admin       | Clears events on the specified level.                                           | Yes    |
+| /changename <player> <name>                     | Admin       | Changes the name of a player                                                                          |        |
+| /clearbuff [<player>] <buff>                    | Admin       | Clears buff from player                                                                                | Yes    |
+| /copyitem [<slot>]                              | Admin       | Copies an item and all of its data                                                                    | Yes    |
+| /copyplayer <from> <to>                         | Admin       | Copy a player's inventory, position and health.                                        | Yes    |
+| /createteam                                      | User        | Creates a new team for yourself                                                                      |        |
+| /deathpenalty <list/penalty>                     | Admin       | Changes death penalty setting                                                                          |        |
+| /demo [<player>] [<setup> [<forceNew>]] [<builds>] | Admin    | Setups up a world and/or build for player                                                             | Yes    |
+| /difficulty <list/difficulty>                     | Admin       | Changes difficulty setting                                                                             |        |
+| /enchant <clear/set/random> [<slot>] [<enchantID>] | Admin    | Gives a random enchant (put item in -1 slot)                               | Yes    |
+| /give [<player>] <item> [<amount>]              | Admin       | Gives item to player                                                                                 | Yes    |
+| /healmobs <health> [<range>] [<filter>]         | Admin       | Heals mobs around you                                                                                 | Yes    |
+| /itemgnd [<slot>] <set/get/clear> [<key> [<value>]] | Owner   | Gets or sets item GND data                                                                            | Yes    |
+| /jobsearchrange <range>                         | Owner       | Sets the job search tile range of settlers                                                             |        |
+| /kick <player> [<message/reason>]               | Moderator   | Kicks player from the server                                                                          |        |
+| /leaveteam                                       | User        | Leaves your current team                                                                              |        |
+| /maxhp [<player>] <health>                       | Admin       | Sets the max health of player                                                                          | Yes    |
+| /me <action>                                     | User        | Declare an action to the entire server                                                               |        |
+| /motd <clear/get/message>                       | Admin       | Sets the message of the day. Use \n for new line                                           |        |
+| /mow <range> [<chance>]                         | Admin       | Mows ground of grass                                                   | Yes    |
+| /pausewhenempty <0/1>                           | Admin       | Enable/disable pause when empty setting                                                                |        |
+| /players                                         | Moderator   | Lists players currently online                                                                        |        |
+| /print <message>                                 | Admin       | Prints a message in the chat                                                                          |        |
+| /regen [<islandX> <islandY> <dimension>] [<biome>] [<seeded>] | Owner | Regenerates the entire level                                                                            | Yes    |
+| /reveal [<player>]                               | Admin       | Reveals entire clients current level                                                                   | Yes    |
+| /save                                            | Moderator   | Saves all data                                                                                        |        |
+| /settings <list/setting> [<arg>]                | Admin       | Change server world settings                                                                           |        |
+| /sharemap [<from>] <to>                         | Admin       | Shares your map discoveries with another player                                                       | Yes    |
+| /stop, /exit or /quit                           | Owner       | Saves and stops the server                                                                             |        |
+| /time <set/add> [<amount>]                      | Admin       | Sets world time                                            | Yes    |
+| /tp [<player1>] <player2/home/death/spawn>     | Admin       | Teleports player1 to player2 or other location                                                       | Yes    |
+| /unban <authentication/name>                     | Admin       | Removes a ban                                                                                         |        |
+| /w, /whisper or /pm <player> <message>          | User        | Whisper a message to another player                                                                  |        |
+| /rain [<islandX> <islandY> <dimension>] <start/clear> | Admin   | Sets the rain on the level                                                                             | Yes    |
+| /settings <list/setting> [<arg>]                | Admin       | Change server world settings                                                                           |        |
+| /clearteam <player>                             | Admin       | Removes the player from his current team                                                              |        |
+| /setdimension [<player>] <dimension>             | Admin       | Changes the dimension of player                                                                        | Yes    |
+| /setisland [<player>] <islandX> <islandY> [<dimension>] | Admin | Changes the island of the player                                                                      | Yes    |
+| /setteam <player> <team>                        | Admin       | Sets the team of the player.                                                                          |        |
+| /setteamowner <team> <player>                   | Admin       | Sets the owner of the team.                            |        |
+| /tp [<player1>] <player2/home/death/spawn>     | Admin       | Teleports player1 to player2 or other location                                                       | Yes    |
+
