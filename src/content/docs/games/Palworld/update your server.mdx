@@ -19,4 +19,17 @@ The server will now automatically download the update as soon as it starts.
 
 If you've tried to restart your server and it didnt update, its possible something is stuck somewhere (`Update state (0x1) running, progress: 0.00 (0 / 0)` for example). To fix this simply stop your server, navigate to `Management > File Manager` and then delete the `steamapps` folder. Once you start your server back up it should download the update fine. 
 
+## Updating From A Reverted Patch
+
+This is what you need to do in order to update your server if it used a rollback patch, reinstalling won't harm your save files at all, but if you're unsure you can go to `Management > Backups`, to create an entire save file backup.
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Stop your server.
+3. Go to `Configuration > Startup Parameters`.
+4. Find the `Auto Update` toggle and make sure it's set to `1`.
+5. Go to `Configuration > Advanced`.
+6. Click `Reinstall Server`.
+7. Start your server.
+
 Remember if you get stuck at any time then reach out to a bro!
+
