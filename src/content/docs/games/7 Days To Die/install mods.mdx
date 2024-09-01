@@ -5,13 +5,13 @@ sidebar:
   label: Install Mods
 ---
 
-If you're getting bored of the vanilla game, you should try modded 7D2D, it's a great way to experience new things and hopefully, restore the fun!
+If you're getting tired of the vanilla game, you should try modded 7D2D, it's a great way to experience new things and hopefully, restore the fun!
 
 In this guide we'll be showing you how to install Mods to your server and local game client, as most Mods will need to be installed on both in order to play.
 
 ## Downloading Mods
 
-Mods can be found from sites like [Nexus Mods](https://www.nexusmods.com/7daystodie/mods/) once downloaded extract the mod file.
+Mods can be found from sites such as [Nexus Mods](https://www.nexusmods.com/7daystodie/mods/) once downloaded extract the mod file.
 
 :::tip
 Make sure the mod you're installing is compatiable with your [7D2D server version](/games/7-days-to-die/change-version/). 
@@ -26,12 +26,48 @@ Make sure the mod you're installing is compatiable with your [7D2D server versio
 5. Using [SFTP](/getting-started/uploading-files/), upload the extracted Mod folder into `/Mods/[ModName]`.
 6. Restart Your Server.
 
-You can type `version` into the server console to see if the mod is running.
+:::tip
+Did you know? You can type `version` into the server console to see your server version and it's loaded mods.
+:::
 
 ## Installing Mods Locally On Your PC
+
+Mods that explicitly say server-sided only will not need to be installed locally, for the rest, here's how. Do note that you may have to disable Anti-Cheat on your game client to use most mods, the steps for that can be found below.
 
 1. Navigate to your game files by going to `Steam > Library > 7D2D > Manage > Browse Local Files`.
 2. Create a folder named `Mods` .
 3. Extract your downloaded Mod Folder into `/Mods/[ModName]`.
 
+You only need to install the extracted folder which directly contains modinfo.xml and it's other files.
+
+## Disabling Anti-Cheat Client And Server
+
+Mods will let you know if you need to disable Anti-Cheat when launching the game, follow these steps to disable Anti-Cheat and successfully load your mods.
+
+1. Open Steam.
+2. Go to `Library`.
+3. Click `Play` on 7D2D.
+4. Select `Launch game without EAC`.
+
+If you don't get a launch prompt after clicking play, you'll have to enable it again, you can do that like this:
+
+1. Open Steam.
+2. Go to `Library`.
+3. Right-click 7D2D and select `Properties`.
+4. Under `General`, find `Selected Launch Option` and set it to `Ask when starting game`.
+5. Click `Play` on 7D2D and choose `Launch game without EAC`.
+
+#### Disabling Anti-Cheat On Your Server
+
+If a mod requires you to disable Anti-Cheat on your client, you should probably disable it on your server too, it's not required for all mods, but definitely something to consider.
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and enter your 7D2D server.
+2. Stop your server.
+3. Go to `Management > File Manager`.
+4. Open `serverconfig.xml`.
+5. Change `EACEnabled` to `False`.
+6. Start your server.
+
 And there you have it, that's how you install mods in 7D2D.
+
+If you get stuck at any time, you can reach out to us on [Discord](https://discord.gg/FN4XgbAwzr).
