@@ -14,14 +14,34 @@ By default, we don't allocate you an external port for Soulmask RCON as it's ins
 ## RCON Commands
 
 | Command                         | Description                                                                                                                                                             |
-|---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | help                            | Shows all the current RCON commands.                                                                                                                                     |
-| quit/close/shutdown seconds     | After the number of seconds specified by the parameter, save and exit the game world.                                                                                    |
+| quit/close/shutdown seconds      | After the number of seconds specified by the parameter, save and exit the game world.                                                                                    |
 | saveworld                       | Only save world archive without exiting.                                                                                                                                 |
 | backup new_database_name        | Back up the world archive to a database file with the specified name.                                                                                                    |
 | backuphour                      | Back up the world archive and name it with the current date and time (UTC), for example: YYYYmmddHH.db                                                                   |
-| dpp                             | Export the basic information of all accounts (account, role, union, level, total online time, creation time, etc.) to Saved/ALL_PLAYER_INFO.txt.                          |
-| setpm flag                      | Set the server login permission management switch (similar to the chmod command, 0 means turning off all permissions, 15 means turning on all permissions:               |
+| dpp                             | Export the basic information of all accounts (account, role, union, level, total online time, creation time, etc.) to Saved/ALL_PLAYER_INFO.txt.                         |
+| setpm flag                      | Set the server login permission management switch (0 to turn off all permissions, 15 to turn on all permissions).                                                        |
 | serverfps                       | Displays the average frame rate of the server over a short period of time.                                                                                               |
 | QueryInvitationCode             | Displays the server's Invitation Code.                                                                                                                                  |
+| List_OnlinePlayers              | Lists the account, name, and body ID of online players. Alias: lp                                                                                                       |
+| List_AllPlayers                 | Lists basic information for all players and database information. Alias: lap                                                                                            |
+| List_SameBelongingObjs          | Lists characters sharing the same ownership as the player. Alias: ls                                                                                                     |
+| List_Guilds                     | Lists registered guild information on the server. Alias: lg                                                                                                             |
+| List_GuildObjs                  | Lists all character information under a specified guild. Alias: lgo                                                                                                      |
+| List_AllNPCClass                | Lists all character types and class names. Alias: lcc                                                                                                                   |
+| Show_Coefficient_Settings       | Lists game coefficient items and their current values. Alias: lc                                                                                                         |
+| List_ServerPermissionList       | Lists all server permission list information. Alias: lsp                                                                                                                |
+| Set_Coefficient                 | Sets game coefficients. Alias: sc                                                                                                                                       |
+| Set_ServerPermissionEnable      | Sets the status of a server permission item. Alias: ssp                                                                                                                 |
+| Set_ServerPermissionFlag        | Sets the server permission flag, globally setting the server permission status. Alias: sspf                                                                              |
+| Update_ServerPermissionList     | Sets the contents of the server permission list (add/remove). Alias: usp                                                                                                |
+| Set_OutputChats                 | Sets whether server chat content is output to the log. Alias: soc                                                                                                        |
+| GotoPostion                     | Teleports a character to specified coordinates. Alias: go                                                                                                               |
+| GotoTarget                      | Teleports a character near another character. Alias: gonpc                                                                                                              |
+| CreateSpecifiedMan              | Creates a barbarian based on a template number, belonging to a specified player. Alias: cnpc                                                                             |
+| CreateSWByClass                 | Creates a barbarian/animal character based on the class name. Alias: create                                                                                              |
+| FlyMode                         | Enables/disables flight mode (ghost mode) for a specified player. Alias: fly                                                                                            |
+| Update_RconClientAddress        | Adds or removes IP addresses from the RCON whitelist. Alias: ura                                                                                                        |
+
 
