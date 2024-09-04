@@ -11,7 +11,8 @@ This guide provides step-by-step instructions on how to set up and manage your S
 By default, we don't allocate you an external port for Soulmask RCON as it's insecure. Simply contact support, and we will add this to your server for you if needed. You can still use all commands directly from our web panel console.
 :::
 
-## RCON Commands
+## Basic RCON Commands
+Here is a list of all the RCON commands with basic details. 
 
 | Command                         | Description                                                                                                                                                             |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,4 +45,115 @@ By default, we don't allocate you an external port for Soulmask RCON as it's ins
 | FlyMode                         | Enables/disables flight mode (ghost mode) for a specified player. Alias: fly                                                                                            |
 | Update_RconClientAddress        | Adds or removes IP addresses from the RCON whitelist. Alias: ura                                                                                                        |
 
+## Adding IPs to Whitelist
+
+For security reasons, RCON uses an IP whitelist. Only whitelisted IP addresses can connect to the server's RCON service. We also dont allow access to this publicly unless requested via a support ticket
+
+
+1. Modify `WS/Saved/Config/[Platform]Server/Engine.ini`:
+   ```ini
+   [Server.SafeIP]
+   IP=xxx.xxx.xxx.xxx
+   IP=yyy.yyy.yyy.yyy
+   ```
+
+2. Use RCON command (not saved after server restart):
+   ```
+   ura 1 xxx.xxx.xxx.xxx,yyy.yyy.yyy.yyy
+   ```
+
+## Help Command
+
+Type `help` in the terminal to display information about available commands.
+
+- `DESC`: Command description
+- `Alia`: Command alias
+- `Example`: Usage example
+
+You can use the command number as a shortcut to execute commands.
+
+## Information Retrieval Commands
+
+1. **List_OnlinePlayers** (Alias: `lp`)
+   - Lists online players' account, name, and body ID
+   - Format: `| Steam Account | Player Name | Current Body ID |`
+
+2. **List_AllPlayers** (Alias: `lap`)
+   - Lists all players' basic and database information
+   - Format: `| Steam Account | Player Name | Guild Name | Awareness Level | Total Online Time (seconds) | Account Creation Time (UTC) |`
+
+3. **List_SameBelongingObjs** (Alias: `ls`)
+   - Lists characters with the same ownership
+   - Parameters: Steam account or Character/mount ID
+   - Format: `| Character Name | Character ID |`
+
+4. **List_Guilds** (Alias: `lg`)
+   - Lists registered guild information
+   - Format: `| Guild Name | Guild ID | Guild Leader Name |`
+
+5. **List_GuildObjs** (Alias: `lgo`)
+   - Lists all characters in a specified guild
+   - Parameters: Guild Name or Guild ID
+   - Format: `| Character Name | Character ID |`
+
+6. **List_AllNPCClass** (Alias: `lcc`)
+   - Lists all character types and class names
+   - Optional parameter to filter results
+   - Format: `| Default Character Name | Character Class Name |`
+
+7. **Show_Coefficient_Settings** (Alias: `lc`)
+   - Lists game coefficient items and their values
+   - Optional parameter to filter results
+   - Format: `| Coefficient Name | Current Coefficient Value |`
+
+8. **List_ServerPermissionList** (Alias: `lsp`)
+   - Lists all server permission information
+
+## Setting Commands
+
+1. **Set_Coefficient** (Alias: `sc`)
+   - Sets game coefficients
+   - Parameters: Coefficient name, New value
+
+2. **Set_ServerPermissionEnable** (Alias: `ssp`)
+   - Sets the status of a server permission item
+   - Parameters: Permission number (0-4), Enable status (0 or 1)
+
+3. **Set_ServerPermissionFlag** (Alias: `sspf`)
+   - Sets the server permission flag globally
+   - Parameter: Integer (sum of flag values)
+
+4. **Update_ServerPermissionList** (Alias: `usp`)
+   - Modifies server permission list (add/remove)
+   - Parameters: Permission type, Add/remove flag, List of accounts/IPs
+
+5. **Set_OutputChats** (Alias: `soc`)
+   - Enables/disables server chat output to log
+   - Parameter: 0 (disable) or 1 (enable)
+
+## Other Commands
+
+1. **GotoPostion** (Alias: `go`)
+   - Teleports a character to specified coordinates
+   - Parameters: Character identifier, X, Y, Z coordinates
+
+2. **GotoTarget** (Alias: `gonpc`)
+   - Teleports a character near another character
+   - Parameters: Character to teleport, Target character
+
+3. **CreateSpecifiedMan** (Alias: `cnpc`)
+   - Creates a barbarian based on a template
+   - Parameters: Player's Steam account, Template number, Gender (0/1)
+
+4. **CreateSWByClass** (Alias: `create`)
+   - Creates a barbarian/animal character
+   - Parameters: Player's Steam account, Class name, Normal/Offspring, Level, Quantity, Quality
+
+5. **FlyMode** (Alias: `fly`)
+   - Enables/disables flight mode for a player
+   - Parameters: Player's Steam account, Enable/Disable (1/0)
+
+6. **Update_RconClientAddress** (Alias: `ura`)
+   - Adds/removes IP addresses from RCON whitelist
+   - Parameters: Add/Remove (1/0), IP address
 
