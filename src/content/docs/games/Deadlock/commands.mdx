@@ -5,18 +5,69 @@ sidebar:
   label: Common Commands
 ---
 
-Here is a list of the most common commands you and your players will want to use for their Deadlock server.
+Here is a full list of console commands for both your Deadlock server and clients. Please be aware some commands are cheat protected and you will need to use `sv_cheats 1` to allow them.
 
-| **Command**                                | **Description**                                                                                 |
-|--------------------------------------------|-------------------------------------------------------------------------------------------------|
-| `exec citadel_botmatch_practice_6v6_hard`  | Loads the bot configuration. Replace `hard` with `easy` or `medium` to adjust bot difficulty.    |
-| `changelevel street_test`                  | Restarts the game on the map `street_test`.                                                      |
-| `citadel_spawn_practice_bots false`        | Prevents bots from spawning immediately when the game starts.                                    |
-| `citadel_spawn_practice_bots_count 12`     | Ensures bots fill all remaining slots (12 bots in total, with 6 on each team).                   |
-| `citadel_pregame_duration [time]`          | Increases the duration of the pregame. Replace `[time]` with the desired pregame length.         |
-| `changeteam 0`                               | Client command. Allows players to switch teams if the team/hero selection menu is glitchy.    |
-| `citadel_spawn_practice_bots true`         | Spawns bots to fill any remaining slots after human players have joined.                         |
+## Finding Console Commands
 
 You can search through all the commands for Deadlock by going to your server console and typing `find` followed by the description of what you want. Most things to do with Deadlock start with the prefix `citadel_`.
 
 Please remember that the Source engine is used in multiple games so just because a command exists, doesn't mean it will work.
+
+## Most Common Deadlock Console Commands
+Here is a list of the most common commands you and your players will want to use for their Deadlock server.
+
+| **Command**                                | **Description**                                                                                 |
+|--------------------------------------------|-------------------------------------------------------------------------------------------------|
+| exec citadel_botmatch_practice_6v6_hard  | Loads the bot configuration. Replace `hard` with `easy` or `medium` to adjust bot difficulty.    |
+| changelevel street_test                 | Restarts the game on the map `street_test`.                                                      |
+| citadel_spawn_practice_bots false        | Prevents bots from spawning immediately when the game starts.                                    |
+| citadel_spawn_practice_bots_count 12     | Ensures bots fill all remaining slots (12 bots in total, with 6 on each team).                   |
+| citadel_pregame_duration [time]          | Increases the duration of the pregame. Replace `[time]` with the desired pregame length.         |
+| changeteam 0                              | **Client command.** Allows players to switch teams if the team/hero selection menu is glitchy.       |
+| citadel_spawn_practice_bots true         | Spawns bots to fill any remaining slots after human players have joined.                         |
+
+
+## All Deadlock Console Commands
+
+| **Command** | **Description** |
+|---------|-------------|
+| bot_kick_all | Kicks all bots from the game. |
+| changelevel | Loads a new map. When used in a multiplayer lobby, players will remain connected while the map changes. Values: See the map command. |
+| changeteam | Allows changing your team and hero. Values: 0: Select a team and hero, 1: Join spectators, 2: Join The Amber Hand and select a hero, 3: Join The Sapphire Flame and select a hero. |
+| citadel_allow_purchasing_anywhere | Enables purchasing anywhere on the map, not just at shops. Requires cheats. Values: true/false |
+| citadel_enable_fast_cooldowns | Enables fast cooldowns, causing all abilities to have a 2 second cooldown. Requires cheats. |
+| citadel_disable_fast_cooldowns | Disables fast cooldowns. Requires cheats. |
+| citadel_enable_fast_stamina | Enables fast stamina, causing stamina to regen very fast. Requires cheats. |
+| citadel_disable_fast_stamina | Disables fast stamina. Requires cheats. |
+| citadel_enable_no_hero_death | Enables invincibility (your health will never go below 1). Requires cheats. |
+| citadel_disable_no_hero_death | Disables invincibility. Requires cheats. |
+| citadel_display_new_player_recommendations | Turns the "Great for New Players" banner on/off when selecting a hero. Values: true/false. Default: true |
+| citadel_hero_testing_enabled | Enables the "Testing Tools" menu from the Hero Sandbox. Enabling the menu does not require cheats, but using any of this menu's functionality will. Values: true/false. Default: false |
+| citadel_hero_testing_infinite_money | Gives players infinite souls and ability points. Values: true/false. Default: false |
+| citadel_hud_visible | Shows/hides the HUD. Values: true/false. Default: true |
+| citadel_pause | Pause the match. |
+| citadel_pregame_duration | Changes the duration of the pregame (countdown before the game starts). Values: number. Default: 10.0 |
+| citadel_region_override | Overrides your matchmaking region. Values: -1: Auto, 0: North America, 1: Europe, 2: Asia, 3: South America, 4: Europe (not sure if this is different from 1), 5: Oceania. Default: -1 |
+| citadel_solo_bot_match | Gets enabled by bot match configs. When disabled, bots don't move. This also enables the pregame countdown. Not sure what else it does. Values: true/false. Default: false |
+| citadel_spawn_nearby_neutrals | Respawns nearby neutral camps. Requires cheats. |
+| citadel_spawn_practice_bots | Enable to spawn bots when the game starts. You can also set this to true during a game to spawn bots (although setting it to false, kicking bots, and setting it to true again will not respawn bots). Values: true/false. Default: false |
+| citadel_spawn_practice_bots_count | Number of practice bots to spawn when citadel_spawn_practice_bots is set to true. Values: number |
+| citadel_test_survey_popup | Shows the post-match survey popup asking players to rate the match. |
+| citadel_unlock_flex_slots | Unlocks all flex slots. Requires cheats. |
+| citadel_unpause_countdown | Changes how many seconds the countdown will last when the game is unpaused. Requires cheats. Values: number. Default: 3 |
+| deadlock_early_development_warning_disabled | Disables the Early Development Build popup when the game starts. This gets set to true if you close the popup after checking "Don't show this again". Values: true/false. Default: false |
+| deadlock_post_match_survey_disabled | Disables the post-match survey. This gets set to true if you submit or skip a survey after checking "Don't show this again". Values: true/false. Default: false |
+| disconnect | Disconnect from the current match. |
+| dump_hero_names | Lists the internal names of all available heros. Requires cheats. |
+| healthpct | Sets your health to the given percentage of your max health. Requires cheats. Values: 0 - 100 |
+| hurtme | Deals 10 damage to yourself. Requires cheats. |
+| killme | Kills you. |
+| kingme | Gives you 1.2 million souls and levels up all your abilities. Requires cheats. |
+| map | Starts a game and loads into the chosen map. When used in a multiplayer lobby, this command will kick everyone from the server. Use changelevel to switch maps without kicking everyone. Values: street_test: The main multiplayer map, new_player_basics: The Hero Sandbox map, 1v1_test: Seems like an early, smaller version of street_test, hero_testing: Seems like an early Hero Sandbox |
+| npc_destroy | Destroys an NPC (troopers, guardians, walkers, etc.). As opposed to npc_kill, which causes the standard death sequence, this command zaps the NPC out of existence. Values: The name of an NPC to destroy (type npc_destroy to see a list of names). If no name is provided, destroys the NPC you're looking at. |
+| npc_kill | Kills an NPC (troopers, guardians, walkers, etc.). This causes the standard death sequence with particles, announcer lines, drops souls, etc. Values: The name of an NPC to kill (type npc_kill to see a list of names). If no name is provided, kills the NPC you're looking at. |
+| quit | Closes the game. |
+| resetme | Resets your level, abilities, and souls. Requires cheats. |
+| selecthero | Requires you to be on the hero selection screen, or have citadel_hero_testing_enabled set to true. Values: Hero name from dump_hero_names |
+| trooper_kill_all | Kills all non-neutral creeps and guardians that aren't shielded. Requires cheats. |
+| trooper_kill_non_bosses | Kills all non-neutral creeps. Requires cheats. |
