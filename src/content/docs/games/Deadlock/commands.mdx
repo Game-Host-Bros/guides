@@ -1,0 +1,22 @@
+---
+title: Common Deadlock Commands List
+description: Here is a list of the most common commands you can use on your Deadlock server.
+sidebar:
+  label: Common Commands
+---
+
+Here is a list of the most common commands you and your players will want to use for their Deadlock server.
+
+| **Command**                                | **Description**                                                                                 |
+|--------------------------------------------|-------------------------------------------------------------------------------------------------|
+| `exec citadel_botmatch_practice_6v6_hard`  | Loads the bot configuration. Replace `hard` with `easy` or `medium` to adjust bot difficulty.    |
+| `changelevel street_test`                  | Restarts the game on the map `street_test`.                                                      |
+| `citadel_spawn_practice_bots false`        | Prevents bots from spawning immediately when the game starts.                                    |
+| `citadel_spawn_practice_bots_count 12`     | Ensures bots fill all remaining slots (12 bots in total, with 6 on each team).                   |
+| `citadel_pregame_duration [time]`          | Increases the duration of the pregame. Replace `[time]` with the desired pregame length.         |
+| `changeteam`                               | Client command. Allows players to switch teams if the team/hero selection menu is glitchy.       |
+| `citadel_spawn_practice_bots true`         | Spawns bots to fill any remaining slots after human players have joined.                         |
+
+You can search through all the commands for Deadlock by going to your server console and typing `find` followed by the description of what you want. Most things to do with Deadlock start with the prefix `citadel_`.
+
+Please remember that the Source engine is used in multiple games so just because a command exists, doesn't mean it will work.
