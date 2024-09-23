@@ -4,9 +4,10 @@ description: Step-by-step guide on how to upload your save file to your Palworld
 sidebar:
   label: Upload Existing Save
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
-In this tutorial, we will guide you through the process of uploading an existing world and player save file to your Palworld dedicated server.
+In this tutorial, we will guide you through the process of uploading an existing world and player save file to your [Palworld server](https://www.gamehostbros.com/palworld-server-hosting/).
 
 You may also refer to this guide on how to [upload files to your game server.](/getting-started/uploading-files/)
 
@@ -21,32 +22,118 @@ You cannot transfer Xbox saves from the cloud to a dedicated server.
 
 ## Transfer from another Palworld dedicated server
 <Steps>
-1. On your existing server, navigate to `PAL/Save/Savegame/0` and backup the folder with random numbers and letters.
+
+1. On your previous existing server, navigate to `PAL/Save/Savegame/0` and backup the folder with random numbers and letters.
 2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Palworld server.
-3. In the sidebar go to `Management > File Manager`.
+3. Go to `Management > File Manager`.
 4. Once there navigate to `PAL/Save/Savegames/0`.
-5. Delete the default save folder (It should have a random number like this 84B5E2264EC387DEDB43179D666031A1).
-6. Upload your existing folder and take note of the folder id/name. 
-7. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`
+5. Delete the default save folder.
+6. Using [SFTP](/getting-started/uploading-files/) upload your existing save folder and copy the folder id/name. 
+7. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`.
 8. Replace the id/name with your existing folder name.
 9. Start your server.
 </Steps>
+
+Here's how it should look when uploaded correctly.
+<FileTree>
+
+- PAL
+  - Save
+    - Savegame
+      - 0
+        - **84B5E2264EC387DEDB43179D666031A1**
+          - **Level.sav**
+          - **LevelMeta.sav**
+          - **Players/**
+</FileTree>
+
 :::caution
 If you have a WorldOptions.sav file in `PAL/Save/Savegames/0/84B5E2264EC387DEDB43179D666031A1/`, you must delete it otherwise it will cause issues with changing settings or connecting to your server.
 :::
 
-## Transfer from a Palworld Co-op save
+## Transfer from a Palworld Steam Co-op save
 <Steps>
-1. Go to `Appdata\Local\PAL\Saved\SaveGames` on your local computer and backup the folder (You may need to allow hidden folders under (View))
+
+1. Press `Win + R` and paste this.
+
+   ```
+   %LOCALAPPDATA%\PAL\Saved\SaveGames
+   ```
+
 2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Palworld server.
-3. In the Game Host Bros panel go to `Management > File Manager`
+3. Go to `Management > File Manager`
 4. Once there navigate to `PAL/Save/Savegames/0`
-5. Delete the default save folder (It should have a random number like this 84B5E2264EC387DEDB43179D666031A1).
-6. Upload your existing folder and take note of the folder id/name. 
+5. Delete the default save folder.
+6. Using [SFTP](/getting-started/uploading-files/) upload your existing save folder and copy the folder id/name. 
 7. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`
 8. Replace the id/name with your existing folder name.
 9. Start your server.
 </Steps>
+
+Here's how it should look when uploaded correctly.
+
+<FileTree>
+
+- PAL
+  - Save
+    - Savegame
+      - 0
+        - **84B5E2264EC387DEDB43179D666031A1**
+          - **Level.sav**
+          - **LevelMeta.sav**
+          - **Players/**
+</FileTree>
+
+:::caution
+If you have a WorldOptions.sav file in `PAL/Save/Savegames/0/84B5E2264EC387DEDB43179D666031A1/`, you must delete it otherwise it will cause issues with changing settings or connecting to your server.
+:::
+
+## Transfer From an PC Game Pass Co-op Save
+
+Unlike Steam, migrating Xbox Game Pass Co-op saves will require additional steps and specific tools to convert your map data so all of your buildings can be loaded, here's the easiest way to do it.
+<Steps>
+
+1. Download, extract and run [XGP Save Extractor](https://github.com/Z1ni/XGP-save-extractor/releases).
+2. Locate the save you wish to upload, it should look something like this.
+
+    <FileTree>
+    
+    - palworld_43714616561_2024-09-24_00_29_56
+      - **84B5E2264EC387DEDB43179D666031A1**
+        - **Level/**
+          - **01.sav** Important! This is your level data on XGP.
+        - **Players/**
+        - **LevelMeta.sav**
+        - LocalData.sav This is not required.
+        - Worldoption.sav Delete this.
+    </FileTree>
+   The next tool requires Python 3.9 or later. Here's how to install python, and use the tool to convert `01.sav` into a .json file, and then into `Level.sav` so it can be loaded on your server.    
+3. Install [Python 3.12 from the Microsoft Store](https://apps.microsoft.com/detail/9NCVDN91XZQP).
+4. Download [Palworld Save Converter](https://github.com/cheahjs/palworld-save-tools/releases) and extract the contents.
+5. Drag `01.sav` onto `convert.py` in the Palworld Save Converters extracted folder.
+6. Take the converted file, and once again drag it onto `convert.py`.
+7. Rename the twice converted file to `Level.sav`.
+8. Delete the `Level` folder in your save files, and drag the newly created `Level.sav` in.
+9. Using [SFTP](/getting-started/uploading-files/) upload your existing save folder and copy the folder id/name.
+10. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`.
+11. Replace the id/name with your existing folder name.
+12. Start your server.
+    
+    This is what your server files should now look like.
+    <FileTree>
+
+     - PAL
+      - Save
+        - Savegame
+          - 0
+            - **84B5E2264EC387DEDB43179D666031A1**
+              - **Level.sav** Formerly known as Level/01.sav
+              - **LevelMeta.sav**
+              - **Players/**
+    </FileTree>
+
+</Steps>
+
 :::caution
 If you have a WorldOptions.sav file in `PAL/Save/Savegames/0/84B5E2264EC387DEDB43179D666031A1/`, you must delete it otherwise it will cause issues with changing settings or connecting to your server.
 :::
