@@ -26,10 +26,12 @@ Here is how you can change the map on your 7 Day to Die server.
 If you'd like to continue playing an existing world, whether it be a downloaded custom world or RWG, the steps to do it will stay the same, here's how you can find and upload it to your server.
 <Steps>
 1. Press `Windows Key + R`.
-2. Type `%userprofile%\AppData\Roaming\7DaysToDie`.
+2. Enter this 
+   ```
+   %userprofile%\AppData\Roaming\7DaysToDie
+   ```
 3. Find your world in `GeneratedWorlds` and save data in `Saves`.
 </Steps>
-If you're using a default pregen world, you only need to change `GameWorld` and `GameName` to the worlds respective name and save file name, the upload location for your saves will be `.local/share/7DaysToDie/Saves`. 
 
 Your World file and Save data location should look something like this.
 
@@ -39,12 +41,14 @@ Your World file and Save data location should look something like this.
   - Roaming
     - 7DaysToDie
       - GeneratedWorlds
-        - WorldName
+        - WorldName/
       - Saves
         - WorldName
-          - SaveName
+          - SaveName/
 
 </FileTree>
+
+If you're using a default pregen world, you only need to change `GameWorld` and `GameName` to the worlds respective name and save file name, the upload location for your saves will be `.local/share/7DaysToDie/Saves`. 
 
 ## Uploading Existing World And Save Data
 
@@ -64,10 +68,10 @@ Your server files should now look like this.
   - share
     - 7DaysToDie
       - GeneratedWorlds
-        - WorldName
+        - WorldName/
     - Saves
       - WorldName
-        - SaveName
+        - SaveName/
       
 
 </FileTree>
