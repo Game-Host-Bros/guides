@@ -5,16 +5,17 @@ tableOfContents: false
 sidebar:
   label: Creating Databases
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 This article will guide you through the process of creating a MySQL database for your game server, which is used by some plugins to store data.
 
 ![Game Host Bros Subusers](../../../assets/guide-images/databases.png)
-
+<Steps>
 1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
 2. In the left-hand menu, click `Management > Databases`.
 3. Click the `Create` button.
 4. Select a `Host` that is closest to your server and give the database a name.
-
+</Steps>
 Now you can locate the plugin you'd like to use the MySQL database for. Open the plugin's configuration file and input the database details correctly. You will need to refer to the documentation of the plugin for the specific location.
 
 :::note

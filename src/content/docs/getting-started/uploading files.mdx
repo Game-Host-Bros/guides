@@ -5,26 +5,27 @@ tableOfContents: false
 sidebar:
   label: Uploading Files
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 This guide will walk you through the process of uploading files on your game server using the File Manager or [Filezilla](https://filezilla-project.org/download.php?show_all=1).
 
 ## Using the File Manager
 ![Game Host Bros Uploading Files](../../../assets/guide-images/uploadfiles.png)
 
-Using the File Manager is suitable for when you need to upload a small single file (Under 50mb) or edit an existing config file.
-
+Using the File Manager is suitable for when you need to upload a single, small file (Under 50mb) or edit an existing config file.
+<Steps>
 1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
 2. In the left-hand menu, click `Management > File Manager`.
 3. Press the 3 dots on the top right and click `Upload`.
-
+</Steps>
 ## Using SFTP
 This method is suitable if you're uploading multiple files or large files. You will need a program like [FileZilla](https://filezilla-project.org/download.php?show_all=1) to do this.
-
+<Steps>
 1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
 2. In the left-hand menu, click `System > SFTP Details`.
 3. Open [FileZilla](https://filezilla-project.org/download.php?show_all=1) and locate the `Quickconnect` bar.
 4. Enter the SFTP connection address you obtained from the game panel into the `Host` field.
 5. Input the `username` and the `password`. The password is the same you use to log in to the Game Panel.
 6. Click the `Quickconnect` button.
-
+</Steps>
 Once connected, you'll see your local files on the left side of the FileZilla window and your game server files on the right side. To upload files, simply locate the files on your local machine (left side), and drag and drop them to the desired location on your game server (right side).

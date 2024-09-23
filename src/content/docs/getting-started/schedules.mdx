@@ -6,6 +6,8 @@ sidebar:
   label: Schedules
 ---
 import { YouTube } from 'astro-embed';
+import { Steps } from '@astrojs/starlight/components';
+
 
 You can set up schedules to restart your server, send commands, or do game-specific tasks such as wiping Rust servers.
 
@@ -14,7 +16,7 @@ You can set up schedules to restart your server, send commands, or do game-speci
 :::note
 When setting up the schedule, the time is in UTC +0. We suggest you restart your servers at least once every 24 hours for the best possible performance.
 :::
-
+<Steps>
 1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
 2. In the left-hand menu, click `Configuration > Schedules`.
 3. Click the `Create` button.
@@ -22,7 +24,7 @@ When setting up the schedule, the time is in UTC +0. We suggest you restart your
 5. Put in the time you want the server to perform the action [in cron format](https://crontab.guru/). For example, to run the Restart at 10 UTC, I would put in 0 10 * * *.
 6. It will now say AT 10:00, Next run at November 29, 2023 @ 6:00 PM. That means at 6:00PM your time the schedule will run.
 7. Click Submit and then `Create Task` on the top right and select the type of Task you want to perform. Example: we use power action, and restart.
-
+</Steps>
 If you have multiple tasks you want to run, for example you want to run a save command then then restart the server, you can use the `Time Offset` function. This is measued in seconds and its the delay from when your last task was run.
 
 Here is a video we've made for schedules. While the Game Panel looks slightly different, the functionality is the same.

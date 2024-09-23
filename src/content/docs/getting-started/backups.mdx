@@ -5,14 +5,15 @@ tableOfContents: false
 sidebar:
   label: Backups
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 By default, we give you space to backup your server incase you need to rollback to a previous configuration.
-
+<Steps>
 1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
 2. In the left-hand menu, click `Management > Backups`.
 3. Click the `Create` button.
 4. Give your backup a name and click `Submit`.
-
+</Steps>
 It will then start a backup. During this time your server will be shut down until the backup is finished.
 
 :::note
