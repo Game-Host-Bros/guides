@@ -4,6 +4,7 @@ description: Learn how to add admins to your Valheim server.
 sidebar:
   label: Adding Admins
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components'
 
 ## Becoming An Admin
@@ -17,6 +18,17 @@ Managing player permissions—including granting administrative privileges or ba
 5. Add a new entry on its own line in SteamID64 format. You can get your SteamID from [here](https://steamid.io/). It should look like this: `76561198072786081`.
 6. Restart your server.
 </Steps>
+<FileTree>
+
+- .config
+  - unity3d
+    - IronGate
+      - Valheim
+        - adminlist.txt
+
+</FileTree>
+
+
 ## Enabling Console
 
 The Valheim in-game console is disabled by default, here are the steps to enable it if you wish to use Admin commands while playing on your server.
