@@ -9,17 +9,15 @@ import robotsTxt from "astro-robots-txt";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://guides.gamehostbros.com',
-  integrations: [starlight({
+  integrations: [
+    starlight({
     plugins: [
       starlightLinksValidator(),
       starlightImageZoom()
     ],
     title: 'Game Host Bros Guides',
     description: 'Learn how to create the best game server with our easy to follow guides.',
-    lastUpdated: true,
-    editLink: {
-      baseUrl: 'https://github.com/Game-Host-Bros/guides/edit/main/',
-    },
+    lastUpdated: false,
     customCss: ['./src/styles/custom.css'],
     logo: {
       light: './src/assets/light-logo.png',
@@ -32,6 +30,9 @@ export default defineConfig({
       youtube: 'https://www.youtube.com/@GameHostBros',
       facebook: 'https://www.facebook.com/gamehostbros/',
       'x.com': 'https://x.com/gamehostbros',
+    },
+    components: {
+      Pagination: "./src/components/CustomPagination.astro"
     },
     sidebar: [{
       label: 'Getting Started',
