@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 import sitemap from "@astrojs/sitemap";
 import starlightLinksValidator from 'starlight-links-validator'
 import starlightImageZoom from 'starlight-image-zoom'
+import starlightHeadingBadges from 'starlight-heading-badges'
 
 import robotsTxt from "astro-robots-txt";
 
@@ -13,6 +14,7 @@ export default defineConfig({
     starlight({
     plugins: [
       starlightLinksValidator(),
+      starlightHeadingBadges(),
       starlightImageZoom()
     ],
     title: 'Game Host Bros Guides',

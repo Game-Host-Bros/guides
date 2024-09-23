@@ -5,7 +5,7 @@ sidebar:
   label: Install Plugins
 ---
 
-At Game Host Bros, you can get Metamod, CounterStrikeSharp and some plugins installed on your CS2 server with a single click.
+At Game Host Bros, you can get Metamod, CounterStrikeSharp and some plugins installed on your [CS2 server](https://www.gamehostbros.com/cs2-server-hosting/) with a single click.
 
 ## Installing Metamod & CounterStrikeSharp
 

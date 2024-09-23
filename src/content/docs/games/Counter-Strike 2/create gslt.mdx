@@ -9,7 +9,7 @@ sidebar:
 ---
 import { Steps } from '@astrojs/starlight/components';
 
-Here is how you create a GSLT for CS2 and add it to your server. This is **required** by Valve to be displayed in the server list.
+Here is how you create a GSLT for [CS2](https://www.gamehostbros.com/cs2-server-hosting/) and add it to your server. This is **required** by Valve to be displayed in the server list.
 <Steps>
 1. Go [here](https://steamcommunity.com/dev/managegameservers) and login with your Steam account.
 2. Under `App ID` enter `730` for CS2, then name the memo anything you want. 
@@ -24,7 +24,11 @@ If you have the error `Cert request for invalid failed with reason code 5005.  W
 Each CS2 server you run requires its own GSLT.
 :::
 
-## Requirements for Making a GSLT
+## FAQ
+
+<details>
+<summary>What are the requirements for Making a GSLT</summary>
+
 Valve has some guidelines on what accounts are able to create a Game Server Login Token.
 
 - Your Steam account must not be currently community banned or locked.
@@ -33,8 +37,12 @@ Valve has some guidelines on what accounts are able to create a Game Server Logi
 - Your Steam account must own the game for which you are creating a game server account.
 - Your Steam account may create 1000 game server accounts.
 
-## GSLT Bans
+</details>
+<details>
+<summary>Can I get a GSLT Ban?</summary>
 
 In the past, Valve has token banned server owners that have used plugins that grant users special weapon skins, knifes or ranks. If Valve token bans you, this means you can no longer host servers from your account, and you will be temporarily banned from Competitive mode. **We strongly suggest you view Valves [Terms of Service](https://help.steampowered.com/en/faqs/view/07AF-502E-A104-BD4B)** to see what is an isn't allowed.
 
 If your GSLT is banned then you will need to use another Steam account to generate tokens in the future.
+
+</details>
