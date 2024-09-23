@@ -9,6 +9,7 @@ import { Steps } from '@astrojs/starlight/components';
 
 With Game Host Bros you can add different Subusers to help with your server. Each user you add can have their own permissions from something basic such as restarting the server, all the way up to full admin access.
 
+## How To Add Subusers To Your Server
 ![Game Host Bros Subusers](../../../assets/guide-images/subusers.png)
 <Steps>
 1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
@@ -19,3 +20,24 @@ With Game Host Bros you can add different Subusers to help with your server. Eac
 </Steps>
 
 After a Subuser is added, they will then be sent an email with further instructions on setting up their account.
+
+## Subuser Permissions
+
+Here is a list of the different things you can give subusers access to. 
+
+| Category | Description |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Support OP Access    | Toggle Support OP Access for this server in the Support tab.                                                                                                   |
+| Control             | Allows users to manage the power state or console of the server, such as viewing logs, running commands, starting, stopping, or restarting the server.          |
+| Subuser             | Allows users to manage subusers, including listing, editing, creating, and deleting them.                                                                       |
+| Allocation          | Allows users to view and modify the server's IP:Port allocations.                                                                                               |
+| Startup Parameters  | Allows users to view and modify startup variables and commands for the server.                                                                                  |
+| Database            | Allows users to manage MySQL databases, including viewing, creating, resetting passwords, and deleting databases.                                               |
+| File Manager        | Allows users to manage server files via SFTP or the File Manager, including listing, reading, writing, deleting, archiving files, and using Git actions.        |
+| Schedule            | Allows users to create, update, and delete automatic task schedules for the server.                                                                             |
+| Backup              | Allows users to manage server backups, including viewing, creating, deploying, downloading, locking, and deleting backups.                                       |
+| Details             | Allows users to view and update the server name as it appears in the panel.                                                                                      |
+| Audit Log           | Allows users to inspect the server action logs.                                                                                                                 |
+| Health Monitor      | Allows users to view and toggle the server's Health Monitor status.                                                                                              |
+| Reinstall           | Allows users to trigger a re-installation of the server.                                                                                                        |
+| Subdomain Manager   | Allows users to manage server subdomains, including viewing, creating, and deleting them.                                                                        |

@@ -7,7 +7,14 @@ sidebar:
 ---
 import { Steps } from '@astrojs/starlight/components';
 
-By default, we give you space to backup your server incase you need to rollback to a previous configuration.
+At Game Host Bros, we give you 5GB of cloud storage to backup your game server with. This will backup the most important parts of your game server such as the save folder, configs, plugins etc (This differs for each game). 
+
+:::note
+We primarily back up critical save game and configuration files to reduce unnecessary server load. To see what's included, create and download a backup to your PC. If you need all files, set up your own backup solution using SFTP and a service like [Multcloud](https://www.multcloud.com/).
+:::
+
+## Creating A Backup
+This is how you can create a backup of your server. This will turn the server off while a backup is happening.
 <Steps>
 1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
 2. In the left-hand menu, click `Management > Backups`.
@@ -16,6 +23,26 @@ By default, we give you space to backup your server incase you need to rollback 
 </Steps>
 It will then start a backup. During this time your server will be shut down until the backup is finished.
 
-:::note
-In most cases we only backup critical save game files and configuration files. This differs for each game. The reason for this is most files are of no use in most cases and place unnessecery load on our servers. You can see what is included by performing a backup of your server instance and then downloading it. If you require every file in your server instance, you will need to create your own backup solution using SFTP and a service like [Multcloud](https://www.multcloud.com/).
-:::
+## Restoring A Backup
+Restoring from a backup is great if you've accidentally modified some of your configs or save files and need to change it back. Please be aware that restoring from a backup won't fix a server that is crashing unless the crash is related to the files that are in the backup itself.
+<Steps>
+1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
+2. In the left-hand menu, click `Management > Backups`.
+3. Search for the backup you want and then click `Deploy`.
+</Steps>
+
+## Downloading A Backup
+Downloading a backup is a great way to store your game save on your local PC.
+<Steps>
+1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
+2. In the left-hand menu, click `Management > Backups`.
+3. Search for the backup you want and then click `Download`.
+</Steps>
+
+## Locking A Backup
+If you have a major server revision you don't wanted to be deleted, You can lock it, so it takes multiple steps to remove it from our panel.
+<Steps>
+1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
+2. In the left-hand menu, click `Management > Backups`.
+3. Search for the backup you want and then click `Lock`.
+</Steps>
