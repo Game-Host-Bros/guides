@@ -4,6 +4,7 @@ description: Learn how to change the map on your 7D2D server.
 sidebar:
   label: Change Maps
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 Here is how you can change the map on your 7 Day to Die server.
@@ -30,9 +31,20 @@ If you'd like to continue playing an existing world, whether it be a downloaded 
 </Steps>
 If you're using a default pregen world, you only need to change `GameWorld` and `GameName` to the worlds respective name and save file name, the upload location for your saves will be `.local/share/7DaysToDie/Saves`. 
 
-:::tip
-To ensure you're in the correct location, World files will contain a `Mapinfo.xml` file, while your Save file won't.
-:::
+Your World file and Save data location should look something like this.
+
+<FileTree>
+
+- Appdata
+  - Roaming
+    - 7DaysToDie
+      - GeneratedWorlds
+        - **WorldName**
+      - Saves
+        - WorldName
+          - **SaveName**
+
+</FileTree>
 
 ## Uploading Existing World And Save Data
 
@@ -44,6 +56,19 @@ Now that you've located your World file, the following steps will guide you on h
 3. Using [SFTP](https://guides.gamehostbros.com/getting-started/uploading-files/) upload your World to the `GeneratedWorlds` folder.
 4. For Save data. Again, using [SFTP](https://guides.gamehostbros.com/getting-started/uploading-files/) upload your Save to `.local/share/7DaysToDie/Saves/[WorldName]/[SaveName]`.
 </Steps>
+Your server files should now look like this.
+
+<FileTree>
+
+- .local
+  - share
+    - 7DaysToDie
+      - GeneratedWorlds
+        - **WorldName**
+    - Saves
+      - **SaveName**
+
+</FileTree>
 ## Enabling Uploaded World
 
 Once the data has been uploaded, to allow your server to run it you'll have to set it to use those uploaded files, specifically `GameWorld` for the map itself, and `GameName` for your save data, here's how it's done.
@@ -55,9 +80,6 @@ Once the data has been uploaded, to allow your server to run it you'll have to s
 5. Find the `GameName` line and change it to your `[SaveName]`.
 6. Click Save, and start your server.
 </Steps>
-:::tip
-Your `[SaveName]` and `[WorldName]`, can be found here, `AppData\Roaming\7DaysToDie\Saves\[WorldName]\[SaveName]`.
-:::
 
 You can check to see if it's loaded correctly by watching your server Console, it should look something like this.
 
