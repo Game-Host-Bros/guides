@@ -5,6 +5,7 @@ tableOfContents: true
 sidebar:
   label: Automatic Updates
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 At Game Host Bros, we have true automatic updates for Counter Strike 2. This means as soon as an update comes out, within 120 seconds your server will send a message to all the players on the server and restart it.
 
@@ -17,31 +18,31 @@ There is no way to interrupt this once it starts. If you're running an important
 ## How to Enable/Disable Automatic Updates
 
 This is how you can turn on automatic updates for your Counter Strike 2 server.
-
+<Steps>
 1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
 2. Go to `Configuration > Startup Parameters`.
 3. Find `Automatic Updates` and toggle it to the desired position and restart your server.
-
+</Steps>
 ## How to Change The Update Message Sent to Players
 
 By default, your CS2 server will send the message to all the players saying "The server will restart in 120 seconds for the latest CS2 update!". You can adjust this message by going to the following settings.
-
+<Steps>
 1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
 2. Go to `Configuration > Startup Parameters`.
 3. Find and change the `Automatic Update Message` field and restart your server.
-
+</Steps>
 ## Sending a Discord Alert
 
 You can also send a Discord alert to one of your channels using a Webhook. This is handy for checking your server after an update to make sure it's all running ok.
 
 ![CS2 Automatic Updates Discord](../../../../assets/guide-images/cs2-auto-updates-discord.png)
-
+<Steps>
 1. Create a channel in your Discord and a Webhook for that channel.
 2. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
 3. Go to `Configuration > Startup Parameters`.
 4. Find and change the `Automatic Update Discord Alert` and paste in your Webhook URL.
 5. Restart your server.
-
+</Steps>
 ## Frequently Asked Questions
 
 **Q.** Can I change the Discord message?  

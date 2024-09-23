@@ -4,6 +4,7 @@ description: Learn how to play workshop maps with friends on your server.
 sidebar:
   label: Play Workshop Maps
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 There are 2 different methods you can use for workshop maps. One is by loading a single map or creating a collection.
 
@@ -28,7 +29,7 @@ Your collection must be active, approved and set public to work on a server. Col
 - An active [GSLT (Game Server Token)](/games/counter-strike-2/create-gslt/)
 
 Let's first create the collection.
-
+<Steps>
 1. Go to the [CS2 Collections page here](https://steamcommunity.com/workshop/browse/?appid=730&section=collections).
 2. Click `Create Collection` and add the maps you want to that collection.
 3. Get the Collection ID from the URL (using the same method as getting the map ID)
@@ -36,7 +37,7 @@ Let's first create the collection.
 5. Make sure `Workshop Type` is set to `Workshop Collection`
 ![workshop collection ID](../../../../assets/guide-images/workshop-collection-id.png)
 6. Select `Workshop ID`, and put your Collection ID in there and restart your server.
-
+</Steps>
 After that, simply restart the server and all the maps will be available. Type `ds_workshop_listmaps` in your console to check. You also don't need to edit any mapgroup or mapcycle files as CS2 will automatically create one for you.
 
 :::caution
@@ -48,16 +49,16 @@ The first time you restart the server with a new collection, it will need to dow
 If you want to play a single workshop map with friends, you only need to know the single Workshop Map ID. Using the Workshop ID from our example above, go to your server and type this into the console: `host_workshop_map 3070288532`. It will then load the map you want. 
 
 If you always want to load this map, then follow these steps.
-
+<Steps>
 1. Go to your server in the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select `Configuration > Startup Parameters`.
 2. Make sure `Workshop Type` is set to `Single Workshop Map`.
 3. Select Workshop ID, and put your map ID in there and restart the server.
-
+</Steps>
 ## How To Update Workshop Maps
-
+<Steps>
 1. Go to your server in the [Game Host Bros Panel](https://panel.gamehostbros.com/).
 2. Click `Restart`
-
+</Steps>
 ## CS2 Workshop Commands
 
 Here are the most common commands you can use.

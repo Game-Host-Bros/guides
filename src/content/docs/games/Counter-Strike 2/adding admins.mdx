@@ -4,13 +4,14 @@ description: In this guide we will show you how you can add admins on your Count
 sidebar:
   label: Adding Admins
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 One of the biggest struggles we've seen with new CS2 server owners is setting up admin perms on their new server. At Game Host Bros, we've made it so our panel will take care of creating all the admin and group files that are needed.
 
 ## Automatically Setting Up Admins
 
 This is the fastest way of setting up admins in CS2. This will set all the player flags to `@css/root` and add them to the `#css/admin` group. In most cases this means they will have access to everything.
-
+<Steps>
 1. Make sure [Enable Modding](/games/counter-strike-2/install-plugins/) is turned on.
 2. Get the link to your Steam profile, and input it into https://steamid.io/ 
 3. Copy your `steamID64` ID.
@@ -18,7 +19,7 @@ This is the fastest way of setting up admins in CS2. This will set all the playe
 5. In the sidebar click on `Configuration > Startup Parameters`.
 6. Look for `Admin SteamID64s` and paste your ID there.
 7. Restart your server.
-
+</Steps>
 You can add multiple admins by adding a comma between each SteamID64 like this `76561197990711958,76561198034202275`
 
 :::note
