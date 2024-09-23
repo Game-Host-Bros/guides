@@ -8,28 +8,26 @@ import { Steps } from '@astrojs/starlight/components';
 
 In this guide you will learn how to install plugins on your Quake Live server using MinQLX.
 
-## Installing MinQLX
+## Enable MinQLX
 
-MinQLX is the framework that allows plugins to interface with Quake Live. By default, we have MinQLX installed on every instance. It simply needs to be toggled on.
+MinQLX is the framework that allows plugins to interface with Quake Live. By default, we have MinQLX installed on every Game Host Bros Quake Live instance. It simply needs to be enabled.
 <Steps>
-1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/).
-2. Select your server.
-3. In the left-hand menu, click `Configuration > Startup Parameters`.
-4. Look for `MinQLX` and toggle it on.
-5. Restart your Quake Live server.
+1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
+2. In the left-hand menu, click `Configuration > Startup Parameters`.
+3. Look for `MinQLX` and toggle it on.
+4. Restart your Quake Live server.
 </Steps>
 You can toggle this off at any time if you need to revert back to the Vanilla QL version for any reason.
 
 ## Installing Plugins
 <Steps>
-1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/).
-2. Select your server.
-3. In the left-hand menu, click `Management > File Manager`.
-4. Open the `minqlx-plugins` folder.
-5. Drag your plugin .py file inside.
-6. In the left-hand menu, click `Configuration > Startup Parameters`.
-7. Look for MinQLX Plugins and add your plugin name to the end of the list.
-8. Restart your server.
+1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
+2. In the left-hand menu, click `Management > File Manager`.
+3. Open the `minqlx-plugins` folder.
+4. Drag your plugin .py file inside.
+5. In the left-hand menu, click `Configuration > Startup Parameters`.
+6. Look for MinQLX Plugins and add your plugin name to the end of the list.
+7. Restart your server.
 </Steps>
 Please make sure to follow the instructions for each plugin as some need extra dependencies added to `minqlx-plugins/requirements.txt`. This file is checked every time your server is started with the MinQLX mod enabled.
 

@@ -12,12 +12,11 @@ Setting up a custom factory on your Quake Live server is an advanced approach th
 
 By default we have 22 factories pre-loaded to our Quake Live servers. This is how you add them to your mappool.txt file.
 <Steps>
-1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
-2. Click on your Quake Live server.
-3. In the sidebar click on `Management > File Manager`.
-4. Select the `baseq3` folder.
-5. Select your mappool.txt file.
-6. Replace the `ID` after the map name.
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Quake Live server.
+2. In the sidebar click on `Management > File Manager`.
+3. Select the `baseq3` folder.
+4. Select your mappool.txt file.
+5. Replace the `ID` after the map name.
 </Steps>
 You can change what map pool file is used under `Startup Parameters`. Here is a list of all Quake Live factory ID's.
 
@@ -48,12 +47,11 @@ You can change what map pool file is used under `Startup Parameters`. Here is a 
 
 ## Creating a Custom Factory
 <Steps>
-1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
-2. Click on your Quake Live server.
-3. In the sidebar click on `Management > File Manager`.
-4. Select the `baseq3` folder.
-5. Create a new folder within `baseq3` and name it `scripts`.
-6. Inside the `scripts` folder, create a new file with a `.factories` extension, like `mynewgametype.factories`. It can be called anything 
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Quake Live server.
+2. In the sidebar click on `Management > File Manager`.
+3. Select the `baseq3` folder.
+4. Create a new folder within `baseq3` and name it `scripts`.
+5. Inside the `scripts` folder, create a new file with a `.factories` extension, like `mynewgametype.factories`. It can be called anything 
 </Steps>
 ## Understand the Factory File Structure
 This `.factories` file is a JSON file. It should contain a JSON array with multiple factories or a single JSON object for one factory. A factory example is provided below, demonstrating an InstaGib FFA factory setup:
@@ -80,9 +78,9 @@ This `.factories` file is a JSON file. It should contain a JSON array with multi
  }
  ```
 
-- 'id': A unique identifier for your factory, used in map pools or callvotes.
-- 'title', 'author', 'description': Strings that provide information about the factory, visible in the 'Start Match' screen.
-- 'basegt': Specifies the base game type. Valid entries are 'ffa', 'duel', 'race', 'tdm', 'ca', 'ctf', 'oneflag', 'har', 'ft', 'dom', 'ad', 'rr'.
-- 'cvars': An object containing pairs of custom game variable (cvar) names and their corresponding values.
+- `id`: A unique identifier for your factory, used in map pools or callvotes.
+- `title`, `author`, `description`: Strings that provide information about the factory, visible in the 'Start Match' screen.
+- `basegt`: Specifies the base game type. Valid entries are 'ffa', 'duel', 'race', 'tdm', 'ca', 'ctf', 'oneflag', 'har', 'ft', 'dom', 'ad', 'rr'.
+- `cvars`: An object containing pairs of custom game variable (cvar) names and their corresponding values.
 
 When the server starts, it attempts to validate all factory files. If there are errors in your custom factory file, these will be noted in the console, and the erroneous factory will not be available for selection. To find errors in your file, you can use a [JSON validator](https://jsonlint.com/) show you where the error is.

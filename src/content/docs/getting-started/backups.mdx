@@ -6,6 +6,7 @@ sidebar:
   label: Backups
 ---
 import { Steps } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
 
 At Game Host Bros, we give you 5GB of cloud storage to backup your game server with. This will backup the most important parts of your game server such as the save folder, configs, plugins etc (This differs for each game). 
 
@@ -22,7 +23,11 @@ This is how you can create a backup of your server. This will turn the server of
 4. Give your backup a name and click `Submit`.
 </Steps>
 It will then start a backup. During this time your server will be shut down until the backup is finished.
-
+<LinkCard
+  title="Schedules"
+  href="/getting-started/schedules/"
+  description="Automate backups using schedules."
+/>
 ## Restoring A Backup
 Restoring from a backup is great if you've accidentally modified some of your configs or save files and need to change it back. Please be aware that restoring from a backup won't fix a server that is crashing unless the crash is related to the files that are in the backup itself.
 <Steps>
