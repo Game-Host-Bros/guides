@@ -4,6 +4,7 @@ description: Learn how to fix common Palworld server issues.
 sidebar:
   label: Troubleshooting
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 Here are common Palworld server issues and how to fix them.
 
@@ -25,47 +26,4 @@ Your server needs to be updated. You can restart your server to apply the latest
 
 ### steamclient.so: cannot open shared object file: No such file or directory
 
-When you start your server you will see a bunch of random error messages from Steam. These are normal and are safe to ignore. Here is what a normal console looks like. 
-
-```sh
-[Game Host Bros] Server marked as STARTING
-[Game Host Bros] Checking size of server data directory...
-[Game Host Bros] Disk Usage: 4365M / 15000M
-[Game Host Bros] Ensuring file permissions.
-[Game Host Bros] Running server preflight.
-[Game Host Bros] Starting server container.
-steam user is not set.
-Using anonymous user.
-tid(27) burning pthread_key_t == 0 so we never use it
-WARNING: setlocale('en_US.UTF-8') failed, using locale: 'C'. International characters may not work.
-Redirecting stderr to '/home/container/Steam/logs/stderr.txt'
-Logging directory: '/home/container/Steam/logs'
-[  0%] Checking for available updates...
-[----] Verifying installation...
-Steam Console Client (c) Valve Corporation - version 1705108307
--- type 'quit' to exit --
-Loading Steam API...dlmopen steamservice.so failed: steamservice.so: cannot open shared object file: No such file or directory
-OK
-Connecting anonymously to Steam Public...OK
-Waiting for client config...OK
-Waiting for user info...OK
-Success! App '2394010' already up to date.
-:/home/container$ /home/container/Pal/Binaries/Linux/PalServer-Linux-Test Pal -port=7777 -players=200 -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS -publicip 51.161.199.6 -publicport 7777 EpicApp=PalServer -servername="GhostCap Palworld"
-Shutdown handler: initalize.
-- Existing per-process limit (soft=1048576, hard=1048576) is enough for us (need only 1048576)
-Increasing per-process limit of core file size to infinity.
-- Existing per-process limit (soft=18446744073709551615, hard=18446744073709551615) is enough for us (need only 18446744073709551615)
-dlopen failed trying to load:
-steamclient.so
-with error:
-steamclient.so: cannot open shared object file: No such file or directory
-[S_API] SteamAPI_Init(): Loaded '/home/container/.steam/sdk64/steamclient.so' OK.  (First tried local 'steamclient.so')
-CAppInfoCacheReadFromDiskThread took 6 milliseconds to initialize
-dlmopen steamservice.so failed: steamservice.so: cannot open shared object file: No such file or directory
-Setting breakpad minidump AppID = 2394010
-[Game Host Bros] Server marked as ON
-[S_API FAIL] Tried to access Steam interface SteamUser021 before SteamAPI_Init succeeded.
-[S_API FAIL] Tried to access Steam interface SteamFriends017 before SteamAPI_Init succeeded.
-[S_API FAIL] Tried to access Steam interface STEAMAPPS_INTERFACE_VERSION008 before SteamAPI_Init succeeded.
-[S_API FAIL] Tried to access Steam interface SteamNetworkingUtils004 before SteamAPI_Init succeeded.
-```
+When you start your server you will see a bunch of random error messages from Steam. These are normal and are safe to ignore.

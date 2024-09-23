@@ -1,51 +1,43 @@
 ---
 title: How To Install Mods to Your BeamMP Server
 description: Learn how to install mods to your BeamMP server with this comprehensive guide.
-tableOfContents: false
+tableOfContents: true
 sidebar:
   label: Installing Mods
 ---
 import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 
 Adding mods to your BeamMP server is a great way to enhance gameplay, introduce new features, and keep your community engaged. This guide will walk you through the steps to easily upload and enable mods on your BeamMP server using the Game Host Bros Panel. Follow these steps to customize your server and create a unique gaming experience for your players.
 
 ## Uploading Mods to Your Server
 To start using mods on your BeamMP server, you need to upload them to the correct directory. Here's how:
 
+<Steps>
 1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your BeamMP server.
 2. In the sidebar go to `Management > File Manager`.
 3. Upload your mod files (usually `.zip` or `.pc` format) to the `/Resources/Client/` directory on your server. For files larger than 100mb you will need to use [SFTP](https://guides.gamehostbros.com/getting-started/uploading-files/).
-<FileTree>
-
-- Resources
-  - Client
-    - R33-Skyline.zip
-    - Toyota-supra-mod.zip
-  - Server
-    - ...
-
-</FileTree>
+   <FileTree>
+   - Resources
+     - Client
+       - R33-Skyline.zip
+       - Toyota-supra-mod.zip
+   </FileTree>
 4. Restart your server to apply the changes.
+</Steps>
 
 In the server console you should see the mods loaded like this `[INFO] Loaded 9 Mods`.
 
 ## Managing Mod Load Order (Optional)
 Some mods are required to be loaded in a specific order. To manage the mod load order, follow these steps:
-
+<Steps>
 1. Go to `Files > SFTP` in the Game Host Bros Panel and access the `/Resources/Client/` directory.
 2. Rename the mod files to reflect the desired load order, using prefixes like `001_`, `002_`, etc.
-<FileTree>
-
-- Resources
-  - Client
-    - 001_R33-Skyline.zip
-    - 002_Toyota-supra-mod.zip
-  - Server
-    - ...
-
-</FileTree>
+   <FileTree>
+   - Resources
+     - Client
+       - 001_R33-Skyline.zip
+       - 002_Toyota-supra-mod.zip
+   </FileTree>
 3. Save the changes and restart your server.
-
-:::tip
-If you're experiencing conflicts between mods, try adjusting the load order to prioritize certain mods over others.
-:::
+</Steps>

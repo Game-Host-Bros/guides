@@ -4,6 +4,7 @@ description: Step-by-step guide on how to upload your save file to your Palworld
 sidebar:
   label: Upload Existing Save
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 In this tutorial, we will guide you through the process of uploading an existing world and player save file to your Palworld dedicated server.
 
@@ -19,33 +20,33 @@ You cannot transfer Xbox saves from the cloud to a dedicated server.
 :::
 
 ## Transfer from another Palworld dedicated server
-
+<Steps>
 1. On your existing server, navigate to `PAL/Save/Savegame/0` and backup the folder with random numbers and letters.
 2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Palworld server.
 3. In the sidebar go to `Management > File Manager`.
 4. Once there navigate to `PAL/Save/Savegames/0`.
-5. Delete the default save folder (It should have a random number like this 723687123871537817243).
+5. Delete the default save folder (It should have a random number like this 84B5E2264EC387DEDB43179D666031A1).
 6. Upload your existing folder and take note of the folder id/name. 
 7. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`
 8. Replace the id/name with your existing folder name.
 9. Start your server.
-
+</Steps>
 :::caution
-If you have a WorldOptions.sav file in `PAL/Save/Savegames/0`, you must delete it or configure it to use our server settings (We do not recommend this. If you misconfigure this file you will not be able to access your server). You can [configure it here.](/games/palworld/configure-palworld/)
+If you have a WorldOptions.sav file in `PAL/Save/Savegames/0/84B5E2264EC387DEDB43179D666031A1/`, you must delete it otherwise it will cause issues with changing settings or connecting to your server.
 :::
 
 ## Transfer from a Palworld Co-op save
-
+<Steps>
 1. Go to `Appdata\Local\PAL\Saved\SaveGames` on your local computer and backup the folder (You may need to allow hidden folders under (View))
 2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Palworld server.
 3. In the Game Host Bros panel go to `Management > File Manager`
 4. Once there navigate to `PAL/Save/Savegames/0`
-5. Delete the default save folder (It should have a random number like this 723687123871537817243).
+5. Delete the default save folder (It should have a random number like this 84B5E2264EC387DEDB43179D666031A1).
 6. Upload your existing folder and take note of the folder id/name. 
 7. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`
 8. Replace the id/name with your existing folder name.
 9. Start your server.
-
+</Steps>
 :::caution
-If you have a WorldOptions.sav file in `PAL/Save/Savegames/0`, you must delete it or configure it to use our server settings (We do not recommend this. If you misconfigure this file you will not be able to access your server). You can [configure it here.](/games/palworld/configure-palworld/)
+If you have a WorldOptions.sav file in `PAL/Save/Savegames/0/84B5E2264EC387DEDB43179D666031A1/`, you must delete it otherwise it will cause issues with changing settings or connecting to your server.
 :::

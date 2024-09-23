@@ -5,11 +5,12 @@ tableOfContents: true
 sidebar:
   label: Changing Difficulty
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 Are you looking for a relaxing experience but feeling the wrath of the game? Or does an unforgiving higher difficulty adventure best suit your needs? Anyway, here is how to change the difficulty for your Ark Survival Evolved server.
 
 ## How To Change The Difficulty On Your Ark Survival Evolved Server
-
+<Steps>
 1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Ark server.
 2. Click `Console > Stop Server`.
 2. Click `Management > File Manager`.
@@ -17,7 +18,7 @@ Are you looking for a relaxing experience but feeling the wrath of the game? Or 
 4. Under `[ServerSettings]` add the lines `DifficultyOffset=` and `OverrideOfficialDifficulty=`.
 5. Edit the values, The parameters for `DifficultyOffset=` are `0.2->1.0`, with `OverrideOfficialDifficulty=` being `1.0->10.0`.
 6. Start your server.
-
+</Steps>
 :::tip
 If you set `DifficultyOffset=1.0` and `OverrideOfficialDifficulty=1.0` then the max dino level will be 30. Setting `OverrideOfficialDifficulty=2.0` will double it to 60, and so on.
 :::
@@ -25,10 +26,10 @@ If you set `DifficultyOffset=1.0` and `OverrideOfficialDifficulty=1.0` then the 
 ## Respawning Wild Dinos
 
 If you don't know how to use admin commands, first follow our guide [here](https://guides.gamehostbros.com/games/ark-survival-evolved/adding-admins/) to become an admin. 
-
+<Steps>
 1. Connect to your server.
 2. Open Console by pressing `Tab`.
 3. Type `admincheat DestroyWildDinos`
-
+</Steps>
 Now higher level Dinos well begin to spawn, it may take awhile, but they'll be back stronger, (or weaker) than ever!
 

@@ -5,36 +5,37 @@ tableOfContents: true
 sidebar:
   label: Adding Admins
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 Many important things in Ark Survival Evolved require Administrator permissions. You can do things such as: enable flight, use the in-game admin panel, manage players and much more. 
 
 Here is how to add admins to your Ark Survival Evolved server. 
 
 ## Setting An Admin Password
-
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and open your Ark Survival Evolved server.
 2. Click `Configuration > Startup Parameters`.
 3. Look for `Admin Password` and then type the password you want.
 4. Go back to the console page, then restart your server.
-
+</Steps>
 ## Make Yourself Admin in Ark Survival Evolved
-
+<Steps>
 1. Open Ark Survival Evolved and connect to your server.
 2. Press `Tab` twice to open Console.
 3. Type `enablecheats [YourAdminPassword]`
 4. You may test with `cheat fly`, to disable this type `cheat walk`.
-
+</Steps>
 
 ## Whitelisting Admins With AllowedCheaterSteamIDs.txt
 
 If you don't want to manually add yourself as an Admin through the in-game console, here's how you can set yourself as an Admin in the game files so you'll automatically become one as soon as you join!
-
+<Steps>
 1. Connect to your server.
 2. Open the larger Console by pressing `Tab` twice.
 3. To find your Ark ID type `whoami` in Console.
 4. Create the file `AllowedCheaterSteamIDs.txt` In `ShooterGame/Saved/`.
 5. List the Ark IDs - One per line, of the players you wish to set as Admin.
-
+</Steps>
 :::tip
 Did you know? There's also an Admin panel in-game, the command to use it is `showmyadminmanager`.
 :::

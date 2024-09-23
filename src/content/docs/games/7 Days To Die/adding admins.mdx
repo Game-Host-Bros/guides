@@ -1,15 +1,22 @@
 ---
 title: How To Add Admins In 7 Days To Die
 description: Learn how to add admins to your 7 Days To Die server.
+tableOfContents: false
 sidebar:
   label: Adding Admins
 ---
+import { Steps } from '@astrojs/starlight/components';
 
-In this guide you will learn how to add admins to your 7D2D server.
+In this guide you will learn how to add admins to your 7D2D server. For this guide you will need to have your [SteamID64](https://steamid.io/).
 
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your 7D2D server.
 2. In the sidebar click on `Management > File Manager`.
 3. Select the `.local/share/7DaysToDie/Saves/` folder.
 4. Here, find the file named `serveradmin.xml`.
-5. Add a new entry on its own line under users in SteamID64 format. You can get your SteamID from [here](https://steamid.io/). It should look like this: `<user platform="Steam" userid="76561198106341655" name="[You!]" permission_level="0" />`.
+5. Add a new entry on its own line under users in SteamID64 format. It should look like this:
+   ```xml title="serveradmin.xml"
+   <user platform="Steam" userid="76561198106341655" name="[You!]" permission_level="0" />
+   ```
 6. Restart your server.
+</Steps>

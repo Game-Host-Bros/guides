@@ -1,9 +1,11 @@
 ---
 title: How To Change Your BeamMP Server Version
 description: Learn how to change the version of your BeamMP server to run an older or pre-release version.
+tableOfContents: false
 sidebar:
   label: Change Server Version
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 Sometimes, you might want to switch your BeamMP server to a different version. This could be to:
 
@@ -12,12 +14,12 @@ Sometimes, you might want to switch your BeamMP server to a different version. T
 - Troubleshoot issues by reverting to a previous stable release.
 
 Here is how you can change your BeamMP server to a specific version:
-
+<Steps>
 1. Find the version number you want to switch to from the [BeamMP Server Releases](https://github.com/BeamMP/BeamMP-Server/releases), e.g., `v3.5.1`.
 2. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your BeamMP server.
 3. Go to `Configuration > Startup Parameters`.
 4. Change the `BeamMP Server Version` to your desired version (e.g., `v3.5.1`).
 5. Navigate to `Advanced > Reinstall Server`. This will reinstall the server with the specified version without deleting any mods or tracks.
 6. Start your server.
-
+</Steps>
 You can verify that the server version has changed by checking the version number in the server console.

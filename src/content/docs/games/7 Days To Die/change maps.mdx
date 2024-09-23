@@ -4,30 +4,30 @@ description: Learn how to change the map on your 7D2D server.
 sidebar:
   label: Change Maps
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 Here is how you can change the map on your 7 Day to Die server.
-
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
 2. Go to `Management > File Manager`.
 3. Open the `serverconfig.xml` file.
-4. Look for the `GameWorld` line and change the map to one of the following.
+4. Look for the `GameWorld` line and change the map to one of the following:
 
-- Navezgane - The default map.
-- RWG - Randomly generates a new map according to the WorldGenSeed.
-- Custom Folder Name - The name of the custom world folder located in `.local/share/7DaysToDie/GeneratedWorlds`
-
-If you're using RWG then you will need to change `WorldGenSeed` and `WorldGenSize`. Bigger map sizes will take long to generate and you may need a higher ram plan if it fails.
+   - **Navezgane**: The default map.
+   - **RWG**: Randomly generates a new map according to the WorldGenSeed.
+   - **Custom Folder Name**: The name of the custom world folder located in `.local/share/7DaysToDie/GeneratedWorlds`
 
 5. Click Save and start your server.
+</Steps>
 
 ## Locating Existing World And Save Data
 
 If you'd like to continue playing an existing world, whether it be a downloaded custom world or RWG, the steps to do it will stay the same, here's how you can find and upload it to your server.
-
+<Steps>
 1. Press `Windows Key + R`.
 2. Type `%userprofile%\AppData\Roaming\7DaysToDie`.
 3. Find your world in `GeneratedWorlds` and save data in `Saves`.
-
+</Steps>
 If you're using a default pregen world, you only need to change `GameWorld` and `GameName` to the worlds respective name and save file name, the upload location for your saves will be `.local/share/7DaysToDie/Saves`. 
 
 :::tip
@@ -38,29 +38,30 @@ To ensure you're in the correct location, World files will contain a `Mapinfo.xm
 
 Now that you've located your World file, the following steps will guide you on how to upload and use it on your 7D2D server.
 
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
 2. In `Management > File Manager`, navigate to `.local/share/7DaysToDie/GeneratedWorlds`.
 3. Using [SFTP](https://guides.gamehostbros.com/getting-started/uploading-files/) upload your World to the `GeneratedWorlds` folder.
 4. For Save data. Again, using [SFTP](https://guides.gamehostbros.com/getting-started/uploading-files/) upload your Save to `.local/share/7DaysToDie/Saves/[WorldName]/[SaveName]`.
-
+</Steps>
 ## Enabling Uploaded World
 
 Once the data has been uploaded, to allow your server to run it you'll have to set it to use those uploaded files, specifically `GameWorld` for the map itself, and `GameName` for your save data, here's how it's done.
-
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
 2. Go to `Management > File Manager`.
 3. Open the `serverconfig.xml` file.
 4. Look for the `GameWorld` line and change it to your `[WorldName]`.
 5. Find the `GameName` line and change it to your `[SaveName]`.
 6. Click Save, and start your server.
-
+</Steps>
 :::tip
 Your `[SaveName]` and `[WorldName]`, can be found here, `AppData\Roaming\7DaysToDie\Saves\[WorldName]\[SaveName]`.
 :::
 
 You can check to see if it's loaded correctly by watching your server Console, it should look something like this.
 
-```sh
+```bash
 [Game Host Bros] Server marked as ON
 World:       `[WorldName]`
 Game name:   `[SaveName]`

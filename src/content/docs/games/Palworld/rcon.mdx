@@ -4,45 +4,33 @@ description: Learn how to use RCON on your Palworld server along with all the co
 sidebar:
   label: RCON
 ---
+import { Steps } from '@astrojs/starlight/components';
 
-This guide provides step-by-step instructions on how to set up and manage your Palworld server using RCON. This guide also assume you've already set up your [Palworldsettings.ini file](/games/palworld/configure-palworld/)
-
-:::caution
-By default, we don't allocate you an extra port for Palworld RCON. Simply contact support, and we will add this to your server for you. 
+Game Host Bros servers have RCON enabled by default, however for security reasons you're restricted to using the web console directly. If you require external access, then  contact support and we will open external access for you.
 :::
 
-## Enabling RCON
+## Changing Your Palworld RCON Password
 
-To enable RCON on your Palworld server, follow these steps. 
-
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
-2. Once on your Palworld Service, ensure you stop it before proceeding.
-3. Once stopped, on the left, navigate to `Management` then `File Manager`.
-4. Inside the File Manager, open the file `/Pal/Saved/Config/WindowsServer/PalWorldSettings.ini`.
-5. Edit these values
-
-RCONPort=255575
-RCONEnabled=True
-AdminPassword="yourpasswordhere"
-
-6. Start your server. 
-
-Make sure the RCON port is the port we provided you.
+2. Navigate to `Configuration` then `Startup Parameters`.
+3. Look for `Admin Password` and replace it with the password you want to set.
+4. Start your server. 
+</Steps>
 
 ## RCON Commands
 
 Here is a list of all the Palworld RCON commands
 
-| Command                  | Unique Description                                |
-|--------------------------|---------------------------------------------------|
-| `broadcast message_here` | Replace spaces with underscores in your message to prevent it from being truncated. |
-| `KickPlayer SteamID`     | Input the SteamID of the player you wish to remove from the server. |
-| `BanPlayer SteamID`      | Specify the SteamID of the player you intend to banish from the server. |
-| `ShowPlayers`            | Displays a list of all players currently active on the server. |
-| `Info`                   | Provides detailed information about the server's status. |
-| `Save`                   | Triggers an immediate save of the server's current state. |
-
-:::note
-There is also the commands `DoExit` & `Shutdown`, but we don't recommend using them on our servers.
-:::
-
+| Command                         | Description                                                                 |
+|----------------------------------|-----------------------------------------------------------------------------|
+| AdminPassword                   | Obtain administrative privileges using a password.                          |
+| Shutdown [Seconds] [MessageText]| Shutdown the server. If [Seconds] is specified, the server will shut down after the specified time has elapsed. The server participant will be notified of what you have entered in [MessageText]. |
+| DoExit                          | Force stop the server.                                                     |
+| Broadcast MessageText         | Send message to all players in the server.                                  |
+| KickPlayer SteamID            | Kick player SteamID from the server.                                      |
+| BanPlayer SteamID             | Ban player SteamID from the server.                                       |
+| ShowPlayers                     | Show information on all connected players.                                  |
+| Info                            | Show server information.                                                    |
+| Save                            | Save the world data.                                                        |
+| UnBanPlayer SteamID           | Unban player SteamID from the server.                                     |

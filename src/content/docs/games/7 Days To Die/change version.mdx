@@ -4,19 +4,20 @@ description: Learn how to change your 7D2D version for clients and your server.
 sidebar:
   label: Change Version
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 Here is how you can change your 7D2D version for both your server and game client.
 
 ## Change 7D2D Server Version
 
 Changing the server version is only available with 7D2D Vanilla versions. As mods only work with specific versions of 7D2D, we enforce those server versions for those particular mods.
-
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your 7D2D server.
 2. Go to `Configuration > Startup Parameters`.
 3. Look for `Server Version` and enter the version you want to use such as `public` for the latest stable, `alpha20.7` for an older version or `latest_experimental` for the latest beta build.
 4. In the sidebar select `Configuration > Advanced`.
 5. Click `Reinstall Server`.
-
+</Steps>
 :::danger
 Changing server versions may cause issues with your world file so make sure you always take a backup first.
 :::
@@ -46,8 +47,9 @@ Here is a list of all the current versions you can use:
 - alpha8.8
 
 ## Change 7D2D Client Version On Steam
-
+<Steps>
 1. Right-click 7 Days to Die on Steam and select `Properties`.
 2. Go to the `Betas` tab.
 3. From the dropdown menu, select the 7D2D version you want to play.
 4. Click ok and let Steam install the required files.
+</Steps>
