@@ -4,23 +4,24 @@ description: Learn how to install plugins your Quake Live server using MinQLX.
 sidebar:
   label: Install Plugins
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 In this guide you will learn how to install plugins on your Quake Live server using MinQLX.
 
 ## Installing MinQLX
 
 MinQLX is the framework that allows plugins to interface with Quake Live. By default, we have MinQLX installed on every instance. It simply needs to be toggled on.
-
+<Steps>
 1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/).
 2. Select your server.
 3. In the left-hand menu, click `Configuration > Startup Parameters`.
 4. Look for `MinQLX` and toggle it on.
 5. Restart your Quake Live server.
-
+</Steps>
 You can toggle this off at any time if you need to revert back to the Vanilla QL version for any reason.
 
 ## Installing Plugins
-
+<Steps>
 1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/).
 2. Select your server.
 3. In the left-hand menu, click `Management > File Manager`.
@@ -29,7 +30,7 @@ You can toggle this off at any time if you need to revert back to the Vanilla QL
 6. In the left-hand menu, click `Configuration > Startup Parameters`.
 7. Look for MinQLX Plugins and add your plugin name to the end of the list.
 8. Restart your server.
-
+</Steps>
 Please make sure to follow the instructions for each plugin as some need extra dependencies added to `minqlx-plugins/requirements.txt`. This file is checked every time your server is started with the MinQLX mod enabled.
 
 ## Quake Live Plugins List

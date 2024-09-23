@@ -4,6 +4,7 @@ description: Step-by-step guide on how to upload your save file to your Sons Of 
 sidebar:
   label: Upload Save
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 In this tutorial, we will guide you through the process of uploading an existing world and player save file to your Sons Of The Forest dedicated server.
 
@@ -15,24 +16,24 @@ You **MUST** convert any single player save to a multiplayer save on your local 
 
 ## Locating your existing Sons Of The Forest save files
 To start we first need to get your existing save file from your local PC.
-
+<Steps>
 1. Press `Win + R` on your keyboard to open the Run dialog.
 2. Copy and paste `%USERPROFILE%\AppData\LocalLow\Endnight\SonsOfTheForest\Saves\{YOUR-STEAM-ID}\SinglePlayer` into the Run window and press OK.
 3. Here you will see a folder with random numbers, inside this folder you will find your `SaveData.zip`.
-
+</Steps>
 ## Convert your single player save to a multiplayer save.
-
+<Steps>
 1. After you've completed the above and copied your `SaveData.zip` file, move it to `%USERPROFILE%\AppData\LocalLow\Endnight\SonsOfTheForest\Saves\{YOUR-STEAM-ID}\Multiplayer`.
 2. Open Sons of the forest and click `Multiplayer > Host Game > Continue > Load Game`, and select the world you want and click `Start`.
 3. Once in the game manually save the game using a Tarp or Tent and then close the game.
 4. Navigate to `%USERPROFILE%\AppData\LocalLow\Endnight\SonsOfTheForest\Saves\{YOUR-STEAM-ID}\Multiplayer` and copy the newly created save.
-
+</Steps>
 ## Uploading your existing Sons Of The Forest save to your server
-
+<Steps>
 1. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Sons Of The Forest server.
 2. In the Game Host Bros panel go to `Management > File Manager`
 3. Once there navigate to `/serverconfig/Saves/DedicatedServer/Multiplayer/0000000001` and delete all the `SaveData.zip` inside (back this up if you want to save this world).
 4. [Upload](/getting-started/uploading-files/) your latest `SaveData.zip` file.
 5. Start your server.
-
+</Steps>
 

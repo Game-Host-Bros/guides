@@ -4,6 +4,7 @@ description: Learn how to configure your V Rising Server
 sidebar:
   label: Configure Your Server
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 In V Rising, there are 2 methods to configure your server. For basic settings you will edit everything from the Game Panel [Startup Parameters](/getting-started/beginners-guide/#edit-server-settings) screen. The other more advance way is to use the ServerGameSettings.json file.
 
@@ -12,9 +13,9 @@ In V Rising, there are 2 methods to configure your server. For basic settings yo
 By default, this file is not created automatically. You need to use one of the base game files as a template to generate it or use the example file below.
 
 :::danger
-Make sure Game Setting Preset is set to blank/Unknown under Startup Parameters to use ServerGameSettings.json.
+Make sure Game Setting Preset is set to blank/Unknown under Startup Parameters to use a custom ServerGameSettings.json.
 :::
-
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your V Rising server.
 2. Go to `System > Console` and Stop your server.
 3. Click on `Management > File Manager.`
@@ -22,10 +23,7 @@ Make sure Game Setting Preset is set to blank/Unknown under Startup Parameters t
 5. Click the 3 dots on the right-hand side of the file and click `Download`.
 6. After you've made your changes, navigate to `/save-data/Settings` and drag your modified file in.
 7. Rename it to `ServerGameSettings.json` and restart your server.
-
-:::tip[Did you know?]
-You have to leave the Game Settings Preset empty in Startup Parameters to use this file.
-:::
+</Steps>
 
 :::danger
 Do NOT edit the files directly inside `VRisingServer_Data/StreamingAssets/GameSettingPresets` as they will be overwritten on an update.

@@ -4,6 +4,7 @@ description: Learn how to setup FastDL for your Quake 3 Arena server.
 sidebar:
   label: FastDL
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 Quake 3 Arena by default doesn't let players download from your server, but at Game Host Bros, we have your server set to `sv_allowDownload 1`. This means that any player can join and download maps.
 
@@ -18,7 +19,7 @@ Players must have `cl_allowDownload 1` to be able to join a server with custom m
 :::
 
 ## How To Sync Your FastDL
-
+<Steps>
 1. Go to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
 2. On the left-hand side, go to `Tools > FastDL`.
 3. Click `Sync FastDL`.
@@ -26,7 +27,7 @@ Players must have `cl_allowDownload 1` to be able to join a server with custom m
 5. Open your `server.cfg`, located in `baseq3/server.cfg`.
 6. Add `sv_dlUrl "http://lonestar.gamehostbros.com/a8341d7b"` into your server.cfg (Replace the URL with your unique FastDL url)
 7. Restart your server.
-
+</Steps>
 :::danger
 If you upload new maps to the server, you **MUST** re-sync your FastDL each time a map is added. Failing to do this means players won't be able to connect to your server. You do not need to add a new config as the existing config is already there.
 :::

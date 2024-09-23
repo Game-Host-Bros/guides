@@ -4,16 +4,17 @@ description: Learn how to use RCON on your Quake Live server.
 sidebar:
   label: RCON
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 This guide provides step-by-step instructions on how to set up and manage your Quake Live server using RCON.
 
 ## Enabling RCON
 
 By default, Quake Live servers have remote administration turned off so you need to activate it. You can do this by setting an RCON password.
-
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
 2. In the console type `\seta rconpassword "your_password"`.
-
+</Steps>
 ## Sending RCON Commands From In Game
 
 There are a few ways you can send commands to the server using RCON.

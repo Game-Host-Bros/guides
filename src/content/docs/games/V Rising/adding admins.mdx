@@ -4,28 +4,29 @@ description: Learn how to add admins to your V Rising server.
 sidebar:
   label: Adding Admins
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 Here is how to add admins to your V Rising server.
 
 Before beginning this guide, you should have the SteamID64 of the user you want to add as an admin/moderator. You can find your SteamID [here](https://steamid.io/).
 
 ## Setting Yourself As An Admin In V Rising
-
+<Steps>
 1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com). 
 2. Select your V Rising server and make sure it's stopped.
 3. In the sidebar, select `Management > File Manager`.
 4. Navigate to `save-data/Settings/adminlist.txt`
 5. Enter your SteamID64 and click `Save File`.
 6. Click `Console` on the right hand side and start your server.
-
+</Steps>
 :::tip[Did you know?]
 You can add multiple admins by adding a new line to the file with their SteamID64.
 :::
 
 ## Using Admin Commands
-
+<Steps>
 1. Open V Rising and connect to your server.
 2. Once connected open your options and navigate to `General > Interface > Console Enabled`. Make sure this is enabled.
 3. Press the tilde key `~` and type `adminauth`
-
+</Steps>
 It should say `You now have Administrator priveleges (SuperAdmin)!`. You can now use any commands you wish for V Rising.

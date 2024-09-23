@@ -4,6 +4,7 @@ description: Learn how to fix common Quake 3 Arena server issues.
 sidebar:
   label: Troubleshooting
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 Here are common Quake 3 Arena issues and how to fix them.
 
@@ -16,19 +17,19 @@ Essentially, both the server and client must use matching sets of .pak files to 
 At Game Host Bros, we recommend standardizing the .pak files used across your Quake 3 Arena game servers and clients. The most efficient way to do this is by utilizing the patch files provided by the ioquake3 project, known for enhanced stability and performance.
 
 #### For Server Owners
-
+<Steps>
 1. Download the latest patch data from ioquake3 at [ioquake3 Patch Data](https://ioquake3.org/extras/patch-data/).
 2. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
 3. Select your Quake 3 Arena server.
 4. In the sidebar, click on `Management > File Manager`.
 5. Navigate to the `q3a/baseq3` folder.
 6. Upload the new .pak file you've obtained from ioquake3.
-
+</Steps>
 #### For Game Clients (Players)
-
+<Steps>
 1. Ensure you've also downloaded the same ioquake3 patch files from the link provided above.
 2. Locate the Quake 3 Arena installation directory on your PC. The default path is usually within your "Program Files" folder.
 3. Just like the server-side process, go to the "baseq3" folder.
 4. Replace the existing .pak files with the freshly downloaded ones from ioquake3. Make sure these match the ones you've uploaded to your server.
-
+</Steps>
 Synchronizing the .pak files between your server and client eliminates the discrepancies that cause the unsettling "User Interface version" errors.

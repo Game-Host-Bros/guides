@@ -4,6 +4,8 @@ description: Learn how you can upload an existing Soulmask world and player data
 sidebar:
   label: Upload Existing Save
 ---
+import { Steps } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
 
 In this tutorial, we will guide you through the process of uploading an existing world and player save file to your Soulmask dedicated server.
 
@@ -13,29 +15,48 @@ If you get stuck at any time, Game Host Bros offers free world transfers. Just r
 
 ## Soulmask Save File Locations
 
-Here is where the save files are located for Soulmask.
+There are 2 main files that you need for Soulmask. One is the game configuration (GameXishu.json) and the save data itself (world.db).
 
 **Dedicated Server:**
-- `/WS/Saved/GameplaySettings/GameXishu.json`
-- `/WS/Saved/Worlds/Dedicated/Level01_Main/world.db`
+<FileTree>
+- WS
+  - Saved
+    - Gameplay
+      - Settings
+        - GameXishu.json
+    - Worlds
+      - Dedicated
+        - Level01_Main
+          - world.db
+</FileTree>
 
 **Local Windows PC:**
-- `%LOCALAPPDATA%\WS\{YOUR-STEAM-ID}\2646460\AutoGames\{YOUR-GAME-INVITE-ID}\GameXishu.json`
-- `%LOCALAPPDATA%\WS\{YOUR-STEAM-ID}\2646460\AutoGames\{YOUR-GAME-INVITE-ID}\world.db`
+<FileTree>
+- %LOCALAPPDATA%
+  - WS
+    - [YOUR-STEAM-ID]
+      - 2646460
+        - AutoGames
+          - [YOUR-GAME-INVITE-ID]
+            - GameXishu.json
+            - world.db
+</FileTree>
+
+To quickly access these files locally, press `WIN + R` on your keyboard and then type `%LOCALAPPDATA%\WS`.
 
 ## Transfer From Another Soulmask Dedicated Server
-
+<Steps>
 1. On your existing server, open the file browser and download these 2 files.
-- `/WS/Saved/GameplaySettings/GameXishu.json`
-- `/WS/Saved/Worlds/Dedicated/Level01_Main/world.db`
+   - `/WS/Saved/GameplaySettings/GameXishu.json`
+   - `/WS/Saved/Worlds/Dedicated/Level01_Main/world.db`
 2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Soulmask server.
 3. In the Game Host Bros panel go to `Management > File Manager`
 4. Once there navigate to the same locations as above and delete the existing `GameXishu.json` and `world.db` files. (Assuming you don't want to save them, otherwise back them up)
 5. Drag in your files from your previous server.
 6. Start your Soulmask server.
-
+</Steps>
 ## Transfer From A Local PC
-
+<Steps>
 1. Press `WIN + R` on your keyboard and type `%LOCALAPPDATA%\WS\`.
 2. You will now see some folders, navigate to the one that has your Steam ID. (Example: 76561198106341655)
 3. Navigate to `2646460\AutoGames\` and then select the folder with the same invite code as the world you want to transfer.
@@ -45,3 +66,4 @@ Here is where the save files are located for Soulmask.
 7. Navigate to `/WS/Saved/GameplaySettings/` and replace the existing `GameXishu.json` file.
 8. Navigate to `/WS/Saved/Worlds/Dedicated/Level01_Main/` and replace the existing `world.db` file.
 9. Start your Soulmask server.
+</Steps>

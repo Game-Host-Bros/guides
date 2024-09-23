@@ -4,6 +4,7 @@ description: Learn how to use RCON on your Soulmask server along with all the co
 sidebar:
   label: RCON
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 This guide provides step-by-step instructions on how to set up and manage your Soulmask server using RCON. This is a fairly new feature and is also sometimes referred to as TELNET in the Soulmask community.
 
@@ -47,7 +48,7 @@ Here is a list of all the RCON commands with basic details.
 
 ## Adding IPs to Whitelist
 
-For security reasons, RCON uses an IP whitelist. Only whitelisted IP addresses can connect to the server's RCON service. We also dont allow access to this publicly unless requested via a support ticket
+For security reasons, RCON uses an IP whitelist. Only whitelisted IP addresses can connect to the server's RCON service. We also don't allow access to this publicly unless requested via a support ticket
 
 
 1. Modify `WS/Saved/Config/[Platform]Server/Engine.ini`:

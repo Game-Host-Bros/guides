@@ -4,19 +4,21 @@ description: Learn how to setup Custom Game Factories for your Quake Live server
 sidebar:
   label: Custom Game Factories
 ---
+import { Steps } from '@astrojs/starlight/components';
+
 Setting up a custom factory on your Quake Live server is an advanced approach that offers you flexibility in defining match rules, ensuring unique setups for each game without residual settings affecting subsequent matches. This article guides you through creating your custom game factory.
 
 ## Using Default Factories
 
 By default we have 22 factories pre-loaded to our Quake Live servers. This is how you add them to your mappool.txt file.
-
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
 2. Click on your Quake Live server.
 3. In the sidebar click on `Management > File Manager`.
 4. Select the `baseq3` folder.
 5. Select your mappool.txt file.
 6. Replace the `ID` after the map name.
-
+</Steps>
 You can change what map pool file is used under `Startup Parameters`. Here is a list of all Quake Live factory ID's.
 
 | Title              | ID         |
@@ -45,14 +47,14 @@ You can change what map pool file is used under `Startup Parameters`. Here is a 
 | Vampiric CA        | vca        |
 
 ## Creating a Custom Factory
-
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
 2. Click on your Quake Live server.
 3. In the sidebar click on `Management > File Manager`.
 4. Select the `baseq3` folder.
 5. Create a new folder within `baseq3` and name it `scripts`.
 6. Inside the `scripts` folder, create a new file with a `.factories` extension, like `mynewgametype.factories`. It can be called anything 
-
+</Steps>
 ## Understand the Factory File Structure
 This `.factories` file is a JSON file. It should contain a JSON array with multiple factories or a single JSON object for one factory. A factory example is provided below, demonstrating an InstaGib FFA factory setup:
 

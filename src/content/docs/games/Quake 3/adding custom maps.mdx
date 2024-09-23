@@ -4,6 +4,7 @@ description: Learn how to add pak0 files to your Quake 3 Arena server.
 sidebar:
   label: Add Custom Maps
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 Quake 3 Arena has lots of great base maps, but sometimes you want something different. In this guide, I'll show you how to add custom maps to your Quake 3 Arena server.
 
@@ -17,14 +18,14 @@ Players must have `cl_allowDownload 1` set to be able to join a server with cust
 :::
 
 ## How to Add Maps
-
+<Steps>
 1. Download the maps you want. These should be in a .pk3 format.
 2. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Quake 3 Arena server.
 3. In the sidebar click on `Management > File Manager`.
 4. Navigate to the `.q3a/baseq3` folder.
 5. Here, upload your custom map .pk3 file. You can drag and drop the file from your local computer, or use an FTP client to upload the file.
 6. Restart your server.
-
+</Steps>
 After you restart your server, you can then load the map straight from the server console. For example, if your custom map was called `2fastcomp003.pk3`, you would type `map 2fastcomp003` into the server console and press enter.
 
 Once you have uploaded your maps, you will need to create a map cycle or levels config.

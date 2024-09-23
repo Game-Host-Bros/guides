@@ -4,11 +4,12 @@ description: Discover how to enable voice chat for your V Rising server in our e
 sidebar:
   label: Enable Voice Chat
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 In this guide you will learn how to enable voice chat on your V Rising server. This comes in multiple parts as you need to upload files as well as setup a [Unity Gaming Services Account](https://dashboard.unity3d.com/gaming/login). You will also need to know how to [upload files to your game server.](/getting-started/uploading-files/).
 
 ## Setup The Vivox DLLs
-
+<Steps>
 1. Visit [Unity Gaming Services](https://dashboard.unity3d.com/gaming/login) and create a new account. 
 2. From the Dashboard, click `Create Project`.
 3. Navigate to `Multiplayer > Voice and Text Chat (Vivox)`.
@@ -17,15 +18,15 @@ In this guide you will learn how to enable voice chat on your V Rising server. T
 6. Click `Custom` and select `Core Windows SDK`.
 7. Extract the downloaded file and navigate to `\vivox-sdk\SDK\Libraries\Release\x64`
 8. Using [SFTP](/getting-started/uploading-files/), upload the files to `/VRisingServer_data/Plugins/x86_64` overwriting any existing files.
-
+</Steps>
 ## Creating ServerVoipSettings.json
-
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your V Rising server.
 2. Go to `System > Console` and Stop your server.
 3. Click on `Management > File Manager.`
 4. Navigate to `save-data/Settings`
 5. Create a blank file called `ServerVoipSettings.json` and add the section below.
-
+</Steps>
 ```json
 {
     "VOIPEnabled": true,
@@ -42,22 +43,20 @@ In this guide you will learn how to enable voice chat on your V Rising server. T
 ```
 
 ## Getting your Vivox credentials
-
+<Steps>
 1. In the left-hand side bar click `Credentials`.
 2. Edit your `ServerVoiceSettings.json` file with the credentials provided.
-- **VOIPIssuer** = Token Issuer
-- **VOIPSecret** = Token Key
-- **VOIPVivoxDomain** = Domain
-- **VOIPAPIEndpoint** = Server
-
-The rest of the settings can remain blank and default.
-
+   - **VOIPIssuer** = Token Issuer
+   - **VOIPSecret** = Token Key
+   - **VOIPVivoxDomain** = Domain
+   - **VOIPAPIEndpoint** = Server
+   - The rest of the settings can remain blank and default.
 3. Restart your server.
-
+</Steps>
 ## Enable Voice in your V Rising Settings
-
+<Steps>
 1. Open V Rising.
 2. Navigate to `Options > Sound`.
 3. Make sure `Use Voice Chat` is enabled.
-
+</Steps>
 If you get stuck at any time, just reach out to a bro on [Discord](https://discord.gg/FN4XgbAwzr) or just use Discord for your voice chat.
