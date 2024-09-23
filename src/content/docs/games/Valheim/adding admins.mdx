@@ -4,37 +4,37 @@ description: Learn how to add admins to your Valheim server.
 sidebar:
   label: Adding Admins
 ---
-
+import { Steps } from '@astrojs/starlight/components'
 
 ## Becoming An Admin
 
 Managing player permissions—including granting administrative privileges or banning players—is essential for maintaining a healthy gaming environment. Valheim uses a file called `adminlist.txt` to handle player permissions.
-
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Valheim server.
 2. In the sidebar click on `Management > File Manager`.
 3. Select the `.config/unity3d/IronGate/Valheim/` folder.
 4. Here, find the file named `adminlist.txt`.
 5. Add a new entry on its own line in SteamID64 format. You can get your SteamID from [here](https://steamid.io/). It should look like this: `76561198072786081`.
 6. Restart your server.
-
+</Steps>
 ## Enabling Console
 
 The Valheim in-game console is disabled by default, here are the steps to enable it if you wish to use Admin commands while playing on your server.
-
+<Steps>
 1. Open Steam.
 2. Navigate to `Library`.
 3. `Right-click` Valheim and enter properties.
 4. Type `-console` in launch options.
 5. Close the window and start your game.
-
+</Steps>
 ## Using Admin Commands
 
 After setting yourself as Admin and adding `-console` as a launch option you'll now be able to open and use the in-game console, here's how.
-
+<Steps>
 1. [Connect](https://guides.gamehostbros.com/games/valheim/connect-to-your-server/) to your Valheim Server.
 2. Press `f5` to open Console.
 3. Type `devcommands` to enable admin commands.
-
+</Steps>
 ## Multiplayer Command List
 
 Now that commands are enabled here's a list of Valheim Multiplayer commands.

@@ -4,6 +4,7 @@ description: Step-by-step guide on how to upload your custom world file to your 
 sidebar:
   label: Upload Custom World
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 In this tutorial, we will guide you through the process of uploading a custom world file to your Valheim dedicated server.
 
@@ -12,17 +13,18 @@ If you get stuck at any time, Game Host Bros offers free save transfers. Just re
 ## Finding Your Save Files
 
 Worlds aren't found in the game files, they are found in a different location which can be accessed by doing this.
-
+<Steps>
 1. Press `Win + R`.
 2. Enter this command `%userprofile%\AppData\LocalLow\IronGate\Valheim`.
 3. Open `Worlds`.
 4. Copy your worlds `.fwl` and `.db` files.
-
+</Steps>
 ## Uploading Your World
-
+<Steps>
 1. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Valheim server.
 2. In the Game Host Bros panel go to `Management > File Manager`
 3. Once there navigate to `.config/unity3d/IronGate/Valheim/worlds_local`
 4. Drag in your existing `.fwl` and `.db` files.
 5. In the sidebar, go to `Configuration > Startup Parameters`
 6. Edit `World Name` and change it to the name of your world file.
+</Steps>

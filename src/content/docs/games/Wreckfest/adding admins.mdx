@@ -5,6 +5,7 @@ tableOfContents: true
 sidebar:
   label: Adding Admins
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 Managing a Wreckfest server can be a big responsibility, especially when you’re focused on creating an enjoyable racing experience for everyone. One way to share the load is by granting admin privileges to trusted players. Admins can help manage the server, enforce rules, and keep gameplay running smoothly.
 
@@ -19,7 +20,7 @@ In this guide, we'll show you how to add admins to your Wreckfest server by edit
 If you're unsure of a player's Steam ID, you can easily find it by visiting [SteamID.io](https://steamid.io/). Simply input the player’s Steam profile URL or username, and the site will provide the corresponding SteamID64, which you can use in your configuration file.
 
 ### Steps to Add Admins on Your Wreckfest Server
-
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and navigate to your Wreckfest server.
 2. Go to `Management > File Manager`.
 3. Open the `server_config.cfg` file.
@@ -33,10 +34,9 @@ If you're unsure of a player's Steam ID, you can easily find it by visiting [Ste
      admin_steam_ids=12345678912345678,12345678912345678
      op_steam_ids=12345678912345678,12345678912345678
      ```
-
 6. After adding the necessary Steam IDs, save the `server_config.cfg` file to apply the changes.
 7. Restart Your Server
-
+</Steps>
 You will now be able to use [Admin Commands](https://guides.gamehostbros.com/games/wreckfest/admin-commands/) from the in game chat menu.
 
 :::tip
