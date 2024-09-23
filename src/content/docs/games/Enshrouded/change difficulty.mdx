@@ -5,17 +5,18 @@ tableOfContents: false
 sidebar:
   label: Change Difficulty
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 In this guide, we will show you how to change the server difficulty on your Enshrouded server.
 
 ## Difficulty Presets (Beginner)
 By default, Enshrouded comes with 5 difficulty presets that you can use to quickly adjust how hard the game is. We allow you to adjust these directly from our Game Panel.
-
+<Steps>
 1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your V Rising server.
 2. Go to `Configuration > Startup Parameters`.
 3. Find the `Difficulty` setting and change it to the desired difficulty.
 4. Restart your server.
-
+</Steps>
 Here are the Enshrouded difficulty presets you can select and what they do.
 
 - **Default** - The “Default” difficulty setting configures all values to default. It is the direct continuation of how Enshrouded was first configured and is the recommended setting for first-time players.
@@ -26,14 +27,14 @@ Here are the Enshrouded difficulty presets you can select and what they do.
 
 ## Editing enshrouded_server.json (Advance)
 If you want to tweak individual game settings, you will need to do it from the `enshrouded_server.json` file.
-
+<Steps>
 1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Enshrouded server.
 2. Stop your Enshrouded server.
 3. Go to `Configuration > Startup Parameters`.
 4. Find the `Difficulty` setting and change it to `Custom`.
 5. Go to `Management > File Manager` and open the file `enshrouded_server.json`.
 6. After you have made the changes you want, start the server. 
-
+</Steps>
 The following options can be modified in the `enshrouded_server.json` file, under the `gameSettings` section.
 
 | Setting                          | Description                                                                                                                                           |

@@ -4,16 +4,17 @@ description: Learn how to fix common Deadlock server issues.
 sidebar:
   label: Troubleshooting
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 As Deadlock is extremely new, we have compiled a list of common errors and fixes.
 
 ## Setting A Match Like Matchmaking
 Currently there are no commands that allow you to run a match like normal online matchmaking. We have a [Game Preset](/games/deadlock/game-presets/) called 6v6_comp that will get you close to that experience but requires extra steps. 
-
+<Steps>
 1. After everyone has joined the server type `changelevel street_test` and then rejoin the server.
 2. Pause the server once you join by pressing `P`.
 3. Wait for everyone to get in again.
-
+</Steps>
 There is a message about being a bot match. This is only set to get the pre-game working correctly (citadel_solo_bot_match 1). If you can't get into your server while pre-game is running, you can go to `/game/citadel/cfg/6v6_comp.cfg` and change `citadel_pregame_duration` to something higher than 30 seconds.
 
 ## No Player Limits

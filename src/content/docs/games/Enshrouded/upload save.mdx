@@ -4,6 +4,7 @@ description: Step-by-step guide on how to upload your save file to your Enshroud
 sidebar:
   label: Upload Save
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 In this tutorial, we will guide you through the process of uploading an existing world and player save file to your Enshrouded dedicated server.
 
@@ -16,20 +17,23 @@ This will delete or overwrite any progress you have made on the server.
 :::
 
 ## Backing Up Your Local Enshrouded Save File
+<Steps>
 1. Open your Steam games library, right click Enshrouded and select `Manage > Browse Local Files`.
 2. Navigate to `userdata > (Your SteamID) > 1203620 > Remote`.
 3. Copy the most recent file to a safe location.
+</Steps>
 
 :::tip
 Usually has the name `3ad85aea` if you only have one world
 :::
 
 ## Upload Your Enshrouded Save To Your Server
-
+<Steps>
 1. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Enshrouded server.
 2. In the Game Host Bros panel go to `Management > File Manager`.
 3. Once there navigate to the `savegame` folder.
 4. Delete the existing save files.
 5. [Upload](/getting-started/uploading-files/) your local save files. (Ensure the local save has been renamed to `3ad85aea` on the server if it's something different)
 6. Start your Enshrouded server.
+</Steps>
 

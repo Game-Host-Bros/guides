@@ -4,15 +4,16 @@ description: Learn how to update your Factorio dedicated server.
 sidebar:
   label: Update Your Server
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 This is how you can update your Factorio dedicated server after an update.
 
 :::danger
 Always backup your world before updating.
 :::
-
+<Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
 2. Go to `Configuration > Advanced`.
 3. Click `Reinstall Server`
-
+</Steps>
 This will run the installer again and download Factorio. The reason why we do it this way is worlds and mods are sensitive to changes and can break your entire factory. This way you're in control and there are no surprises when you have a mega factory.

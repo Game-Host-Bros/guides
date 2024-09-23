@@ -5,23 +5,24 @@ tableOfContents: true
 sidebar:
   label: Adding Admins
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 At Game Host Bros, we make it easy for you to set yourself as an admin on your Enshrouded server. As an admin, you can kick and ban players, make changes to other players' bases, and access chests or other containers. This guide will walk you through the steps to set up an admin password and become an admin in the game.
 
 ## How To Set An Admin Password On Your Enshrouded Server
-
+<Steps>
 1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Enshrouded server.
 2. Go to `Configuration > Startup Parameters`.
 3. Find `Admin Password` and enter your desired password.
 4. Start your server.
-
+</Steps>
 This will automatically configure your enshrouded_server.json file to add the required roles. If you remove the `Admin Password` then it will also remove the admin role. Check out our guide on [Enshrouded Server Roles](/games/enshrouded/server-roles/) if you would prefer to manually edit your roles.
 
 ## How To Use Admin Commands In Game
-
+<Steps>
 1. Open Enshrouded and join your server.
 2. Connect with the `Admin Password` you set earlier.
-
+</Steps>
 :::tip
 You can open the in-game menu and select permissions to confirm that you're now an Admin.
 :::
