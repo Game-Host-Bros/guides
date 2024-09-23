@@ -5,6 +5,7 @@ tableOfContents: true
 sidebar:
   label: Change Map
 ---
+import { FileTree } from '@astrojs/starlight/components';
 
 Whether you're looking to explore new terrains or just want a different environment for your players, this guide will walk you through the steps to change the server map on your BeamMP server using the Game Host Bros Panel. By following these instructions, you'll be able to quickly switch to any of the stock maps that come with BeamMP or even set a custom map of your choice.
 
@@ -51,6 +52,18 @@ Custom maps are normally provided to you in a .zip format. To use custom maps on
 6. Find the `Map` setting and enter the filepath for your custom map, e.g., `/levels/custom_map/info.json`.
 7. Restart your server to apply the changes.
 
-:::note
-Ensure your custom map files are correctly placed in the `/levels/` directory and that the `info.json` file exists in the map folder.
-:::
+This is how your files should look if everything is uploaded correctly.
+
+<FileTree>
+
+- levels
+  - custom_map
+    - **info.json**
+    - ...
+- Resources
+  - Client
+    - **custom_map.zip**
+    - skyline-r33.zip
+    - ...
+
+</FileTree>
