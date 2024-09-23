@@ -4,6 +4,7 @@ description: Step-by-step guide on how to upload your save file to your V Rising
 sidebar:
   label: Upload Save
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 In this tutorial, we will guide you through the process of uploading an existing world and player save file to your V Rising dedicated server.
@@ -14,7 +15,10 @@ If you get stuck at any time, Game Host Bros offers free save transfers. Just re
 To start we first need to get your existing save file from your local PC.
 <Steps>
 1. Press `Win + R` on your keyboard to open the Run dialog.
-2. Copy and paste `%USERPROFILE%\AppData\LocalLow\Stunlock Studios\VRising\CloudSaves` into the Run window and press OK.
+2. Enter 
+   ```
+   %USERPROFILE%\AppData\LocalLow\Stunlock Studios\VRising\CloudSaves
+   ```
 3. Here you will see a folder with random numbers, inside this folder you will find your `AutoSave` file, `SessionId.json` and `StartDate.json` file.
 </Steps>
 ## Uploading your existing V Rising save to your server
@@ -25,5 +29,17 @@ To start we first need to get your existing save file from your local PC.
 4. [Upload](/getting-started/uploading-files/) your latest `AutoSave` file, `SessionId.json` and `StartDate.json` file.
 5. Start your server.
 </Steps>
+
+<FileTree>
+
+- save-data
+  - Saves
+    - v3
+      - world1
+        - **AutoSave**
+        - **SessionID.json**
+        - **StartDate.json**
+        
+</FileTree>
 
 
