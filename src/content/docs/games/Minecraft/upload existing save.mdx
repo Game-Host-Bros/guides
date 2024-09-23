@@ -5,26 +5,38 @@ tableOfContents: true
 sidebar:
   label: Upload Existing Save
 ---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 
 This is what you do if you need to upload an existing world to your Minecraft Java Edition Server.
 
 ## Finding Locally Existing Worlds
+<Steps>
+  1. On your keyboard press `Windows Key + R`. 
+  2. Type `%appdata%` into the search box.
+  3. Navigate to `AppData\Roaming\.minecraft\saves`.
+</Steps>
 
-1. On your keyboard press `Windows Key + R`. 
-2. Type `%appdata%` into the search box.
-3. Navigate to `AppData\Roaming\.minecraft\saves`.
-4. Make a copy of your existing world file.
+<FileTree>
+    - AppData
+      - Roaming
+        - .minecraft
+          - saves/
+</FileTree>
 
+<Steps>
+  4. Make a copy of your existing world file.
+</Steps>
 
 ## Uploading Existing Worlds
-
-1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/).
-2. Stop your server.
-3. Connect to your server via `SFTP` by following [this guide](https://guides.gamehostbros.com/getting-started/uploading-files/)
-4. On your server, navigate to the `World` file and delete the contents.
-5. Upload the contents of your existing save file from `AppData\Roaming\.minecraft\saves`
-6. Connect to your server.
-
+<Steps>
+  1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+  2. Stop your server.
+  3. Connect to your server via `SFTP` by following [this guide](https://guides.gamehostbros.com/getting-started/uploading-files/)
+  4. On your server, navigate to the `World` file and delete the contents.
+  5. Upload the contents of your existing save file from `AppData\Roaming\.minecraft\saves`
+  6. Connect to your server.
+</Steps>
 :::danger
 If you wish to keep a copy of the current World on your server, make sure to create a backup before deleting!
 :::

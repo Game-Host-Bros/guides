@@ -4,15 +4,17 @@ description: Learn how to change the seed of your Minecraft Server
 sidebar:
   label: Change Seed
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 If you'd like to change your Minecraft world seed, here's how it's done.
-
-1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Server.
-2. Click `Management > File Manager`.
-3. Delete your current `World` files.
-4. Open `server.properties`.
-5. Edit `world-seed=` and Save File.  
-6. Start your Server.
+<Steps>
+  1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Server.
+  2. Click `Management > File Manager`.
+  3. Delete your current `World` files.
+  4. Open `server.properties`.
+  5. Edit `world-seed=` and Save File.  
+  6. Start your Server.
+</Steps>
 
 If you'd like to keep your old world you can simply change `level-name=` to something else in `server.properties`.
 

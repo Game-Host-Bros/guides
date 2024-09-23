@@ -5,23 +5,27 @@ tableOfContents: true
 sidebar:
   label: Adding Whitelist
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 If you want to make your server private, adding a whitelist will be the easiest way to do so, once enabled, players must have their username added to the whitelist in order to join your Minecraft server. This is what you do if you need to add a whitelist to your Minecraft Server.
 
 ## Adding Players To The Whitelist
 
-1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/).
-2. Select your server.
-3. Go to `System > Console`.
-4. Type `whitelist add [Username]`.
+<Steps>
+  1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+  2. Select your server.
+  3. Go to `System > Console`.
+  4. Type `whitelist add [Username]`.
+</Steps>
 
 ## Enabling And Reloading The Whitelist
 
 While still in `System > Console`. Enter these commands to Enable and Reload your servers whitelist.
-
-1. Type `whitelist on`.
-2. Type `whitelist reload`.
-3. Restart your server.
+<Steps>
+  1. Type `whitelist on`.
+  2. Type `whitelist reload`.
+  3. Restart your server.
+</Steps>
 
 You can type `whitelist list` to view your whitelist, and `whitelist off` to disable it.
 

@@ -5,16 +5,17 @@ tableOfContents: true
 sidebar:
   label: Installing Modpacks
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 This is what you do if you need to install a Modpack to your Minecraft Java Edition Server. We recommend installing modpacks to a fresh Server.
 
 ## Installing Modpacks Using Our Modpack Manager
-
-1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Minecraft server.
-2. Go to `Tools > Modpack Manager`.
-3. Select the Modpack and version you want to install.
-4. Enable `Format` and install the Modpack.
-
+<Steps>
+  1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Minecraft server.
+  2. Go to `Tools > Modpack Manager`.
+  3. Select the Modpack and version you want to install.
+  4. Enable `Format` and install the Modpack.
+</Steps>
 Depending on the mod pack, **you may need to restart the server** after it fully loads the first time as it needs to create all the config files. Failing to do so may end up with your client saying `Connection Refused` when you try join.
 
 :::danger
@@ -24,12 +25,12 @@ Enabling Format **will wipe your server** to make sure all of the server version
 ## Manually Checking Version Compatibility
 
 Some modpacks won't have a premade server.zip to download and may not work, and even if it does, it may not have of all the required server files, an easy way to tell if this is the case is if the downloaded modpack includes a .jar file, it's usually named something like `[loader][version].jar`, if it's a forge.jar you should leave it as `forge-wrapper.jar` in the panel. To install the correct minecraft game and modloader version as specified by the modpacks website, follow these instructions.
-
-1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Minecraft server.
-3. Go to `Configuration > Advanced`.
-4. Under Install Different Edition, select the compatible version.
-5. Enable `Format` and click `Install Different Edition`.
-
+<Steps>
+  1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Minecraft server.
+  3. Go to `Configuration > Advanced`.
+  4. Under Install Different Edition, select the compatible version.
+  5. Enable `Format` and click `Install Different Edition`.
+</Steps>
 :::danger
 Enabling Format will wipe your server to make sure all of the server versions are correct to run the Modpack, If you have any data you wish to keep, make a backup!
 :::
@@ -37,16 +38,16 @@ Enabling Format will wipe your server to make sure all of the server versions ar
 ## Manually Installing Modpacks To Your Server
 
 These are the next steps after you've downloaded your Modpack of choice and have made sure the version is compatible, We recommend a launcher such as Prism Launcher to install Modpacks to your game client. Also, if the Modpack has a server pack that doesn't contain a `.jar` file, be sure to change the server to the correct version before proceeding, you can do this by following [these steps](https://guides.gamehostbros.com/games/minecraft/changing-versions).
-
-1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/).
-2. Stop your server and delete everything in `File Manager`.
-3. Connect to your server via [FTP](https://guides.gamehostbros.com/getting-started/uploading-files/).
-4. Upload your Modpack.zip to the server (If it's not .zip extract it first).
-5. In the panel go to `File Manager` and decompress the file.
-6. Go into `Configuration > Startup Parameters` and make sure `Server Jar File` matches the .jar file from the Modpack, if it contains one.
-7. Start your server and select the default java version.
-8. Restart your server.
-
+<Steps>
+  1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+  2. Stop your server and delete everything in `File Manager`.
+  3. Connect to your server via [FTP](https://guides.gamehostbros.com/getting-started/uploading-files/).
+  4. Upload your Modpack.zip to the server (If it's not .zip extract it first).
+  5. In the panel go to `File Manager` and decompress the file.
+  6. Go into `Configuration > Startup Parameters` and make sure `Server Jar File` matches the .jar file from the Modpack, if it contains one.
+  7. Start your server and select the default java version.
+  8. Restart your server.
+</Steps>
 Why the restart? It's to make sure the server ports are set correctly in your server settings as some files get generated after the initial launch, if they aren't already included in the modpack download you won't be able to connect unless you do this.
 
 ## Troubleshooting

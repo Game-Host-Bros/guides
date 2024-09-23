@@ -4,15 +4,16 @@ description: Learn how to enable flight for your Minecraft Server
 sidebar:
   label: Enable Flight
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 In Minecraft there's a common error where you may get kicked for "Flying is not enabled on this server", here's how to fix this.
-
-1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Server.
-2. Click `Management > File Manager`.
-3. Open `server.properties`.
-4. Set `allow-flight=` to `allow-flight=true` and Save File.  
-5. Start your Server.
-
+<Steps>
+  1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Server.
+  2. Click `Management > File Manager`.
+  3. Open `server.properties`.
+  4. Set `allow-flight=` to `allow-flight=true` and Save File.  
+  5. Start your Server.
+</Steps>
 :::tip
 When changing Minecraft Server settings outside of the game or server console, you have to restart your server for the changes to apply.
 :::

@@ -5,12 +5,13 @@ tableOfContents: false
 sidebar:
   label: Change Java Version
 ---
+import { Steps } from '@astrojs/starlight/components';
 
 By default, the Game Host Bros panel will detect what version of Java you need. However, some mod packs will require you to use a specific version of Java otherwise they won't start.
-
-1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Minecraft server.
-2. Go to `Management > File Manager`.
-3. Find `disable_prompt_for_java_version` and delete it.
-4. Restart your server and type what number you want to select your desired Java version.
-
+<Steps>
+  1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Minecraft server.
+  2. Go to `Management > File Manager`.
+  3. Find `disable_prompt_for_java_version` and delete it.
+  4. Restart your server and type what number you want to select your desired Java version.
+</Steps>
 You can change the Java version at any time without affecting anything on your server.
