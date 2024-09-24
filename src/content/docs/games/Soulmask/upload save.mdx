@@ -7,7 +7,7 @@ sidebar:
 import { Steps } from '@astrojs/starlight/components';
 import { FileTree } from '@astrojs/starlight/components';
 
-In this tutorial, we will guide you through the process of uploading an existing world and player save file to your Soulmask dedicated server.
+In this tutorial, we will guide you through the process of uploading an existing world and player save file to your [Soulmask server](https://www.gamehostbros.com/soulmask-server-hosting/).
 
 You may also refer to this guide on how to [upload files to your game server.](/getting-started/uploading-files/)
 
@@ -23,11 +23,11 @@ There are 2 main files that you need for Soulmask. One is the game configuration
   - Saved
     - Gameplay
       - Settings
-        - GameXishu.json
+        - **GameXishu.json**
     - Worlds
       - Dedicated
         - Level01_Main
-          - world.db
+          - **world.db**
 </FileTree>
 
 **Local Windows PC:**
@@ -38,12 +38,14 @@ There are 2 main files that you need for Soulmask. One is the game configuration
       - 2646460
         - AutoGames
           - [YOUR-GAME-INVITE-ID]
-            - GameXishu.json
-            - world.db
+            - **GameXishu.json**
+            - **world.db**
 </FileTree>
 
-To quickly access these files locally, press `WIN + R` on your keyboard and then type `%LOCALAPPDATA%\WS`.
-
+To quickly access these files locally, press `WIN + R` on your keyboard and enter
+  ```
+  %LOCALAPPDATA%\WS
+  ```
 ## Transfer From Another Soulmask Dedicated Server
 <Steps>
 1. On your existing server, open the file browser and download these 2 files.
