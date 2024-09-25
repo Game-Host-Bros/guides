@@ -4,9 +4,10 @@ description: Learn how to install mods and plugins on your V Rising server.
 sidebar:
   label: Install Mods
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
-In this guide, you will learn how to install mods and plugins on your V Rising server using [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/).
+In this guide, you will learn how to install mods and plugins on your [V Rising server](https://www.gamehostbros.com/v-rising-server-hosting/) using [BepInEx](https://thunderstore.io/c/v-rising/p/BepInEx/BepInExPack_V_Rising/).
 
 ## Installing BepInEx
 Before installing any mods or plugins, you must first install BepInEx
@@ -26,6 +27,15 @@ Once BepInEx is installed, you can now add the plugins you wish. We suggest down
 2. Download the plugin you want from [Thunderstore](https://thunderstore.io/c/v-rising/), right click and extract it.
 3. Access your V Rising server using [SFTP](/getting-started/uploading-files/).
 4. Navigate to `BepInEx/plugins` and upload your extracted plugin folder.
+    <FileTree>
+
+   - BepInEx
+     - plugins
+       - **odjit-KindredPortals** Example plugin.
+         - **KindredPortals.dll**
+         - **manifest.json**
+         - ..   
+   </FileTree>
 6. Start your server.
 </Steps>
 If you get stuck at any time, just reach out to a bro on [Discord](https://discord.gg/FN4XgbAwzr) or via a support ticket.

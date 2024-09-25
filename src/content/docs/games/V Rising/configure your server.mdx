@@ -4,11 +4,12 @@ description: Learn how to configure your V Rising Server
 sidebar:
   label: Configure Your Server
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
-In V Rising, there are 2 methods to configure your server. For basic settings you will edit everything from the Game Panel [Startup Parameters](/getting-started/beginners-guide/#edit-server-settings) screen. The other more advance way is to use the ServerGameSettings.json file.
+In V Rising, there are 2 methods to configure your server. For basic settings you will edit everything from the Game Panel [Startup Parameters](/getting-started/beginners-guide/#edit-server-settings) screen. The other and more advanced way is to use the ServerGameSettings.json file to configure your [V Rising server](https://www.gamehostbros.com/v-rising-server-hosting/).
 
-## How to create ServerGameSettings.json
+## How To Create ServerGameSettings.json
 
 By default, this file is not created automatically. You need to use one of the base game files as a template to generate it or use the example file below.
 
@@ -16,14 +17,27 @@ By default, this file is not created automatically. You need to use one of the b
 Make sure Game Setting Preset is set to blank/Unknown under Startup Parameters to use a custom ServerGameSettings.json.
 :::
 <Steps>
-1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your V Rising server.
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
 2. Go to `System > Console` and Stop your server.
 3. Click on `Management > File Manager.`
 4. Navigate to `VRisingServer_Data/StreamingAssets/GameSettingPresets` and look for a template that suits your desired settings.
+   <FileTree>
+    - VRisingServer_Data
+      - StreamingAssets
+        - **GameSettingPresets/**
+   </FileTree>
+
 5. Click the 3 dots on the right-hand side of the file and click `Download`.
 6. After you've made your changes, navigate to `/save-data/Settings` and drag your modified file in.
 7. Rename it to `ServerGameSettings.json` and restart your server.
+   <FileTree>
+    - save-data
+      - Settings
+        - **ServerGameSettings.json**
+   </FileTree>
+
 </Steps>
+
 
 :::danger
 Do NOT edit the files directly inside `VRisingServer_Data/StreamingAssets/GameSettingPresets` as they will be overwritten on an update.

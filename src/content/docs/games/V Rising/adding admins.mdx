@@ -4,6 +4,7 @@ description: Learn how to add admins to your V Rising server.
 sidebar:
   label: Adding Admins
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 Here is how to add admins to your [V Rising server](https://www.gamehostbros.com/v-rising-server-hosting/).
@@ -12,11 +13,20 @@ Before beginning this guide, you should have the SteamID64 of the user you want 
 
 ## Setting Yourself As An Admin In V Rising
 <Steps>
-1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com). 
-2. Select your V Rising server and make sure it's stopped.
-3. In the sidebar, select `Management > File Manager`.
-4. Navigate to `save-data/Settings/adminlist.txt`
-5. Enter your SteamID64 and click `Save File`.
+1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com) and Stop your server. 
+2. Go to `Management > File Manager`.
+3. Navigate to `save-data/Settings/adminlist.txt`
+   <FileTree>
+    - save-data
+      - Settings
+        - **adminlist.txt**
+   </FileTree>
+4. Enter your [SteamID64](https://steamid.io/) and click `Save File`.
+
+   ```txt title="adminlist.txt"
+   76561198072786081
+   ```
+5. Restart your server.
 6. Click `Console` on the right hand side and start your server.
 </Steps>
 :::tip[Did you know?]
