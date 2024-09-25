@@ -5,6 +5,7 @@ sidebar:
   label: Update Your Server
 ---
 import { Steps } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
 
 By default, Game Host Bros [Palworld servers](https://www.gamehostbros.com/palworld-server-hosting/) will automatically update when the server is restarted, so you shouldn't need to change anything below. If your server didn't update, you can check automatic updates are turned on. This is how you can update your server after a Palworld update. 
 <Steps>
@@ -16,9 +17,12 @@ By default, Game Host Bros [Palworld servers](https://www.gamehostbros.com/palwo
 </Steps>
 The server will now automatically download the update as soon as it starts.
 
-## My Server Still Didnt Update
+<details>
+<summary>My Server Still Didnt Update?</summary>
 
-If you've tried to restart your server and it didnt update, its possible something is stuck somewhere (`Update state (0x1) running, progress: 0.00 (0 / 0)` for example). To fix this simply stop your server, navigate to `Management > File Manager` and then delete the `steamapps` folder. Once you start your server back up it should download the update fine. 
+If you've tried to restart your server and it didn't update, its possible something is stuck somewhere (`Update state (0x1) running, progress: 0.00 (0 / 0)` for example). To fix this simply stop your server, navigate to `Tools > Mod Manager` and then install the `Stuck Update Fix Script`. Once you start your server back up it should download the update fine. 
+
+</details>
 
 ## Updating From A Reverted Patch
 
