@@ -4,11 +4,12 @@ description: Learn how to upload existing worlds to your Ark Survival Evolved se
 sidebar:
   label: Upload Existing Save
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 Here is how to upload existing saves to your Ark Survival Evolved Server.
 
-## How To Find Your Existing Ark Survival Evolved Saves
+## Locating Your Existing Steam Ark Survival Evolved Saves
 
 First you'll need to locate your existing world, follow these steps to do this.
 <Steps>
@@ -16,26 +17,43 @@ First you'll need to locate your existing world, follow these steps to do this.
 2. Right-Click Ark Survival Evolved and hover `Manage > Browse Local Files`.
 3. Navigate to `ShooterGame\Saved\SavedArksLocal`.
 4. Find the `.arktribe` `.arkprofile` and `TheIsland.ark` files.
+   <FileTree>
+   - ShooterGame
+     - Saved
+       - SavedArksLocal
+         - **1616480944.arktribe**
+         - **LocalPlayer.arkprofile** Rename this to your **STEAMID64.arkprofile**
+         - **TheIsland.ark**
+   </FileTree>
+
 </Steps>
 :::tip
 If you want to upload your settings aswell, they'll be located in `ShooterGame\Saved\Config\WindowsNoEditor`. You'll need to copy `Game.ini` and `GameUserSettings.ini`
 :::
 
-Note that `.arkprofile` will need to be renamed from `LocalPlayer.arkprofile`, you'll have to change this to [YourSteamID64.arkprofile].
+Note that `.arkprofile` will need to be renamed from `LocalPlayer.arkprofile`, you'll have to change this to [YourSteamID64.arkprofile]. Can be found [Here](https://steamid.io/)
 
-## How To Upload Your Existing Ark Survival Evolved Saves
+## Uploading Your Existing Steam Ark Survival Evolved Saves
 
 There are two methods to do this, you can either use our `Management > File Manager` or `SFTP`, we cover both methods [here](https://guides.gamehostbros.com/getting-started/uploading-files/).
 <Steps>
-1. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and select your Ark server.
-2. Click `System > Console` and `Stop` your server.
-2. Find your SFTP details under `System > SFTP Details` and connect to your server via `SFTP`.
-3. After connecting to your server, navigate to `/ShooterGame/Saved/SavedArks`.
-4. As you're uploading existing saves, you can go ahead and `Delete` everything in there.
-5. Select the `.arktribe` `.arkprofile` and `TheIsland.ark` files. And upload them to `/ShooterGame/Saved/SavedArks`.
-6. Rename `LocalPlayer.arkprofile` to [YourSteamID64.arkprofile] for example it should now be `76561198106341655.arkprofile`.
+1. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your server.
+2. Open `Management > File Manager`.
+3. Navigate to `/ShooterGame/Saved/SavedArks`.
+4. `Delete` everything in there.
+5. [Upload](https://guides.gamehostbros.com/getting-started/uploading-files/) your existing save files.
+6. Rename `LocalPlayer.arkprofile` to your `SteamID64`.
+   <FileTree>
+   - ShooterGame
+     - Saved
+       - SavedArks
+         - **1616480944.arktribe**
+         - **76561198106341655.arkprofile** Renamed to STEAMID64
+         - **TheIsland.ark**
+   </FileTree>
 7. Start your server.
 </Steps>
+
 :::tip
 If you're uploading a different `Map`, make sure `Server Map` is set correctly in `Configuration > Startup Parameters`.
 :::
