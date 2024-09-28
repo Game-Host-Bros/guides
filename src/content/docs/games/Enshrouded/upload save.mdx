@@ -4,6 +4,7 @@ description: Step-by-step guide on how to upload your save file to your Enshroud
 sidebar:
   label: Upload Save
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 In this tutorial, we will guide you through the process of uploading an existing world and player save file to your Enshrouded dedicated server.
@@ -34,6 +35,11 @@ Usually has the name `3ad85aea` if you only have one world
 3. Once there navigate to the `savegame` folder.
 4. Delete the existing save files.
 5. [Upload](/getting-started/uploading-files/) your local save files. (Ensure the local save has been renamed to `3ad85aea` on the server if it's something different)
+   <FileTree>
+   
+   - savegame
+     - **3ad85aea** The name is important! 
+   </FileTree>
 6. Start your Enshrouded server.
 </Steps>
 

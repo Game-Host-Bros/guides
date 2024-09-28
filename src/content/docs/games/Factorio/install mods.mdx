@@ -4,6 +4,7 @@ description: Learn how to install mods and plugins on your Factorio server.
 sidebar:
   label: Install Mods
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 In this guide you will learn how to install Factorio mods manually and using the Game Host Bros Mod Manager. You can download mods from [https://mods.factorio.com/](https://mods.factorio.com/).
@@ -29,7 +30,14 @@ If the Factorio mod you want to play isn't listed in our Mod Manager, installing
 1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Factorio server.
 2. In the left-hand menu, click `Management > File Manager`.
 3. Open the `Mods` folder
-4. Drag the mods you want to add into this file and restart the server (If your mods are over 100mb you will need to use SFTP)
+4. Drag the mods you want to add into this file and restart the server. (Limited to 1GB, otherwise use [SFTP](/getting-started/uploading-files/)).
+   <FileTree>
+   
+   - mods
+     - **mod.zip**
+     - **mod2.zip**
+     - ..
+   </FileTree>
 </Steps>
 Like our 1-Click mods, you can simply join the server afterwards, and it will automatically download them to your game client.
 
