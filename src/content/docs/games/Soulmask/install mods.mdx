@@ -1,0 +1,37 @@
+---
+title: How To Install Workshop Mods On Your Soulmask Server
+description: In this guide you will learn how you can easily install workshop mods on your Soulmask server.
+sidebar:
+  label: Install Mods
+---
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide we will show you how you can quickly install Workshop mods on your [Soulmask server](https://www.gamehostbros.com/soulmask-server-hosting/).
+
+:::danger
+Always back up your world manually before installing any Mods!
+:::
+
+## How To Get Your Workshop Mod IDs
+
+You will need to know how to get a Workshop ID for each mod you want to install. You can [view all the Soulmask mods here](https://steamcommunity.com/app/2646460/workshop/)
+
+Once you find the mod you want you need to copy the URL. Let's use this URL for example: [https://steamcommunity.com/sharedfiles/filedetails/?id=3070288532&searchtext=bhop](https://steamcommunity.com/sharedfiles/filedetails/?id=3070288532&searchtext=bhop)
+
+![CS2 workshop URL](../../../../assets/guide-images/cs2-workshop-screenshot.jpg)
+
+As you can see from the numbers in the URL, our map ID is `3070288532`
+
+## How To Install Soulmask Workshop Mods
+<Steps>
+1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Palworld server.
+2. Go to `Configuration > Startup Parameters`.
+3. Look for the `Workshop Mods` section and add the IDs for the mods you want like this.
+   - For a single mod: `3325629900`
+   - For multiple mods: `3325629900,3325143163,3325592770`
+4. Restart your server.
+</Steps>
+
+You can then confirm if the mods have been installed by going to your file manager and looking in `/WS/Mods`. You should see all your Soulmask mods there if they downloaded successfully.
+
+
