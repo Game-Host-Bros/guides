@@ -23,42 +23,52 @@ Enabling Format **will wipe your server** to make sure all of the server version
 
 ## Manually Checking Version Compatibility
 
-Some modpacks won't have a premade server.zip to download and may not work, and even if it does, it may not have of all the required server files, an easy way to tell if this is the case is if the downloaded modpack includes a .jar file, it's usually named something like `[loader][version].jar`, if it's a forge.jar you should leave it as `forge-wrapper.jar` in the panel. To install the correct minecraft game and modloader version as specified by the modpacks website, follow these instructions.
+Some modpacks won't have a premade server.zip to download and may not work, and even if it does, it may not have any of the required server .jar files. This will be something you will have to look out for as every modpack is different. The easiest way to go about it is by installing the Minecraft version by using the panel, and then only uploading the mods folder from the modpack.
+
 <Steps>
   1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Minecraft server.
   3. Go to `Configuration > Advanced`.
   4. Under Install Different Edition, select the compatible version.
   5. Enable `Format` and click `Install Different Edition`.
 </Steps>
+
 :::danger
-Enabling Format will wipe your server to make sure all of the server versions are correct to run the Modpack, If you have any data you wish to keep, make a backup!
+Enabling Format **will wipe your server** to make sure all of the server versions are correct to run the Modpack, If you have any data you wish to keep, make a backup!
 :::
 
 ## Manually Installing Modpacks To Your Server
 
-These are the next steps after you've downloaded your Modpack of choice and have made sure the version is compatible, We recommend a launcher such as Prism Launcher to install Modpacks to your game client. Also, if the Modpack has a server pack that doesn't contain a `.jar` file, be sure to change the server to the correct version before proceeding, you can do this by following [these steps](https://guides.gamehostbros.com/games/minecraft/changing-versions).
+We recommend a launcher such as CurseForge to find and install Modpacks to your game client, CurseForge normally also had a server.zip download, this is where you will get the server modpack from. Also, if the server pack that doesn't contain a .jar file, be sure to change the server to the correct version before proceeding, you can do this by following [these steps](https://guides.gamehostbros.com/games/minecraft/changing-versions). If there is a .jar you should normally just delete everything on your server and then upload the modpack.
 <Steps>
   1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/).
-  2. Stop your server and delete everything in `File Manager`.
-  3. Connect to your server via [FTP](https://guides.gamehostbros.com/getting-started/uploading-files/).
-  4. Upload your Modpack.zip to the server (If it's not .zip extract it first).
-  5. In the panel go to `File Manager` and decompress the file.
-  6. Go into `Configuration > Startup Parameters` and make sure `Server Jar File` matches the .jar file from the Modpack, if it contains one.
-  7. Start your server and select the default java version.
-  8. Restart your server.
+  2. Connect to your server via [SFTP](https://guides.gamehostbros.com/getting-started/uploading-files/).
+  3. Upload your Modpack.zip to the server.
+  4. In the panel go to `File Manager` and decompress the file.
+  5. Go into `Configuration > Startup Parameters` and make sure `Server Jar File` matches the .jar file from the Modpack, if it contains one.
+  6. Start your server and select the default java version.
+  7. Restart your server.
 </Steps>
 Why the restart? It's to make sure the server ports are set correctly in your server settings as some files get generated after the initial launch, if they aren't already included in the modpack download you won't be able to connect unless you do this.
 
 ## Troubleshooting
 
-`Mismatched Mods?` Most Modpacks will also need to be installed locally on your game-client. When trying to connect to your server, if you have any problems such as mismatched mods. You can either, download the Mods and install them manually to the server and your client, or if you have Mods the server doesn't, you can delete them from your game files and try to connect again. Deleting the problem Mods on the server and Client will be the easiest solution.
+Here are the most common issues you may run into when installing mods to your Minecraft server.
 
-`Version Compatibilty` Make sure to double-check for version compatibility and Mod dependencies on the Mod website if you're having trouble connecting, also make sure to reinstall the correct Minecraft version under 
-Advanced in the panel, be sure to click Format if you haven't already deleted everything in File Manager.
+### Mismatched Mods 
 
-`Immediate Crashing` This may be because the server may be using an incompatible java version, the default is a recommendation that is usually correct, but can be wrong from time to time, if you have an odd issue like this follow [these steps](https://guides.gamehostbros.com/games/minecraft/change-java-version/) and cycle through versions, if none of them work start by trying the other troubleshooting steps to rule out possible causes.
+Most Modpacks will also need to be installed locally on your game-client. When trying to connect to your server, if you have any problems such as mismatched mods. You can either,download the Mods and install them manually to the server and your client, or if you have Mods the server doesn't, you can delete them from your game files and try to connect again.Deleting the problem Mods on the server and Client will be the easiest solution.
 
-`Connection Refused?` If you've just manually installed a Modpack and can't connect to your server, and your error message is just refused connection with no information, first try restarting your server, also make sure to watch the server console as the server starts to make sure it's correctly installed and starting properly.
+### Version Compatibilty
+
+Make sure to double-check for version compatibility and Mod dependencies on the Mod website if you're having trouble connecting, also make sure to reinstall the correct Minecraft version under `Advanced` in the panel, be sure to click Format if you haven't already deleted everything in File Manager.
+
+### Immediate Crashing
+
+This may be because the server may be using an incompatible java version, the default is a recommendation that is usually correct, but can be wrong from time to time, if you have an odd issue like this follow [these steps](https://guides.gamehostbros.com/games/minecraft/change-java-version/) and cycle through versions, if none of them work start by trying the other troubleshooting steps to rule out possible causes.
+
+### Connection Refused?
+
+If you've just manually installed a Modpack and can't connect to your server, and your error message is just refused connection with no information, first try restarting your server, also make sure to watch the server console as the server starts to make sure it's correctly installed and starting properly.
 
 Finally, the most important troubleshooting step is to watch the server console if it crashes, or if you disconnect. You'd be looking for things such as Mismatched Mods, Install Different Fabric API or if the server crashes while loading a particular mod, it may be a sign that the mod is incompatible.
 
