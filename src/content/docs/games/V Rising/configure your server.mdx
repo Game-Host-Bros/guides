@@ -1,81 +1,33 @@
 ---
 title: How To Configure Your V Rising Server
-description: Learn how to configure your V Rising Server 
+description: Learn how to configure your V Rising Server using game presets or ServerGameSettings.json
 sidebar:
   label: Configure Your Server
 ---
-import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
-In V Rising, there are 2 methods to configure your server. For basic settings you will edit everything from the Game Panel [Startup Parameters](/getting-started/beginners-guide/#edit-server-settings) screen. The other and more advanced way is to use the ServerGameSettings.json file to configure your [V Rising server](https://www.gamehostbros.com/v-rising-server-hosting/).
+In this guide, we will teach you how to configure your [V Rising server](https://www.gamehostbros.com/v-rising-server-hosting/) using both game presets or by using a custom ServerGameSettings.json file.
 
-## How To Create ServerGameSettings.json
+## Using Game Presets
 
-By default, this file is not created automatically. You need to use one of the base game files as a template to generate it or use the example file below.
+If you only want to play specific game modes, then game presets is filled with options you can use to quickly get up and running.
 
-:::danger
-Make sure Game Setting Preset is set to blank/Unknown under Startup Parameters to use a custom ServerGameSettings.json.
-:::
 <Steps>
-1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
-2. Go to `System > Console` and Stop your server.
-3. Click on `Management > File Manager.`
-4. Navigate to `VRisingServer_Data/StreamingAssets/GameSettingPresets` and look for a template that suits your desired settings.
-   <FileTree>
-    - VRisingServer_Data
-      - StreamingAssets
-        - **GameSettingPresets/**
-   </FileTree>
-
-5. Click the 3 dots on the right-hand side of the file and click `Download`.
-6. After you've made your changes, navigate to `/save-data/Settings` and drag your modified file in.
-7. Rename it to `ServerGameSettings.json` and restart your server.
-   <FileTree>
-    - save-data
-      - Settings
-        - **ServerGameSettings.json**
-   </FileTree>
-
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your V Rising server.
+2. Go to `Configuration > Startup Parameters`.
+3. Find the `Game Setting Preset` setting and change it to the desired mode.
+4. Restart your server.
 </Steps>
 
+## Setting Custom Settings Using ServerGameSettings.json
 
-:::danger
-Do NOT edit the files directly inside `VRisingServer_Data/StreamingAssets/GameSettingPresets` as they will be overwritten on an update.
-:::
+We allow you to make custom settings using the `ServerGameSettings.json` file, however **you must** make sure `Game Setting Preset` is set to blank/Unknown under Startup Parameters to use custom settings. If you have a Game Setting Preset set then this file is ignored.
 
-## ServerGameSettings.json Example File
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your V Rising server.
+2. Click on `Management > File Manager.`
+3. Navigate to `/save-data/Settings/ServerGameSettings.json` and make the changes you want.
+4. Restart your server.
+</Steps>
 
-Here is an example of ServerGameSettings.json that you can use. It's based on the Standard PVP file.
-
-```json
-{
-  "GameModeType": "PvP",
-  "CastleDamageMode": "TimeRestricted",
-  "CastleHeartDamageMode": "CanBeDestroyedOnlyWhenDecaying",
-  "DeathContainerPermission": "Anyone",
-  "RelicSpawnType": "Unique",
-  "BloodBoundEquipment": true,
-  "PlayerDamageMode": "Always",
-  "PvPProtectionMode": "Short",
-  "SiegeWeaponHealth": "High",
-  "AnnounceSiegeWeaponSpawn": true,
-  "ShowSiegeWeaponMapIcon": false,
-  "BloodDrainModifier": 1.25,
-  "BatBoundItems": true,
-  "CastleStatModifiers_Global": {
-    "CastleLimit": 1
-  },
-  "WarEventGameSettings": {
-    "WeekdayTime": {
-      "StartHour": 8,
-      "EndHour": 2,
-      "EndMinute": 0
-    },
-    "WeekendTime": {
-      "StartHour": 8,
-      "EndHour": 2,
-      "EndMinute": 0
-    }
-  }
-}
-```
+If you need to know what all the settings do, we have a [PDF that you can download here](https://cdn.stunlock.com/blog/2022/05/25083113/Game-Server-Settings.pdf). This is released by the game developers that contains all the settings and descriptions.
