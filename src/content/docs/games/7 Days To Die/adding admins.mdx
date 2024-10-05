@@ -6,18 +6,168 @@ sidebar:
 ---
 import { Steps } from '@astrojs/starlight/components';
 
-Looking to better manage your 7 Days To Die server by adding admins? This comprehensive guide will show you how to assign admin privileges to trusted players on your [7D2D server](https://www.gamehostbros.com/7-days-to-die-server-hosting/). Before you start, ensure you have the [SteamID64](https://steamid.io/) of each player you wish to promote.
+Looking to better manage your 7 Days To Die server by adding admins? This comprehensive guide will show you how to assign admin privileges to trusted players on your [7D2D server](https://www.gamehostbros.com/7-days-to-die-server-hosting/).
 
-## Setting Yourself As An Admin In 7 Days To Die
+## Setting Yourself As An Admin In 7D2D
 
 <Steps>
-1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your 7D2D server.
-2. In the sidebar click on `Management > File Manager`.
-3. Select the `.local/share/7DaysToDie/Saves/` folder.
-4. Open the file named `serveradmin.xml`.
-5. Add a new entry on its own line under users in SteamID64 format. It should look like this:
-   ```xml title="serveradmin.xml"
-   <user platform="Steam" userid="76561198106341655" name="[You!]" permission_level="0" />
+
+1. Connect to your 7D2D server.
+2. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your 7D2D server.
+3. In the sidebar click on `System > Console` type `listplayers` and note the player ID= of the user you want to set as Admin.
+4. Enter this command, Name is an optional identifier.
+
+   ```  
+   admin add <ID> <0-1000> <Name>
    ```
-6. Restart your server.
+   **A permission level of 0 gives the user access to all commands.**
+   - Type `admin list` to list admins.
+   - To remove an admin, type `admin remove ID`. 
 </Steps>
+
+Now that you're an Admin, you may want to check out our guide about [Enabling Admin Menus](/games/7-days-to-die/admin-menus/).
+
+## [Advanced] 7D2D Admin Permission Level Configuration
+
+Permission levels in 7D2D are set in the serveradmin.xml file on your server. To apply a permission level to a certain command, first find the command you want to limit, and then follow these steps.
+
+<Steps>
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your 7D2D server.
+2. In File Manager, navigate to `/.local/share/7DaysToDie/Saves/serveradmin.xml`.
+3. Scroll down to `<Commands>`.
+4. Copy this and add it to a new line under `<Commands>`, replacing the command and setting a permission level of `0-1000`.
+
+   ```xml title="serveradmin.xml"
+   <permission cmd="gettime" permission_level="1000" />
+   ```
+   - A level of 1000 will give all users access to the command.
+   - A user's permission level must be equal to or below the commands permission level in order to have access to it.
+</Steps>   
+
+## All 7D2D Commands
+
+Below is a table of every 7D2D command, with descriptions and titles directly from the game, they can also be found by typing `help` into console.
+
+**Generic Console Help**
+
+| Command                          | Description                                               |
+|----------------------------------|-----------------------------------------------------------|
+| `help <command>`          | Get help on a specific topic or command.                  |
+
+**List of Commands**
+
+| Command                        | Description                                                         |
+|--------------------------------|---------------------------------------------------------------------|
+| `admin`                        | Manage user permission levels.                                      |
+| `AdminSpeed / as`                | AdminSpeed.                                                         |
+| `agemap`                       | Output debug map for chunk age/protection/save status.               |
+| `ai`                           | AI commands.                                                        |
+| `aiddebug`                     | Toggles AIDirector debug output.                                     |
+| `audio`                        | Watch audio stats.                                                  |
+| `automove`                     | Player auto movement.                                               |
+| `ban`                          | Manage ban entries.                                                 |
+| `bents`                        | Switches block entities on/off.                                     |
+| `buff`                         | Applies a buff to the local player.                                 |
+| `buffplayer`                   | Apply a buff to a player.                                           |
+| `camera / cam`                   | Lock/unlock camera movement or load/save a specific camera position. |
+| `chunkcache / cc`                | Shows all loaded chunks in cache.                                   |
+| `chunkobserver / co`             | Place a chunk observer on a given position.                         |
+| `chunkreset / cr`                | Resets the specified chunks.                                        |
+| `commandpermission / cp`         | Manage command permission levels.                                   |
+| `createwebuser`                | Create a web dashboard user account.                                |
+| `creativemenu / cm`              | Enables/disables the creative menu.                                 |
+| `damagereset`                  | Reset damage on all blocks in the currently loaded POI.             |
+| `debuff`                       | Removes a buff from the local player.                               |
+| `debuffplayer`                 | Remove a buff from a player.                                        |
+| `debuggamestats`               | GameStats commands.                                                 |
+| `debugmenu / dm`                 | Enables/disables the debug menu.                                    |
+| `debugpanels`                  | Allows usage of debug display panels (F3 menu) via command console.  |
+| `debugshot / dbs`                | Creates a screenshot with some debug information.                   |
+| `debugweather`                 | Dumps internal weather state to the console.                        |
+| `decomgr`                      | Saves a debug texture visualizing the DecoOccupiedMap.              |
+| `Dynamic mesh zz`              | Dynamic mesh.                                                       |
+| `enablerendering`              | Disable live map rendering.                                         |
+| `exception`                    | Throw an exception or log messages.                                 |
+| `exhausted`                    | Makes the player exhausted.                                         |
+| `expiryinfo`                   | Prints location and expiry day/time for the next chunks set to expire. |
+| `exportcurrentconfigs`         | Exports the current game config XMLs.                               |
+| `floatingorigin / fo`            | Floating origin commands.                                           |
+| `ForceEventDate`               | Specify date for testing event dates.                               |
+| `fov`                          | Camera field of view.                                               |
+| `gamestage`                    | Shows the gamestage of the local player.                            |
+| `getgamepref / gg`               | Gets game preferences.                                              |
+| `getgamestat / ggs`              | Gets game stats.                                                    |
+| `getlogpath / glp`               | Get the path of the logfile the game currently writes to.           |
+| `getoptions`                   | Gets game options.                                                  |
+| `gettime / gt`                   | Get the current game time.                                          |
+| `gfx`                          | Graphics commands.                                                  |
+| `give`                         | Give an item to a player (entity id or name).                       |
+| `givequest`                    | Usage: givequest questname.                                         |
+| `giveself`                     | Usage: giveself itemName [qualityLevel=6] [count=1] [putInInventory=false] [spawnWithMods=true]. |
+| `giveselfxp`                   | Usage: giveselfxp 10000.                                            |
+| `givexp`                       | Give XP to a player.                                                |
+| `graph`                        | Draws graphs on screen.                                             |
+| `help`                         | Help on console and specific commands.                              |
+| `invalidatecaches`             | Invalidate contents of web file caches.                             |
+| `jds`                          | Server drone commands.                                              |
+| `junkDrone / jd`                 | Local player junk drone queries.                                    |
+| `kick`                         | Kicks user with optional reason.                                    |
+| `kickall`                      | Kicks all users with optional reason.                               |
+| `kill`                         | Kill a given entity.                                                |
+| `killall`                      | Kill all entities.                                                  |
+| `listgameobjects / lgo`          | List all active game objects.                                       |
+| `lights`                       | Light debugging.                                                    |
+| `listents / le`                  | Lists all entities.                                                 |
+| `listitems / li`                 | Lists all items that contain the given substring.                   |
+| `listplayerids / lpi`            | Lists all players with their IDs for in-game commands.              |
+| `listplayers / lp`               | Lists all players.                                                  |
+| `listthreads / lt`               | Lists all threads.                                                  |
+| `loggamestate / lgs`             | Log the current state of the game.                                  |
+| `loglevel`                     | Telnet/Web only: Select which types of log messages are shown.       |
+| `loot`                         | Loot commands.                                                      |
+| `mapdata`                      | Writes some map data to an image.                                   |
+| `mem`                          | Prints memory information and unloads resources or changes garbage collector. |
+| `memcl`                        | Prints memory information on client and calls garbage collector.     |
+| `memprofile / mprof`             | Toggles screen Memory Profiler UI.                                  |
+| `mumblepositionalaudio / mpa`    | Mumble Positional Audio related tools.                              |
+| `na`                           | Test new HD stuff.                                                  |
+| `networkclient / netc`           | Client side network commands.                                       |
+| `networkserver / nets`           | Server side network commands.                                       |
+| `newweathersurvival`           | Enables/disables new weather survival.                              |
+| `occlusion`                    | Control OcclusionManager.                                           |
+| `openiddebug`                  | Enable/disable OpenID debugging.                                    |
+| `overridemaxplayercount`       | Override Max Server Player Count.                                   |
+| `permissionsallowed / pa`        | Apply a mask to permissions for testing purposes.                   |
+| `playervisitmap / pvm`           | Teleports the player through a rectangular area with optional memory logging. |
+| `pois`                         | Switches distant POIs on/off.                                       |
+| `poiwaypoints / pwp`             | Adds waypoints for specified POIs.                                  |
+| `prefabeditor / prefabedit predit`| Open the Prefab Editor.                                             |
+| `regionreset / rr`               | Resets chunks within a target region, or for the entire map.         |
+| `rendermap`                    | Render the current map to a file.                                   |
+| `repairchunkdensity / rcd`       | Check and optionally fix densities of a chunk.                      |
+| `reply / re`                     | Send a message to the player who last sent you a PM.                |
+| `resetallstats`                | Resets all achievement stats (and achievements when parameter is true). |
+| `saveworld / sa`                 | Saves the world manually.                                           |
+| `say`                          | Sends a message to all connected clients.                           |
+| `sayplayer / pm`                 | Send a message to a single player.                                  |
+| `setgamepref / sg`               | Sets a game preference.                                             |
+| `setgamestat / sgs`              | Sets a game stat.                                                   |
+| `settargetfps`                 | Set the target FPS the game should run at (upper limit).             |
+| `settime / st`                   | Set the current game time.                                          |
+| `shutdown`                     | Shuts down the game.                                                |
+| `spawnentity / se`               | Spawns an entity.                                                   |
+| `spectatormode / sm`             | Enables/disables spectator mode.                                    |
+| `version`                      | Get the currently running version of the game and loaded mods.       |
+| `weather`                      | Control weather settings.                                           |
+| `whitelist`                    | Manage whitelist entries.                                           |
+| `xui`                          | Execute XUi operations.                                             |
+
+**List of Help Topics**
+
+| Command            | Description                                 |
+|--------------------|---------------------------------------------|
+| `output`           | Prints commands to log file.                |
+| `outputdetailed`   | Prints commands with details to log file.   |
+| `search`           | Search for all commands matching a string.  |
+| `*`                | Search for all commands matching a string.  |

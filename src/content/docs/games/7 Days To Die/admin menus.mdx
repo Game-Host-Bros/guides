@@ -1,0 +1,252 @@
+---
+title: How To Enable Admin Menus On Your 7 Days To Die Server
+description: Learn how to enable Admin menus on your 7 Days To Die Server
+sidebar:
+  label: Admin Menus
+---
+import { Steps } from '@astrojs/starlight/components';
+
+After [Becoming An Admin](/games/7-days-to-die/adding-admins/) on your [7 Days To Die server](https://www.gamehostbros.com/7-days-to-die-server-hosting/) to execute commands you will open console with `F1` and enter the command you'd like, commands can be found [here](/games/7-days-to-die/adding-admins/#all-7d2d-commands), or by typing `help` into console. This guide will show you how to enable Admin Menus in 7D2D.
+
+## Enabling The Debug Menu In 7D2D
+
+The Debug Menu, otherwise known as Cheat Mode, unlocks powerful admin tools in 7 Days to Die, including options to spawn entities, teleport to Points of Interest (POIs), and access to various debugging features. Follow these steps to enable the Debug Menu:
+
+<Steps>
+
+1. On your keyboard, press `F1` and enter `debugmenu`.
+2. Close Console, and press `ESC`.
+</Steps> 
+
+With the Debug Menu enabled, you can now activate God Mode, Fly Mode, Invisibility, and more directly from the in-game menu. Additionally, the left-hand sidebar will include an option to Open POI Teleporter, allowing you to instantly teleport to points of interest across the map.
+
+## Enabling The Creative Menu In 7D2D
+
+:::danger
+Enabling the Creative Menu will disable achievements on your server.
+:::
+
+If infinite resources and building is your thing, you're in luck! The Creative Menu makes resource gathering completely redundant, and allows you to instantly start building without the fear of running out of materials. Here's how to enable the Creative Menu.
+
+<Steps>
+
+1. Open Console with `F1` and type `cm`.
+2. Press `U` to open the Creative Menu.
+</Steps> 
+
+To spawn items, select and drag them into your inventory. To destroy an item, either drag it back into an empty slot in the Creative Menu or click `Clear Inventory`.
+
+## Enabling The Spawn Entity Menu In 7D2D
+
+The Spawn Entity menu requires the Debug Menu to be enabled, here's how to enable both as an Admin:
+<Steps>
+
+1. On your keyboard, press `F1` and enter `debugmenu`.
+2. Press `F6` to open the Spawn Entity menu.
+</Steps> 
+
+Entities can also be spawned by using console commands. Using console does not require the Debug Menu to be enabled, to use the console method you will need to type `listplayers`, note your player ID= number, and then type this.
+```
+se <ID> <entity-id> <amount>
+```
+All of the 7D2D Entity-ID's can be found below. They can also be found by typing `se` to list all entities in console.
+
+### All 7D2D Entity-ID's
+| ID  | Entity                                 |
+|-----|----------------------------------------|
+| 1   | zombieArlene                          |
+| 2   | zombieArleneFeral                     |
+| 3   | zombieArleneRadiated                  |
+| 4   | zombieMarlene                         |
+| 5   | zombieMarleneFeral                    |
+| 6   | zombieMarleneRadiated                 |
+| 7   | zombiePartyGirl                       |
+| 8   | zombiePartyGirlFeral                  |
+| 9   | zombiePartyGirlRadiated               |
+| 10  | zombieNurse                           |
+| 11  | zombieNurseFeral                      |
+| 12  | zombieNurseRadiated                   |
+| 13  | zombieJoe                             |
+| 14  | zombieJoeFeral                        |
+| 15  | zombieJoeRadiated                     |
+| 16  | zombieSteve                           |
+| 17  | zombieSteveFeral                      |
+| 18  | zombieSteveRadiated                   |
+| 19  | zombieTomClark                        |
+| 20  | zombieTomClarkFeral                   |
+| 21  | zombieTomClarkRadiated                |
+| 22  | zombieBusinessMan                     |
+| 23  | zombieBusinessManFeral                |
+| 24  | zombieBusinessManRadiated             |
+| 25  | zombieBurnt                           |
+| 26  | zombieBurntFeral                      |
+| 27  | zombieBurntRadiated                   |
+| 28  | zombieSpider                          |
+| 29  | zombieSpiderFeral                     |
+| 30  | zombieSpiderRadiated                  |
+| 31  | zombieBoe                             |
+| 32  | zombieBoeFeral                        |
+| 33  | zombieBoeRadiated                     |
+| 34  | zombieMaleHazmat                      |
+| 35  | zombieMaleHazmatFeral                 |
+| 36  | zombieMaleHazmatRadiated              |
+| 37  | zombieJanitor                         |
+| 38  | zombieJanitorFeral                    |
+| 39  | zombieJanitorRadiated                 |
+| 40  | zombieInmate                          |
+| 41  | zombieInmateFeral                     |
+| 42  | zombieInmateRadiated                  |
+| 43  | zombieMoe                             |
+| 44  | zombieMoeFeral                        |
+| 45  | zombieMoeRadiated                     |
+| 46  | zombieLab                             |
+| 47  | zombieLabFeral                        |
+| 48  | zombieLabRadiated                     |
+| 49  | zombieDarlene                         |
+| 50  | zombieDarleneFeral                    |
+| 51  | zombieDarleneRadiated                 |
+| 52  | zombieYo                              |
+| 53  | zombieYoFeral                         |
+| 54  | zombieYoRadiated                      |
+| 55  | zombieUtilityWorker                   |
+| 56  | zombieUtilityWorkerFeral              |
+| 57  | zombieUtilityWorkerRadiated           |
+| 58  | zombieBiker                           |
+| 59  | zombieBikerFeral                      |
+| 60  | zombieBikerRadiated                   |
+| 61  | zombieLumberjack                      |
+| 62  | zombieLumberjackFeral                 |
+| 63  | zombieLumberjackRadiated              |
+| 64  | zombieFemaleFat                       |
+| 65  | zombieFemaleFatFeral                  |
+| 66  | zombieFemaleFatRadiated               |
+| 67  | zombieFatHawaiian                     |
+| 68  | zombieFatHawaiianFeral                |
+| 69  | zombieFatHawaiianRadiated             |
+| 70  | zombieBowler                          |
+| 71  | zombieBowlerFeral                     |
+| 72  | zombieBowlerRadiated                  |
+| 73  | zombieFatCop                          |
+| 74  | zombieFatCopFeral                     |
+| 75  | zombieFatCopRadiated                  |
+| 76  | zombieSkateboarder                    |
+| 77  | zombieSkateboarderFeral               |
+| 78  | zombieSkateboarderRadiated            |
+| 79  | zombieSoldier                         |
+| 80  | zombieSoldierFeral                    |
+| 81  | zombieSoldierRadiated                 |
+| 82  | zombieWightFeral                      |
+| 83  | zombieWightRadiated                   |
+| 84  | zombieScreamer                        |
+| 85  | zombieScreamerFeral                   |
+| 86  | zombieScreamerRadiated                |
+| 87  | zombieMutated                         |
+| 88  | zombieMutatedFeral                    |
+| 89  | zombieMutatedRadiated                 |
+| 90  | zombieDemolition                      |
+| 91  | zombieSteveCrawler                    |
+| 92  | zombieSteveCrawlerFeral               |
+| 93  | animalStag                            |
+| 94  | animalDoe                             |
+| 95  | animalRabbit                          |
+| 96  | animalChicken                         |
+| 97  | animalBear                            |
+| 98  | animalBearSmall                       |
+| 99  | animalZombieBear                      |
+| 100 | animalWolf                            |
+| 101 | animalDireWolf                        |
+| 102 | animalChickenHostile                  |
+| 103 | animalCoyote                          |
+| 104 | animalMountainLion                    |
+| 105 | animalZombieVulture                   |
+| 106 | animalZombieVultureRadiated           |
+| 107 | animalZombieDog                       |
+| 108 | animalSnake                           |
+| 109 | animalBoar                            |
+| 110 | animalBossGrace                       |
+| 111 | vehicleBicycle                        |
+| 112 | vehicleMinibike                       |
+| 113 | vehicleMotorcycle                     |
+| 114 | vehicleTruck4x4                       |
+| 115 | vehicleGyrocopter                     |
+| 116 | sc_General                            |
+| 117 | EntityLootContainerRegular            |
+| 118 | EntityLootContainerStrong             |
+| 119 | EntityLootContainerBoss               |
+| 120 | DroppedLootContainerTwitch            |
+| 121 | junkTurretSledge                      |
+| 122 | junkTurretGun                         |
+| 123 | entityJunkDrone                       |
+| 124 | npcTraderJoel                         |
+| 125 | npcTraderRekt                         |
+| 126 | npcTraderBob                          |
+| 127 | npcTraderHugh                         |
+| 128 | npcTraderJen                          |
+| 129 | TwitchAction_SupplyWeapon1            |
+| 130 | TwitchAction_SupplyWeapon2            |
+| 131 | TwitchAction_SupplyWeapon3            |
+| 132 | TwitchAction_SupplyWeapon4            |
+| 133 | TwitchAction_SupplyTool1              |
+| 134 | TwitchAction_SupplyTool2              |
+| 135 | TwitchAction_SupplyTool3              |
+| 136 | TwitchAction_SupplyMedicine1          |
+| 137 | TwitchAction_SupplyMedicine2          |
+| 138 | TwitchAction_SupplyMedicine3          |
+| 139 | TwitchAction_SupplyResource1          |
+| 140 | TwitchAction_SupplyResource2          |
+| 141 | TwitchAction_SupplyResource3          |
+| 142 | TwitchAction_SupplyResource4          |
+| 143 | TwitchAction_SupplyBuilder1           |
+| 144 | TwitchAction_SupplyBuilder2           |
+| 145 | TwitchAction_SupplyBuilder3           |
+| 146 | TwitchAction_SupplyFarming1           |
+| 147 | TwitchAction_SupplyFarming2           |
+| 148 | TwitchAction_SupplyAmmo1              |
+| 149 | TwitchAction_SupplyAmmo2              |
+| 150 | TwitchAction_SupplyAmmo3              |
+| 151 | TwitchAction_SupplyAmmo4              |
+| 152 | TwitchAction_SupplySpecialAmmo1       |
+| 153 | TwitchAction_SupplySpecialAmmo2       |
+| 154 | TwitchAction_SupplyBooks1             |
+| 155 | TwitchAction_SupplyBooks2             |
+| 156 | TwitchAction_SupplyBooks3             |
+| 157 | TwitchAction_SupplyUtility1           |
+| 158 | TwitchAction_SupplyUtility2           |
+| 159 | TwitchAction_SupplyCandy              |
+| 160 | TwitchAction_SupplyTreasure           |
+| 161 | TwitchAction_SupplyArmor1             |
+| 162 | TwitchAction_SupplyArmor2             |
+| 163 | TwitchAction_SupplyArmor3             |
+| 164 | TwitchAction_SupplyFoodWater1         |
+| 165 | TwitchAction_SupplyFoodWater2         |
+| 166 | TwitchAction_SupplyFoodWater3         |
+| 167 | TwitchAction_SupplyFoodWater4         |
+| 168 | TwitchAction_SupplyBicycle            |
+| 169 | TwitchAction_SupplyMinibike           |
+| 170 | TwitchAction_SupplyMotorcycle         |
+| 171 | TwitchAction_Supply4x4                |
+| 172 | TwitchAction_SupplyGyro               |
+| 173 | TwitchAction_SupplyExplosives1        |
+| 174 | TwitchAction_SupplyExplosives2        |
+| 175 | TwitchAction_SupplyExplosives3        |
+| 176 | TwitchAction_SupplyExplosives4        |
+| 177 | TwitchAction_SupplyRobo1              |
+| 178 | TwitchAction_SupplyRobo2              |
+| 179 | TwitchAction_SupplyRobo3              |
+| 180 | TwitchAction_SupplyRobo4              |
+| 181 | TwitchAction_SupplyMods1              |
+| 182 | TwitchAction_SupplyMods2              |
+| 183 | TwitchAction_SupplyMods3              |
+| 184 | TwitchAction_SupplyElectrical1        |
+| 185 | TwitchAction_SupplyElectrical2        |
+| 186 | TwitchAction_VoteRewardT1             |
+| 187 | TwitchAction_VoteRewardT2             |
+| 188 | TwitchAction_VoteRewardT3             |
+| 189 | TwitchAction_VoteRewardT4             |
+| 190 | TwitchAction_HomeRunRewardT1          |
+| 191 | TwitchAction_HomeRunRewardT2          |
+| 192 | TwitchAction_HomeRunRewardT3          |
+| 193 | TwitchAction_HomeRunRewardT4          |
+| 194 | TwitchAction_HomeRunRewardT5          |
+
+If you get stuck at any time, you can reach out to us on [Discord](https://discord.gg/FN4XgbAwzr).
