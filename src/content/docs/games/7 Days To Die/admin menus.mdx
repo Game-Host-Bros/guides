@@ -6,7 +6,7 @@ sidebar:
 ---
 import { Steps } from '@astrojs/starlight/components';
 
-After [Becoming An Admin](/games/7-days-to-die/adding-admins/) on your [7 Days To Die server](https://www.gamehostbros.com/7-days-to-die-server-hosting/) to execute commands you will open console with `F1` and enter the command you'd like, commands can be found [here](/games/7-days-to-die/adding-admins/#all-7d2d-commands), or by typing `help` into console. This guide will show you how to enable Admin Menus in 7D2D.
+After [Becoming An Admin](/games/7-days-to-die/adding-admins/) on your [7 Days To Die server](https://www.gamehostbros.com/7-days-to-die-server-hosting/) to execute commands you will open console with `F1` and enter the command you'd like, all commands can be found [here](/games/7-days-to-die/adding-admins/#all-7d2d-commands), or by typing `help` into console. This guide will show you how to enable Admin Menus in 7D2D.
 
 ## Enabling The Debug Menu In 7D2D
 
@@ -28,13 +28,31 @@ Enabling the Creative Menu will disable achievements on your server.
 
 If infinite resources and building is your thing, you're in luck! The Creative Menu makes resource gathering completely redundant, and allows you to instantly start building without the fear of running out of materials. Here's how to enable the Creative Menu.
 
+At Game Host Bros we have a toggle for the Creative Menu directly in our game panel, here's how to enable it only for Admins, and how to enable it for everybody.
+
+**Enabling The Creative Menu As An Admin**
+
 <Steps>
 
-1. Open Console with `F1` and type `cm`.
+1. Open 7D2D Console with `F1` and type `cm`.
 2. Press `U` to open the Creative Menu.
 </Steps> 
 
 To spawn items, select and drag them into your inventory. To destroy an item, either drag it back into an empty slot in the Creative Menu or click `Clear Inventory`.
+
+**Enabling The Creative Menu For Everybody**
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your 7D2D server.
+2. Go to `Configuration > Startup Parameters`.
+3. Under `Gameplay`, find the `Build Create (Cheat Mode)` setting and set it to `Enabled`.
+4. Restart your server.
+   - Once connected press `U` to open the Creative Menu.
+
+</Steps> 
+
+:::danger
+Setting Cheat Mode in the game panel will give everybody access to the Creative Menu, if you only want it to be for Admins, follow the steps above.
+:::
 
 ## Enabling The Spawn Entity Menu In 7D2D
 
@@ -47,7 +65,7 @@ The Spawn Entity menu requires the Debug Menu to be enabled, here's how to enabl
 
 Entities can also be spawned by using console commands. Using console does not require the Debug Menu to be enabled, to use the console method you will need to type `listplayers`, note your player ID= number, and then type this.
 ```
-se <ID> <entity-id> <amount>
+se ID entity-id amount
 ```
 All of the 7D2D Entity-ID's can be found below. They can also be found by typing `se` to list all entities in console.
 

@@ -10,6 +10,7 @@ import { Steps } from '@astrojs/starlight/components';
 Want to explore new terrains or try out custom worlds on your [7 Days To Die server](https://www.gamehostbros.com/7-days-to-die-server-hosting/)? This comprehensive guide will walk you through the steps to change maps, upload custom worlds, and continue playing on existing saves. Whether you're looking to switch to the default Navezgane map, generate a random world, or upload your own, we've got you covered.
 
 <Steps>
+
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
 2. Go to `Management > File Manager`.
 3. Open the `serverconfig.xml` file.
@@ -26,6 +27,7 @@ Want to explore new terrains or try out custom worlds on your [7 Days To Die ser
 
 If you'd like to continue playing an existing world, whether it be a downloaded custom world or RWG, the steps to do it will stay the same, here's how you can find and upload it to your server.
 <Steps>
+
 1. Press `Windows Key + R`.
 2. Enter this 
    ```
@@ -56,6 +58,7 @@ If you're using a default pregen world, you only need to change `GameWorld` and 
 Now that you've located your World file, the following steps will guide you on how to upload and use it on your 7D2D server.
 
 <Steps>
+
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
 2. In `Management > File Manager`, navigate to `.local/share/7DaysToDie/GeneratedWorlds`.
 3. Using [SFTP](https://guides.gamehostbros.com/getting-started/uploading-files/) upload your World to the `GeneratedWorlds` folder.
@@ -80,12 +83,12 @@ Your server files should now look like this.
 
 Once the data has been uploaded, to allow your server to run it you'll have to set it to use those uploaded files, specifically `GameWorld` for the map itself, and `GameName` for your save data, here's how it's done.
 <Steps>
+
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
-2. Go to `Management > File Manager`.
-3. Open the `serverconfig.xml` file.
-4. Look for the `GameWorld` line and change it to your `[WorldName]`.
-5. Find the `GameName` line and change it to your `[SaveName]`.
-6. Click Save, and start your server.
+2. Go to `Configuration > Startup Parameters`.
+4. Under `Map` look for the `GameWorld` line and change it to your `[WorldName]`.
+5. Under `Map` look for the `GameName` line and change it to your `[SaveName]`.
+6. Start your server.
 </Steps>
 
 You can check to see if it's loaded correctly by watching your server Console, it should look something like this.
