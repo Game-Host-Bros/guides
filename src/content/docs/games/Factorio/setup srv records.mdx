@@ -1,6 +1,6 @@
 ---
-title: How To Setup SRV Records
-description: Learn how to set up SRV Records for Factorio.
+title: How To Setup SRV Records For Your Factorio Server
+description: Learn how to set up SRV Records and use a custom domain for your Factorio server.
 sidebar:
   label: Setup SRV Records
 ---
@@ -22,7 +22,7 @@ In this guide, you will learn how to set up SRV records for your Factorio server
     - **TTL**: Select `Auto`
     - **Weight**: Enter `1` for the Weight (used for load balancing).
     - **Port**: Enter The port number for your Factorio Server (Example: `34197`)
-    - **Target**: The hostname you wish the service to be on. (Example: `factorio.domain.tld`)
+    - **Target**: The hostname you wish the service to be on. (Example: `play.example.com`)
 <Steps>
   5. Save your SRV record.
   6. Wait for DNS propagation, which can take a few minutes to several hours (depending on your DNS Provider).
@@ -30,10 +30,10 @@ In this guide, you will learn how to set up SRV records for your Factorio server
 
 Here’s a breakdown of the record:
 ```
-  _factorio._tcp.domain.tld SRV 1 1 34197 factorio.domain.tld
+  _factorio._udp.domain.tld SRV 1 1 34197 play.example.com
 ```
 
-Now, users connecting to `factorio.domain.tld` will automatically be directed to **your Factorio Server IP** on port `34197`.
+Now, users connecting to `play.example.com` will automatically be directed to **your Factorio Server IP** on port `34197`.
 
 
 
