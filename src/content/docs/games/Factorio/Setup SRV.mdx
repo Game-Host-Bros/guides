@@ -1,0 +1,39 @@
+---
+title: How To Setup SRV Records
+description: Learn how to set up SRV Records for your services.
+sidebar:
+  label: Setup SRV Records
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide, you will learn how to set up SRV records for your domain. SRV (Service) records are used to point specific services like Game servers, to the right IP and PORT. in the Steps we will be using [Cloudflare](https://cloudflare.com).
+
+## Setting Up SRV Records
+
+<Steps>
+    1. Log in to your DNS provider's control panel. (e.g. Cloudflare, GoDaddy,)
+    2. Navigate to the DNS management section.
+    3. Select the option to add a new DNS record and choose `SRV` from the record type dropdown.
+    4. Enter the following details:
+</Steps>
+    - **Name**: Enter `_factorio._udp`
+    - **Priority**: Enter `1` for the Priority (lower numbers get higher priority).
+    - **TTL**: Select `Auto`
+    - **Weight**: Enter `1` for the Weight (used for load balancing).
+    - **Port**: Enter The port number for your Factorio Server (Example: `34197`)
+    - **Target**: The hostname you wish the service to be on. (Example: `factorio.domain.tld`)
+<Steps>
+  5. Save your SRV record.
+  6. Wait for DNS propagation, which can take a few minutes to several hours (depending on your DNS Provider).
+</Steps>
+
+Here’s a breakdown of the record:
+```
+  _Factorio._tcp.domain.tld SRV 1 1 34197 factorio.domain.tld
+```
+
+Now, users connecting to `factorio.domain.tld` will automatically be directed to **your Factorio Server IP** on port `34197`.
+
+
+
