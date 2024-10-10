@@ -6,16 +6,38 @@ sidebar:
 ---
 import { Steps } from '@astrojs/starlight/components';
 
-By default, Team Fortress 2 will slowly download files directly from the server itself, this can be slow for players who are trying to connect to your server. Game Host Bros offers FastDL so players can download the files faster. By default it will sync all custom files inside the `/tf2/` directory on your [TF2 server](https://www.gamehostbros.com/team-fortress-2-server-hosting/).
+At Game Host Bros, we offer FastDL for your Team Fortress 2 server so players can download custom files such as maps, models and materials quickly. Everything is automatic and there is no extra configuration required on your end other than uploading your custom content. 
 
-## How To Sync Your FastDL
+## How Does FastDL Work?
+While everything is automatic, there are still some things you should know about our FastDL system:
+- Files are synced (and compressed) to `/fastdl/` when you start your server.
+- `sv_downloadurl` is automatically updated or added to your `server.cfg`.
+- Files only get served to players after everything is compressed.
+- You can view all the files online by checking your FastDL url directly. You can get it by typing `sv_downloadurl` into your console.
+
+Here is a list of folders and file types in those folders we sync.
+
+| Folder       | Extensions                        |
+|--------------|----------------------------------|
+| gfx          | .tga, .bmp                        |
+| maps         | .bsp, .nav, .res, .txt            |
+| materials    | .vmt, .vtf, .raw, .svg            |
+| models       | .mdl, .vtx, .vvd, .phy            |
+| overviews    | .bmp, .txt                        |
+| particles    | .pcf                              |
+| resource     | .txt, .res                        |
+| sound        | .mp3, .wav, .txt                  |
+| sprites      | .spr, .tga, .txt                  |
+|              | .wad                              |
+
+If what you require isn't listed, please reach out to a bro, and we will add what you require.
+
+## Using A Third Party FastDL
+If you want to use an external FastDL you can do so by adding another config that runs after `server.cfg`.
 
 <Steps>
-1. Go to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
-2. On the left-hand side, go to `Tools > FastDL`.
-3. Click `Sync FastDL`.
-4. Copy the address to your FastDL it looks something like this: `http://lonestar.gamehostbros.com/a8341d7b`
-5. Open your `server.cfg`, located in `tf2/server.cfg`.
-6. Add or update `sv_downloadurl "http://lonestar.gamehostbros.com/a8341d7b"` into your server.cfg (Replace the URL with your unique FastDL url)
-7. Restart your server.
+1. Create a `fastdl.cfg` in your game folder or cfg folder where your `server.cfg` is located.
+2. Add the line `sv_downloadurl www.myfastdlurl.com`
+3. Go back to your `server.cfg` and add the line `exec fastdl` to the bottom of the file.
+4. Restart your server. 
 </Steps>
