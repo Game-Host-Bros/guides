@@ -1,0 +1,55 @@
+---
+title: How To Install Mods On Your American Truck Simulator Server
+description: Learn how to install mods on your American Truck Simulator Server
+sidebar:
+  label: Install Mods
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+To upload mods to your server you first need to activate them locally, here's how to activate, export, and upload the necessary files to run mods on your new [American Truck Simulator server](https://www.gamehostbros.com/euro-truck-simulator-2-server-hosting/).
+
+## Locally Enabling And Exporting Mods For An American Truck Simulator Server
+
+If you haven't already, you will need to enable the American Truck Simulator in-game console, this can be done by following our guide [here](/games/american-truck-simulator/enable-console/)
+<Steps>
+
+1. Open ATS and under `Mods` select the mods you'd like to activate, then click `Confirm Changes`.
+2. Load into a career game, and then open console with `~`.
+3. Type `export_server_packages` and press enter.
+4. Find the exported files by pressing `Windows Key + R` and entering this.
+   ```
+   %USERPROFILE%\Documents\American Truck Simulator
+   ```
+5. Make a copy of `server_packages.dat` and `server_packages.sii`, then proceed to the steps below.
+</Steps>
+
+
+## Uploading Mods To Your American Truck Simulator Server
+
+Now that you've enabled and locally exported your server_packages.dat and server_packages.sii files, they just need to be uploaded to your ATS server, here's how it's done.
+
+<Steps>
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your ATS server.
+2. Go to `Management > File Manager`.
+3. Inside of `.local/share/American Truck Simulator` delete the existing `server_packages.dat` and `server_packages.sii` files.
+4. [Upload](getting-started/uploading-files) your exported `server_packages.dat` and `server_packages.sii`.
+   <FileTree>
+    - .local
+      - share
+        - American-Truck-Simulator
+          - **server_packages.dat** Uploaded version
+          - **server_packages.sii** Uploaded version
+          - ..
+   </FileTree>
+5. Start your server.
+ </Steps>
+
+
+
+
+
+
+
+
