@@ -8,6 +8,16 @@ import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 In this guide, you will learn how to set up SRV records for your Factorio server. SRV (Service) records are used to connect services, like game servers, to the correct IP address and port. By setting up an SRV record, you can allow players to use a custom domain name (like play.example.com) instead of having to remember a string of numbers (your server's IP address and port). This makes it easier for players to connect to your server. in the Steps we will be using [Cloudflare](https://cloudflare.com).
+## Setting up an A Record
+
+<Steps>
+    1. Log in to your DNS provider's control panel. (e.g. Cloudflare, GoDaddy,)
+    2. Navigate to the DNS management section.
+    3. Select the option to add a new DNS record and choose `A` from the record type dropdown.
+    4. Enter the following details:
+</Steps>
+    - **Name:**: Enter in the subdomain you wish to use (Example: `play`)
+    - **Ipv4 Address:** Enter in the IP Address for your server (Example: `1.1.1.1`)
 
 ## Setting Up SRV Records
 
@@ -22,7 +32,7 @@ In this guide, you will learn how to set up SRV records for your Factorio server
     - **TTL**: Select `Auto`
     - **Weight**: Enter `1` for the Weight (used for load balancing).
     - **Port**: Enter The port number for your Factorio Server (Example: `34197`)
-    - **Target**: The hostname you wish the service to be on. (Example: `factorio.domain.tld`)
+    - **Target**: The hostname you wish the service to be on. (Example: `play.domain.tld`)
 <Steps>
   5. Save your SRV record.
   6. Wait for DNS propagation, which can take a few minutes to several hours (depending on your DNS Provider).
