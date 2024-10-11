@@ -4,6 +4,7 @@ description: Learn how to install modpacks on your Minecraft Java Edition Server
 sidebar:
   label: Installing Modpacks
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 This is what you do if you need to install a Modpack to your [Minecraft server](https://www.gamehostbros.com/minecraft-server-hosting/). We recommend installing modpacks to a fresh Minecraft Server to avoid possible conflicts.
@@ -28,15 +29,31 @@ Enabling Format **will wipe your server** to make sure all of the server version
 We recommend using CurseForge to find and install Modpacks to your server and game client. Modpacks on CurseForge normally have a separate download for servers. This guide is suitable for most cases.
 
 <Steps>
+
   1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/).
-  2. Delete everything in File Manager.
-  3. Drag your Modpack.zip into File Manager to upload it, and then `Decompress` the .zip by clicking the three dots.
-     - Use [SFTP](/getting-started/uploading-files/#using-sftp) if your Modpack is over 1GB.
-  4. Go into `Configuration > Startup Parameters` and set `Server Jar File` to your .jar file.
+  2. In the sidebar, go to `Configuration > Advanced > Install Different Edition`.
+  3. Select the compatible version and edition of your modpack and click `Format`.
+     - **If you want to keep any files, manually download a backup before doing this!**
+  4. Start your server, once fully started, Stop your server.
+  5. Drag your Modpack.zip into File Manager to upload it, and then `Decompress` the .zip by clicking the three dots.
+     - Uploading a .zip is preferred as it's faster, but you can also upload everything uncompressed with [SFTP](/getting-started/uploading-files/#using-sftp) if you're having trouble.
+     - Use [SFTP](/getting-started/uploading-files/#using-sftp) if your modpack is over 1GB.
+     - The upload location will be the home directory of your server, when you click File Manager it should look something like this.
+     <FileTree>
+     - File-Manager
+       - **mods**
+       - **config**
+       - **forge-wrapper.jar** example
+       - **server.properties**
+       - **ops.txt**
+       - **libraries**
+       - **world**
+       - ..
+     </FileTree>
   5. Start your server, and then restart it after.
 </Steps>
 
-Why the Restart? You may need to make sure the server ports are set correctly in your server settings as some files may get generated after the initial launch, if they aren't already included in the modpack download you won't be able to connect unless you do this.
+Why the Restart? You may need to make sure the server ports are set correctly in your server settings as some files get generated after the initial launch, if they aren't already included in the modpack download you won't be able to connect unless you do this.
 
 ## Troubleshooting
 
@@ -47,7 +64,7 @@ Here are the most common issues you may run into when installing mods to your Mi
 This may be because the server is using an incompatible java version, the default is a recommendation is usually correct, but can be wrong from time to time. Try these steps to troubleshoot it:
 
 - Double check that the server .jar file is set correctly in `Configuration > Startup Parameters`.
-- In File Manager, delete `disable_prompt_for_java_version`, start your server and then test with a different Java Version.
+- In `Configuration > Startup Parameters` change the java version restart your server, you may need to try this a couple of times, `Automatic` works for 99% of cases.
 - Make sure the upload was successful, files larger than 1GB need to be uploaded using [SFTP](/getting-started/uploading-files/#using-sftp).
 
 ### Version Compatibility
