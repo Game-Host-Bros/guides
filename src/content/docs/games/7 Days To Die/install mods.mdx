@@ -4,6 +4,7 @@ description: Learn how to install mods on your 7D2D Server.
 sidebar:
   label: Install Mods
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 If you're getting tired of the vanilla game, you should try modded [7D2D](https://www.gamehostbros.com/7-days-to-die-server-hosting/), it's a great way to experience new things and hopefully, restore the fun!
@@ -39,7 +40,23 @@ Mods that explicitly say server-sided only will not need to be installed locally
 1. Navigate to your game files by going to `Steam > Library > 7D2D > Manage > Browse Local Files`.
 2. Create a folder named `Mods` .
 3. Extract your downloaded Mod Folder into `/Mods/[ModName]`.
+   - Not to be confused with a folder sharing the name of an entire modpack, but each mod individually should be /mods/[ModName], for example, it should look like this.
+  
+   <FileTree>
+   
+     - mods
+       - **mod1**
+         - **modinfo.xml**
+         - ..
+       - **mod2**
+         - **modinfo.xml**
+         - ..
+       - **mod3**
+         - **modinfo.xml**
+         - ..
+   </FileTree>
 </Steps>
+
 You only need to install the extracted folder which directly contains `modinfo.xml` and it's other files.
 
 ## Disabling EAC Anti-Cheat Client And Server
