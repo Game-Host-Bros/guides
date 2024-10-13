@@ -1,11 +1,12 @@
 ---
-title: How To Enable Admin Menus On Your 7 Days To Die Server
-description: Learn how to enable Admin menus on your 7 Days To Die Server
+title: How To The Spawn Entity Menu On Your 7 Days To Die Server
+description: Learn how to enable the Spawn Entity Menu on your 7 Days To Die Server
 sidebar:
-  label: Admin Menus
+  label: Spawn Entities
 ---
 import { Steps } from '@astrojs/starlight/components';
 
+<<<<<<< Updated upstream:src/content/docs/games/7 Days To Die/admin menus.mdx
 After [Becoming An Admin](/games/7-days-to-die/adding-admins/) on your [7 Days To Die server](https://www.gamehostbros.com/7-days-to-die-server-hosting/) to execute commands you will open console with `F1` and enter the command you'd like, all commands can be found [here](/games/7-days-to-die/console-commands/), or by typing `help` into console. This guide will show you how to enable Admin Menus in 7D2D.
 
 ## Enabling The Debug Menu In 7D2D
@@ -54,20 +55,29 @@ To spawn items, select and drag them into your inventory. To destroy an item, ei
 :::danger
 Setting Cheat Mode in the game panel will give everybody access to the Creative Menu, if you only want it to be for Admins, follow the steps above.
 :::
+=======
+After [Becoming An Admin](/games/7-days-to-die/adding-admins/) on your [7 Days To Die server](https://www.gamehostbros.com/7-days-to-die-server-hosting/) if you'd like to spawn in some mobs to mess around you're in luck, this guide will show you how to enable the Spawn Entity menu in 7D2D.
+>>>>>>> Stashed changes:src/content/docs/games/7 Days To Die/spawn entities.mdx
 
 ## Enabling The Spawn Entity Menu In 7D2D
 
-The Spawn Entity menu requires the Debug Menu to be enabled, here's how to enable both as an Admin:
+The Spawn Entity menu requires the Debug Menu to be enabled, here's how to enable both as an [Admin](/games/7-days-to-die/adding-admins/) on your server.
 <Steps>
 
 1. On your keyboard, press `F1` and enter `debugmenu`.
 2. Press `F6` to open the Spawn Entity menu.
 </Steps> 
 
-Entities can also be spawned by using console commands. Using console does not require the Debug Menu to be enabled, to use the console method you will need to type `listplayers`, note your player ID= number, and then type this.
+Entities can also be spawned by using console commands. Using console does not require the Debug Menu to be enabled, to use the console method you will need to type `listplayers`, note your player ID number, and then type this.
 ```
 se ID entity-id amount
+```  
+example
 ```
+se 171 1 3 
+```
+This command will spawn three of the zombieArlene entities at playerid 171.
+
 All of the 7D2D Entity-ID's can be found below. They can also be found by typing `se` to list all entities in console.
 
 ### All 7D2D Entity-ID's
