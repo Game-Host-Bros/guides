@@ -1,0 +1,21 @@
+---
+title: How To Install Mods On Your Half Life Server
+description: Learn how to install Mods on your Half Life server such as The Specialist.
+sidebar:
+  label: Install Mods
+---
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide we will show you how you can install mods on your Half Life Deathmatch server. This will allow you to host other games such as The Specialist, Ricochet etc.
+
+:::danger
+Half-Life is an old game and it has been around for 25+ years. There will be mods that simply will not work. We suggest doing some research to see if the mod you want to use still works or reach out to a bro for advice.
+:::
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Half Life Deathmatch server.
+2. Download and extract your mod to your PC, then upload the root folder to your server using [SFTP](/getting-started/uploading-files/#using-sftp). You should only be uploading a single folder without overwriting anything.
+3. In the sidebar go to `Configuration > Startup Parameters` and look for the setting `Custom Game Folder`.
+4. Change it to the name of the folder you just uploaded. (Example change it to `ts` for The Specialist, `cstrike` for Counter-Strike)
+5. Restart your server.
+</Steps>
