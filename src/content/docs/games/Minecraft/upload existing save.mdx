@@ -4,38 +4,41 @@ description: Learn how to upload your existing save file to your Minecraft Serve
 sidebar:
   label: Upload Existing Save
 ---
-import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 This is what you do if you need to upload an existing world to your [Minecraft server](https://www.gamehostbros.com/minecraft-server-hosting/).
 
-## Finding Locally Existing Worlds
+## Finding Local Worlds On The Vanilla Minecraft Launcher
+
 <Steps>
   1. On your keyboard press `Windows Key + R`. 
-  2. Type `%appdata%` into the search box.
-  3. Navigate to `AppData\Roaming\.minecraft\saves`.
+  2. Enter this:
+     ```
+     %APPDATA%\.minecraft\saves
+     ```
+  3. Make a copy of your existing world file.
 </Steps>
 
-<FileTree>
-    - AppData
-      - Roaming
-        - .minecraft
-          - saves/
-</FileTree>
+## Finding Local Worlds On The CurseForge Launcher
 
 <Steps>
-  4. Make a copy of your existing world file.
+1. Open CurseForge.
+2. Right-Click on your Minecraft Instance, and select `Open Folder`.
+3. Copy your world found in the `saves` folder.
 </Steps>
 
-## Uploading Existing Worlds
+## Uploading Worlds To Your Minecraft Server
+
 <Steps>
-  1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/).
-  2. Stop your server.
-  3. Connect to your server via `SFTP` by following [this guide](https://guides.gamehostbros.com/getting-started/uploading-files/)
-  4. On your server, navigate to the `World` file and delete the contents.
-  5. Upload the contents of your existing save file from `AppData\Roaming\.minecraft\saves`
-  6. Connect to your server.
+  1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and Stop your server.
+  2. Connect to your server via `SFTP` by following [this guide](https://guides.gamehostbros.com/getting-started/uploading-files/).
+  3. Upload your existing save file to the home directory of your server.
+  4. In the panel, go to `Management > File Manager`, and open `server.properties`.
+  5. Set `level-name=` to your world name.
+  6. Start your server.
 </Steps>
+
+You can alternatively upload your world folder as is, and simply choose which world to load by finding server.properties in your server's home directory, and changing `level-name=` to reflect the name of your uploaded world.
 :::danger
 If you wish to keep a copy of the current World on your server, make sure to create a backup before deleting!
 :::
