@@ -1,0 +1,49 @@
+---
+title: How To Add A Whitelist To Your 7 Days To Die Server
+description: Learn how to whitelist players on your 7 Days To Die Server
+sidebar:
+  label: Adding Whitelist
+---
+import { Steps } from '@astrojs/starlight/components';
+
+This guide will cover how to add and remove players from a whitelist on your [7D2D server](https://www.gamehostbros.com/7-days-to-die-server-hosting/). Adding a whitelist is the best way to keep your server private for you and your friends, whitelists work to only allow the accounts of authorized players to join your server.
+
+Here's how to add players to your 7D2D whitelist by using their in-game player IDs or [SteamID64](https://www.steamidfinder.com/).
+
+## Whitelisting Players On A 7D2D Server
+
+:::tip
+Once a player is added to the whitelist it will automatically activate, and anyone who wishes to join will also need to be added.
+:::
+
+<Steps>
+1. Connect to your 7D2D server.
+2. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+3. Type `listplayers` in console and note your player ID.
+4. Enter this command to whitelist the user.
+   ```
+   whitelist add ID
+   ```
+   - For example:
+   ```
+   whitelist add 171
+   ```
+   - You can check the whitelist by typing `whitelist list`.
+   - Type `whitelist remove ID` to remove players from your whitelist.
+</Steps>
+
+## Whitelisting Players With A SteamID64
+
+It's also possible to use a SteamID64 instead of an in-game player ID, you can find your [SteamID64 here](https://www.steamidfinder.com/) by entering the link to your Steam profile. It won't require you to join your server and is done like this.
+
+<Steps>
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+2. Open Console and enter this command to whitelist a user.
+   ```
+   whitelist add steam_76561198106341655
+   ```
+   ```
+   whitelist remove steam_76561198106341655
+   ```
+</Steps>

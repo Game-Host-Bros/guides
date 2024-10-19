@@ -9,17 +9,30 @@ import { Steps } from '@astrojs/starlight/components';
 
 This is what you do if you need to install plugins to your [Minecraft server](https://www.gamehostbros.com/minecraft-server-hosting/).
 
-:::danger
-Before starting you must [set your Minecraft server version](/games/minecraft/changing-versions/) to either Spigot or Paper. If you try and run plugins on the Vanilla game or Forge they **will not work**.
-:::
-
 ## Installing Using Our Plugin Manager
 
+:::danger
+If you're using our Plugin Manager you must [set your Minecraft server version](/games/minecraft/changing-versions/) to either Spigot or Paper. If you try and run plugins on the Vanilla game or Forge they **will not work**.
+:::
+
 <Steps>
-  1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Minecraft server.
+  1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Minecraft server.
   2. Go to `Tools > Plugin Manager`.
   3. Select the plugins you want to install.
   4. Restart your server.
 </Steps>
 
 Some plugins may not work with the latest versions of the game, so we suggest checking the plugin requirements before installing and making sure you're on the correct version.
+
+## Manually Installing Most Plugins
+
+If you're not on Paper or Spigot then our panel plugins won't work, here's how to upload plugins to your server after finding a plugin that is compatible with your current Minecraft edition and version, plugins can be found from a site such as [Modrinth](https://modrinth.com/plugins).
+
+<Steps>
+  1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Minecraft server.
+  2. Go to `Configuration > File Manager`.
+  3. Open the `Plugins` folder and [Upload](/getting-started/uploading-files/) your extracted `plugin.jar`.
+  4. Restart your server.
+</Steps>
+
+If you get stuck at any time, you can reach out to a Bro on [Discord](https://discord.gg/FN4XgbAwzr).
