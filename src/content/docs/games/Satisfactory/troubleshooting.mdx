@@ -11,6 +11,32 @@ Here are common [Satisfactory server](https://www.gamehostbros.com/satisfactory-
 ## No EncryptionToken specified, disconnecting.
 This message happens when you try and join the server from the `Join Game` menu. You must join your Satisfactory server from the `Server Manager`.
 
+## Server Crashing
+
+This could be due to many different things, here are the two most probable causes for a Satisfactory crash that we've seen.
+
+### Out Of Memory
+
+The larger your factory, and the more friends you have connected, the more resources your server will need to run. You can check the crash logs by going to `System > Audit Logs` in our game panel, if it reports as `OutOfMemory True` keep an eye on your RAM usage to be certain. If your server is frequently running out of RAM you will need to [upgrade your server](/account/upgrade-your-server/).
+- We only recommend upgrading when it's necessary to match the demands of your server.
+
+### Autosave Crashing Server Unable To Start
+
+While much, much rarer, Satisfactory just like any other game isn't perfect and has bugs, whatever was happening in-game right before the most recent autosave caused the autosave to corrupt. If the broken autosave is on your server it will cause your server to be unable to start. Here's how to fix it.
+
+<Steps>
+
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and create a [Backup](/getting-started/backups/) of your server.
+2. Go to `Management > File Manager`.
+3. Navigate to `.config/Epic/FactoryGame/Saved/SaveGames/server`.
+4. Delete the most recent autosave.
+   - Check `Last Modified` for the timestamps.
+   - Filesize may also be an indicator of a failed autosave.
+5. Start your server.
+</Steps>
+
+This should solve the issue, but if it doesn't, delete the next most recent autosave and then repeat the process. If it continues to happen please reach out to a bro.
+
 ## Tier 0 has been skipped
 Currently, Tier 0 (Onboarding) is not possible to play on a dedicated server and it will be automatically unlocked, even if you upload a save in Tier 0. If you would like to play the beginning of the game with Onboarding, it is recommended you play local multiplayer first, and then upload your save to your server after completing Tier 0.
 
