@@ -1,0 +1,114 @@
+---
+title: How To Create An Interactive Live Map For Your 7 Days To Die Server
+description: Learn how to use the allocs server fixes mod to create an interactive live map for your 7 Days to Die server with this comprehensive guide
+sidebar:
+  label: Interactive Live Map
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+This guide will show you how to install Allocs Server Fixes and create an interactive live map of your [7D2D server](https://www.gamehostbros.com/7-days-to-die-server-hosting/), here's how it's done as of 7D2D V1.1 (b14), this mod integrates it's live map into the 7D2D Web Dashboard.
+
+## Installing Allocs Server Fixes
+
+If you're new to modding 7D2D setting up a live map is rather advanced and requires additional setup compared to your average mod installation, this guide operates under the assumption that you have some prior experience with modding and configuration files.
+
+<Steps>
+
+1. Download Allocs Server Fixes from [here](https://7dtd.illy.bz/wiki/Server%20fixes).
+2. Extract the downloaded files.
+3. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Server.
+4. Using SFTP, [Upload](/getting-started/uploading-files/) the extracted Mods to your servers `Mods` folder.
+</Steps>
+
+### Enabling The Allocs Server Fixes 7D2D Interactive Live Map 
+
+<Steps>
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Server.
+2. Go to `Management > File Manager`.
+3. Navigate to `.local/share/7DaysToDie/Saves/serveradmin.xml`.
+   <FileTree>
+   - .local
+     - share
+       - 7DaysToDie
+         - Saves
+           - **serveradmin.xml**
+   </FileTree>
+4. Paste this under the `</apitokens>` section, and click save.
+</Steps>
+   ```
+   <webmodules>
+    <module name="web.map" permission_level="2000" />
+  </webmodules>
+   ```
+
+
+The bottom of your file should now look something like this:
+
+```xml title="serveradmin.xml"
+  <apitokens>
+    <!-- <token name="adminuser1" secret="supersecrettoken" permission_level="0" /> -->
+  </apitokens> 
+  <webmodules>
+    <module name="web.map" permission_level="2000" /> 
+  </webmodules>
+  <webusers />
+</adminTools>
+   ```
+- Permission level 2000 means anyone can view the live map without logging into your web dashboard with Steam.
+
+### Enabling The 7D2D Web Dashboard With Map Rendering
+
+<Steps>
+
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Server.
+2. Go to `Configuration > Startup Parameters`.
+3. Set `Web Dashboard Enabled` to `Enabled`.
+4. Set `Enable Map Rendering` to `Enabled`.
+5. Start your server.
+</Steps>
+
+## Viewing Your 7D2D Live Map 
+
+<Steps>
+
+1. Copy your servers IP address.
+2. In your browser, Go to your `ServerIPAddress:WebDashboardPort`, for example:
+   ```
+   123.123.123.123:7800
+   ```
+   123.123.123.123 being the IP address of the server, and 7800 being the Web Dashboard Port, as seen under `Configuration > Startup Parameters > Web Dashboard Port`.
+3. Select Legacy-Map to view your Live Map.
+</Steps>
+
+If you're an [Admin](/games/7-days-to-die/adding-admins/) and you sign into the Web Dashboard you'll have additional features, normal users can only see the map and it's chunk regions.
+
+To render the map, a player will either have to explore it, or you can use the `visitmap -x -x x x` command, replacing -x -x for negative coordinates, and x x for positive coordinates, for example an 8k map can be rendered with this command into your server console:
+```
+visitmap -8192 -8192 8192 8192
+```
+Here are the visitmap commands for all of the pregen map sizes
+
+**4k Pregen**
+```
+visitmap -4096 -4096 4096 4096
+```
+**6k Pregen** 
+```
+visitmap -6144 -6144 6144 6144
+```
+**8k Pregen**
+```
+visitmap -8192 -8192 8192 8192
+```
+**10k Pregen**
+```
+visitmap -10240 -10240 10240 10240
+```
+
+
+
+
+
+
+
