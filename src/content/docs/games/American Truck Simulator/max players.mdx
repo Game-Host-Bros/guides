@@ -16,3 +16,26 @@ At Game Host Bros we make it easy to adjust Max Players. Here's how you can easi
 3. Edit `Max Players`.
 4. After changing, `Start` your Server.
 </Steps>
+
+:::danger
+For player counts above 8 you MUST modify your local game config files otherwise you won't be able to see your server in the browser, how to do that can be found in the section below.
+:::
+
+## More Than 8 Players - 128 Players ATS Convoy
+
+If you want to have more than 8 players on your ATS server every player MUST modify their local game files to allow for higher player count servers, otherwise they won't be able to see or join your server, here's how that's done.
+
+These steps are to be followed after changing Max Players in `Configuration > Startup Parameters` and restarting your server in the steps above.
+
+**Windows PC**
+<Steps>
+1. Close your ATS Game.
+2. Press `Windows Key + R` and paste this command.
+   ```
+   %USERPROFILE%\Documents\American Truck Simulator
+   ```
+3. Edit `config.cfg` with notepad.
+4. Press `Crtl + F` to find `uset g_max_convoy_size` and change it's value to 128, it should now look like this.
+   - uset g_max_convoy_size "128"
+5. Save your changes and start ATS.
+</Steps>
