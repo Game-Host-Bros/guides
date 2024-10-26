@@ -10,12 +10,23 @@ This is how you can change your Factorio dedicated server version, this is handy
 
 ## Changing Your Factorio Server Version
 
-We don't recommend using your current save or any mods on an older version of Factorio. However, if you still want to try, you must first manually download a backup of your save before proceeding with the steps below.
+We don't recommend using your current save or any current mods on an older version of Factorio. However, if you still want to try, you must first manually download a backup of your save before proceeding with the steps below.
+
+:::danger
+If you're going back to a version before 2.0, you will need to make sure the Spage Age mods are disabled in the folder /mods/mod-list.json.
+
+Change the following to false:
+- elevated-rails
+- quality
+- space-age
+
+We intend to make this process automatic in the coming weeks.
+:::
 
 <Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your server.
 2. Go to `Configuration > Startup Parameters`.
-3. Edit `Factorio Version` and `Save Name`.
+3. Edit `Factorio Version` and `Save Name` to something that isn't your current save.
 4. Restart your server.
 </Steps>
 
