@@ -1,0 +1,356 @@
+---
+title: How To Use Twitch Integration On Your 7 Days To Die Server
+description: Learn how to use 7D2D Twitch Integration with this comprehensive guide, this is suitable for any 7D2D server and isn't just related to Game Host Bros
+sidebar:
+  label: Twitch Integration
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Twitch Integration is an extension for streamer's that allows livestream viewers to interact with the streamer's game, through chatting or donations with bits. 
+
+This comprehensive guide covers how to install the required twitch extension, how to connect twitch to your [7D2D server](https://www.gamehostbros.com/7-days-to-die-server-hosting/) and much more.
+
+Before proceeding with this guide, ensure that you're an [Admin](/games/7-days-to-die/adding-admins/) on your 7D2D server.
+
+:::note
+The default permission level required for Twitch Integration is 90.
+:::
+
+## Installing The 7D2D Twitch Integration Extension
+
+<Steps>
+
+1. Login to [Twitch](https://www.twitch.tv/) and go to your `Creator Dashboard`.
+2. In the sidebar select `Extensions`, and search for `7 days`.
+3. Install the `7 Days to Die Integration` extension.
+</Steps>
+
+Make sure to select an overlay when installing.
+
+## Connecting Twitch Integration To Your 7D2D Server
+
+Again, make sure you're an [Admin](/games/7-days-to-die/adding-admins/) otherwise this won't work unless the necessary settings have been changed.
+
+<Steps>
+
+1. Connect to your 7D2D server.
+2. Press `Esc` to open the game menu.
+3. Select `Options > Twitch` and click `Login Twitch`.
+   - A browser will open, automatically redirecting you to a page.
+4. Click `Activate` with the code, and then click `Authorize` on the next page.
+</Steps>
+
+Now you should see `Connected: [YourTwitch]` in the bottom right of the in-game twitch menu.
+
+## Enabling The Extension As A Viewer
+
+Viewers must give access to the 7D2D Twitch extension in order to be able to use it, luckily it's a simple process, do this as a viewer:
+
+<Steps>
+
+1. Go to the Twitch Streamers channel.
+2. Hover over the video and click on the 7D2D extension popup.
+3. Scroll down to `Manage Access` and click `Grant`.
+</Steps>
+
+## All Viewer Commands
+
+Here are all of the commands viewers can use for your server as per official documentation which can be found [here](https://7daystodie.com/wp-content/uploads/2023/10/twitch_documentation_rev_10_26_2023.pdf).
+
+**All commands with an added * need to be enabled**. To configure settings use the in-game Twitch menu, by going to Actions > View Extra > Allow Action on specific commands.
+
+<details>
+<summary>Spawning Commands</summary>
+
+| Command           | Description                                          |
+|-------------------|------------------------------------------------------|
+| #spawn_bear       | Spawns a bear.                                       |
+| #spawn_biker      | Spawns a biker zombie.                               |
+| #spawn_boar       | Spawns a boar.                                       |
+| #spawn_cop        | Spawns a cop zombie.                                 |
+| #spawn_coyote     | Spawns a coyote.                                     |
+| #spawn_crawler    | Spawns a crawler zombie.                             |
+| #spawn_demo       | Spawns a demo zombie.                                |
+| #spawn_direwolf   | Spawns a direwolf.                                   |
+| #spawn_dog        | Spawns a dog.                                        |
+| #spawn_feral      | Spawns a feral zombie.                               |
+| #spawn_lion       | Spawns a lion.                                       |
+| #spawn_mama       | Spawns a big mama zombie.                            |
+| #spawn_mutated    | Spawns a mutated zombie.                             |
+| #spawn_normal     | Spawns a normal zombie.                              |
+| #spawn_rad        | Spawns a radiated zombie.                            |
+| #spawn_radvulture | Spawns a radiated vulture.                           |
+| #spawn_snake      | Spawns a snake.                                      |
+| #spawn_soldier    | Spawns a soldier zombie.                             |
+| #spawn_spider     | Spawns a spider zombie.                              |
+| #spawn_tourist    | Spawns a tourist zombie.                             |
+| #spawn_vulture    | Spawns a vulture.                                    |
+| #spawn_wight      | Spawns a wight zombie.                               |
+| #spawn_wolf       | Spawns a wolf.                                       |
+| #bomb_blitz       | Small groups of burnt zombies spawn and chase the target then explode. |
+| #buffed_ferals    | Spawn a group of empowered feral zombies.            |
+| #buffed_rads      | Spawn a group of empowered radiated zombies.         |
+| #buffed_wights    | Spawn a group of empowered wights.                   |
+| #buffed_zombies   | Spawn a group of empowered zombies.                  |
+| #group_bears      | Spawn a group of bears.                              |
+| #group_boars      | Spawn a group of boars.                              |
+| #group_chickens   | Spawn a group of murder chickens.                    |
+| #group_coyotes    | Spawn a group of coyotes.                            |
+| #group_dogs       | Spawn a group of dogs.                               |
+| #group_grace      | Spawn Grace with some boars.                         |
+| #group_dogs     | Spawn a group of dogs.                                 |
+| #group_grace    | Spawn Grace with some boars.                           |
+| #group_vultures | Spawn a group of vultures.                             |
+| #group_wolves   | Spawn a group of wolves.                               |
+| #horde_bears    *  | Spawns a large group of bears.                         |
+| #horde_boars    *  | Spawns a large group of boars.                         |
+| #horde_chickens *  | Spawns a large group of chickens.                      |
+| #horde_wolves   *  | Spawns a large group of wolves.                        |
+| #horde_zombies  *  | Spawns a large group of regular zombies.               |
+| #horde_ferals   *  | Spawns a large group of feral zombies.                 |
+| #horde_rads     *  | Spawns a large group of radiated zombies.              |
+</details>
+
+<details>
+<summary>Supply Commands</summary>
+
+| Command             | Description                        |
+|---------------------|------------------------------------|
+| #supply_4x4         | Supplies a 4×4 parts crate.       |
+| #supply_ammo        | Supplies an ammo crate.           |
+| #supply_armor       | Supplies an armor crate.          |
+| #supply_bicycle     | Supplies a bicycle parts crate.   |
+| #supply_books       | Supplies a book crate.            |
+| #supply_builder     | Spawns a single builder crate.    |
+| #supply_electrical  | Supplies an electrical crate.     |
+| #supply_explosives  | Supplies an explosives crate.     |
+| #supply_farming     | Spawns a single farming crate.    |
+| #supply_meal        | Supplies a meal crate.            |
+| #supply_meds        | Supplies a medical crate.         |
+| #supply_minibike    | Supplies a minibike parts crate.  |
+| #supply_mods        | Supplies a mods crate.            |
+| #supply_motorcycle  | Supplies a motorcycle parts crate.|
+| #supply_resource    | Supplies a resource crate.        |
+| #supply_robo        | Supplies a robotic crate.         |
+| #supply_sammo       | Supplies a special ammo crate.    |
+| #supply_tool        | Supplies a tool crate.            |
+| #supply_utility     | Supplies an utility crate.        |
+| #supply_weapon      | Supplies a weapon crate.          |
+| #supply_candy       | Supplies a single candy crate.    |
+| #supply_treasure    | Supplies a single treasure crate. |
+</details>
+
+<details>
+<summary>Buff Commands</summary>
+
+| Command            | Description                                                                                                   |
+|--------------------|---------------------------------------------------------------------------------------------------------------|
+| #boost_melee       | Cancels Weaken/No Melee if enabled on Target or increases melee damage for the target and their party for a limited time. |
+| #boost_range       | Cancels Weaken/No Range if enabled on Target or increases range damage for the target and their party for a limited time. |
+| #celebrate         | Any zombies/animals killed by the target and their party will explode into confetti for a limited time.        |
+| #energize          | Increases stamina regeneration of the target and their party for a limited time.                               |
+| #fast              | Cancels Slow if enabled on Target or increases the movement speed of the target and their party for a limited time. |
+| #jump              | Increases jump height of the target and their party for a limited time.                                        |
+| #leech             | Cancels Anti-Leech if enabled on Target or applies all damage given as health to the target and their party for a limited time. |
+| #pack_mule         | Removes the encumbrance from the target and their party for a limited time.                                    |
+| #regen             | Cancels Hurt if enabled on Target or increases health regen and removes all criticals for the target and their party for a limited time. |
+| #shield            | Increases the damage resistance of the target and their party for a limited time.                              |
+| #silly             | All sounds replaced with “Silly” sounds for a limited time.                                                    |
+| #stay_still        | Cancels Keep Moving if enabled on Target or heals the target and their party for a limited time if they stop moving. |
+| #infinite_ammo     | Enables infinite ammo for the target and their party for a limited time.                                       |
+| #insta_regen       | Instantly heals the target and their party to full and removes all debuffs.                                    |
+| #nourish           | Instantly removes hunger and thirst from the target and their party members.                                   |
+| #pp_bonanza        | Everyone in your chat receives double the point generation for a limited time.                                 |
+| #xp_gain           | Doubles all XP gains of the target and their party for a limited time.                                         |
+</details>
+
+<details>
+<summary>Debuff Commands</summary>
+
+| Command            | Description                                                                                                     |
+|--------------------|-----------------------------------------------------------------------------------------------------------------|
+| #antileech         | Cancels Leech if enabled on Target or applies all damage given as damage to the target and their party for a limited time. |
+| #blur              | Blurs the vision of the target and their party for a limited time.                                              |
+| #clumsy_runner   *  | Target and their party members have a chance to fall when running.                                              |
+| #confuse           | Reverses all movement controls.                                                                                 |
+| #deafen            | All sounds are reduced to near inaudible levels.                                                                |
+| #distort           | Distorts the vision of the target and their party for a limited time.                                           |
+| #dont_miss         | Target and their party take damage if they miss their attacks.                                                  |
+| #double_spawns   *  | Doubles all spawns for the target and their party.                                                              |
+| #encumbered      *  | Target and their party lose all bonuses that reduce encumbrance.                                                |
+| #greyscale         | Changes the vision of the target and their party to black and white for a limited time.                         |
+| #headshot          | Target and their party can only damage zombies and animals with headshots.                                      |
+| #hurt              | Cancels Regen if enabled on Target or reduces the max health of the target and their party for a limited time.  |
+| #keep_moving       | Cancels Stay Still if enabled on Target or damages the target and their party if they stop moving for a limited time. |
+| #jumbled_backpack  | Shuffles the backpack of the target and their party for a limited time.                                         |
+| #no_explosives     | No explosive use.                                                                                               |
+| #no_melee          | Cancels Boost Melee if enabled on Target or stops any melee attacks for the target and their party for a limited time. |
+| #no_range          | Cancels Boost Range if enabled on Target or stops any range attacks for the target and their party for a limited time. |
+| #no_robo           | No robotic helpers will function.                                                                              |
+| #no_stealth        | “Bombs” go off that give your position away in stealth.                                                         |
+| #no_vehicle        | Using vehicles hurts you.                                                                                      |
+| #newbie            | Reduces all attributes and perks of the target and their party to that of a new player.                         |
+| #no_help           | Disables all helpful Twitch commands for a limited time.                                                        |
+| #no_running    *    | Damages the Target and their party if they run for a limited time.                                              |
+| #no_safe       *    | Target and their party take damage when inside a trader outpost or land claim area.                             |
+| #no_trader     *    | Target and their party are not allowed to enter trader outposts for a limited time.                             |
+| #painting          | A painting visual filter is applied to the player.                                                              |
+| #resurrect       * | Enemies killed by the target or their party are resurrected.                                                    |
+| #shield_enemies  * | Target and their party members do less damage to all enemies and animals.                                       |
+| #silent_actions  * | Target no longer sees or hears notifications about Twitch Actions for the duration of the buff.                 |
+| #slow              | Cancels Fast if enabled on Target or reduces the movement speed of the target and their party for 60 seconds.   |
+| #tougher_enemies   | Target and their party have tougher enemies for a limited time.                                                 |
+| #trippy            | Causes the target and their party to hallucinate for 60 seconds.                                                |
+| #unlock_actions  *  | Target has progression turned off for a limited time.                                                           |
+| #weak_jump       *  | Decreases the jump height of the target and their party for a limited time.                                     |
+| #weak_melee        | You have decreased melee damage. (-75% melee damage).                                                           |
+
+</details>
+
+<details>
+<summary>Block Related Commands</summary>
+
+| Command           | Description                                                                                                     |
+|-------------------|-----------------------------------------------------------------------------------------------------------------|
+| #break_claim     * | Target’s nearby landclaim is broken, and the target and their party cannot place another for a limited time.    |
+| #cacti           * | Spawns a group of cacti around the target.                                                                      |
+| #destroy_base    * | Destroys the target’s entire land claim area.                                                                   |
+| #destroy_station * | Destroys a random workstation (excluding campfires) near the target in their landclaim.                         |
+| #doors_off       * | Removes all the doors in the area around the target.                                                            |
+| #empty_boxes     * | Empties all the boxes in the target’s land claim.                                                               |
+| #fill_base       * | Fills the target’s entire land claim area with dirt.                                                            |
+| #grow             | Makes all nearby farming plants grow to their next stage.                                                       |
+| #mine_field      * | Spawns a minefield around the target.                                                                           |
+| #rename_signs    * | Renames all the signs and boxes in a land claim to "Renamed by [viewer]".                                       |
+| #shuffle_boxes   * | Shuffles the contents of all nearby containers.                                                                 |
+| #spike_traps     * | Spawns spike traps around the target.                                                                           |
+| #spoil_boxes     * | Spoils all food in the entire bounds of the land claim.                                                         |
+| #weaken_blocks   * | Sets all nearby blocks to 1 health around the Target. Does not work in safe zones.                              |
+</details>
+
+<details>
+<summary>World Commands</summary>
+
+| Command          | Description                                                                                                |
+|------------------|------------------------------------------------------------------------------------------------------------|
+| #daytime         | Moves time forward to the next morning. Can only be activated at night.                                   |
+| #fog             | Commands fog to appear in the world around you.                                                           |
+| #nighttime    *   | Moves time forward to the next night. Can only be activated during the day.                               |
+| #no_time         | Moves time forward a small amount then hides the day and time display for the target and their party.      |
+| #rain            | Commands rain to appear in the world around you.                                                          |
+| #snow            | Commands snow to appear in the world around you.                                                          |
+| #thunderstorm    | Commands a thunderstorm to appear in the world around you.                                               |
+| #bloodmoon     *  | Triggers a bloodmoon event for the current day.                                                           |
+
+</details>
+
+<details>
+<summary>Special Commands</summary>
+
+| Command              | Description                                                                                                          |
+|----------------------|----------------------------------------------------------------------------------------------------------------------|
+| #add_fuel      *      | Sets the fuel of the target’s nearest owned vehicle to full.                                                        |
+| #auto_pull           | Target has all spawned zombies pulled to their position periodically.                                               |
+| #big_head            | Zombies, Animals, and NPCs have inflated heads! Easier headshots.                                                  |
+| #blind         *      | Blinds the target and their party for 10 seconds.                                                                   |
+| #burn_near           | All nearby zombies around the target are burned for a few seconds.                                                 |
+| #bucket_head         | Zombies and Animals have buckets on their head for a short amount of time.                                         |
+| #cripple_em          | All nearby zombies around the target are crippled and will crawl from now on.                                      |
+| #dance_off           | All zombies and NPCs will dance as music plays.                                                                    |
+| #degrade             | Slightly degrades all toolbelt items for the target and their party.                                               |
+| #destroy_armor     * | Deletes all armor the target is wearing.                                                                            |
+| #destroy_backpack  * | Deletes all items in the backpack of the target.                                                                   |
+| #destroy_toolbelt  *  | Deletes all items in the toolbelt of the target.                                                                   |
+| #dismantle_vehicle * | Dismantles vehicle into parts and places them in a bag with all mods and storage items.                           |
+| #drop_held         * | Target drops their held item.                                                                                      |
+| #drop_toolbelt     * | The target and their party drop all items in their toolbelt.                                                       |
+| #ember_piles       * | Spawns a group of ember piles around the target.                                                                   |
+| #empower_zombies     | All nearby zombies around the target gain empowered hands and attack the target.                                   |
+| #empty_fuel      *    | Removes the fuel of the target’s nearest owned vehicle.                                                            |
+| #enrage              | Forces all nearby zombies and animals to become enraged and attack the target.                                     |
+| #end_cooldown        | Ends the current cooldown. Only works for cooldowns triggered by spawning too many zombies.                        |
+| #jump_scare          | Scares the target with a random jump scare sound.                                                                  |
+| #kaboom              | Explodes all zombies around the target without harming the target.                                                 |
+| #lost       *            | Teleports selected player a short distance away, removes all map data and waypoints for that player.              |
+| #mind_wipe    *       | Target and their party have their skill purchases refunded to them.                                                |
+| #mixup      *         | Mixes contents of player's backpack and toolbelt.                                                                   |
+| #pull                | Pulls all spawned enemies to the target so they can’t escape.                                                      |
+| #pull_player         | Pulls the target to a random Twitch spawned enemy.                                                                 |
+| #ragdoll             | All nearby zombies around the target fall down for a few seconds.                                                  |
+| #ragdoll_players     | Target and their party fall down for a few seconds.                                                                |
+| #repair              | Slightly repairs all toolbelt items for the target and their party.                                                |
+| #repair_all          | Repairs all items on the target and their party members.                                                           |
+| #reverse             | Forces the target and their party to reverse the direction they are facing.                                        |
+| #scare               | Scares the target with a random enemy sound around the level of the target.                                       |
+| #shock_near          | All nearby zombies around the target are shocked for a few seconds.                                                |
+| #spoil               | Spoils all food in the inventory of the target and their party.                                                    |
+| #teleport_short    *  | Teleports the target 50-100 meters in a random direction.                                                          |
+| #teleport_medium   *  | Teleports the target 500-1000 meters in a random direction.                                                       |
+| #teleport_long     *  | Teleports the target 1000-2000 meters in a random direction.                                                      |
+| #teleport_up       *  | Teleports the player high into the sky (no fall damage).                                                           |
+| #unload_ammo       *  | Unloads all ammunition from all weapons in a target's backpack/toolbelt.                                          |
+
+</details>
+
+<details>
+<summary>Viewer Commands</summary>
+
+| Command              | Description                                                          |
+|----------------------|----------------------------------------------------------------------|
+| #checkcredit         | Checks points balance for bit credit.                               |
+| #checkpoints         | #cp Checks points balance for Pimp Points and Special Points.       |
+| #actionstage         | #as #gs Checks action stage for streamer.                          |
+
+</details>
+
+<details>
+<summary>Administrator Commands</summary>
+
+| Command                       | Description                                                                             |
+|-------------------------------|-----------------------------------------------------------------------------------------|
+| #addcredit [target] [value]   | Adds the number of bit credit to targeted viewer. Does not expire.                    |
+| #addpp [target|all] [value]   | Adds the number of PP to targeted viewer.                                             |
+| #addsp [target] [value]       | Adds the number of SPECIAL points to targeted viewer. Does not expire.                |
+| #checkcredit [target]         | Checks bit credit for a specified viewer.                                             |
+| #commands                      | Lists administration chat commands.                                                   |
+| #cp [target]                  | Checks points for a specified viewer.                                                 |
+| #debug                         | Adds debug information to the outputlog.txt for submitting bug reports for Twitch Integration. |
+| #pause                         | Pauses the Twitch Integration.                                                         |
+| #redeem_giftsub [target]      | [value] *Test gift sub events.                                                        |
+| #redeem_hypetrain [target]     | [value] *Test hype train events.                                                      |
+| #redeem_raid [target]          | [value] *Test raid events.                                                            |
+| #redeem_sub [target]           | [value] *Test sub events.                                                             |
+| #remove_viewer [target]       | Removes targeted viewer data from streamer's database.                                |
+| #reset_cooldowns               | Clears all the action cooldowns.                                                      |
+| #setcooldown [seconds]        | Sets the global cooldown duration.                                                    |
+| #setpot [value]               | Sets the value of the pot. The pot will continue to increase with interaction.       |
+| #teleport_backpack            | Teleports streamer to their backpack.                                                 |
+| #tp_backpack                  | Teleports streamer to their backpack.                                                 |
+| #unpause                      | Unpauses the Twitch Integration.                                                       |
+| #useprogression               | Enables progression.                                                                   |
+
+</details>
+
+## Troubleshooting
+
+These are a couple somewhat common issues with 7D2D Twitch Integration and how to fix them.
+
+### Connection Timed Out
+
+If you're unable to connect and the steps have been followed properly, try these fixes:
+
+- Check your firewall.
+- Disable browser extensions, or try setting a new default browser.
+- Restart your PC.
+
+### The Twitch Extension Must Be Installed And Active On Your Channel
+
+This means the 7D2D extension hasn't been activated on your twitch channel, do this to activate it:
+
+- Login to twitch, go to `Creator Dashboard > Extensions > My Extensions` click `Activate` and select an overlay for the 7D2D twitch extension.
+
+
+
+
+
+
