@@ -4,6 +4,7 @@ description: In this guide you will learn how to upload custom blueprints your S
 sidebar:
   label: Upload Blueprints
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 Blueprints are a game-changing feature that lets you save and replicate intricate factory layouts, efficient production lines, and stunning architectural designs. In this guide you will lean how to add Blueprints to your [Satisfactory server](https://www.gamehostbros.com/satisfactory-server-hosting/).
@@ -13,6 +14,16 @@ Blueprints are a game-changing feature that lets you save and replicate intricat
 2. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Satisfactory server.
 3. Navigate to `Management > File Manager`. 
 4. Go to the path `.config/Epic/FactoryGame/Saved/SaveGames` and then create a folder called `blueprints`.
+   <FileTree>
+    - .config
+      - Epic
+        - FactoryGame
+          - Saved
+            - SaveGames
+              - **blueprints/** 
+    </FileTree>
 5. Create a folder the same as your save name (session name) and then drag in your `.sbp` files.
 6. `Start` your Server.
+
+   
 </Steps>
