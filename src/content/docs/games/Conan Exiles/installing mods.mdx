@@ -1,0 +1,42 @@
+---
+title: How To Install Mods On Your Conan Exiles Server
+description: Learn how to install mods to your Conan Exiles Server
+sidebar:
+  label: Install Mods
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Adding mods to Conan Exiles is a great way to mix-up the gameplay and try new things, whether it's a simple quality-of-life mod or a total overhaul, there'll likely be something that's perfect for you. This guide will cover where to find and add mods to your [Conan Exiles server](https://www.gamehostbros.com/conan-exiles-server-hosting/).
+
+## Installing Mods To Your Conan Exiles Server
+
+You will need to know how to get a Workshop ID for each mod you want to install. You can [view all the Conan Exiles mods here](https://steamcommunity.com/app/440900/workshop/).
+
+Once you find the mod you want you need to copy the URL. Let's use this URL for example: [https://steamcommunity.com/sharedfiles/filedetails/?id=3357115923](https://steamcommunity.com/sharedfiles/filedetails/?id=3357115923)
+
+![CS2 workshop URL](../../../../assets/guide-images/cs2-workshop-screenshot.jpg)
+
+<Steps>
+1. Access to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Conan Exiles Server.
+2. Go to `Management > File Manager`.
+3. Enter `modlist.txt` in the home directory.
+4. Paste the Workshop ID of the Mod you'd like to install, for example if I wanted to install this mod [https://steamcommunity.com/sharedfiles/filedetails/?id=3357115923](https://steamcommunity.com/sharedfiles/filedetails/?id=3357115923) It should look like this, one per line:
+   
+   ```txt title="modlist.txt"
+   3357115923
+   3357758627
+   3299875004
+   ```
+
+   - The ModID for this mod is `3357115923`, this id can be found at the end of the Steam Workshop URL.
+   - To change the mod load order simply rearrange them in the list and restart your server.
+5. Start your server, twice.
+</Steps>
+
+The mods will automatically download and enable once your server starts.
+
+
+
+
+
+
