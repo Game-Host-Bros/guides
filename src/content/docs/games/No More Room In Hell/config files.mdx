@@ -1,0 +1,40 @@
+---
+title: How To Edit No More Room In Hell Configuration Files
+description: Learn how to edit your config files on your No More Room In Hell server.
+sidebar:
+  label: Config Files
+---
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide you will learn how to edit the different [No More Room in Hell](https://www.gamehostbros.com/no-more-room-in-hell-server-hosting/) server config files such as `server.cfg`, `mapcycle.txt` and exactly what each one is for.
+
+
+## Main Server Configs in NMRIH
+By default, **the configuration files listed below will control 99% of the things you need to do on your server**. Here is an overview of each file and what they do. You can edit these files by going to `Management > File Manager`.
+
+:::danger
+**Don't** go online and copy someone else's entire config file. Only use what you need. When it comes to configuration, **less is more**.
+:::
+
+### server.cfg
+**Default location:** `/nmrih/cfg/server.cfg`
+
+The `server.cfg` file is used for changing server related settings like game mechanics, physics, and other aspects that affect all players on the server. Examples include `sv_cheats`, which allows or disallows the use of cheat commands, and `mp_timelimit` which sets the game time per map in minutes.
+
+### mapcycle.txt
+**Default location:** `/nmrih/cfg/mapcycle.txt`
+
+The `mapcycle.txt` file is where you can edit the NMRih map rotation, by default there will be a mapcycle_default.txt file in the same directory, you can rename this to mapcycle.txt or use it as a reference for your own custom mapcycle.
+
+## Plugin Config Files
+**Default location:** `/nmrih/addons/sourcemod/configs`
+
+If you're using [NMRiH](/games/no-more-room-in-hell/installing-plugins/) plugins such as Sourcemod, each plugin you install should generate a config file inside the Sourcemod /addons/configs/ folder. Some plugins may put their config file in `/nmrih/cfg/sourcemod/`. If you're in doubt, you'll need to refer to the plugin authors documentation.
+
+**Alternative Location**
+
+Some plugins store their basic config files in `/nmrih/cfg/sourcemod/`, as it depends on the plugin this is something you'll need to look out for.
+
+## Finding Convars & Commands
+
+If you ever need to find a convar or command, you can simply go to your servers console and type `find` followed by what you're looking to change. For example if you wanted to find a command about rounds, you can simply type `find round`, and it will output all the current convars, commands along with a description of what they all do. 

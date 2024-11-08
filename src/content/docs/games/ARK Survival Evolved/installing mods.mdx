@@ -1,6 +1,6 @@
 ---
-title: How To Install Mods To Your Ark Survival Evolved Server
-description: Learn how to install mods on your Ark Survival Evolved server.
+title: How To Install Mods To Your ARK Survival Evolved Server
+description: Learn how to install mods on your ARK Survival Evolved server.
 sidebar:
   label: Install Mods
 ---
@@ -10,19 +10,22 @@ import { Steps } from '@astrojs/starlight/components';
 This only works for Steam players, Ark Survival Evolved has NO Mod support for Epic Games players.
 :::
 
-Here is how to find Mods for your server.
+## How To Get Your Workshop Mod IDs
 
+You will need to know how to get a Workshop ID for each mod you want to install. You can [view all the ARK Survival Evolved mods here](https://steamcommunity.com/workshop/browse/?appid=346110&requiredtags%5B%5D=Mod)
+
+Once you find the mod you want you need to copy the URL. Let's use this URL for example: [https://steamcommunity.com/sharedfiles/filedetails/?id=3070288532&searchtext=bhop](https://steamcommunity.com/sharedfiles/filedetails/?id=3070288532&searchtext=bhop)
+
+![CS2 workshop URL](../../../../assets/guide-images/cs2-workshop-screenshot.jpg)
 Go to the Steam Workshop page for Ark Surival Evolved, which can be found [here](https://steamcommunity.com/workshop/browse/?appid=346110&requiredtags%5B%5D=Mod)
 
 ## How to Install Mods on Your Ark Survival Evolved Server.
 <Steps>
-1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Ark server.
-2. Click `Console > Stop Server`.
-2. Click `Configuration > Startup Parameters`.
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your ARK server.
+2. Go to `Configuration > Startup Parameters`.
 3. Select `Mods`.
-4. Copy the Mod ID, this will be the numbers at the end, for example: https://steamcommunity.com/sharedfiles/filedetails/?id= `821530042`.
-5. Paste the Mod ID into `Mods`. ex: `821530042`.
-6. Start your server.
+4. Paste the Workshop ID into `Mods`. ex: `821530042`.
+5. Start your server.
 </Steps>
 :::tip
 For multiple mods you have to seperate each Mod ID with `,` for example: `821530042,731604991`
