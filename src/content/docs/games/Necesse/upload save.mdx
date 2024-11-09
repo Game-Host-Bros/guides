@@ -1,0 +1,51 @@
+---
+title: How To Upload An Existing Save To Your Necesse Server
+description: Learn how to upload an existing save to your Necesse Server with this quick and easy to follow guide
+sidebar:
+  label: Upload Existing Save
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+This guide will show you how to find and upload an existing save to your [Necesse server](https://www.gamehostbros.com/necesse-server-hosting/).  
+
+## Necesse Save File Location
+
+Follow these steps to find your local Necesse save file:
+
+**Windows**
+
+<Steps>
+1. Press `Windows Key + R`.
+2. Enter this command:
+   ```
+   %userprofile%\AppData\Roaming\necesse\saves\worlds
+   ```
+3. Copy the save.zip file you want to upload.
+</Steps>
+
+**Linux** 
+
+`~/.config/Necesse/saves/`
+
+**MacOS**
+
+`~/Library/Application Support/Necesse/saves`
+
+## Uploading A Save To Your Necesse Server
+
+<Steps>
+  1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Server.
+  2. In the sidebar go to `Management > File Manager`.
+  3. Navigate to `/saves/worlds/` and [Upload](/getting-started/uploading-files/) your save.zip file.
+  4. Go to `Configuration > Startup Parameters` and set `Save Name` to the name of your save.
+  5. Start your server.
+   </Steps>
+
+  <FileTree>
+  
+  - saves
+    - worlds
+      - **Save1**
+  
+  </FileTree>
