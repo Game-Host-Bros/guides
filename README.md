@@ -1,28 +1,36 @@
-# Starlight Starter Kit: Basics
+# Game Host Bros Community Guides
+
+Welcome to the Game Host Bros community guides repository! This is a collaborative space where anyone can contribute their knowledge and expertise to help fellow gamers and server hosts.
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-```
-npm create astro@latest -- --template starlight
-```
+## 🤝 How to Contribute
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+We welcome contributions from everyone! Here's how you can help:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+1. **Fork the Repository**
+   - Click the "Fork" button in the top right corner of this repository
+   - Clone your fork locally: `git clone https://github.com/your-username/game-host-bros-guides`
 
-## 🚀 Project Structure
+2. **Make Your Changes**
+   - Create a new branch: `git checkout -b my-new-guide`
+   - Add or edit content in the `src/content/docs/` directory
+   - All content should be written in Markdown (`.md`) or MDX (`.mdx`) format
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+3. **Submit Your Changes**
+   - Push your changes to your fork
+   - Create a Pull Request back to this repository
+   - Our team will review your contribution
+
+## 📁 Project Structure
 
 ```
 .
-├── public/
+├── public/           # Static assets (images, favicon, etc.)
 ├── src/
-│   ├── assets/
+│   ├── assets/      # Images and other assets used in guides
 │   ├── content/
-│   │   ├── docs/
+│   │   ├── docs/    # All guide content goes here
 │   │   └── config.ts
 │   └── env.d.ts
 ├── astro.config.mjs
@@ -30,25 +38,32 @@ Inside of your Astro + Starlight project, you'll see the following folders and f
 └── tsconfig.json
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+## 🚀 Running Locally
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+1. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-Static assets, like favicons, can be placed in the `public/` directory.
+2. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
+   This will start the server at `localhost:4321`
 
-## 🧞 Commands
+## 📝 Writing Guidelines
 
-All commands are run from the root of the project, from a terminal:
+1. **File Organization**
+   - Place your guide in the appropriate category folder within `src/content/docs/`
+   - Use kebab-case for filenames: `my-awesome-guide.md`
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+2. **Content Structure**
+   - Start with a clear title and description
+   - Use headings to organize content
+   - Include code examples where relevant
+   - Add images to enhance understanding
 
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+3. **Formatting**
+   - Use Markdown formatting for consistency
+   - Include code blocks with appropriate language tags
+   - Add screenshots or diagrams when helpful
