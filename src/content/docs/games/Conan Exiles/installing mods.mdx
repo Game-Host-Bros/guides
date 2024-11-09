@@ -15,20 +15,17 @@ You will need to know how to get a Workshop ID for each mod you want to install.
 Once you find the mod you want you need to copy the URL. Let's use this URL for example: [https://steamcommunity.com/sharedfiles/filedetails/?id=3357115923](https://steamcommunity.com/sharedfiles/filedetails/?id=3357115923). The Workshop ID is the numbers at the end of the URL, in this case the Workshop ID is `3357115923`.
 
 <Steps>
-1. Access to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Conan Exiles Server.
-2. Go to `Management > File Manager`.
-3. Enter `modlist.txt` in the home directory.
-4. Paste the Workshop ID of the Mod you'd like to install, for example if I wanted to install this mod [https://steamcommunity.com/sharedfiles/filedetails/?id=3357115923](https://steamcommunity.com/sharedfiles/filedetails/?id=3357115923) It should look like this, one per line:
+1. Access to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and select your Conan Exiles Server.
+2. Go to `Configuration > Startup Parameters` and select the `Mods` tab.
+3. Look for `Workshop Mods` and paste the Workshop ID of the Mod you'd like to install. You can also add multiple mods by seperating them with a comma.
    
-   ```txt title="modlist.txt"
-   3357115923
-   3357758627
-   3299875004
+   ```
+   3357115923,3357758627,3299875004
    ```
 
    - The Workshop ID for this mod is `3357115923`, this id can be found at the end of the Steam Workshop URL.
    - To change the mod load order simply rearrange them in the list and restart your server.
-5. Start your server.
+4. Start your server.
 </Steps>
 
 The mods will automatically download and enable once your server starts.
