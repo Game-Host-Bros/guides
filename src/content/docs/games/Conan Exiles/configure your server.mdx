@@ -6,13 +6,33 @@ sidebar:
 ---
 import { Steps } from '@astrojs/starlight/components';
 
-In this guide, we will show you how you can edit the settings on your [Conan Exiles server](https://www.gamehostbros.com/conan-exiles-server-hosting/). 
+In this guide, we will show you how to edit every settings on your [Conan Exiles server](https://www.gamehostbros.com/conan-exiles-server-hosting/).
 
-## Configuring Your Conan Exiles Server
+This guide mainly focuses on the in-game server settings menu to customize your server with the easiest way possible, without the need to manually edit configuration files.
+
+## Basic Server Configuration
+
+Basic settings such as Server Password, Server Name, PvP, Community Type and more can be configured directly in our game panel, here are the steps for basic configuration:
 
 <Steps>
-1. Firstly, login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your server.
-2. Once stopped, on the left, navigate to `Management` then `File Manager`.
-3. Navigate to `/ConanSandbox/Saved/Config/WindowsServer/ServerSettings.ini`.
-4. After you have made the changes you want, start the server. 
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your server.
+2. In the sidebar, click `Configuration > Startup Parameters`.
+3. Edit the setting you want to change.
+4. Start your server.
 </Steps>
+
+## Using The In-Game Server Settings Menu
+
+Before proceeding ensure that you've set an [Admin Password](/games/conan-exiles/adding-admins/) as this is required to give yourself the necessary permissions to edit your server settings in-game.
+<Steps>
+
+1. Connect to your Conan Exiles server.
+2. Open the menu with `Esc` and click `Settings > Server Settings`.
+3. Click `Make Me Admin` and enter your [Admin Password](/games/conan-exiles/adding-admins/).
+4. Use the sidebar to find and change settings.
+</Steps>
+
+:::note
+If you want to configure everything only via game files or the in-game menu go to `Configuration > Startup Parameters` and disable `File Parser`, this is for advanced users who want to manually configure a server.
+:::
