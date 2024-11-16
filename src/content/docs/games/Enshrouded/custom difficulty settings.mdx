@@ -1,0 +1,110 @@
+---
+title: How To Configure Every Setting On Your Enshrouded Server
+description: Learn how to configure settings on your Enshrouded server with this comprehensive and easy-to-follow guide.
+sidebar:
+  label: Custom Difficulty Settings
+---
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide, we will show you how to change the server difficulty on your [Enshrouded server](https://www.gamehostbros.com/enshrouded-server-hosting/). 
+
+This is our advanced guide allowing you to change every setting individually, for basic Difficulty presets follow [this guide](/games/enshrouded/change-difficulty-presets/).
+
+## Editing enshrouded_server.json
+
+This is the advanced way to modify Enshrouded server settings, if you're looking for full customization of each individual option this is the method for you.
+
+<Steps>
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Enshrouded server.
+3. Go to `Configuration > Startup Parameters`.
+4. Find the `Difficulty` setting and change it to `Custom`.
+5. Go to `Management > File Manager` and open the file `enshrouded_server.json`.
+6. After you have made the changes you want, start the server. 
+</Steps>
+
+The following options can be modified in the `enshrouded_server.json` file, under the `gameSettings` section. 
+
+Units involving time are in nanoseconds (1/1,000,000,000 of a second), in-game they are displayed as minutes, you can calculate your desired value using [this calculator](https://www.unitconverters.net/time/minute-to-nanosecond.htm).
+
+| Setting Name                  | Description                                                                                 |
+|-------------------------------|---------------------------------------------------------------------------------------------|
+| playerHealthFactor            | Adjusts player health scale. **Min: 0.25 Max: 4**                                          |
+| playerManaFactor              | Adjusts player mana scale. **Min: 0.25 Max: 4**                                            |
+| playerStaminaFactor           | Adjusts player stamina scale. **Min: 0.25 Max: 4**                                         |
+| playerBodyHeatFactor          | Increases resistance to cold. **Min: 0.5 Max: 2**                                          |
+| enableDurability              | Prevents weapons breaking if false. **Values: true/false**                                 |
+| enableStarvingDebuff          | Enables health loss when starving. **Values: true/false**                                  |
+| foodBuffDurationFactor        | Adjusts food buff duration. **Min: 0.5 Max: 2**                                            |
+| fromHungerToStarving          | Time before starvation begins. **Min: 300000000000 (5 Minutes) Max: 1200000000000 (20 minutes)** |
+| shroudTimeFactor              | Adjusts time spent in the Shroud. **Min: 0.5 Max: 2**                                      |
+| enableGliderTurbulences       | Disables glider air turbulence if false. **Values: true/false**                            |
+| weatherFrequency              | Frequency of weather changes. **Values: Disabled/Rare/Normal/Often**                       |
+| randomSpawnerAmount           | Controls enemy count. **Values: Few/Normal/Many/Extreme**                                  |
+| miningDamageFactor            | Adjusts mining yield. **Min: 0.5 Max: 2**                                                 |
+| plantGrowthSpeedFactor        | Adjusts plant growth speed. **Min: 0.25 Max: 2**                                           |
+| resourceDropStackAmountFactor | Adjusts resource stack sizes. **Min: 0.25 Max: 2**                                         |
+| factoryProductionSpeedFactor  | Reduces production time. **Min: 0.25 Max: 2**                                             |
+| perkUpgradeRecyclingFactor    | Rune yield when recycling weapons. **Min: 0 Max: 1**                                      |
+| perkCostFactor                | Adjusts rune upgrade costs. **Min: 0.25 Max: 2**                                           |
+| experienceCombatFactor        | Adjusts combat XP gain. **Min: 0.25 Max: 2**                                              |
+| experienceMiningFactor        | Adjusts mining XP gain. **Min: 0 Max: 2**                                                 |
+| experienceExplorationQuestsFactor | Adjusts quest XP gain. **Min: 0.25 Max: 2**                                          |
+| aggroPoolAmount               | Controls enemy attack count. **Values: Few/Normal/Many/Extreme**                           |
+| enemyDamageFactor             | Adjusts enemy damage. (Excludes Bosses) **Min: 0.25 Max: 5**                               |
+| enemyHealthFactor             | Adjusts enemy health. (Excludes Bosses) **Min: 0.25 Max: 4**                               |
+| enemyStaminaFactor            | Adjusts enemy stun resistance. (Excludes Bosses) **Min: 0.5 Max: 2**                       |
+| enemyPerceptionRangeFactor    | Adjusts enemy perception range. (Excludes Bosses) **Min: 0.5 Max: 2**                      |
+| bossDamageFactor              | Scales the damage of boss attacks. **Min: 0.2 Max: 5**                                                  |
+| bossHealthFactor              | Scales all health of bosses by this value. **Min: 0.2 Max: 5**                                                  |
+| threatBonus                   | Adjusts enemy attack frequency. (Excludes Bosses) **Min: 0.25 Max: 4**                     |
+| pacifyAllEnemies              | Enemies won’t attack if true. (Excludes Bosses) **Values: true/false**                     |
+| tamingStartleRepercussion     | Taming progress impact if startled. **Values: KeepProgress/LoseSomeProgress/LoseAllProgress** |
+| dayTimeDuration               | Adjusts day length.  **Min: 120000000000 (2 Minutes) Max: 3600000000000 (60 Minutes)** |
+| nightTimeDuration             | Adjusts night length.  **Min: 120000000000 (2 Minutes) Max: 3600000000000 (60 Minutes)** |
+| tombstoneMode                 | Determines item loss on death. **Values: AddBackpackMaterials/Everything/NoTombstone**    |
+
+
+
+<details>
+<summary>enshrouded_server.json - Custom Game Settings Example</summary>
+
+```json title="enshrouded_server.json"
+"gameSettingsPreset": "Custom",
+"gameSettings": {
+"playerHealthFactor": 2,
+"playerManaFactor": 3,
+"playerStaminaFactor": 4,
+"playerBodyHeatFactor": 0.25,
+"enableDurability": true,
+"enableStarvingDebuff": false,
+"foodBuffDurationFactor": 1,
+"fromHungerToStarving": 300000000000,
+"shroudTimeFactor": 1,
+"tombstoneMode": "AddBackpackMaterials",
+"enableGliderTurbulences": true,
+"weatherFrequency": "Normal",
+"miningDamageFactor": 1,
+"plantGrowthSpeedFactor": 1,
+"resourceDropStackAmountFactor": 1,
+"factoryProductionSpeedFactor": 1,
+"perkUpgradeRecyclingFactor": 0.500000,
+"perkCostFactor": 1,
+"experienceCombatFactor": 1,
+"experienceMiningFactor": 1,
+"experienceExplorationQuestsFactor": 1,
+"randomSpawnerAmount": "Normal",
+"aggroPoolAmount": "Normal",
+"enemyDamageFactor": 1,
+"enemyHealthFactor": 1,
+"enemyStaminaFactor": 2,
+"enemyPerceptionRangeFactor": 1,
+"bossDamageFactor": 1,
+"bossHealthFactor": 1,
+"threatBonus": 1,
+"pacifyAllEnemies": false,
+"tamingStartleRepercussion": "LoseSomeProgress",
+"dayTimeDuration": 1800000000000,
+"nightTimeDuration": 720000000000
+},
+```
+</details>

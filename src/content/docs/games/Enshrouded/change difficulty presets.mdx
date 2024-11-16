@@ -1,0 +1,29 @@
+---
+title: How To Change The Difficulty Preset On Your Enshrouded Server
+description: Learn how to change the server difficulty preset on your Enshrouded server.
+sidebar:
+  label: Change Difficulty Presets
+---
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide, we will show you how to change the server difficulty on your [Enshrouded server](https://www.gamehostbros.com/enshrouded-server-hosting/). 
+
+## Difficulty Presets
+By default, Enshrouded comes with 5 difficulty presets that you can use to quickly adjust how hard the game is. We allow you to adjust these directly from our Game Panel.
+<Steps>
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and Stop your Enshrouded server.
+2. Go to `Configuration > Startup Parameters`.
+3. Find the `Difficulty` setting and change it to the desired difficulty.
+4. Start your server.
+</Steps>
+Here are the Enshrouded difficulty presets you can select and what they do.
+
+- **Default** - The “Default” difficulty setting configures all values to default. It is the direct continuation of how Enshrouded was first configured and is the recommended setting for first-time players.
+- **Relaxed** - The “Relaxed” preset reduces the amount of enemies and provides players with more resources and loot. This mode targets players who are most interested in base-building and light-hearted adventuring.
+- **Hard** - The “Hard” preset increases the amount of enemies and makes them more aggressive to give players a tougher combat experience.
+- **Survival** - The “Survival” preset is for those who seek some punishment with additional survival mechanics on top of more aggressive enemies.
+- **Custom** - When “Custom” is selected, a long list of individual settings can be tweaked. This setting is required if you manually adjust your enshrouded_server.json file.
+
+If you want to tweak individual game settings, you will need to do it from the `enshrouded_server.json` file and `Difficulty` must be set to `Custom` in our game panel, our guide on that can be found here:
+
+- [Enshrouded Custom Difficulty Configuration Guide](/games/enshrouded/custom-difficulty-settings/)
