@@ -8,13 +8,13 @@ import { Steps } from '@astrojs/starlight/components';
 
 By default, base [Quake 3 Arena](https://www.gamehostbros.com/quake-3-arena-server-hosting/) doesn't support a map cycle file, however you can do a workaround to get the same effect with scripting.
 
-It's worth noting that **some mods such as OSP will automatically add all the maps** from the server that support your current game mode. **We recommend you install the OSP mod directly from our Mod Manager** to make it easier for you to manage your maps. This will also make dealing with custom maps easier and you can simply upload them.
+It's worth noting that **some mods such as OSP will automatically add all the maps** from the server that support your current game mode.
 
 ## How To Modify the Map Cycle
 
-We include a base `level.txt` in `baseq3/levels.cfg` by default on our servers that you can easily modify.
+FIrst you need to create the file `baseq3/levels.cfg`.
 
-You can change what map config it reads by going to your server, `Startup Parameters` and changing `Exec/Gamemode`. If you leave this as `levels.cfg` and load a mod, it will use this map list. We suggest removing levels.cfg from Exec/Gamemode and using some configs inbuilt with your mod (for example OSP will select all the maps for that game mod) or creating your own custom map list based on the mode you're playing.
+You can change what map config it reads by going to your server, `Startup Parameters` and changing `Exec/Gamemode`. If you leave this as `levels` and load a mod, it will use this map list. We suggest removing levels.cfg from Exec/Gamemode and using some configs inbuilt with your mod (for example OSP will select all the maps for that game mod) or creating your own custom map list based on the mode you're playing.
 
 The default file looks like this.
 
