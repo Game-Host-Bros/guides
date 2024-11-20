@@ -1,0 +1,72 @@
+---
+title: How To Install Mods On Your Satisfactory Server
+description: Step-by-step guide on how to install mods to a Satisfactory dedicated server using the Satisfactory Mod Manager.
+sidebar:
+  label: Install Mods
+---
+import { Steps } from '@astrojs/starlight/components';
+
+This guide will cover how to find and install mods to your [Satisfactory server](https://www.gamehostbros.com/satisfactory-server-hosting/), this method focuses on using the [Satisfactory Mod Manager](https://docs.ficsit.app/satisfactory-modding/latest/ForUsers/SatisfactoryModManager.html) (SMM) tool to easily upload mods to your server. 
+
+## Connect Satisfactory Mod Manager To Your Server
+
+Here's how to connect to your Satisfactory server with SFTP using SMM. First, download it from here [SMM Releases Github](https://github.com/satisfactorymodding/SatisfactoryModManager/releases).
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Satisfactory server.
+2. In the sidebar, select `System > SFTP Details`.
+3. Run Satisfactory Mod Manager and select `Manage Servers` in the left-hand sidebar.
+4. Select `SFTP` and then enter your SFTP details, following this example:
+   - Username - Your SFTP Username 
+   - Password - Your SFTP Password (Game Panel Password)
+   - Host - Your Connection Address (Remove the port from here)
+   - Port - 2022 
+   - Path - Can be left empty.
+5. Click `Add`.
+</Steps>
+
+## Installing Mods To Your Satisfactory Server
+
+After you've connected to your server with SMM, follow these steps to install mods on your Satisfactory server. If not already, It's highly recommended to Stop your server before proceeding.
+
+<Steps>
+1. In the top left of SMM, select your server under `Select Game Installation`.
+2. Sort mods by `Compatible` to exclude Client-side only mods.
+3. Download and then enable the mods you desire.
+</Steps>
+
+To make sure the mods have been installed correctly you can use File Manager to check the `/FactoryGame/Mods/` folder on your server, if this folder doesn't exist mods haven't been installed.
+
+## Connecting To A Modded Server
+
+Joining a modded Satisfactory server isn't different to a Vanilla server, you must only ensure that you're launching with Mods enabled in SMM, here's how to do that.
+
+<Steps>
+1. In Satisfactory Mod Manager select your local Game Installation.
+2. Toggle `Mods On`.
+3. At the bottom, click `Play Satisfactory`.
+</Steps>
+
+:::note
+You MUST also have the same mods as the server installed and enabled on your local game installation, otherwise you won't be able to join or interact with your server, you can use the [Import/Export profile functionality](https://docs.ficsit.app/satisfactory-modding/latest/faq.html#Files_SMMProfiles) of SMM to send mods to your friends.
+:::
+
+## Troubleshooting
+
+Here are some general troubleshooting steps you can follow.
+
+### Launching Satisfactory Mod Manager 
+
+Try these suggestions if things aren't working properly.
+
+- Make sure you've downloaded the version of SMM compatible with your platform.
+- Run the program as Administrator.
+- Check your Firewall/Antivirus.
+
+### Server Wont Add To SFTP
+
+Ensure that you're removing the port from the Host field, the information for Host can be found in `System > SFTP Details` of the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and it will be your `Connection Address`. For example:
+
+- MyConnectionAddress323283:2022, you need to remove :2022 from the `Host` field in SMM.
+- Make sure your password is correct, it's your game panel password, you can reset it [here](https://panel.gamehostbros.com/login/reset).
+- Double-check all the information is input correctly.
