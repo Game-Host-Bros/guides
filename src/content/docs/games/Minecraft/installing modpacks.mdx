@@ -31,21 +31,14 @@ We recommend using CurseForge to find and install Modpacks to your server and ga
   1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/).
   2. In the sidebar, go to `Configuration > Advanced > Install Different Edition`.
   3. Select the compatible version and edition of your modpack and click `Format`.
-     - **If you want to keep any files, manually download a backup before doing this!**
-  4. Start your server, once fully started, Stop your server.
-  5. Drag your Modpack.zip into File Manager to upload it, and then `Decompress` the .zip by clicking the three dots.
-     - Uploading a .zip is preferred as it's faster, but you can also upload everything uncompressed with [SFTP](/getting-started/uploading-files/#using-sftp) if you're having trouble.
-     - Use [SFTP](/getting-started/uploading-files/#using-sftp) if your modpack is over 1GB.
-     - The upload location will be the home directory of your server, when you click File Manager it should look something like this.
+  4. Use [SFTP](/getting-started/uploading-files/#using-sftp) and upload the Modpack.zip to your servers home directory.
+  5. Once uploaded `Decompress` the  Modpack.zip by clicking the three dots in `Management > File Manager`.
+     - Uploading a .zip is preferred as it's faster, but you can also upload everything uncompressed if you're having trouble.
+     - The upload location will be the home directory of your server, for most Forge versions when you click File Manager it should look something like this.
      <FileTree>
      - File-Manager
-       - **mods**
-       - **config**
-       - **forge-wrapper.jar** example
-       - **server.properties**
-       - **ops.txt**
+       - **forge-wrapper.jar** 
        - **libraries**
-       - **world**
        - ..
      </FileTree>
   5. Start your server.
@@ -60,7 +53,7 @@ Here are the most common issues you may run into when installing mods to your Mi
 This may be because the server is using an incompatible java version, the automatic version is usually correct, but can be wrong from time to time. Try these steps to troubleshoot it:
 
 - Double check that the server .jar file is set correctly in `Configuration > Startup Parameters`.
-- In `Configuration > Startup Parameters` change the java version restart your server, you may need to try this a couple of times, `Automatic` works for 99% of cases.
+- In `Configuration > Startup Parameters` change the java version and restart your server, you may need to try this a couple of times, `Automatic` works for 99% of cases.
 - Make sure the upload was successful, files larger than 1GB need to be uploaded using [SFTP](/getting-started/uploading-files/#using-sftp).
 
 ### Version Compatibility
