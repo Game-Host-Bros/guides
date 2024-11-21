@@ -17,24 +17,22 @@ It's common to enable flight on your [Minecraft server](https://www.gamehostbros
   4. Start your Server.
 </Steps>
 
-## Minecraft Server Settings
-
-| Setting                          | Default             | Description                                                                                                  |
-|----------------------------------|---------------------|--------------------------------------------------------------------------------------------------------------|
-| allow-flight                     | false               | Allows users to use flight on the server while in Survival mode.                                             |
-| difficulty                       | easy                | Defines the difficulty (such as damage dealt by mobs and the way hunger and poison affect players) of the server. |
-| enable-command-block             | false               | Enables command blocks.                                                                                       |
-| enforce-whitelist                | false               | Enforces the whitelist on the server.                                                                         |
-| gamemode                         | survival            | Defines the mode of gameplay.                                                                                 |
-| hardcore                         | false               | Server difficulty is ignored and set to hard and players are set to spectator mode if they die.               |
-| level-name                       | world               | The "level-name" value is used as the world name and its folder name.                                         |
-| level-seed                       | blank               | Sets a world seed for the player's world, as in Singleplayer. The world generates with a random seed if left blank. |
-| level-type                       | minecraft:normal    | Determines the world preset that is generated.                                                                |
-| max-players                      | 20                  | The maximum number of players that can play on the server at the same time.                                   |
-| motd                             | A Minecraft Server  | This is the message that is displayed in the server list of the client.                     |
-| player-idle-timeout              | 0                   | If non-zero, players are kicked from the server if they are idle for more than that many minutes.             |
-| pvp                              | true                | Enables Player versus Player combat.                                                                          |
-
 These are the most commonly changed Minecraft server settings. A full list can be found [Here](https://minecraft.fandom.com/wiki/Server.properties).
 
-If you get stuck at any time, you can reach out to us on [Discord](https://discord.gg/FN4XgbAwzr).
+## Minecraft Server Settings
+
+| Setting               | Default Value      | Other Possible Values                                         | Description                                                                 |
+|-----------------------|--------------------|---------------------------------------------------------------|-----------------------------------------------------------------------------|
+| allow-flight          | false             | true                                                          | Allows users to use flight on the server while in Survival mode.           |
+| difficulty            | easy              | peaceful, normal, hard                                        | Defines the difficulty (such as damage dealt by mobs and the way hunger and poison affect players) of the server. |
+| enable-command-block  | false             | true                                                          | Enables command blocks.                                                    |
+| enforce-whitelist     | false             | true                                                          | Enforces the whitelist on the server.                                      |
+| gamemode              | survival          | creative, adventure, spectator                                | Defines the mode of gameplay.                                              |
+| hardcore              | false             | true                                                          | Server difficulty is ignored and set to hard, and players are set to spectator mode if they die. |
+| level-name            | world             | (Any valid string)                                            | The “level-name” value is used as the world name and its folder name.       |
+| level-seed            | blank             | (Any valid seed value)                                        | Sets a world seed for the player’s world, as in Singleplayer. The world generates with a random seed if left blank. |
+| level-type            | minecraft:normal  | minecraft:flat, minecraft:large_biomes, minecraft:amplified, minecraft:custom | Determines the world preset that is generated. |
+| max-players           | 20                | (Any positive integer)                                        | The maximum number of players that can play on the server at the same time. |
+| motd                  | A Minecraft Server | (Any valid string)                                            | This is the message that is displayed in the server list of the client.     |
+| player-idle-timeout   | 0                 | (Any positive integer)                                        | If non-zero, players are kicked from the server if they are idle for more than that many minutes. |
+| pvp                   | true              | false                                                         | Enables Player versus Player combat.                                       |
