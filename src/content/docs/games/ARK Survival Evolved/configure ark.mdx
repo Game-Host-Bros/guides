@@ -6,14 +6,153 @@ sidebar:
 ---
 import { Steps } from '@astrojs/starlight/components';
 
-Here's how you can locate the and edit the config file for your Ark Survival Evolved server.
+Here's how you can locate the and edit the config file for your [Ark Survival Evolved server](https://www.gamehostbros.com/ark-survival-evolved-server-hosting/), this guide covers.
 
-## Editing GameUserSettings.ini
-Editing your GameUserSettings.ini file is the fastest way to modify all gameplay settings on your Ark Survival Evolved server. Please be aware that basic settings such server name and more are handled by our game panel under `Configuration > Startup Parameters`.
+The [GameUserSettings.ini Generator](https://ini.arkforum.de/index.php) is a powerful tool available on ArkForum that simplifies ARK server configuration. Instead of manually adding and configuring every setting this tool includes an easy-to-use interface to generate your settings.
+
+A full breakdown of settings can also be found on the [ARK SE Server Configuration Wiki](https://ark.fandom.com/wiki/Server_configuration#GameUserSettings.ini), this page also contains details on how to configure your Game.ini file, this file is used for advanced configuration of an ARK server.
+
+## Using The GameUserSettings.ini Generator
+
+:::note
+Basic settings such as Server Name and Password are set in our game panel under `Configuration > Startup Parameters`.
+:::
 
 <Steps>
-1. Firstly, login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Ark server.
+1. Use the [ARK GameUserSettings.ini Generator](https://ini.arkforum.de/index.php) to set your desired settings.
+2. Click `Create File` then copy everything directly under the `[ServerSettings]` section in the generated output.
+3. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your Ark server.
+4. In File Manager, Navigate to `/ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini`.
+5. Paste the settings you copied earlier under the header of `[ServerSettings]`, replacing what used to be there.
+6. Start your server.
+</Steps>
+
+Here's an example of what your settings file shouldafter you've pasted in your new settings, only replacing the settings under the `[ServerSettings]` header in your GameUserSettings.ini file:
+
+<details>
+<summary>GameUserSettings.ini [ServerSettings] Example</summary>
+
+```ini title="GameUserSettings.ini"
+[ServerSettings]                      
+allowThirdPersonPlayer=0
+AllowCaveBuildingPvE=0
+alwaysNotifyPlayerJoined=0
+alwaysNotifyPlayerLeft=0
+bAllowFlyerCarryPvE=0
+bDisableStructureDecayPvE=0
+DayCycleSpeedScale=1.00000
+DayTimeSpeedScale=1.00000
+NightTimeSpeedScale=1.00000
+DinoCharacterFoodDrainMultiplier=1.00000
+DinoCharacterHealthRecoveryMultiplier=1.00000
+DinoCharacterStaminaDrainMultiplier=1.00000
+DinoCountMultiplier=1.00000
+DinoDamageMultiplier=1.00000
+DinoResistanceMultiplier=1.00000
+globalVoiceChat=0
+HarvestAmountMultiplier=1.00000
+HarvestHealthMultiplier=1.00000
+MaxStructuresInRange=6700
+noTributeDownloads=0
+PreventDownloadSurvivors=0
+PreventDownloadItems=0
+PreventDownloadDinos=0
+PlayerCharacterFoodDrainMultiplier=1.00000
+PlayerCharacterHealthRecoveryMultiplier=1.00000
+PlayerCharacterStaminaDrainMultiplier=1.00000
+PlayerCharacterWaterDrainMultiplier=1.00000
+PlayerDamageMultiplier=1.00000
+PlayerResistanceMultiplier=1.00000
+proximityChat=0
+ResourceNoReplenishRadiusPlayers=1.00000
+ResourceNoReplenishRadiusStructures=1.00000
+ResourcesRespawnPeriodMultiplier=1.00000
+ServerAdminPassword=
+ServerCrosshair=0
+serverForceNoHud=0
+serverHardcore=0
+ServerPassword=
+serverPVE=0
+ShowMapPlayerLocation=0
+StructureDamageMultiplier=1.00000
+StructureResistanceMultiplier=1.00000
+TamedDinoDamageMultiplier=1.00000
+TamedDinoResistanceMultiplier=1.00000
+TamingSpeedMultiplier=1.00000
+XPMultiplier=1.00000
+EnablePVPGamma=0
+EnablePVEGamma=0
+SpectatorPassword=
+DifficultyOffset=0.50000
+PvEStructureDecayPeriodMultiplier=1.00000
+PvEStructureDecayDestructionPeriod=1.00000
+Banlist="http://arkdedicated.com/banlist.txt"
+PvPStructureDecay=0
+DisableDinoDecayPvE=0
+PvEDinoDecayPeriodMultiplier=1.00000
+AdminLogging=0
+MaxTamedDinos=8000
+MaxNumbersofPlayersInTribe=2
+BattleNumOfTribestoStartGame=2
+TimeToCollapseROD=100
+BattleAutoStartGameInterval=100
+BattleSuddenDeathInterval=300
+KickIdlePlayersPeriod=1800
+PerPlatformMaxStructuresMultiplier=1.00000
+StructureDamageRepairCooldown=180
+bForceAllStructureLocking=1
+AutoDestroyOldStructuresMultiplier=0.00000
+bUseVSync=0
+MaxPlatformSaddleStructureLimit=100
+bPassiveDefensesDamageRiderlessDinos=1
+RCONPort=27020
+AutoSavePeriodMinutes=20
+RCONServerGameLogBuffer=600
+OverrideStructurePlatformPrevention=0
+PreventOfflinePvPInterval=60.0
+bPvPDinoDecay=1
+bPvPStructureDecay=1
+DisableImprintDinoBuff=1
+AllowAnyoneBabyImprintCuddle=1
+EnableExtraStructurePreventionVolumes=1
+ShowFloatingDamageText=1
+DestroyUnconnectedWaterPipes=0
+OverrideOfficialDifficulty=1.0
+TheMaxStructuresInRange=10500
+MinimumDinoReuploadInterval=0
+PvEAllowStructuresAtSupplyDrops=0
+NPCNetworkStasisRangeScalePlayerCountStart=70
+NPCNetworkStasisRangeScalePlayerCountEnd=120
+NPCNetworkStasisRangeScalePercentEnd=0.50
+MaxPersonalTamedDinos=500
+AutoDestroyDecayedDinos=1
+ClampItemSpoilingTimes=0
+UseOptimizedHarvestingHealth=1
+AllowCrateSpawnsOnTopOfStructures=1
+ForceFlyerExplosives=0
+PreventOfflinePvP=1
+AllowFlyingStaminaRecovery=1
+AllowMultipleAttachedC4=1
+OxygenSwimSpeedStatMultiplier=1.00
+bPvEDisableFriendlyFire=1
+ServerAutoForceRespawnWildDinosInterval=86400
+DisableWeatherFog=0
+RandomSupplyCratePoints=0
+CrossARKAllowForeignDinoDownloads=0
+PersonalTamedDinosSaddleStructureCost=19
+```
+</details>
+
+## Manually Configuring GameUserSettings.ini
+
+By default, an ARK server won't include all of the settings in your GameUserSettings.ini file. 
+
+A full breakdown of the possible settings can be found on the [ARK SE Wiki](https://ark.fandom.com/wiki/Server_configuration#GameUserSettings.ini).
+
+<Steps>
+1. Firstly, login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your Ark server.
 2. On the left sidebar, navigate to `Management` then `File Manager`.
 3. Navigate to `/ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini`.
-4. After you have made the changes you want, restart the server. 
+4. After you have made the changes you want, start your server. 
 </Steps>
+
