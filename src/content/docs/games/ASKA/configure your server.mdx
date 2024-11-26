@@ -1,0 +1,63 @@
+---
+title: How To Configure Your ASKA Server
+description: Learn how to change game settings and configure your ASKA dedicated server.
+sidebar:
+  label: Configure Your Server
+---
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide, we will show you how to edit every setting on your [ASKA server](https://www.gamehostbros.com/aska-server-hosting/). 
+
+ASKA has two types of settings, some are normal and can be edited freely, while enabling others require an additional step. This guide covers everything you need to know about ASKA server settings.
+
+## Configuring Your ASKA Server
+
+At Game Host Bros, we've integrated ASKA settings into our game panel, allowing you to customize your server quickly and easily.
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your server.
+2. In the sidebar, click `Configuration > Startup Parameters`.
+3. Sort by `Normal` or `Custom`.
+4. Edit the setting you want to change.
+5. Start your server.
+</Steps>
+
+:::tip
+Some ASKA settings require your server gameplay mode to be `custom`, this can be changed in `Configuration > Startup Parameters`.
+:::
+
+Here are all of the available settings for your ASKA server, sorted by `normal` and `custom` mode settings:
+
+### Normal Settings
+
+| Setting Name                | Possible Values                                                                                        | Description                                                                                     |
+|-----------------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| display name    | Any string       | The name displayed in the session list for new saves, uses the save name for old saves. || keep server world alive     | true, false                                                                                           | Toggles autopause when no players are connected. |
+| keep server world alive     | true, false        | Disables autopause when no players are connected (true = no pause). || password                    | Any string                                                                                             | The session password. |
+| mode                        | normal, custom                                                                              | The gameplay mode. Use custom to enable additional customization options. |
+| region                      | default, asia, japan, europe, south america, south korea, usa east, usa west, australia, canada east, hong kong, india, turkey, uae, usa south central | The hosting region. Use default for best ping. |
+| save id                     | Any alphanumeric string                                                                                 | The ID used to load an existing save file. |
+| seed                        | Any alphanumeric string                                                                                 | The world generation seed. |
+| server name                 | Any string                                                                                             | The host name displayed in the session list. |
+
+### Custom Settings
+
+:::tip
+These settings REQUIRE that your server is set to `custom` mode, you can change this in `Configuration > Startup Parameters`.
+:::
+
+| Setting Name                | Possible Values                                                                                        | Description                                                                                     |
+|-----------------------------|------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| bear population             | low, medium, high                                                                                   | The population of bears. |
+| day length                  | minimum, reduced, default, extended, maximum                                                       | The length of in-game days. |
+| invasion difficulty         | off, easy, normal, hard                                                                              | The difficulty of invasions. |
+| herbivore population        | low, medium, high                                                                                   | The population of herbivores. |
+| monster density             | off, low, medium, high                                                                                | The density of monsters in the world. |
+| monster population          | low, medium, high                                                                                   | The overall monster population. |
+| precipitation               | 0 (sunny) to 6 (soggy)                                                                                | The level of precipitation. (Rain Level) |
+| starting season             | spring, summer, autumn, winter                                                                      | The season in which the game starts. |
+| structure decay             | low, medium, high                                                                                   | The rate at which structures decay. |
+| terrain aspect              | smooth, normal, rocky                                                                                 | The terrain roughness. |
+| terrain height              | flat, normal, varied                                                                                 | The terrain height. |
+| wulfar population           | low, medium, high                                                                                   | The population of Wulfar NPCs. |
+| year length                 | minimum, reduced, default, extended, maximum                                                        | The length of the in-game year. |
+
