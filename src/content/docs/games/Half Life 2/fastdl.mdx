@@ -1,0 +1,43 @@
+---
+title: How To Setup FastDL For Your Half Life 2 Server
+description: Learn how to setup FastDL for your Half Life 2 dedicated server.
+sidebar:
+  label: FastDL
+---
+import { Steps } from '@astrojs/starlight/components';
+
+At Game Host Bros, we offer FastDL for your [Half Life 2 server](https://www.gamehostbros.com/half-life-2-deathmatch-server-hosting/) so players can download custom files such as maps, models and materials quickly. Everything is automatic and there is no extra configuration required on your end other than uploading your custom content. 
+
+## How Does FastDL Work?
+While everything is automatic, there are still some things you should know about our FastDL system:
+- Files are synced (and compressed) to `/fastdl/` when you start your server.
+- `sv_downloadurl` is automatically updated or added to your `server.cfg`.
+- Files only get served to players after everything is compressed.
+- You can view all the files online by checking your FastDL url directly. You can get it by typing `sv_downloadurl` into your console.
+
+Here is a list of folders and file types in those folders we sync.
+
+| Folder       | Extensions                        |
+|--------------|----------------------------------|
+| gfx          | .tga, .bmp                        |
+| maps         | .bsp, .nav, .res, .txt            |
+| materials    | .vmt, .vtf, .raw, .svg            |
+| models       | .mdl, .vtx, .vvd, .phy            |
+| overviews    | .bmp, .txt                        |
+| particles    | .pcf                              |
+| resource     | .txt, .res                        |
+| sound        | .mp3, .wav, .txt                  |
+| sprites      | .spr, .tga, .txt                  |
+|              | .wad                              |
+
+If what you require isn't listed, please reach out to a bro, and we will add what you require.
+
+## Using A Third Party FastDL
+If you want to use an external FastDL you can do so by adding another config that runs after `server.cfg`.
+
+<Steps>
+1. Create a `fastdl.cfg` in your game folder or cfg folder where your `server.cfg` is located.
+2. Add the line `sv_downloadurl www.myfastdlurl.com`
+3. Go back to your `server.cfg` and add the line `exec fastdl` to the bottom of the file.
+4. Restart your server. 
+</Steps>
