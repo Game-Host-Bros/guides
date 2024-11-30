@@ -32,16 +32,18 @@ We recommend using CurseForge to find and install Modpacks to your server and ga
   2. In the sidebar, go to `Configuration > Advanced > Install Different Edition`.
   3. Select the compatible version and edition of your modpack and click `Format`.
   4. Use [SFTP](/getting-started/uploading-files/#using-sftp) and upload the Modpack.zip to your servers home directory.
-  5. Once uploaded `Decompress` the  Modpack.zip by clicking the three dots in `Management > File Manager`.
-     - Uploading a .zip is preferred as it's faster, but you can also upload everything uncompressed if you're having trouble.
-     - The upload location will be the home directory of your server, for most Forge versions when you click File Manager it should look something like this.
+  5. Once uploaded, in `Management > File Manager` click the three dots to `Decompress` your Modpack.zip.
+     - Uploading a .zip is preferred as it's faster, but you can also upload everything uncompressed if you're having trouble, normally you'll only need the mods and configs folders uploaded.
+     - For most Forge versions and Modpacks after uploading and decompressing, your server should now look something like this.
      <FileTree>
      - File-Manager
        - **forge-wrapper.jar** 
        - **libraries**
+       - **mods**
+       - **configs**
        - ..
      </FileTree>
-  5. Start your server.
+  6. Start your server.
 </Steps>
 
 ## Troubleshooting
