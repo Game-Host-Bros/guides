@@ -12,18 +12,9 @@ At Game Host Bros, we make it easy for you to mod your [Palworld server](https:/
 Always back up your world manually before installing any Mods!
 :::
 
-## Using our 1-Click Mod Installer
-We include a few select server side only mods that work for both Steam and Xbox Palworld servers. This is how you can install them.
-<Steps>
-1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Palworld server.
-2. In the left-hand menu, click `Tools > Mod Manager`.
-3. Look for the plugin you want.
-4. Click the Install button then restart the server.
-</Steps>
-Some plugins require additional configuration, so please check the URL provided with the mod for more information.
+## Installing Mods 
 
-## Installing Mods Manually
-You also have the option to install Palworld mods manually however this can be a complicated task. Palworld mod websites mix in client mods with server mods, so you need to make sure they're going to work on a server. You must read the description of each mod as they will tell you if it will work on a server there. 
+Palworld mod websites mix in client mods with server mods, so you need to make sure they're going to work on a server. You must read the description of each mod as they will tell you if it will work on a server there. 
 
 Here are some things to consider **before** installing mods.
 - Make sure they're compatible with servers (UE4SS mods, .pak or .lua). Client servers are **NOT** the same as servers.
@@ -37,6 +28,9 @@ Here are some things to consider **before** installing mods.
 4. Navigate to `Pal/Binaries/Win64` and upload your extracted plugin folder.
 6. Start your server.
 </Steps>
+
+Many mods will also need to be enabled in the `Pal/Binaries/Win64/Mods/mods.txt` file, you'll need to add the name of the mod and enable it on a new line.
+
 :::danger
-`Pal/Binaries/Win64` is the most common folder for mods, however some Palworld mods may require a different location. Please check the documentation for the plugins you're downloading. If you're unsure or get stuck at any time, just reach out to a bro on [Discord)](https://discord.gg/FN4XgbAwzr) or via a support ticket.
+`Pal/Binaries/Win64` is the most common folder for mods, however some Palworld mods may require a different location. Please check the documentation for the plugins you're downloading.
 :::
