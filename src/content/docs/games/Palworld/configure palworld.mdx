@@ -99,19 +99,13 @@ Here is a list of all the settings inside the PalworldSettings.ini file as well 
 
 
 
-## Editing WorldOptions.sav (Legacy - Advanced)
+## Importing WorldOptions.sav Settings
 
 :::danger
-We don't recommend using WorldOptions. Instead, we suggest you use one of the above options. Using this file will overwrite anything inside PalWorldSettings.ini. This also means if you change the server settings in our panel it will no longer work and you **MUST** update them though WorldOptions.sav.
-
-You also **MUST** fill out all the options such as IP, Port, RCON, password etc. correctly otherwise your server will not be discoverable/joinable.
-
-If you're using an **Xbox** server you cannot use this file.
+As of the 2nd of December, 2024, we no longer support using WorldOptions.sav on our servers. If you upload this file it will be renamed to `WorldOptions.sav.disabled`. This file is not longer supported for Xbox, and every setting is directly in the panel now so it simply causes issues using if not configured correctly.
 :::
 
-1. Generate a `WorldOptions.sav` file using the settings you want from [here](https://palworldoptions.com/) (We suggest importing your PalWorldSettings.ini file).
+1. Click [here](https://palworldoptions.com/) and import your `WorldOptions.sav` file.
 2. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and once there, select your Palworld Service.
-3. Once on your Palworld Service, ensure you stop it before proceeding.
-4. Once stopped, on the left, navigate to `Management` then `File Manager`.
-5. Navigate to `Pal/Saved/SaveGames/0/YOURWORLDFILE` and drag the `WorldOptions.sav` into the save folder with your `LevelMeta.sav` and `Level.sav`.
-6. After you have uploaded the file, start the server. 
+3. Go to `Configuration > Startup Parameters` and change the settings to match your WorldOptions.sav file.
+4. Restart your server.
