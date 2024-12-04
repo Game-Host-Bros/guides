@@ -8,6 +8,14 @@ import { Steps } from '@astrojs/starlight/components';
 
 Here are common [Palworld server](https://www.gamehostbros.com/palworld-server-hosting/) issues and how to fix them.
 
+### Error! app '2394010' state is 0x6 after update job.
+
+Sometimes when you try to update Palworld, its will get stuck somewhere with the error `Error! app '2394010' state is 0x6 after update job.`. 
+
+To fix this simply stop your server, navigate to `Tools > Mod Manager` and then install the `Stuck Update Fix Script`. Once you start your server again it should download the update. 
+
+Alternativly, you can goto the file manager and delete the `steamapps` folder, then restart your server.
+
 ### "Connection timed out" When Connecting to your Palworld Server
 
 If you're getting the message `Connection timed out` when you're connecting to your server, this is most likely because you're trying to connect via the `Recent Servers` tab. Currently, this doesn't work, and you must connect direct [using the IP address every time.](/games/palworld/connect-to-your-server/)
