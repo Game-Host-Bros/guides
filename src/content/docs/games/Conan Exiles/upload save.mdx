@@ -1,0 +1,41 @@
+---
+title: How To Upload Your Existing Conan Exiles Server Save
+description: Step-by-step guide on how to upload your save file to your Conan Exiles dedicated server.
+sidebar:
+  label: Upload Save
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+In this tutorial, we will guide you through the process of uploading an existing world to your [Conan Exiles server](https://www.gamehostbros.com/conan-exiles-server-hosting/).
+
+You may also refer to this guide on how to [upload files to your game server.](/getting-started/uploading-files/)
+
+:::note
+Things to note before getting started:
+
+- This will **delete or overwrite** any progress you have made on the server.
+- If you need to install mods with your save, they can be added following [this guide](/games/conan-exiles/installing-mods/), this guide assumes that your save isn't modded.
+- If your save isn't on the Default map you will have to change the map on your server, our guide for this can be found [here](/games/conan-exiles/change-map/).
+:::
+
+## Locating Your Local Conan Exiles Save File
+
+<Steps>
+1. Open your Steam Library, right-click Conan Exiles and select `Manage > Browse Local Files`.
+2. Enter the `ConanSandbox/Saved` folder.
+3. Copy your `world.db` file.
+</Steps>
+
+## Uploading Your Conan Exiles Save To Your Server
+
+A save on the default map will be named game.db while other maps will have different names, for Isles Of Siptah your save will be named DLC_Siptah.db.
+
+<Steps>
+1. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your server.
+2. In the sidebar, go to `Management > File Manager`.
+3. Once there navigate to the `ConanSandbox/Saved` folder.
+4. Delete the existing `game.db` file, then [Upload](/getting-started/uploading-files/) your existing `game.db` file to your server.
+5. Start your server.
+</Steps>
+

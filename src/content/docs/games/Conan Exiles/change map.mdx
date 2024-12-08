@@ -1,0 +1,41 @@
+---
+title: How To Change Map On Your Conan Exiles Server
+description: Learn how to change the map of your Conan Exiles Dedicated Server, this is how you can select DLC or Custom maps.
+sidebar:
+  label: Change Map
+---
+import { Steps } from '@astrojs/starlight/components';
+
+This is how to change the map on your [Conan Exiles server](https://www.gamehostbros.com/conan-exiles-server-hosting/), this is how select which map your server will load.
+
+## Changing Conan Exiles Map
+
+<Steps>
+
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your server.
+2. Go to `Management > File Manager`.
+3. Navigate to `ConanSandbox/Saved/Config/WindowsServer/Engine.ini`
+4. Add one of the following to your Engine.ini file, separate from other sections.
+
+    **Isle of Siptah DLC Map**
+ 
+    ```
+    [/Script/EngineSettings.GameMapsSettings]
+   ServerDefaultMap=/Game/DLC_EXT/DLC_Siptah/Maps/DLC_Isle_of_Siptah
+   ```
+
+   **Custom Map**
+   ```
+   [/Script/EngineSettings.GameMapsSettings]
+   ServerDefaultMap= File Path To Your Map 
+   ```
+5. Click save, then start your server. 
+</Steps>
+
+If you ever want to revert back to the default map simply stop your server and remove what you've added.
+
+For a custom map such as Savage Wilds, follow [this guide](/games/conan-exiles/savage-wilds/).
+
+
+
+

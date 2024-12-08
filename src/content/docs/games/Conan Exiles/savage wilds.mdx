@@ -1,0 +1,37 @@
+---
+title: How To Install Savage Wilds On Your Conan Exiles Server
+description: Learn how to install the Savage Wilds map on your Conan Exiles Dedicated Server.
+sidebar:
+  label: Install Savage Wilds
+---
+import { Steps } from '@astrojs/starlight/components';
+
+This is how to change the map on your [Conan Exiles server](https://www.gamehostbros.com/conan-exiles-server-hosting/) to [Savage Wilds](https://savagewilds.com/), a popular custom map found on the Steam Workshop.
+
+## Installing Savage Wilds
+
+<Steps>
+
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your server.
+2. Go to `Configuration > Startup Parameters`.
+3. Add the ID `2377569193` to Workshop Mods.
+</Steps>
+
+## Loading Savage Wilds
+
+Here's how to load the Savage Wilds map on your Conan Exiles server.
+
+<Steps>
+
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your server.
+2. Go to `Management > File Manager`.
+3. Navigate to `ConanSandbox/Saved/Config/WindowsServer/Engine.ini`
+4. Add the following, separate from other sections.
+    ```
+   [/Script/EngineSettings.GameMapsSettings]
+   ServerDefaultMap=/Game/Mods/Savage_Wilds/Savage_Wilds
+   ```
+5. Click save, then start your server.
+</Steps>
+
+That's it, now your server will be hosting the Savage Wilds map. 
