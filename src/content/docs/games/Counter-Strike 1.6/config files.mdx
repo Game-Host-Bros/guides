@@ -1,0 +1,56 @@
+---
+title: How To Edit CS 1.6 Server Config Files
+description: Learn how to edit your config files on your CS 1.6 dedicated server.
+sidebar:
+  label: Config Files
+---
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide you will learn how to edit the different [Counter-Strike 1.6](https://www.gamehostbros.com/counter-strike-1-6-server-hosting/) config files such as `server.cfg`, `mapcycle.txt` and exactly what each one is for.
+
+## Main Configs in CS 1.6
+By default, **the configuration files listed below will control 99% of the things you need to do on your server**. Here is an overview of each file and what commands/convars should go where. You can edit these files by going to `Management > File Manager`.
+
+### server.cfg
+**Default location:** `/cstrike/server.cfg`
+
+The `server.cfg` file is the main configuration file of your CS 1.6 server, this is where you add custom commands which can control things such as, round timers, map timers and much more. 
+
+Here are some examples of common settings:
+
+- mp_timelimit - Time before map rotation.
+- mp_maxrounds - Maximum rounds before map change.
+- mp_roundtime - Sets round time.
+
+If you're looking for an in-depth list of CS 1.6 server commands, check out [this website](https://github.com/txdv/cstrike-cvarlist/).
+
+### mapcycle.txt
+**Default location:** `/cstrike/mapcycle.txt`
+
+The mapcycle file is where you edit your CS 1.6 server map rotation, ensure that any map added has already been uploaded to the `cstrike/maps` folder on your server.
+
+<details>
+<summary>Default Contents</summary>
+
+- de_airstrip
+- cs_havana
+- de_chateau
+- de_aztec
+- as_oilrig
+- cs_siege
+- de_cbble
+- de_dust
+- cs_747
+- de_prodigy
+- cs_assault
+- cs_office
+- cs_italy
+- cs_backalley
+- cs_militia
+- de_train
+</details>
+
+## Plugin Config Files
+**Default location:** `/cstrike/addons/amxmodx/configs`
+
+If you're using [CS 1.6 plugins](/games/counter-strike-16/install-plugins/) such as AMX Mod X, each plugin you install should generate a config file inside the AMX Mod X plugin folder.
