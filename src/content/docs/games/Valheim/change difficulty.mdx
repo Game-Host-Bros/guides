@@ -10,8 +10,9 @@ import { Steps } from '@astrojs/starlight/components';
 
 ## Changing World Modifiers
 
+
 <Steps>
-1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your server.
 2. Go to `Configuration > Startup Parameters`.
 3. Find the World Modifer setting you want to adjust from the drop down menus.
    - Combat
@@ -21,3 +22,29 @@ import { Steps } from '@astrojs/starlight/components';
    - Portals
 4. Restart your server.
 </Steps>
+
+:::danger
+Valheim itself has issues with changing existing World Modifiers, to reset your existing World Modifiers follow the steps below.
+:::
+
+## Resetting World Modifiers
+
+If you'd like to change existing World Modifiers you may need to follow these steps, here's how it's done. 
+
+We always recommend making a [Backup](/getting-started/backups/) before making any major changes.
+
+<Steps>
+1. Enable console, then connect to your server as an Admin following our [Valheim Admin Guide](/games/valheim/adding-admins/)
+2. Open console with `f5`.
+3. Type `devcommands`.
+   - You should see devcommands = true.
+4. Enter these commands, `setworldpreset default` and then `save`.
+</Steps>
+
+:::tip
+Press f1 and you'll now see that your World Modifiers have been cleared.
+:::
+
+- `setworldpreset default` will clear your existing world modifiers, `save` will initiate a save of your server. 
+
+Once done, refer to the above steps [here](/games/valheim/change-difficulty/#changing-world-modifiers) to set new World Modifiers.
