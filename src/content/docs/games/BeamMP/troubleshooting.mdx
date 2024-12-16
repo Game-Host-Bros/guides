@@ -1,0 +1,43 @@
+---
+title: Troubleshooting Your BeamMP Server
+description: Learn how to fix common BeamMP dedicated server issues, such as Mod downloads getting stuck, backend failed to respond to a heartbeat and more.
+sidebar:
+  label: Troubleshooting
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Here are some common [BeamMP server](https://www.gamehostbros.com/beammp-server-hosting/) issues you may encounter and how to fix them.
+
+## Mods Stuck Downloading
+
+BeamMP has has reported bugs regarding mod downloading for quite some time.
+
+As of late new changes have been made to networking with newer BeamMP server versions, typically an issue such as this can be solved by updating your server to one a newer [BeamMP Server](https://github.com/BeamMP/BeamMP-Server/releases) pre-release version.
+
+- Update your server by following our [Change Server Version](/games/beammp/change-version/) guide.
+- Remove the problematic mod.
+- Restart your PC.
+
+## [WARN] Backend failed to respond to a heartbeat.
+
+This means that your server is unable to be queried by BeamMP, the cause of this is most likely because you don't currently have an AUTH key set for your server, this is required if you want your server to be displayed in the server browser.
+
+- Create an [AUTH key](/games/beammp/authkeys/) for your BeamMP server.
+
+### Server Still Won't Show In Multiplayer Browser
+
+This issue is also caused by the above, your server **Requires** an AUTH key to display in the server browser, and also needs to be set as a Public server, follow these steps to resolve the issue
+
+- Create an [AUTH key](/games/beammp/authkeys/) for your BeamMP server.
+- Ensure `Private` is set to `False` in Configuration > Startup Parameters of the [Game Host Bros Game Panel](https://panel.gamehostbros.com/).
+
+If unsuccessful, ensure your AUTH key is correct and that you've restarted your server, otherwise there's nothing to do except wait as BeamMP may be having network issues. You can view our own network status [here](https://status.gamehostbros.com/).
+
+## BeamMP Won't Start
+
+- Restart your PC.
+- Run the launcher as Administrator.
+- Check your Firewall/Anti-virus.
+- Check for GPU driver updates.
+- Search the BeamMP [Reddit](https://www.reddit.com/r/BeamMP/) or [Discord](https://discord.gg/BeamMP).
+- Reinstall BeamMP.
