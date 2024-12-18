@@ -1,0 +1,42 @@
+---
+title: How To Create A GSLT For ASKA (Steam Game Server Login Token)
+description: Learn how to create a GSLT for your ASKA dedicated server.
+sidebar:
+  label: Create GSLT
+  badge:
+    text: Important
+    variant: caution
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Here is how you create a GSLT for [ASKA](https://www.gamehostbros.com/aska-server-hosting/) and add it to your server. This is **required** by Valve to be displayed in the server list.
+
+## Creating A GSLT Token For ASKA
+
+<Steps>
+1. Go [here](https://steamcommunity.com/dev/managegameservers) and login with your Steam account.
+2. Under `App ID` enter `1898300` for ASKA, then name the memo anything you want. 
+3. Visit [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your ASKA server.
+4. Go to `Configuration > Startup Parameters`.
+5. Enter your token under `Steam GSLT Auth Token`. 
+6. Go to `System > Console` and Restart your server.
+</Steps>
+
+:::note
+Each ASKA server you run requires its own GSLT.
+:::
+
+## FAQ
+
+<details>
+<summary>What are the requirements for Making a GSLT</summary>
+
+Valve has some guidelines on what accounts are able to create a Game Server Login Token.
+
+- Your Steam account must not be currently community banned or locked.
+- Your Steam account must not be limited.
+- Your Steam account must have a qualifying registered phone.
+- Your Steam account must own the game for which you are creating a game server account.
+- Your Steam account may create 1000 game server accounts.
+
+</details>
