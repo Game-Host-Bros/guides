@@ -29,62 +29,82 @@ You can only edit this file if you don't have all the settings in `Configuration
 ## Palworld Settings List
 Here is a list of all the settings inside the PalWorldSettings.ini file as well as what they do.
 
-| **Parameter**                     | **Default Value**                                                                                       | **Description**                                                                                          |
-|-----------------------------------|---------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| AdminPassword                     | ""                                                                                                      | Password used to obtain administrative privileges on the server.                                         |
-| AllowConnectPlatform              | Steam                                                                                                   | Specify which platforms are allowed to connect. Steam, Xbox, or Mac? (Default value is Steam).            |
-| BaseCampMaxNumInGuild             | 4                                                                                                       | Max BaseCamp count per guild. Default is 3. (Vanilla MAX 10). Larger value will increase system load.            |
-| BaseCampWorkerMaxNum              | 15                                                                                                      | Max pals per basecamp (Vanilla MAX 50). Larger value will increase system load.                                  |
-| bBuildAreaLimit                   | False                                                                                                   | Prohibit building near structures such as fast travel.                                                   |
-| bEnableFastTravel                 |  True                                                                                                    | Enable Fast Travel.                                                                                      |
-| bEnableInvaderEnemy               | True                                                                                                    | Enable Invader.                                                                                          |
-| bHardcore                         | False                                                                                                   | Enable Hardcore. Cannot respawn upon death.                                                              |
-| bInvisibleOtherGuildBaseCampAreaFX| False                                                                                                   | Enable Show basecamp area.                                                                               |
-| bIsUseBackupSaveData              | True                                                                                                    | Enable world backup. Disk load will increase when enabled.                                               |
-| bPalLost                          | False                                                                                                   | Permanently lose your Pals upon death.                                                                   |
-| bShowPlayerList                   | False                                                                                                   | Enable player list when the press ESC key.                                                               |
-| BuildObjectDamageRate             | 1.000000                                                                                                | Damage to Structure Multiplier.                                                                          |
-| BuildObjectDeteriorationDamageRate| 1.000000                                                                                                | Structure Deterioration Rate.                                                                            |
-| ChatPostLimitPerMinute            | 10                                                                                                      | Number of chats that can be posted per minute.                                                           |
-| CollectionDropRate                | 1.000000                                                                                                | Gatherable Items Multiplier.                                                                             |
-| CollectionObjectHpRate            | 1.000000                                                                                                | Gatherable Objects Health Multiplier.                                                                    |
-| CollectionObjectRespawnSpeedRate  | 1.000000                                                                                                | Gatherable Objects Respawn Interval.                                                                     |
-| DayTimeSpeedRate                  | 1.000000                                                                                                | Day time speed.                                                                                          |
-| DeathPenalty                      | All                                                                                                     | Death Penalty: None (No drops), Item (Drop all items except equipment), ItemAndEquipment (Drop all items), All (Drop all items and all Pals on team). |
-| EnemyDropItemRate                 | 1.000000                                                                                                | Dropped Items Multiplier.                                                                                |
-| ExpRate                           | 1.000000                                                                                                | EXP rate.                                                                                                |
-| GuildPlayerMaxNum                 | 20                                                                                                      | Max Player Number of Guilds.                                                                             |
-| ItemWeightRate                    | 1.000000                                                                                                | Item weight ratio.                                                                                       |
-| LogFormatType                     | Text                                                                                                    | Log format: Text or Json.                                                                                |
-| MaxBuildingLimitNum               | 0                                                                                                       | Building num limit per player (0 = unlimited).                                                           |
-| NightTimeSpeedRate                | 1.000000                                                                                                | Night time speed.                                                                                        |
-| PalAutoHPRegeneRate               | 1.000000                                                                                                | Pal Auto Health Regeneration Rate.                                                                       |
-| PalAutoHpRegeneRateInSleep        | 1.000000                                                                                                | Pal Sleep Health Regeneration Rate (Health Regeneration Rate in Palbox).                                 |
-| PalCaptureRate                    | 1.000000                                                                                                | Pal capture rate.                                                                                        |
-| PalDamageRateAttack               | 1.000000                                                                                                | Damage from Pals Multiplier.                                                                             |
-| PalDamageRateDefense              | 1.000000                                                                                                | Damage to Pals Multiplier.                                                                               |
-| PalEggDefaultHatchingTime         | 72.000000                                                                                               | Time (h) to incubate Massive Egg. Note: Other eggs also require time to incubate.                        |
-| PalSpawnNumRate                   | 1.000000                                                                                                | Pal Appearance Rate. *Note: Affects game performance.*                                                   |
-| PalStaminaDecreaceRate            | 1.000000                                                                                                | Pal Stamina Reduction Rate.                                                                              |
-| PalStomachDecreaceRate            | 1.000000                                                                                                | Pal Hunger Depletion Rate.                                                                               |
-| PlayerAutoHPRegeneRate            | 1.000000                                                                                                | Player Auto Health Regeneration Rate.                                                                    |
-| PlayerAutoHpRegeneRateInSleep     | 1.000000                                                                                                | Player Sleep Health Regeneration Rate.                                                                   |
-| PlayerDamageRateAttack            | 1.000000                                                                                                | Damage from Player Multiplier.                                                                           |
-| PlayerDamageRateDefense           | 1.000000                                                                                                | Damage to Player Multiplier.                                                                             |
-| PlayerStaminaDecreaceRate         | 1.000000                                                                                                | Player Stamina Reduction Rate.                                                                           |
-| PlayerStomachDecreaceRate         | 1.000000                                                                                                | Player Hunger Depletion Rate.                                                                            |
-| PublicIP                          | ""                                                                                                      | Explicitly specify an external public IP in the community server settings.                               |
-| PublicPort                        | 8211                                                                                                    | Explicitly specify the external public port in the community server configuration. (This setting does not change the server's listen port.) |
-| RCONEnabled                       | False                                                                                                   | Enable RCON.                                                                                             |
-| RCONPort                          | 25575                                                                                                   | Port Number for RCON.                                                                                    |
-| RESTAPIEnabled                    | False                                                                                                   | Enable REST API.                                                                                         |
-| RESTAPIPort                       | 8212                                                                                                    | Listen port for REST API.                                                                                |
-| ServerDescription                 | ""                                                                                                      | Server description.                                                                                      |
-| ServerName                        | Default Palworld Server                                                                                 | Server name.                                                                                             |
-| ServerPassword                    | ""                                                                                                      | Password required for server login.                                                                      |
-| ServerPlayerMaxNum                | 32                                                                                                      | Maximum number of players that can join the server.                                                      |
-| ServerReplicatePawnCullDistance   | 15000.000000                                                                                            | Pal sync distance from player (cm). Min 5000 ~ Max 15000.                                                |
-| SupplyDropSpan                    | 180                                                                                                     | Interval for supply drop (minutes).                                                                      |
+| Parameter | Default Value | Description |
+|-----------|---------------|-------------|
+| AdminPassword | "" | Password used to obtain administrative privileges on the server. |
+| AllowConnectPlatform | Steam | Specify which platforms are allowed to connect. Steam, Xbox, or Mac? (Default value is Steam). |
+| AutoResetGuildTimeNoOnlinePlayers | 72.000000 | How quickly an inactive Guild will be disbanded |
+| BaseCampMaxNumInGuild | 4 | Max BaseCamp count per guild. Default is 4. (Vanilla MAX 10). Larger value will increase system load. |
+| BaseCampWorkerMaxNum | 15 | Max pals per basecamp (Vanilla MAX 50). Larger value will increase system load. |
+| bActiveUNKO | False | TBD |
+| bAutoResetGuildNoOnlinePlayers | False | Enable disbanding Guilds when none of the member players have been online (based on duration specified by AutoResetGuildTimeNoOnlinePlayers) |
+| bBuildAreaLimit | False | Prohibit building near structures such as fast travel. |
+| bCanPickupOtherGuildDeathPenaltyDrop | False | Allow players to pick up items dropped on death by players from Guilds other than their own |
+| bEnableAimAssistKeyboard | False | Enables keyboard aim assist |
+| bEnableAimAssistPad | True | Enables aim pad aim assist |
+| bEnableDefenseOtherGuildPlayer | False | Enables or disables the defense of other guild players |
+| bEnableFastTravel | True | Enables fast travel |
+| bEnableFriendlyFire | False | Enables friendly fire |
+| bEnableInvaderEnemy | True | Enable Invader |
+| bEnableNonLoginPenalty | True | Enables penalties for players who don't login over a period of time |
+| bEnablePlayerToPlayerDamage | False | Enables player to player damage |
+| bExistPlayerAfterLogout | False | Enables if player characters remain in-game after logging out |
+| bHardcore | False | Enable Hardcore. Cannot respawn upon death. |
+| bInvisibleOtherGuildBaseCampAreaFX | False | Blue parameter circle is invisible to you if you are looking from another guild |
+| bIsPvP | False | Enables PvP |
+| bIsStartLocationSelectByMap | True | Sets if the start location can be chosen by using the map |
+| bIsUseBackupSaveData | True | Enable world backup. Disk load will increase when enabled. |
+| bPalLost | False | Permanently lose your Pals upon death. |
+| bShowPlayerList | False | Enable player list when the press ESC key. |
+| bUseAuth | True | Toggles server player authentication - not recommended to change |
+| BuildObjectDamageRate | 1.000000 | Damage to Structure Multiplier |
+| BuildObjectDeteriorationDamageRate | 1.000000 | Structure Deterioration Rate |
+| ChatPostLimitPerMinute | 10 | Number of chats that can be posted per minute. |
+| CollectionDropRate | 1.000000 | Gatherable Items Multiplier |
+| CollectionObjectHpRate | 1.000000 | Gatherable Objects Health Multiplier |
+| CollectionObjectRespawnSpeedRate | 1.000000 | Gatherable Objects Respawn Interval |
+| CoopPlayerMaxNum | 4 | Sets the maximum player count for a Cooperative game (Currently doesn't seem to do anything, but is included in the default configuration file) |
+| DayTimeSpeedRate | 1.000000 | Day time speed |
+| DeathPenalty | All | Death Penalty: None (No drops), Item (Drop all items except equipment), ItemAndEquipment (Drop all items), All (Drop all items and all Pals on team) |
+| DropItemAliveMaxHours | 1.000000 | How long dropped items stay before they disappear |
+| DropItemMaxNum | 3000 | Max amount of items that can be dropped |
+| DropItemMaxNum_UNKO | 100 | TBD |
+| EnemyDropItemRate | 1.000000 | Dropped Items Multiplier |
+| ExpRate | 1.000000 | EXP rate |
+| GuildPlayerMaxNum | 20 | Max Player Number of Guilds |
+| ItemWeightRate | 1.000000 | Item weight ratio. |
+| LogFormatType | Text | Log format: Text or Json |
+| MaxBuildingLimitNum | 0 | Building num limit per player (0 = unlimited). |
+| NightTimeSpeedRate | 1.000000 | Night time speed |
+| PalAutoHPRegeneRate | 1.000000 | Pal Auto Health Regeneration Rate |
+| PalAutoHpRegeneRateInSleep | 1.000000 | Pal Sleep Health Regeneration Rate (Health Regeneration Rate in Palbox) |
+| PalCaptureRate | 1.000000 | Pal capture rate |
+| PalDamageRateAttack | 1.000000 | Damage from Pals Multiplier |
+| PalDamageRateDefense | 1.000000 | Damage to Pals Multiplier |
+| PalEggDefaultHatchingTime | 72.000000 | Time (h) to incubate Massive Egg. Note: Other eggs also require time to incubate. |
+| PalSpawnNumRate | 1.000000 | Pal Appearance Rate. *Note: Affects game performance* |
+| PalStaminaDecreaceRate | 1.000000 | Pal Stamina Reduction Rate |
+| PalStomachDecreaceRate | 1.000000 | Pal Hunger Depletion Rate |
+| PlayerAutoHPRegeneRate | 1.000000 | Player Auto Health Regeneration Rate |
+| PlayerAutoHpRegeneRateInSleep | 1.000000 | Player Sleep Health Regeneration Rate |
+| PlayerDamageRateAttack | 1.000000 | Damage from Player Multiplier |
+| PlayerDamageRateDefense | 1.000000 | Damage to Player Multiplier |
+| PlayerStaminaDecreaceRate | 1.000000 | Player Stamina Reduction Rate |
+| PlayerStomachDecreaceRate | 1.000000 | Player Hunger Depletion Rate |
+| PublicIP | "" | Explicitly specify an external public IP in the community server settings |
+| PublicPort | 8211 | Explicitly specify the external public port in the community server configuration. (This setting does not change the server's listen port.) |
+| RCONEnabled | False | Enable RCON |
+| RCONPort | 25575 | Port Number for RCON |
+| Region | "" | Sets server region (Seems to just be for display purposes) |
+| RESTAPIEnabled | False | Enable REST API |
+| RESTAPIPort | 8212 | Listen port for REST API |
+| ServerDescription | "" | Server description |
+| ServerName | "Default Palworld Server" | Server name |
+| ServerPassword | "" | Password required for server login |
+| ServerPlayerMaxNum | 32 | Maximum number of players that can join the server. |
+| ServerReplicatePawnCullDistance | 15000.000000 | Pal sync distance from player (cm). Min 5000 ~ Max 15000. |
+| SupplyDropSpan | 180 | Interval for supply drop (minutes). |
+| WorkSpeedRate | 1.000000 | Work speed rate modifier |
 
 ## Importing WorldOptions.sav Settings
 
