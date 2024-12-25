@@ -44,28 +44,24 @@ This setting will override anything you have manually set inside your ServerConf
 :::
 
 ## Uploading Custom Maps
-Custom maps are normally provided to you in a .zip format. To use custom maps on your BeamMP server, you'll need to upload them via SFTP in 2 different folders, one folder is for the server, and the other is so the client can download the map. Follow these steps:
+Custom maps are normally provided to you in a .zip format. To use custom maps on your BeamMP server, you'll need to upload them via SFTP.
+
 <Steps>
 1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your BeamMP server.
-2. Access your server files using [SFTP](https://guides.gamehostbros.com/getting-started/uploading-files/) and navigate to `/levels/`.
-3. Extract your custom_map.zip and upload the folder to `/levels/`. The map should be inside its own folder.
-4. Upload your custom_map.zip to `/Resources/Client/` so the client is able to download the map.zip (the same as a mod .zip). 
-5. After uploading, go to `Configuration > Startup Parameters` in the Game Host Bros Panel.
-6. Find the `Map` setting and enter the filepath for your custom map, e.g., `/levels/custom_map/info.json`.
-7. Restart your server to apply the changes.
+2. Access your server files using [SFTP](https://guides.gamehostbros.com/getting-started/uploading-files/).
+3. Upload your custom_map.zip to `/Resources/Client/` so the client is able to download the map.zip (the same as a mod .zip). 
+4. After uploading, go to `Configuration > Startup Parameters` in the Game Host Bros Panel.
+5. Open the custom_map.zip locally on your PC and look for the info.json file. Enter the filepath for your custom map info into the `Map` section. e.g. `/levels/custom_map/info.json`.
+6. Restart your server to apply the changes.
 </Steps>
 This is how your files should look if everything is uploaded correctly.
 
 <FileTree>
 
-- levels
-  - custom_map
-    - **info.json**
-    - ...
 - Resources
   - Client
     - **custom_map.zip**
-    - skyline-r33.zip
+    - skyline-r33-mod.zip
     - ...
 
 </FileTree>
