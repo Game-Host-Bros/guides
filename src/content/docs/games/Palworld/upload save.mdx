@@ -112,11 +112,11 @@ Unlike Steam, migrating Xbox Game Pass Co-op saves will require additional steps
         - LocalData.sav This is not required.
         - WorldOptions.sav Delete this.
     </FileTree>
-   The next tool requires Python 3.9 or later. Here's how to install python, and use the tool to convert `01.sav` into a .json file, and then into `Level.sav` so it can be loaded on your server.    
-3. Install [Python 3.12 from the Microsoft Store](https://apps.microsoft.com/detail/9NCVDN91XZQP).
+   The next tool requires Python. Here's how to install python, and use the tool to convert `01.sav` into a .json file, and then into `Level.sav` so it can be loaded on your server.    
+3. Install [Python](https://www.python.org/downloads/).
 4. Download [Palworld Save Tools](https://github.com/deafdudecomputers/PalWorldSaveTools/releases) and extract the contents.
 5. In the Palworld Save Tools extracted folder drag `01.sav` onto `convert.py`.
-6. Take the converted `01.json` file, and once again drag it onto `convert.py`.
+6. Take the converted `01.sav.json` file, and once again drag it onto `convert.py`.
 7. Rename the twice converted file to `Level.sav`.
 8. Delete the `Level` folder in your save files and then drag the newly created `Level.sav` in.
 9. Using [SFTP](/getting-started/uploading-files/) upload your existing save folder to `PAL/Save/Savegames/0/` and copy the folder id/name.
