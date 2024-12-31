@@ -20,10 +20,10 @@ You cannot transfer Xbox saves from the cloud to a dedicated server.
 ## Transfer From Another Palworld Server Provider
 If you already have a Palworld server with another provider then this is how you migrate your existing save to Game Host Bros.
 <Steps>
-1. On your previous existing server, navigate to `PAL/Save/Savegame/0` and backup the folder with random numbers and letters.
+1. On your previous existing server, navigate to `Pal/Saved/SaveGames/0/` and backup the folder with random numbers and letters.
 2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Palworld server.
 3. Go to `Management > File Manager`.
-4. Once there navigate to `PAL/Save/Savegames/0`.
+4. Once there navigate to `Pal/Saved/SaveGames/0/`.
 5. Delete the default save folder.
 6. Using [SFTP](/getting-started/uploading-files/) upload your existing save folder and copy the folder id/name. 
 7. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`.
@@ -45,7 +45,7 @@ Here's how it should look when uploaded correctly.
 </FileTree>
 
 :::danger
-If you have a WorldOptions.sav file in `PAL/Save/Savegames/0/84B5E2264EC387DEDB43179D666031A1/`, you must delete it otherwise it will cause issues with changing settings or connecting to your server.
+If you have a WorldOptions.sav file in `Pal/Saved/SaveGames/0/84B5E2264EC387DEDB43179D666031A1/`, you must delete it otherwise it will cause issues with changing settings or connecting to your server.
 :::
 
 ## Transfer From A Palworld Steam Co-op Save
@@ -63,7 +63,7 @@ If you're moving from a local Co-op save file, the host will have to start fresh
 
 2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Palworld server.
 3. Go to `Management > File Manager`
-4. Once there navigate to `PAL/Save/Savegames/0`
+4. Once there navigate to `Pal/Saved/SaveGames/0/`
 5. Delete the default save folder.
 6. Using [SFTP](/getting-started/uploading-files/) upload your existing save folder and copy the folder id/name. 
 7. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`
@@ -86,7 +86,7 @@ Here's how it should look when uploaded correctly.
 </FileTree>
 
 :::danger
-If you have a WorldOptions.sav file in `PAL/Save/Savegames/0/84B5E2264EC387DEDB43179D666031A1/`, you must delete it otherwise it will cause issues with changing settings or connecting to your server.
+If you have a WorldOptions.sav file in `Pal/Saved/SaveGames/0/84B5E2264EC387DEDB43179D666031A1/`, you must delete it otherwise it will cause issues with changing settings or connecting to your server.
 :::
 
 ## Transfer From A PC Game Pass Co-op Save
@@ -119,7 +119,7 @@ Unlike Steam, migrating Xbox Game Pass Co-op saves will require additional steps
 6. Take the converted `01.sav.json` file, and once again drag it onto `convert.py`.
 7. Rename the twice converted file to `Level.sav`.
 8. Delete the `Level` folder in your save files and then drag the newly created `Level.sav` in.
-9. Using [SFTP](/getting-started/uploading-files/) upload your existing save folder to `PAL/Save/Savegames/0/` and copy the folder id/name.
+9. Using [SFTP](/getting-started/uploading-files/) upload your existing save folder to `Pal/Saved/SaveGames/0/` and copy the folder id/name.
 10. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`.
 11. Replace the id/name with your existing folder name.
 12. Start your server.
