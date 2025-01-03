@@ -20,7 +20,7 @@ When setting up the schedule, the time is in UTC +0. We suggest you restart your
 2. In the left-hand menu, click `Configuration > Schedules`.
 3. Click the `Create` button.
 4. Give your schedule a name, in this example we will use "Restart" as the name.
-5. Put in the time you want the server to perform the action [in cron format](https://crontab.guru/). For example, to run the Restart at 10 UTC, I would put in 0 10 * * *.
+5. Put in the time you want the server to perform the action [in cron format](https://crontab.guru/). Templates are below.
 6. It will now say AT 10:00, Next run at November 29, 2023 @ 6:00 PM. That means at 6:00PM your time the schedule will run.
 7. Click Submit and then `Create Task` on the top right and select the type of Task you want to perform. Example: we use power action, and restart.
 </Steps>
@@ -30,13 +30,29 @@ Here is a video we've made for schedules. While the Game Panel looks slightly di
 
 <YouTube id="MyIA9kse-Ec" />
 
-## Popular Times
+## Popular Times for Restart Schedules
 
-Here is a list of popular times in cron format.
+Here is a list of popular times in cron format to help you set up restart schedules effectively.
 
-| Schedule         | Crontab Entry         |
-|------------------|-----------------------|
-| Every 1 hour     | `0 * * *`           |
-| Every 2 hours    | `0 */2 * *`         |
-| Every 4 hours    | `0 */4 * *`         |
-| Every day        | `0 0 * *`           |
+### Timezone-Specific Schedules
+
+Use the following cron entries to set restart schedules for specific server locations, based on their time zones:
+
+| Location          | Time Zone | Crontab Entry  |
+|--------------------|-----------|----------------|
+| Singapore         | UTC+8     | `0 20 * *`   |
+| Sydney            | UTC+10    | `0 18 * *`   |
+| Los Angeles       | UTC-8     | `0 12 * *`   |
+| Dallas            | UTC-6     | `0 10 * *`   |
+| New York          | UTC-5     | `0 9 * *`   |
+| UK                | UTC±0     | `0 4 * *`    |
+| Frankfurt         | UTC+1     | `0 3 * *`    |
+
+### Common Crontab Entries
+
+| Description      | Crontab Entry       |
+|------------------|---------------------|
+| Every 1 hour     | `0 * * * `        |
+| Every 2 hours    | `0 */2 * *`      |
+| Every 4 hours    | `0 */4 * *`      |
+| Every day        | `0 0 * *`        |
