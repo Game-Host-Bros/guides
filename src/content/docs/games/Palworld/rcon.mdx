@@ -6,8 +6,8 @@ sidebar:
 ---
 import { Steps } from '@astrojs/starlight/components';
 
-Game Host Bros [Palworld servers](https://www.gamehostbros.com/palworld-server-hosting/) have RCON enabled by default, however for security reasons you're restricted to using the web console directly. If you require external access, then  contact support and we will open external access for you.
-:::
+Game Host Bros [Palworld servers](https://www.gamehostbros.com/palworld-server-hosting/) have RCON enabled by default, however for security reasons you're restricted to using the web console directly. If you require external access, then contact support and we will open external access for you.
+
 
 ## Changing Your Palworld RCON Password
 
@@ -20,17 +20,19 @@ Game Host Bros [Palworld servers](https://www.gamehostbros.com/palworld-server-h
 
 ## RCON Commands
 
-Here is a list of all the Palworld RCON commands
+Here is a list of all the Palworld RCON commands that you can use from the Server Console.
 
-| Command                         | Description                                                                 |
-|----------------------------------|-----------------------------------------------------------------------------|
-| AdminPassword                   | Obtain administrative privileges using a password.                          |
-| Shutdown [Seconds] [MessageText]| Shutdown the server. If [Seconds] is specified, the server will shut down after the specified time has elapsed. The server participant will be notified of what you have entered in [MessageText]. |
-| DoExit                          | Force stop the server.                                                     |
-| Broadcast MessageText         | Send message to all players in the server.                                  |
-| KickPlayer SteamID            | Kick player SteamID from the server.                                      |
-| BanPlayer SteamID             | Ban player SteamID from the server.                                       |
-| ShowPlayers                     | Show information on all connected players.                                  |
-| Info                            | Show server information.                                                    |
-| Save                            | Save the world data.                                                        |
-| UnBanPlayer SteamID           | Unban player SteamID from the server.                                     |
+| Command                         | Description                                                                                                           |
+|----------------------------------|-----------------------------------------------------------------------------------------------------------------------|
+| AdminPassword                   | Obtain administrative privileges using a password.                                                                    |
+| Shutdown [Seconds] [MessageText]| Shutdown the server. **Usage: Shutdown [Seconds] [MessageText]** If [Seconds] is specified, the server will shut down after the specified time has elapsed. The server participant will be notified of what you have entered in [MessageText]. |
+| DoExit                          | Force stop the server.                                                                                                |
+| Broadcast MessageText           | Send a message to all players in the server. **Usage: Broadcast MessageText**                                         |
+| KickPlayer SteamID              | Kick player SteamID from the server. **Usage: KickPlayer steam_SteamID64**                                            |
+| BanPlayer SteamID               | Ban player SteamID from the server. **Usage: BanPlayer steam_SteamID64**                                              |
+| ShowPlayers                     | Show information on all connected players.                                                                            |
+| Info                            | Show server information.                                                                                              |
+| Save                            | Save the world data.                                                                                                  |
+| UnBanPlayer SteamID             | Unban player SteamID from the server. **Usage: UnBanPlayer steam_SteamID64**                                          |
+
+To use these commands and more in-game refer to our [Admin Commands Guide](/games/palworld/admin-commands/).

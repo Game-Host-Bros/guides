@@ -1,0 +1,52 @@
+---
+title: How To Use Admin Commands On Your Palworld Server
+description: Learn how to use admin commands on your Palworld dedicated server.
+sidebar:
+  label: Adding Admins
+---
+import { Steps } from '@astrojs/starlight/components';
+
+This guide will cover how to become an Admin along with all Admin Commands for [Palworld servers](https://www.gamehostbros.com/palworld-server-hosting/) and how to use them, this includes usage for kicking, banning, and teleporting to other players.
+
+## Setting An Admin Password
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your server.
+2. Navigate to `Configuration > Startup Parameters`.
+3. Under `Basic` edit `Admin Password` with the password you want to set.
+4. Start your server. 
+</Steps>
+
+## Becoming An Admin
+
+After setting an Admin Password, here's how to become an Admin.
+
+<Steps>
+1. Connect to your server.
+2. Open chat with `Enter`, and type this `/adminpassword YourAdminPassword`.
+</Steps>
+
+:::tip
+All commands used in-game require a `/`, while commands entered through the server console (sometimes known as RCON) do not.
+:::
+
+## Palworld Admin Commands
+
+Here is a list of all the Palworld Admin Commands:
+
+| Command              | Description                                                                                                     |
+|----------------------|-----------------------------------------------------------------------------------------------------------------|
+| /AdminPassword       | Obtain administrative privileges using a password.                                                             |
+| /Shutdown            | Shutdown the server. **Usage: /Shutdown [Seconds] [MessageText]** If [Seconds] is specified, the server will shut down after the specified time. The server participants will see [MessageText]. |
+| /DoExit              | Force stop the server.                                                                                         |
+| /Broadcast           | Send a message to all players in the server. **Usage: /Broadcast [Message]**                                   |
+| /KickPlayer          | Kick a player from the server. **Usage: /KickPlayer steam_SteamID**                                            |
+| /BanPlayer           | Ban a player from the server. **Usage: /BanPlayer steam_SteamID**                                              |
+| /TeleportToPlayer    | Teleport to a player. **Usage: /TeleportToPlayer steam_SteamID**                                               |
+| /TeleportToMe        | Teleport a player to you. **Usage: /TeleportToMe steam_SteamID**                                               |
+| /ShowPlayers         | Show information on all connected players.                                                                     |
+| /Info                | Show server information.                                                                                       |
+| /Save                | Save the world data.                                                                                           |
+| /UnBanPlayer         | Unban a player from the server. **Usage: /UnBanPlayer steam_SteamID**                                          |
+
+To find a players SteamID, you can press `Esc` and click on the players name in the menu, or type `/showplayers`.
