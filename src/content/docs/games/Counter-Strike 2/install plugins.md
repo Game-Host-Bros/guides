@@ -36,7 +36,7 @@ You can check if the plugin is loaded by typing `css_plugins list` into the cons
 
 ## CS2 Plugins List
 
-Here is a list of all the current Counter-Strike 2 plugins you can manually install on your server.
+Here is a list of Counter-Strike 2 plugins you can manually install on your server.
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
