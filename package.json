@@ -17,7 +17,7 @@
     "astro-feelback": "^0.3.4",
     "astro-icon": "^1.1.4",
     "astro-robots-txt": "^1.0.0",
-    "marked": "^15.0.1",
+    "marked": "^15.0.6",
     "node-html-parser": "^7.0.1",
     "sharp": "^0.33.4",
     "starlight-heading-badges": "^0.3.0",
