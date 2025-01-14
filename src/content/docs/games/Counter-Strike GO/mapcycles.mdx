@@ -1,0 +1,26 @@
+---
+title: How To Create A Mapcycle On Your Counter Strike Global Offensive Server
+description: Learn how to create a mapcycle on your Counter Strike Global Offensive dedicated Server
+sidebar:
+  label: Map Cycles
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Creating custom mapcycles is an important step of customizing your [Counter-Strike: Global Offensive server](https://www.gamehostbros.com/csgo-server-hosting/), this guide will show you how to create your own map rotation.
+
+## Editing Mapcycles.txt
+
+The mapcycle file isn't created by default, follow these easy steps to begin configuring a map rotation.
+
+<Steps>
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Server.
+2. Go to `Management > File Manager` and enter `csgo`.
+3. Edit `mapcycle.txt`, then click save.
+4. Restart your server.
+</Steps>
+
+The maps that get added to this file are found in `/csgo/maps/`.
+
+:::note
+If you're using Sourcemod, we also recommend copying the contents of your mapcycle.txt file to `maplists.txt`.
+:::

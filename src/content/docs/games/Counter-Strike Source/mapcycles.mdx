@@ -1,0 +1,24 @@
+---
+title: How To Create A Mapcycle On Your Counter Strike Source Server
+description: Learn how to create a mapcycle on your Counter Strike Source dedicated Server
+sidebar:
+  label: Map Cycles
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Creating custom mapcycles is an important step of customizing your [CSS server](https://www.gamehostbros.com/counter-strike-source-server-hosting/), this guide will show you how to create your own map rotation.
+
+## Editing Mapcycles.txt
+
+The mapcycle file isn't created by default, follow these easy steps to begin configuring a map rotation.
+
+<Steps>
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Server.
+2. Go to `Management > File Manager`.
+3. Navigate to `/cstrike/cfg/`.
+4. Copy `mapcycle_default.txt` and rename the copied file to `mapcycle.txt`.
+5. Add your desired maps to `mapcycle.txt` and click save.
+6. Restart your server.
+</Steps>
+
+The maps that get added to this file are found in `/cstrike/maps/`.
