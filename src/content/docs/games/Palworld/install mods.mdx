@@ -17,22 +17,24 @@ Always back up your world manually before installing any Mods!
 Palworld mod websites mix in client mods with server mods, so you need to make sure they're going to work on a server. You must read the description of each mod as they will tell you if it will work on a server there. 
 
 Here are some things to consider **before** installing mods.
-- Make sure to install [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS/releases) before starting, UE4SS contents are typically installed into `Pal/Binaries/Win64`.
+- Make sure to install [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS/releases) before starting, UE4SS contents are installed into `Pal/Binaries/Win64`. As of 2025, it's currently recommended to install the experimental_latest version of UE4SS.
 - Make sure they're compatible with servers (UE4SS mods, .pak or .lua). Client servers are **NOT** the same as servers.
+
 - Only install one mod at a time and test it to make sure it works. If it doesn't then remove the files from your server.
+
 - Make sure the mod is compatible with the correct server version (type `info` into the console to get your version).
+
 - Some mods are required to be installed on the **SERVER** and **CLIENT**. This means you would need the mod installed locally on all your players games (including [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS)) as well as the server itself. Refer to the mod documentation.
+
 <Steps>
 1. Download the mods you want from [Nexus Mods](https://www.nexusmods.com/palworld/mods/). (Make sure they're server side mods!)
 2. Extract the downloaded `.zip` file on your PC.
 2. Access your Palworld server using [SFTP](/getting-started/uploading-files/).
-4. Navigate to `Pal/Binaries/Win64` and upload your extracted plugin folder.
-   - There are other locations too, consult the mod/plugin documentation, common locations are `Pal/Binaries/Win64` and `Pal/Binaries/Win64/Mods`. Whereas for pak mods `Pal/Content/Paks/LogicMods`, `Pal/Content/Paks` or `Pal/Content/Paks/~mods`, again refer to the mods documentation.
+4. Upload your extracted mod folder to the location as specified by the Mod author.
+   - The experimenal version of UE4SS uses `Pal/Binaries/Win64/ue4ss/Mods`. Whereas for pak mods `Pal/Content/Paks/LogicMods` or `Pal/Content/Paks/~mods`, again refer to the mods documentation.
 6. Start your server.
 </Steps>
 
-Some mods will also need to be enabled in the `Pal/Binaries/Win64/Mods/mods.txt` file, you'll need to add the name of the mod and enable it on a new line.
-
 :::danger
-`Pal/Binaries/Win64` and `Pal/Binaries/Win64/Mods` are the most common folders, however some Palworld mods may require a different location. Please check the documentation for the plugins you're downloading.
+`Pal/Binaries/Win64/ue4ss/Mods` and `Pal/Content/Paks/~mods` are the most common folders, however some Palworld mods may require a different location. Please check the documentation for the plugins you're downloading.
 :::
