@@ -1,0 +1,50 @@
+---
+title: How To Optimize Your Palworld ServerFPS
+description: Learn how to optimize your Palworld dedicated server to increase serverfps and keep your server running as smooth as possible with this Palworld performance guide.
+sidebar:
+  label: Performance Guide
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Here is how to boost ServerFPS and optimize your [Palworld Server](https://www.gamehostbros.com/palworld-server-hosting/), this guide will focus on the best practices you can take as a server owner to make your Palworld server run at peak performance, this will have a noticeable difference in most cases.
+
+## Daily Restarts
+
+The first thing you'll want to do is create an automatic daily restart schedule, this serves to keep your resource usage under control while ensuring your server has a fresh load once every 24 hours.
+
+To create a schedule follow [this guide](/getting-started/schedules/).
+
+## Optimize Configuration
+
+There are multiple Palworld server settings that will negatively impact performance, some may only a little, while others have very noticable effects. 
+
+If you're having any ServerFPS issues adjust these settings accordingly, these will be the most important settings for performance especially if you're running a community server.
+ 
+These settings are changed in `Configuration > Startup Parameters` of the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+
+### Main Settings
+
+| Setting Name | Default Value | Description |
+|--------------|---------------|-------------|
+| BuildObjectDeteriorationDamageRate | 1.0 | Increase this to clean up objects more often, this should always be at least **0.1** |
+| PalSpawnNumRate | 1.0 | Decrease this to spawn less Pals |
+| DropItemMaxNum | 3000 | Decrease this especially if you have increased Drop Rates |
+| BaseCampMaxNumInGuild | 4 | Decrease this if there are many guilds |
+| ServerReplicatePawnCullDistance | 15000.0 | **Experimental**. Decrease this for better performance, officially "Pal Sync Distance" |
+| BaseCampWorkerMaxNum | 15 | Decrease this to lessen load |
+| MaxBuildingLimitNum | 0 (Unlimited) | Set a value to limit max bases per player |
+
+### Secondary Performance Settings
+
+| Setting Name | Default Value | Description |
+|--------------|---------------|-------------|
+| BaseCampMaxNum | 128 | Decrease this if you're running a popular public server with a lot of bases |
+| Auto Save Span | 240 (4 minutes)| Increase this for less frequent auto save CPU spikes |
+| bAutoResetGuildNoOnlinePlayers | False | Set to **True** - Enables guild disbanding after the duration specified by AutoResetGuildTimeNoOnlinePlayers |
+| AutoResetGuildTimeNoOnlinePlayers | 72.0 | If bAutoResetGuildNoOnlinePlayers is enabled, this the time limit before a guild will be disbanded |
+
+:::note
+Heavy building, and high player count servers will always reach a limitation at some point. Even the fastest gaming hardware isn't able to run a Palworld server at 60fps in such cases.
+:::
+
+
