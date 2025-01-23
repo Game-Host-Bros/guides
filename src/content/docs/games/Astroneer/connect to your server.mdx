@@ -1,0 +1,41 @@
+---
+title: How To Connect To Your Astroneer Server
+description: Learn how to join your Astroneer dedicated server.
+sidebar:
+  label: Connect to Your Server
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Here is how you can connect to your [Astroneer server](https://www.gamehostbros.com/astroneer-server-hosting/) using a Friend Code or from the in-game server browser.
+
+:::note
+You must first configure your game client allow it to connect to 3rd party servers!
+:::
+
+## Configure Your Game Client
+This step is **required** before you connect to a 3rd party Astroneer server
+
+<Steps>
+1. Press `Windows Key + R`.
+2. Enter this location and press Ok
+   ```
+   %LocalAppData%\Astro\Saved\Config\WindowsNoEditor\Engine.ini
+   ```
+3. Add the follow to the bottom of the file and then save the file.
+   ```
+   [SystemSettings]
+   net.AllowEncryption=false
+   ```
+</Steps>
+
+## Connecting To Your Astroneer Server
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Astroneer server.
+2. Copy the [server IP address](https://www.youtube.com/watch?v=Ap7DtDF-wYg) from the sidebar.
+3. Open Astroneer and select the `Server List` tab.
+4. Click `Add Dedicated Server`.
+5. Paste your IP address in `Server URL`, type a nickname you want to identify the server by and then click `Add Server`
+6. Select the server under `Favorite Servers` and click `Join Game`
+</Steps>
+
+The first time you join a server it will take you to the Co-op screen. You can simply click join game once it takes you here. 
