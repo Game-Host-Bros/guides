@@ -11,9 +11,7 @@ If you're looking to mod your [Palworld server](https://www.gamehostbros.com/pal
 :::danger
 Always back up your world manually before installing any Mods!
 :::
-
-## Installing Mods 
-
+ 
 Palworld mod websites mix in client mods with server mods, so you need to make sure they're going to work on a server. You must read the description of each mod as they will tell you if it will work on a server there. 
 
 Here are some things to consider **before** installing mods.
@@ -27,12 +25,24 @@ Here are some things to consider **before** installing mods.
 
 - Some mods are required to be installed on the **SERVER** and **CLIENT**. This means you would need the mod installed locally on all your players games (including [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS)) as well as the server itself. Refer to the mod documentation.
 
+## Installing UE4SS
+
+<Steps>
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Server.
+2. Go to `Tools > Mod Manager`.
+3. Install `UE4SS`.
+   - This installs UE4SS experimental v3.0.1-272, the currently recommended version for Palworld modding.
+4. `Start` your server.
+</Steps>
+
+## Installing Mods
+
 <Steps>
 1. Download the mods you want from [Nexus Mods](https://www.nexusmods.com/palworld/mods/). (Make sure they're server side mods!)
 2. Extract the downloaded `.zip` file on your PC.
 2. Access your Palworld server using [SFTP](/getting-started/uploading-files/).
 4. Upload your extracted mod folder to the location as specified by the Mod author.
-   - The experimenal version of UE4SS uses `Pal/Binaries/Win64/ue4ss/Mods`. Whereas for pak mods `Pal/Content/Paks/LogicMods` or `Pal/Content/Paks/~mods`, again refer to the mods documentation.
+   - Our installer version of UE4SS uses `Pal/Binaries/Win64/ue4ss/Mods`. Whereas for pak mods `Pal/Content/Paks/LogicMods` or `Pal/Content/Paks/~mods`, again refer to the mods documentation.
 6. Start your server.
 </Steps>
 
