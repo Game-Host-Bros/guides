@@ -26,16 +26,17 @@ These settings are changed in `Configuration > Startup Parameters` of the [Game 
 
 | Setting Name | Default Value | Description |
 |--------------|---------------|-------------|
-| BuildObjectDeteriorationDamageRate | 1.0 | Increase this to clean up objects more often, this should always be at least **0.1** |
+| BuildObjectDeteriorationDamageRate | 1.0 | **Higher** is better for performance, this should always be at least **0.1** |
 | bAutoResetGuildNoOnlinePlayers | False | Set to **True** - Enables guild disbanding after the duration specified by AutoResetGuildTimeNoOnlinePlayers |
 | AutoResetGuildTimeNoOnlinePlayers | 72.0 | If bAutoResetGuildNoOnlinePlayers is enabled, this the time limit before a guild will be disbanded |
 | PalSpawnNumRate | 1.0 | Decrease this to spawn less Pals |
 | DropItemMaxNum | 3000 | Decrease this especially if you have increased Drop Rates |
 | DropItemAliveMaxHours | 1.0 | Decrease this especially if you have increased Drop Rates or many players|
 | BaseCampMaxNumInGuild | 4 | Decrease this if there are many guilds |
-| ServerReplicatePawnCullDistance | 15000.0 | **Experimental**. Decrease this for better performance, officially "Pal Sync Distance" |
+| ServerReplicatePawnCullDistance | 15000.0 | Decrease this for much better performance, officially "Pal Sync Distance" |
 | BaseCampWorkerMaxNum | 15 | Decrease this to lessen load |
 | MaxBuildingLimitNum | 0 (Unlimited) | Set a value to limit max buildings per player |
+| bEnableInvaderEnemy  | True | Set to **False**. |
 
 ### Secondary Performance Settings
 
