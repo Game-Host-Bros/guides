@@ -1,0 +1,55 @@
+---
+title: How To Add Voice Chat To Your Minecraft Server
+description: Learn how to add voice chat to your Minecraft dedicated Server
+sidebar:
+  label: Adding Voice Chat
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Here's how to add voice chat to your [Minecraft server](https://www.gamehostbros.com/minecraft-server-hosting/). This guide will cover installing and configuring the [Simple Voice Chat](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat) Mod.
+
+:::note
+Simple Voice Chat is required to be installed on your local Minecraft Client, along with your Server. 
+
+Official instructions for installing Simple Voice Chat to your local Minecraft Client can be found [here](https://modrepo.de/minecraft/voicechat/wiki/installation). We recommend using a launcher such as CurseForge or Prism Launcher.
+:::
+
+## Installing Simple Voice Chat To Your Minecraft Server
+
+:::note
+Before getting started make sure to [change your Minecraft server version](http://localhost:4321/games/minecraft/changing-versions/) to a version compatible with Simple Voice Chat.
+
+Official installation instructions for Simple Voice Chat can be found here: https://modrepo.de/minecraft/voicechat/wiki/server_setup
+:::
+
+In this example we'll be installing [Simple Voice Chat 1.21.4 Fabric](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat/files/5998380).
+
+<Steps>
+1. Download a version of [Simple Voice Chat](https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat/).
+2. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Minecraft server.
+3. Go to `Management > File Manager`.
+4. [Upload](/getting-started/uploading-files/) your downloaded voicechat.jar to `Mods`.
+5. Start your server.
+</Steps>
+
+### Enabling Simple Voice Chat On Your Minecraft Server
+
+After following the above steps and installing Simple Voice Chat, here's how to configure this mod on your server.
+
+:::tip
+Simple Voice Chat requires configuration, specifically a port to run on. A port is the number at the end of your IP address after the colon **:**. 
+
+For example if your IP is `111.123.144.15:27033` - `27033` is a port.
+
+Your available ports can be seen in `Management > Allocations`, we don't recommend using your Primary port for Simple Voice Chat.
+:::
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Minecraft server.
+2. Go to `Management > File Manager`.
+3. Navigate to `/config/voicechat/` and open `voicechat-server.properties`.
+4. Edit `port=` to a non-primary port found in `Management > Allocations` and click save.
+5. Start your server.
+</Steps>
+
+After connecting to your server press `V` to configure Voice Chat in-game.
