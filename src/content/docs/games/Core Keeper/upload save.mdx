@@ -1,0 +1,66 @@
+---
+title: How To Upload Your Existing Core Keeper Server Save
+description: Step-by-step guide on how to upload your save file to your Core Keeper dedicated server.
+sidebar:
+  label: Upload Save
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+In this tutorial, we will guide you through the process of uploading an existing world and player save file to your [Core Keeper dedicated server](https://www.gamehostbros.com/core-keeper-server-hosting/).
+
+You may also refer to this guide on how to [upload files to your game server.](/getting-started/uploading-files/)
+
+If you get stuck at any time, Game Host Bros offers free world transfers. Just reach out to a bro on [Discord](https://discord.gg/FN4XgbAwzr)
+
+:::danger
+This will delete or overwrite any progress you have made on the server. 
+:::
+
+## Locating Your Local Core Keeper Save File
+
+<Steps>
+1. Press `Windows Key + R`.
+2. Enter this and click Ok
+   ```
+   %USERPROFILE%\AppData\LocalLow\Pugstorm\Core Keeper\Steam\
+   ```
+3. Enter the folder with random numbers and then find your world in `worlds`.
+</Steps>
+
+<FileTree>
+  - AppData
+    - Locallow
+      - Pugstorm
+        - Core-Keeper
+          - Steam
+            - 156xxxx
+              - worlds
+                - **0.world.gzip**
+   </FileTree>
+
+:::tip
+Usually has the name `0.world.gzip` if you only have one world.
+:::
+
+## Upload Your Core Keeper Save To Your Server
+<Steps>
+1. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and `Stop` your Core Keeper server.
+2. Go to `Management > File Manager`.
+3. Navigate to `/.config/unity3d/Pugstorm/CoreKeeper/DedicatedServer/worlds`
+4. [Upload](/getting-started/uploading-files/) your local save file, replacing any files if necessary.
+5. Go to `Configuration > Startup Parameters` and ensure `World Index` matches the number of your uploaded world file.
+6. Start your Core Keeper server.
+</Steps>
+
+This is what your server should now look like.
+
+<FileTree>
+  - .config
+    - unity3d
+      - Pugstorm
+        - Core-Keeper
+          - DedicatedServer
+            - worlds
+              - **0.world.gzip** Your uploaded world. 
+   </FileTree>
