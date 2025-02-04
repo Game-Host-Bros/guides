@@ -1,0 +1,38 @@
+---
+title: How To Restore A Backup On Your Valheim Server
+description: Learn how to restore a backup on your Valheim dedicated server.
+sidebar:
+  label: Restore Backup
+---
+import { Steps } from '@astrojs/starlight/components';
+
+This is what you do if you need to restore a backup on your [Valheim server](https://www.gamehostbros.com/valheim-server-hosting/). This guide covers restoring world backups on your server and restoring local character backups.
+
+## World Backups
+
+Follow these steps to restore your world to one of Valheims automatic backups.
+
+<Steps>
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
+2. Go to `Management > File Manager`.
+3. Navigate to `/.config/unity3d/IronGate/Valheim/worlds_local`.
+4. Delete your current `Dedicated.db` and `Dedicated.fwl` files.
+5. Rename your backup_auto_xxxx .fwl and .db files to `Dedicated.fwl` and `Dedicated.db` respectively.
+6. Start your server.
+</Steps>
+
+:::note
+Dedicated.db and Dedicated.fwl are the default names of your world files. The files you restore to must be from the same backup.
+:::
+
+## Character Backups
+
+Here's how to restore your character to an earlier backup, this is useful if you've lost a tombstone or would simply like to play a previous version of your character.
+
+<Steps>
+1. Open Valheim.
+2. From the main menu, click `Manage Saves`.
+3. Select `Characters`.
+4. Select your character and choose a backup, then click `Restore Backup`.
+</Steps>
