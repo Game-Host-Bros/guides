@@ -28,7 +28,7 @@ In this guide, you will learn how to set up SRV records for your [Minecraft serv
     3. Select the option to add a new DNS record and choose `SRV` from the record type dropdown.
     4. Enter the following details:
 </Steps>
-    - **Name**: Enter `_minecraft._udp`
+    - **Name**: Enter `_minecraft._tcp`
     - **Priority**: Enter `1` for the Priority (lower numbers get higher priority).
     - **TTL**: Select `Auto`
     - **Weight**: Enter `1` for the Weight (used for load balancing).
@@ -41,7 +41,7 @@ In this guide, you will learn how to set up SRV records for your [Minecraft serv
 
 Here’s a breakdown of the record:
 ```
-  _Minecraft._tcp.domain.tld SRV 1 1 34197 Minecraft.domain.tld
+  _minecraft._tcp.domain.tld SRV 1 1 34197 play.domain.tld
 ```
 
 Now, users connecting to `Minecraft.domain.tld` will automatically be directed to **your Minecraft Server IP** on port `34197`.
