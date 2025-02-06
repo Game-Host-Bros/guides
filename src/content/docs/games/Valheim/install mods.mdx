@@ -4,6 +4,7 @@ description: Learn how to install mods and plugins on your Valheim dedicated ser
 sidebar:
   label: Install Mods
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 In this guide, you will learn how to install mods and plugins on your [Valheim server](https://www.gamehostbros.com/valheim-server-hosting/) using BepInEx.
@@ -37,4 +38,22 @@ Once BepInEx is installed, you can now add the plugins you wish. We suggest down
 4. Navigate to `BepInEx/plugins` and upload your extracted plugin folder.
 6. Start your server.
 </Steps>
-If you get stuck at any time, just reach out to a bro on [Discord](https://discord.gg/FN4XgbAwzr) or via a support ticket.
+
+Here's what your server should typically look like after installing plugins:
+
+<FileTree>
+
+- Bepinex
+  - Plugins
+    - **OdinPlus-GoodestBoy**
+      - **GoodestBoy.dll**
+    - **Azumatt-AzuExtendedPlayerInventory**
+      - **AzuExtendedPlayerInventory.dll**
+    - **Therzie-Warfare**
+      - **Warfare.dll**
+
+
+</FileTree>
+
+If you get stuck at any time, just reach out to a bro on [Discord](https://discord.gg/FN4XgbAwzr).
+
