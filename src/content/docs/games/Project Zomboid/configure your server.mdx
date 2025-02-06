@@ -1,0 +1,34 @@
+---
+title: How To Configure Your Project Zomboid Server
+description: Learn how to change game settings and configure your Project Zomboid dedicated server
+sidebar:
+  label: Configure Your Server
+---
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide, we will show you how to edit every settings on your [Project Zomboid server](https://www.gamehostbros.com/project-zomboid-server-hosting/).
+
+## Basic Server Configuration
+
+Basic settings such as Server Password, Server Name and more can be configured directly in our game panel, here are the steps for basic configuration:
+
+<Steps>
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your Project Zomboid server.
+2. In the sidebar, click `Configuration > Startup Parameters`.
+3. Edit the setting you want to change.
+4. Start your server.
+</Steps>
+
+## Using The Configuration File
+
+<Steps>
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your Project Zomboid server.
+2. In the sidebar, click `Management > File Manager` and navigate to `.cache/Server/pzserver.ini`.
+3. Make the changes you want and then restart the server.
+</Steps>
+
+:::note
+If the settings exist in Startup Parameters, then they will override what is in the configuration file.
+:::
