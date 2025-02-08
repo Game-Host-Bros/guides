@@ -1,0 +1,34 @@
+---
+title: How To Configure Your ICARUS Server
+description: Learn how to configure your ICARUS dedicated server
+sidebar:
+  label: Configure Your Server
+---
+import { Steps } from '@astrojs/starlight/components';
+
+At Game Host Bros, we've integrated basic ICARUS settings directly into our game panel, here's how to quickly and easily configure your new [ICARUS server](https://www.gamehostbros.com/icarus-server-hosting/).
+
+## Basic Settings
+
+<Steps>
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your server.
+2. Go to `Configuration > Startup Parameters`.
+3. Under `Basic`, edit the settings you'd like to change.
+4. Start your server.
+</Steps>
+
+## Custom Configuration
+
+:::note
+Settings in `Configuration > Startup Parameters` must be set there, and will be overriden if set directly in the file.
+:::
+
+<Steps>
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
+2. Go to `Management > File Manager.
+3. Navigate to `/ICARUS/Saved/Config/WindowsServer/ServerSettings.ini`
+4. After changing your desired settings, click save.
+5. Start your server
+</Steps>

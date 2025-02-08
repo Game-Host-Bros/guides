@@ -1,0 +1,23 @@
+---
+title: How To Reset The World On Your Project Zomboid Server
+description: Learn how to reset the world on your Project Zomboid dedicated server.
+sidebar:
+  label: Reset World
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Here is how you can reset the world on your [Project Zomboid server](https://www.gamehostbros.com/project-zomboid-server-hosting/) to start fresh, this is helpful in case you've made a mistake that cannot be undone.
+
+## Resetting Your World
+
+:::caution
+This should only be used as a last resort. If you keep having issues, then reach out to a bro. We're here to help you.
+:::
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
+2. Go to `Management > File Manager`.
+3. Navigate to `.cache/Saves/Multiplayer`.
+4. Delete the `pzserver` folder.
+5. Start your server.
+</Steps>

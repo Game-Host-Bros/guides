@@ -1,0 +1,40 @@
+---
+title: How To Add Admins In ICARUS
+description: Learn how to add admins to your ICARUS dedicated server.
+sidebar:
+  label: Adding Admins
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components'
+
+Managing player permissions—including granting administrative privileges or banning players—is essential for maintaining a healthy gaming environment. [ICARUS server's](https://www.gamehostbros.com/icarus-server-hosting/) use an Admin Password to authenticate users.
+
+## Setting An Admin Password
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your ICARUS server.
+2. Go to `Configuration > Startup Parameters`.
+3. Under `Basic`, set your desired `Admin Password`.
+4. Restart your server.
+</Steps>
+
+## Becoming An Admin In ICARUS
+
+<Steps>
+1. [Connect to your server](/games/icarus/connect-to-your-server/).
+2. Open chat with `Enter`.
+3. Enter `/adminlogin YourAdminPassword`.
+</Steps>
+
+## All ICARUS Admin Commands
+
+| Command | Description |
+|---------|-------------|
+| **/AdminLogin [Password]** | Authenticate as an Admin on your server. |
+| **/AdminSay [Message]** | Display a message to all players. |
+| **/BanPlayer [Steam ID/Player Name] [Reason]** | Ban a player from the server with an optional reason. |
+| **/Help** | Display a list of available commands |
+| **/KickPlayer [Steam ID/Player Name] [Reason]** | Kick a player from the server with an optional reason. |
+| **/ReturnToLobby** | Immediately returns the dedicated server to the lobby. |
+| **/ReturnToLobbyWhenEmpty** | Returns the dedicated server to the lobby as soon as the server is empty. |
+| **/UnbanPlayer [Steam ID/Player Name]** | Unbans a player from the server. |
