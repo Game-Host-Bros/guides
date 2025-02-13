@@ -1,0 +1,85 @@
+---
+title: How To Upload A Custom Map To Your DayZ Server
+description: Learn how to easily upload a custom map to your DayZ dedicated server. Follow this step-by-step guide to upload, and enable your custom map.
+sidebar:
+  label: Upload Custom Map
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+Want to explore new terrains on your [DayZ server?](https://www.gamehostbros.com/dayz-server-hosting/) This easy-to-follow guide will show you how to upload a custom map to your DayZ server.
+
+Here's how to download and then upload a custom map to your DayZ Server. In this example, we'll be using the [Melkart_Official Map](https://steamcommunity.com/sharedfiles/filedetails/?id=2716445223).
+
+## Downloading A Custom Map
+
+<Steps>
+1. Subscribe to the map on Steam [Melkart_Official Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2716445223).
+2. Find server files to download, for example [Melkart_Official Server Files](https://github.com/RafaelLunaC/Melkart-Server).
+3. Select the version you want, for example `Melkart1.25.rar`, then on the right-hand side click the download icon.
+4. Extract the downloaded contents.
+</Steps>
+
+This is what you should now see:
+
+<FileTree>
+  - Downloads
+    - Melkart1.25
+      - **empty.melkart** 
+        - **..**
+   </FileTree>
+
+## Uploading A Custom Map
+
+Here's to upload a custom map to your DayZ server, this will also cover installing [Melkart_Official](https://steamcommunity.com/sharedfiles/filedetails/?id=2716445223) as a mod to your server.
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your DayZ server.
+2. [Upload](/getting-started/uploading-files/#using-sftp) the `empty.melkart` to the `mpmissions` folder on your server.
+3. Export and [Upload](/getting-started/uploading-files/) a `modlist.html` to your server, following our [Installing DayZ Mods Guide](/games/dayz/installing-mods/).
+</Steps>
+
+<FileTree>
+  - mpmissions
+    - **empty.melkart** 
+      - ..
+    - dayzOffline.enoch/
+    - dayzOffline.sakhal/
+    - dayzOffline.chernarusplus/
+
+   </FileTree>
+
+## Enabling Your Custom Map
+
+Following the above steps, here's how to enable your custom map, using [Melkart_Official](https://steamcommunity.com/sharedfiles/filedetails/?id=2716445223) as an example.
+
+<Steps>
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your DayZ server.
+2. Go to `Management > File Manager`.
+3. Open `serverDZ.cfg`.
+4. Scroll down and edit `template=` to `empty.melkart`.
+5. Click save and then start your server.
+</Steps>
+
+Here's what your serverDZ.cfg should now look like:
+
+```ini title="serverDZ.cfg"
+   
+class Missions
+{
+    class DayZ
+    {
+        template="empty.melkart"; // Mission to load on server startup. <MissionName>.<TerrainName>
+					      // Vanilla mission: dayzOffline.chernarusplus
+					      // DLC mission: dayzOffline.enoch
+    };
+};
+
+   ```
+
+:::note 
+You can follow the same format for other custom maps from the Steam Workshop, however always remember to follow any instructions that the Map Author may include.
+
+The `template=` name, is the name of the map folder uploaded to `mpmissions` on your server. The naming scheme for this is officially `<MissionName>.<TerrainName>`.
+:::

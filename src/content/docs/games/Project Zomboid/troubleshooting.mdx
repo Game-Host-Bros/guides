@@ -1,0 +1,37 @@
+---
+title: Troubleshooting Your Project Zomboid Server
+description: Learn how to fix common Project Zomboid dedicated server issues.
+sidebar:
+  label: Troubleshooting
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Here are some [Project Zomboid server](https://www.gamehostbros.com/project-zomboid-server-hosting/) issues and how to fix them.
+
+## No Space Left On Device
+
+This is a bug that can occur with Project Zomboid, regardless of how much space is left on the server, fix it by doing the following:
+
+<Steps>
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
+2. Go to `Management > File Manager`.
+3. Navigate to `.cache/Server/pzserver.ini`.
+4. Find `BackupsOnStart` and set it to `false`, then click save. 
+5. Start your server.
+</Steps>
+
+## Incompatible Or Conflicting Mods
+
+- Undo your latest changes, this includes removing mods.
+- Make sure all of your mods are compatible with the current version of your Project Zomboid server.
+- Double-check that your mods aren't missing any dependencies.
+- Remove all of your mods.
+- Begin testing mods and their dependencies one at a time.
+
+## Out Of Memory Crashing
+
+The more mods, and the more friends you have connected, the more resources your server will need to run. 
+
+You can check the crash logs by going to `System > Audit Logs` in our game panel, if it reports as `OutOfMemory True` then your server is running out of RAM. If your server is frequently running out of RAM you will need to [upgrade your server](/account/upgrade-your-server/).
+- We only recommend upgrading when it's necessary to match the demands of your server.
+- It's also possible that one of your Mods has a `Memory Leak`, in that case you will need to remove mods until you find out which mod is causing the problem.

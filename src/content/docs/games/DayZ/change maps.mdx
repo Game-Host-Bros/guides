@@ -1,0 +1,42 @@
+---
+title: How To Change Maps On Your DayZ Server
+description: Discover how to effortlessly change maps on your DayZ dedicated server with our detailed step-by-step guide. Customize your gameplay experience today!
+sidebar:
+  label: Change Maps
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Want to explore new terrains on your [DayZ server](https://www.gamehostbros.com/dayz-server-hosting/)? This guide will walk you through the steps to switch between default DayZ maps.
+
+If you're looking to upload a custom map follow [this guide](/games/dayz/upload-custom-map/).
+
+## Changing Map On Your DayZ Server
+<Steps>
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your DayZ server.
+2. Go to `Management > File Manager`.
+3. Open `serverDZ.cfg`.
+4. Scroll down and edit `template=` to one of the following:
+  
+   | Map | Template ID |
+   |---|---|
+   | Chernarus Plus | dayzOffline.chernarusplus |
+   | Livonia | dayzOffline.enoch |
+   | Sakhalin | dayzOffline.sakhal |
+
+5. Click save and start your server.
+</Steps>
+
+ ```ini title="serverDZ.cfg"
+      
+   class Missions
+   {
+       class DayZ
+       {
+           template="dayzOffline.chernarusplus"; // Mission to load on server startup. <MissionName>.<TerrainName>
+   					      // Vanilla mission: dayzOffline.chernarusplus
+   					      // DLC mission: dayzOffline.enoch
+       };
+   };
+   
+      ```
