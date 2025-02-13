@@ -57,7 +57,7 @@ export default defineConfig({
       }
     }, {
       label: 'Support',
-      link: 'https://portal.gamehostbros.com/supporttickets.php'
+      link: 'https://www.gamehostbros.com/support/'
     }]
   }), sitemap({
     changefreq: 'daily',
