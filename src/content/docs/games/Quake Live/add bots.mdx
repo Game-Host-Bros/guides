@@ -1,0 +1,67 @@
+---
+title: How To Add Bots To Your Quake Live Server
+description: Learn how to add bots to your Quake Live dedicated server.
+sidebar:
+  label: Add Bots
+---
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide we will show you how you can add bots to your [Quake Live](https://www.gamehostbros.com/quake-live-server-hosting/) server.
+
+## Automatically Adding Bots
+Using this method will add random bots to the server when it is first started.
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Quake Live server.
+2. In the sidebar click on `Management > File Manager`.
+3. Select the `baseq3` folder and open your `server.cfg`.
+4. Add `set bot_enable 1` and `set bot_minplayers 2` to the end of the file (each on their own line).
+5. Save your `server.cfg` and restart your server.
+</Steps>
+
+:::note
+If you use this method, you will not be able to use the `kick allbots` command as they will automatically be added back to your server.
+:::
+
+## Manually Adding Custom Bots
+You can use this method to add specific type of bots to the server.
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Quake Live server.
+2. In the sidebar click on `Management > File Manager`.
+3. Select the `baseq3` folder and open your `server.cfg`.
+4. Add `set bot_enable 1` to the end of the file.
+5. Save your `server.cfg` and restart your server.
+</Steps>
+
+You can now type `addbot anarki 5` in the server console and it will add a single bot. You can change the difficulty of the bot by changing the number after the bot name from 1 to 5. You can remove all the bots from the server by typing `kick allbots`.
+
+Here is a list of all the different character names with the command to add that bot.
+
+| Character | Command |
+|-----------|----------|
+| Anarki | `addbot anarki 5` |
+| Angel | `addbot angel 5` |
+| Biker | `addbot biker 5` |
+| Bitterman | `addbot bitterman 5` |
+| Bones | `addbot bones 5` |
+| Crash | `addbot crash 5` |
+| Doom | `addbot doom 5` |
+| Gorre | `addbot gorre 5` |
+| Hunter | `addbot hunter 5` |
+| Keel | `addbot keel 5` |
+| Klesk | `addbot klesk 5` |
+| Lucy | `addbot lucy 5` |
+| Major | `addbot major 5` |
+| Mynx | `addbot mynx 5` |
+| Orbb | `addbot orbb 5` |
+| Patriot | `addbot patriot 5` |
+| Phobos | `addbot phobos 5` |
+| Ranger | `addbot ranger 5` |
+| Razor | `addbot razor 5` |
+| Sarge | `addbot sarge 5` |
+| Slash | `addbot slash 5` |
+| Sorlag | `addbot sorlag 5` |
+| Stripe | `addbot stripe 5` |
+| Tank Jr. | `addbot tankjr 5` |
+| Uriel | `addbot uriel 5` |
+| Visor | `addbot visor 5` |
+| Xaero | `addbot xaero 5` |

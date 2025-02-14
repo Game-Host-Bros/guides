@@ -1,0 +1,22 @@
+---
+title: How To Install Steam Workshop Mods On Your Quake Live Server
+description: Learn how to install Steam Workshop mods on your Quake Live dedicated server.
+sidebar:
+  label: Install Workshop Mods
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Since [Quake Live](https://www.gamehostbros.com/quake-live-server-hosting/) doesn't support FastDL, you are required to use the Steam Workshop for downloading custom content. The benefit of this is your server and players will always have the same content.
+
+For this example, we will be adding this killstreak sound mod to our server: [Workshop Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=701783942)
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Quake Live server.
+2. Make sure MinQLX is enabled on your server using [this guide](quake-live/install-plugins/)
+3. In the sidebar click on `Management > File Manager`.
+4. Select the `baseq3` folder.
+5. Open the `workshop.txt` file and add your workshop IDs to the bottom of the file. This downloads the mods to the server itself.
+6. Open `server.cfg` and add the line `set qlx_workshopReferences 701783942` to the bottom of the file (replace the ID with your own). This forces the client to download the workshop mods.
+7. Restart your server.
+</Steps>
+
+If you want to add multiple workshop mods, you **MUST** add all the IDs to the workshop.txt file (one ID each line) and to the server.cfg `qlx_workshopReferences` line (comma separated)
