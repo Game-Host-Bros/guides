@@ -1,0 +1,93 @@
+---
+title: How To Wipe Your Rust Server
+description: Learn how to wipe your Rust dedicated server, this easy-to-follow guide will show you how to BP wipe, Map Wipe, Full Wipe and more.
+sidebar:
+  label: Wipe Server
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+Wiping your server is a great way of keeping gameplay fresh, by performing cycled wipes - full wipes specifically, you're effectively establishing equal footing between new and veteran players.
+
+Here are the most common ways to wipe your [Rust server](https://www.gamehostbros.com/rust-server-hosting/). 
+
+:::note
+Certain wipes are **Forced** wipes, these occur when Rust updates (Typically on the first Thursday of every month).
+:::
+
+## Blueprint (BP) Wipe
+
+Wiping Blueprints will reset the blueprint progress for all players, this is a great wipe to keep the flow of newer players joining your server, while also encouraging your veterans to start playing again. 
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Rust server.
+2. Go to `Management > File Manager`.
+3. Navigate to `/server/rust/`.
+4. Delete all of the `player.blueprint` files.
+5. Start your server.
+</Steps>
+
+**Files to Delete:**
+
+<FileTree>
+
+- server
+  - rust
+    - **player.blueprints.x.db** Delete me!
+    - **player.blueprints.x.db-wal** Delete me!
+
+</FileTree>
+
+## Map Wipe
+
+Here's how to perform a Map Wipe, performing a Map Wipe will clear all structures created by players.
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Rust server.
+2. Go to `Management > File Manager`.
+3. Navigate to `/server/rust/`.
+4. Delete all of the `.map`, `.sav` and `player.states` files.
+5. Start your server.
+</Steps>
+
+**Files to Delete:**
+
+<FileTree>
+
+- server
+  - rust
+    - **Yourmap.sav** Delete me!
+    - **Yourmap.map** Delete me!
+    - **player.states.db** Delete me!
+    - **player.states.db-wal** Delete me!
+    - player.deaths.db (Recommended to delete)
+    - player.deaths.db-wal (Recommended to delete)
+
+</FileTree>
+
+## Full Wipe
+
+This is the most common Wipe, a Full Wipe (Server Wipe) refers to a wipe where all game data is erased, causing all players to have a fresh start, this equalizes the map, giving all players an equal opportunity to compete on wipe day.
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Rust server.
+2. Go to `Management > File Manager`.
+3. Navigate to `/server/rust/`.
+4. Delete all of the files **except** `cfg`.
+5. Start your server.
+</Steps>
+
+## Server Reinstallation
+
+:::caution
+This should only be used as a last resort. If you keep having issues, then reach out to a bro. We're here to help you.
+:::
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
+2. Go to `Management > File Manager` and delete **ALL the folders and files** (The file manager should have nothing left).
+3. In the sidebar select `Configuration > Advanced`.
+4. Click `Reinstall Server` and wait for the install to finish.
+</Steps>
+
+

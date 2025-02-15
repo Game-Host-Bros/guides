@@ -1,0 +1,62 @@
+---
+title: How To Upload A Custom Map To Your Rust Server
+description: Learn how to easily install a custom map to your Rust dedicated server. Follow this step-by-step guide to install, and enable your custom map.
+sidebar:
+  label: Adding Custom Maps
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+Want to explore new terrains on your [Rust server?](https://www.gamehostbros.com/rust-server-hosting/) This easy-to-follow guide will show you how to add a custom map to your Rust server.
+
+Here's how to download and play a custom map to your Rust Server. You can find custom maps from a website such as [lone.design](https://lone.design/rust-custom-maps/).
+
+:::note
+Before proceeding do the following:
+
+- In the contents of your downloaded map folder, find it's `.map` file. 
+- Upload the `.map` file to [Dropbox](https://www.dropbox.com/basic).
+- On Dropbox, select your uploaded `.map` file,  then select Share > Settings > Anyone with the link can view. then click `Create and copy link`, and save this link for later.
+:::
+
+## Installing Oxide And RustEdit
+
+Oxide is a modding framework, and RustEdit is a required extension for further customization of Rust maps, your server must have these installed to play Custom Maps.
+
+<Steps>
+1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com) and `Stop` your Rust server.
+2. Go to `Configuration > Startup Parameters`.
+3. Under `Modding Frameworks` select `oxide` or `oxide-staging`.
+4. Go to `Tools > Mod Manager`.
+5. Install `RustEdit`.
+6. Start your server.
+</Steps>
+
+### Wipe Your Server :badge[Recommended]{variant=success}
+
+Before switching to a custom map, we recommend performing a [Map Wipe](/games/rust/wipe-server/#map-wipe) or [Full Wipe](/games/rust/wipe-server/#full-wipe).
+
+- [BP Wipe](/games/rust/wipe-server/#blueprint-bp-wipe)
+- [Full Wipe](/games/rust/wipe-server/#full-wipe)
+- [Map Wipe](/games/rust/wipe-server/#map-wipe) 
+
+## Installing A Custom Map
+
+After installing Oxide and RustEdit, here's how to add a custom map to your Rust server.
+
+<Steps>
+1. Log into the [Game Host Bros Panel](https://panel.gamehostbros.com) and `Stop` your Rust server.
+2. Go to `Configuration > Startup Parameters`.
+3. Find `Custom Map URL`.
+4. Paste in the Dropbox download URL to your `.map` file, in the URL make sure `dl=0` is set to `dl=1`.
+5. Start your server.
+</Steps>
+
+:::note
+Make sure to select your `.map` file on Dropbox, then select Share > Settings > Anyone with the link can view.
+
+In your download URL ensure `dl=0` is set to `dl=1`.
+
+Ensure your download URL directly downloads only the required `.map` file.
+:::
+

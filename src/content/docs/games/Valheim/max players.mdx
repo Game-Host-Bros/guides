@@ -1,0 +1,43 @@
+---
+title: How To Increase Max Players On Your Valheim Server
+description: Learn how to increase max players on Valheim dedicated Server
+sidebar:
+  label: Max Players
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Here's how to increase Max Players to allow more than 10 players at once on your [Valheim server](https://www.gamehostbros.com/Valheim-server-hosting/).
+
+By default, Valheim dedicated servers support up to 10 players, this can be increased by installing a mod such as [Valheim Plus](https://thunderstore.io/c/valheim/p/Grantapher/ValheimPlus_Grantapher_Temporary/) or [MaxPlayerCount](https://thunderstore.io/c/valheim/p/Azumatt/MaxPlayerCount/). 
+
+While this version of Valheim Plus is currently the most up-to-date, this may change in the future.
+
+:::caution
+You may encounter performance issues or unexpected bugs with higher player counts as Valheim is designed for up to 10 players, increase max players at your own risk.
+:::
+
+## Installing A Max Player Mod
+
+We recommend installing [Valheim Plus](https://thunderstore.io/c/valheim/p/Grantapher/ValheimPlus_Grantapher_Temporary/) due to it including a wider list of features, the only caveat is that all players connecting must also install this mod locally.
+
+<Steps>
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Server.
+2. Install [Valheim Plus](https://thunderstore.io/c/valheim/p/Grantapher/ValheimPlus_Grantapher_Temporary/) or [MaxPlayerCount](https://thunderstore.io/c/valheim/p/Azumatt/MaxPlayerCount/) by following our [Valheim Modding Guide](/games/valheim/install-mods/).
+3. Start your server.
+</Steps>
+
+## Configuring Max Players
+
+These are the steps to configure Valheim Plus as it's the most popular mod, the method for configuring MaxPlayerCount is very similar.
+
+<Steps>
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Server.
+2. Go to `Management > File Manager`.
+3. Navigate to `/Bepinex/config/`.
+4. Open the configuration file of your installed mod, find and edit `maxPlayers`.
+5. Click save, then start your server.
+</Steps>
+
+When starting your server you should now see: `[Info   :Valheim Plus] [Server] Updating maxPlayers from 10 to xx`.
+
+
