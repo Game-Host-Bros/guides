@@ -1,0 +1,39 @@
+---
+title: How To Install Oxide Plugins For Your Rust Server
+description: Learn how to install Oxide plugins and extensions for your Rust dedicated server.
+sidebar:
+  label: Install Plugins
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Installing plugins on your [Rust server](https://www.gamehostbros.com/rust-server-hosting/) can enhance gameplay and add new features. Game Host Bros makes it easy to enable Oxide, which is required for most plugins.
+
+## How To Enable Oxide
+Here you will learn to install the Oxide modding framework. This is required for all Rust plugins to function.
+<Steps>
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Rust server.
+2. Navigate to `Configuration > Startup Parameters` in the left sidebar.
+3. Find the `Modding Framework` option and change it from vanilla to `oxide`.
+4. Restart your server.
+</Steps>
+
+## How To Install Plugins
+Once Oxide is enabled, you can start adding plugins to your server:
+<Steps>
+1. In the sidebar go to `Management > File Manager`.
+2. Navigate to the `oxide/plugins/` directory.
+3. Upload your plugin files (usually ending in .cs) to this directory.
+4. Check if the plugin is loaded by typing `o.plugins` into the server console.
+</Steps>
+
+:::note
+You can also install some of the mod common Rust plugins directly from our panel by going to `Tools > Mod Manager`. Some of these may require additional configuration.
+:::
+
+## How To Install Extensions
+Some plugins require additional extensions to function properly. Here's how to install them:
+<Steps>
+1. In the file manager, go to the `RustDedicated_Data/Managed/` directory (This is the most common location, but refer to your plugin documentation).
+2. Upload the extension files (ending in .dll) to this directory.
+3. Restart your server.
+</Steps>
