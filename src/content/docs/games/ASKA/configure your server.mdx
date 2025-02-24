@@ -10,23 +10,32 @@ In this guide, we will show you how to edit every setting on your [ASKA server](
 
 ASKA has two types of settings, some are normal and can be edited freely, while enabling others require an additional step. This guide covers everything you need to know about ASKA server settings.
 
-## Configuring Your ASKA Server
+## Basic Configuration Of Your ASKA Server
 
-At Game Host Bros, we're integrating ASKA settings into our game panel, allowing you to customize your server quickly and easily. This is currently being implemented as we speak!
+At Game Host Bros, we've integrated basic ASKA settings into our game panel, allowing you to do basic customization of your server quickly and easily, this covers Server Name, Password, Region and more, for in-depth gameplay configuration follow the steps found below.
 
 <Steps>
-1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your server.
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
 2. In the sidebar, click `Configuration > Startup Parameters`.
-3. Sort by `Basic`, `Advanced`, `Important`, `Normal` or `Custom`.
-4. Edit the setting you want to change.
-5. Start your server.
+3. Edit the setting you want to change.
+4. Start your server.
 </Steps>
 
 :::tip
-Some ASKA settings require your server gameplay mode to be `custom`, this can be changed in `Configuration > Startup Parameters`.
+Some ASKA settings require your server gameplay mode to be `custom`, this can be changed as `mode` in `server properties.txt` located in the home directory of your server under `Management > File Manager`.
 :::
 
-Here are all of the available settings for your ASKA server, sorted by `normal` and `custom` mode settings:
+## Detailed Configuration
+
+These steps will walk you through how to edit your server properties.txt file, this file contains the gameplay settings for your server. 
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
+2. In the sidebar, click `Management > File Manager`.
+3. Open `server properties.txt`.
+4. Edit the setting you want to change.
+5. Start your server.
+</Steps>
 
 ### Normal Settings
 
@@ -43,7 +52,7 @@ Here are all of the available settings for your ASKA server, sorted by `normal` 
 ### Custom Settings
 
 :::tip
-These settings REQUIRE that your server is set to `custom` mode, you can change this in `Configuration > Startup Parameters`.
+These settings REQUIRE that your server is set to `custom` mode, this can be changed as `mode` in `server properties.txt` located in the home directory of your server under `Management > File Manager`.
 :::
 
 | Setting Name                | Possible Values                                                                                        | Description                                                                                     |
