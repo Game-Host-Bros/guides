@@ -1,0 +1,54 @@
+---
+title: How To Change Difficulty On Your The Lord of the Rings Return to Moria Server
+description: Learn how to change your server difficulty on your The Lord of the Rings Return to Moria dedicated server using World Modifiers.
+sidebar:
+  label: Change Difficulty
+---
+import { Steps } from '@astrojs/starlight/components';
+
+[The Lord of the Rings Return to Moria](https://www.gamehostbros.com/the-lord-of-the-rings-return-to-moria-server-hosting/) includes multiple difficulty presets to quickly confiure your server, this guide will cover using existing presets along with how to use custom difficulty settings.
+
+## Changing Difficulty Presets
+
+:::note
+You must create a new world to change settings. You can do so by changing World Name in Startup Parameters.
+:::
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
+2. Go to `Configuration > Startup Parameters`.
+3. Look for `Difficulty` and then select the preset you want.
+4. Change `World Name` to generate a new world.
+5. Restart your server.
+</Steps>
+
+## Custom Difficulty Configuration
+
+Here's how to set custom difficulty settings in LotR Return to Moria, this is allows you to adjust individual settings.
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
+2. Go to `Configuration > Startup Parameters`.
+3. Look for `Difficulty` and then select `Custom`.
+4. Change `World Name` to generate a new world.
+5. Go to `Management > File Manager` and open `MoriaServerConfig.ini`.
+6. Under [World.Create], adjust the settings you wish and then click save.
+7. Start your server.
+</Steps>
+
+Here are all of the difficulty settings for LotR Return To Moria, and what each of their possible values are:
+
+| Setting | Possible Values `verylow, low, default, high, veryhigh` |
+|---------|-------|
+| CombatDifficulty | verylow, low, default, high, veryhigh |
+| EnemyAggression | low, default, high, veryhigh |
+| SurvivalDifficulty | verylow, low, default, high |
+| MiningDrops | verylow, low, default, high |
+| WorldDrops | verylow, low, default, high |
+| HordeFrequency | verylow, low, default, high, veryhigh |
+| SiegeFrequency | verylow, low, default, high, veryhigh |
+| PatrolFrequency | verylow, low, default, high, veryhigh |
+
+:::tip
+The possible values are `verylow`, `low`, `default`, `high` and `veryhigh`. Not all settings have these parameters, however they will automatically default to the nearest value, for example low or high instead.
+:::

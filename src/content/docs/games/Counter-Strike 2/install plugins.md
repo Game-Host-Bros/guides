@@ -12,7 +12,7 @@ At Game Host Bros, you can get Metamod, CounterStrikeSharp and some plugins inst
 The first thing you need to do is to install Metamod Source and CounterStrikeSharp. You can install it by simply enabling modding in our Game Panel.
 
 1. Load the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your CS2 server.
-2. In the left-hand menu, click `Configuration > Startup Parameters` and toggle on the setting `Enable Modding`.
+2. In the left-hand menu, Go to `Configuration > Startup Parameters` and toggle on the setting `Enable Modding`.
 3. Restart the server.
 
 Everything you require to install mods and plugins on your CS2 server is now configured and ready to use. Everything will be automatically updated once your server restarts. 

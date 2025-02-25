@@ -1,0 +1,45 @@
+---
+title: How To Configure Player Permissions In The Lord of the Rings Return to Moria
+description: Learn how to configure player permissions on your The Lord of the Rings Return to Moria dedicated server.
+sidebar:
+  label: Player Permissions
+---
+import { Steps } from '@astrojs/starlight/components'
+
+Managing player permissions-including granting administrative privileges or banning players—is essential for maintaining a healthy gaming environment. [The Lord of the Rings Return to Moria](https://www.gamehostbros.com/the-lord-of-the-rings-return-to-moria-server-hosting/) uses a file called `MoriaServerPermissions.txt` to handle player permissions.
+
+## Configuring Permissions
+
+Here's how to configure permissions on your server, ensure that you've already [connected to your server](/games/the-lord-of-the-rings-return-to-moria/connect-to-your-server/) before following these steps.
+
+<Steps>
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
+2. In the sidebar, go to `Management > File Manager`.
+3. In the home directory, open `MoriaServerPermissions.txt`.
+4. Scroll to the bottom and find your account name.
+5. Configure your desired permissions.
+6. Click save and start your server.
+</Steps>
+
+| Permission | Description |
+|------------|-------------|
+| **Blocked** | Will block a user with that account name. |
+| **Default** | Will use the default permissions. |
+| **NoConstruction** | Prevents user using any build or quickbuild functions, or deconstructing any player constructions. |
+| **QuickBuild** | Allows quick-build of platforms and rope ladders, but prevents other construction or deconstruction. |
+| **AllConstruction** | Allows all construction and deconstruction. |
+| **NoStorage** | Prevents interaction with storage containers, and disallows using shared base storage for crafting. |
+| **AllStorage** | Allows all use of storage containers and contents. |
+
+Here are some permission examples:
+
+   ```txt title="MoriaServerPermissions.txt"
+GHB = AllConstruction,AllStorage
+Jerry = Blocked
+Tom = Default
+   ```
+This example does the following: 
+
+- Grants the player GHB access to all construction and storage permissions.
+- Blocks Jerry from connecting to your server.
+- Sets Tom's permissions to default.

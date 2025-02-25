@@ -1,0 +1,77 @@
+---
+title: How To Upload Your Existing Lord of the Rings Return to Moria Save
+description: Step-by-step guide on how to upload your save file to your The Lord of the Rings Return to Moria dedicated server.
+sidebar:
+  label: Upload Save
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+In this tutorial, we will guide you through the process of uploading an existing world save file to your [The Lord of the Rings Return to Moria dedicated server](https://www.gamehostbros.com/the-lord-of-the-rings-return-to-moria-server-hosting/).
+
+You may also refer to this guide on how to [upload files to your game server.](/getting-started/uploading-files/)
+
+If you get stuck at any time, Game Host Bros offers free world transfers. Just reach out to a bro on [Discord](https://discord.gg/FN4XgbAwzr)
+
+## Steam Save File Location
+
+<Steps>
+1. Press `Win + R` on your keyboard.
+2. Enter this:
+   ```
+   %localappdata%\Moria\Saved\SaveGamesSteam
+   ```
+3. Find your world file, for example: `MW_6BE7222A40EB974D3499BAB262B5D8D7.sav`
+</Steps>
+
+:::note
+If you have multiple worlds and you're not sure which is which, you can rename your world and then reload your save folder to see what was last modified.
+:::
+
+## Epic Games Save File Location
+
+<Steps>
+1. Press `Win + R` on your keyboard.
+2. Enter this:
+   ```
+   %localappdata%\Moria\Saved\SaveGamesSteam
+   ```
+3. Find your world file, for example: `MW_6BE7222A40EB974D3499BAB262B5D8D7.sav`
+</Steps>
+
+:::note
+If you have multiple worlds and you're not sure which is which, you can rename your world and then reload your save folder to see what was last modified.
+:::
+
+## Uploading Your Save Files
+
+<Steps>
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
+2. In the sidebar, go to `Management > File Manager`.
+3. Open `MoriaServerConfig.ini` and edit `OptionalWorldFilename=` to the name of your save file, excluding .sav at the end.
+4. Next, navigate to `Moria/Saved/SaveGamesDedicated`.
+5. [Upload](/getting-started/uploading-files/) your save file.
+6. Start your server.
+</Steps>
+
+Here's what your server should now look like:
+
+ ```ini title="MoriaServerConfig.ini"
+[World]
+OptionalWorldFilename=MW_6BE7222A40EB974D3499BAB262B5D8D7
+   ```
+
+And here's your uploaded save file location:
+
+<FileTree>
+- Moria
+  - Saved
+    - SaveGamesDedicated
+      - **MW_6BE7222A40EB974D3499BAB262B5D8D7.sav**
+      
+</FileTree>
+
+
+
+
+
