@@ -4,6 +4,7 @@ description: Learn how to install mods and plugins on your Palworld dedicated se
 sidebar:
   label: Install Mods
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 If you're looking to mod your [Palworld server](https://www.gamehostbros.com/palworld-server-hosting/), here's how to do it. This guide covers installation for most .pak, .lua and UE4SS mods. You can find plugins and mods from sites like [Nexus Mods](https://www.nexusmods.com/palworld/mods/).
@@ -47,4 +48,37 @@ Here are some things to consider **before** installing mods.
 
 :::danger
 `Pal/Binaries/Win64/ue4ss/Mods` and `Pal/Content/Paks/~mods` are the most common folders, however some Palworld mods may require a different location. Please check the documentation for the plugins you're downloading.
+:::
+
+### Lua Mod Installation Example
+
+Lua mods are mods that come in folders and contain the following file structure:
+
+<FileTree>
+ - Pal
+   - Binaries
+     - Win64
+       - ue4ss
+         - Mods
+           - **UploadedMod**
+             - **scripts**
+               - **main.lua**
+</FileTree>
+
+For advanced Lua modding information consider reading this resource:
+
+- [Lua Modding Documentation](https://pwmodding.wiki/docs/category/lua-modding)
+
+### Pak Mod Installation Example
+
+<FileTree>
+ - Pal
+   - Content
+     - Paks
+       - **~Mods**
+         - **UploadedMod.pak**
+</FileTree>
+
+:::note
+Always follow the mod authors instructions, if a .pak mod says it needs to be installed into the `LogicMods` folder, place it there instead. ~mods is a folder made to keep your mods organized.
 :::
