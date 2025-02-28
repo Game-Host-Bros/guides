@@ -1,0 +1,57 @@
+---
+title: How To Add Admins To Your Sons Of The Forest Server
+description: Learn how to add admins to your Sons of the forest dedicated server.
+sidebar:
+  label: Adding Admins
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+Here is how to add admins to your [Sons Of The Forest server](https://www.gamehostbros.com/sons-of-the-forest-server-hosting/). In SoTF admins are able to enter commands to enable things such as godmode, superjump, item spawning and more. If you're running a community becoming an admin is a vital part of managing your server.
+
+## Setting Yourself As An Admin In SoTF
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
+2. Go to `Management > File Manager`.
+3. Navigate to `/serverconfig/ownerswhitelist.txt`.
+4. On a new line, add your [SteamID64](https://www.steamidfinder.com/) and click save.
+5. Start your server.
+</Steps>
+
+<FileTree>
+  - serverconfig
+    - **ownerswhitelist.txt** edit me!        
+</FileTree>
+
+## Using SoTF Admin Commands
+
+The Sons of the forest in-game admin menu is disabled by default, here's how to enable the admin menu and use admin commands on your server. 
+
+<Steps>
+1. [Connect](/games/sons-of-the-forest/connect-to-your-server/) to your server.
+2. Once in-game type `cheatstick` to enable the developer console.
+3. Press `f1` to open the admin menu.
+4. Enter your desired command, for example `speedyrun on`.
+</Steps>
+
+## Admin Commands
+
+Here's a list of some common admin commands that you can currently use on your SoTF server.
+
+Commands such as speedyrun, superjump and godmode are typically considered as fun commands, use these at your own discrection. 
+
+:::note
+Not all commands available in singleplayer are compatible with dedicated servers, furthermore some commands listed in the admin menu are no longer functional in-game.
+:::
+
+| Command | Description |
+|---------|-------------|
+| addallitems | Adds all items to your inventory |
+| additem [ItemID] | Adds a specific item to your inventory, you can find a list of ItemID's [here](https://sonsoftheforest.fandom.com/wiki/Item_Id) |
+| buffstats | Buffs stats such as your hydration and stamina |
+| cavelight on / off | Makes your character become a light source |
+| godmode on / off | Toggles invincibility mode |
+| spawnitem 78 [value] | Spawns x amount of logs |
+| speedyrun on / off | Toggles speedyrun, pair this with godmode |
+| superjump on / off | Toggles superjumping, pair this with godmode |

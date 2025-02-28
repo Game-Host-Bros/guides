@@ -11,15 +11,17 @@ import { Steps } from '@astrojs/starlight/components';
 ## Changing Difficulty Presets
 
 :::note
-You must create a new world to change settings. You can do so by changing World Name in Startup Parameters.
+You must create a new world to change difficulty settings. You can do so by changing World Name in Startup Parameters.
 :::
 
 <Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
-2. Go to `Configuration > Startup Parameters`.
-3. Look for `Difficulty` and then select the preset you want.
+2. Go to `Management > File Manager` and open `MoriaServerConfig.ini`.
+3. Under [World.Create] look for `Difficulty.Preset` and enter one of the following presets:
+   - **story**, **solo**, **normal** or  **hard**.
+4. Go to `Configuration > Startup Parameters`.
 4. Change `World Name` to generate a new world.
-5. Restart your server.
+5. Start your server.
 </Steps>
 
 ## Custom Difficulty Configuration
@@ -28,11 +30,11 @@ Here's how to set custom difficulty settings in LotR Return to Moria, this is al
 
 <Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
-2. Go to `Configuration > Startup Parameters`.
-3. Look for `Difficulty` and then select `Custom`.
-4. Change `World Name` to generate a new world.
-5. Go to `Management > File Manager` and open `MoriaServerConfig.ini`.
-6. Under [World.Create], adjust the settings you wish and then click save.
+2. Go to `Management > File Manager` and open `MoriaServerConfig.ini`.
+3. Under [World.Create] edit `Difficulty.Preset` to `custom`.
+4. Edit your desired custom difficulty settings and click save.
+5. Go to `Configuration > Startup Parameters`.
+6. Change `World Name` to generate a new world.
 7. Start your server.
 </Steps>
 
