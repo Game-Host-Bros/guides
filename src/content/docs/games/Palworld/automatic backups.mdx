@@ -6,17 +6,22 @@ sidebar:
 ---
 import { Steps } from '@astrojs/starlight/components';
 
-At Game Host Bros, we automatically take a backup snapshot of your [Palworld](https://www.gamehostbros.com/palworld-server-hosting/) save files every hour the server is live. This means if there is a failed update or a bug you're able to restore to a previous time. Giving you access to saved data in case something goes wrong. 
+At Game Host Bros, we automatically take a backup snapshot of your [Palworld](https://www.gamehostbros.com/palworld-server-hosting/) save files every few hours the server is live. This means if there is a failed update or a bug you're able to restore to a previous time. Giving you access to saved data in case something goes wrong. 
 
-## How to Access the Automatic Palworld Backups
+##  Entering Recovery Mode and Restoring Backups :badge[Recommended]{variant=success}
+
+The recommended method for restoring your Palworld server with minimal effort and risk.
 <Steps>
 1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Palworld Server.
-2. On the left, navigate to `Management` then `File Manager`.
-3. Find your automatic backups in `Pal/Saved/SaveGames/0/[Your Save File]/backup/world`.
+2. On the left, navigate to `Configuration > Startup Parameters`.
+3. Find the `Boot Mode` setting and change it from `Normal` to `Recovery Mode`.
+4. Look for the time you want to restore from, and enter a number to restore that backup.
+5. Change the server `Boot Mode` back to `Normal` and restart your server.
 </Steps>
-## Restoring From Automatic Backups
 
-This is how you can restore from an existing automatic backup.
+## Manual Backup Restoration Guide
+
+For advanced users who need direct control over the restoration process or when Recovery Mode is unavailable.
 <Steps>
 1. Download the backup you want to restore from `Pal/Saved/SaveGames/0/[Your Save File]/backup/world` and extract the downloaded file. 
 2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Palworld server.
