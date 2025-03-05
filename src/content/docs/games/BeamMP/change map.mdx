@@ -19,6 +19,7 @@ Here is how you can use some of the default maps that come with BeamMP.
 </Steps>
 
 ## Uploading Custom Maps
+
 Custom maps are normally provided to you in a .zip format. To use custom maps on your BeamMP server, you'll need to upload them via SFTP. For this example we will be uploading a file called `custom_map.zip` to our server.
 
 <Steps>
@@ -43,3 +44,7 @@ This is how your files should look if everything is uploaded correctly.
     - ...
 
 </FileTree>
+
+:::note
+If you're using a plugin such as BeamJoy to control map changes, you **must** set `Default Map` to `Disable Start Map` in Configuration > Startup Parameters, doing so will mean our panel will no longer control the map setting.
+:::
