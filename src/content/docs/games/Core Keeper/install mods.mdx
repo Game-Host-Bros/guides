@@ -1,0 +1,73 @@
+---
+title: How To Install Mods On Core Keeper
+description: Learn how to install mods on your Core Keeper dedicated server.
+sidebar:
+  label: Install Mods
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide you will learn how to install Mods to your [Core Keeper server](https://www.gamehostbros.com/core-keeper-server-hosting/). You can download Mods from [mods.io](https://Mod.io/g/corekeeper).
+
+This guide will cover how to install Mods locally to your own game and your Core Keeper server.
+
+## Installing Core Keeper Mods Locally
+
+:::caution
+Make sure you install **All** the required dependencies for each Mod you're installing. These dependencies are listed on each Mods download page.
+
+Be sure to check for Mod updates as they may break after new Core Keeper updates!
+:::
+
+<Steps>
+1. Open Core Keeper.
+2. Select `Mods` in the menu.
+3. Subscribe to your desired Mods.
+4. Confirm that they are enabled under `Collections`.
+5. Restart Core Keeper to load your enabled Mods.
+</Steps>
+
+## Uploading Core Keeper Mods To Your Server
+
+:::caution
+Make sure you upload **All** the required dependencies for each Mod you're installing. These dependencies are listed on each Mods download page.
+
+Always check for Mod updates as they may break after new Core Keeper updates!
+
+Additionally, keep in mind that some Mods will only need to be installed on your local game client, while others may **require** installation on both your server and game client.
+:::
+
+
+**Downloading Core Keeper Mods**
+
+<Steps>
+1. Go to this website [mods.io](https://mod.io/g/corekeeper).
+   - In the left-hand sidebar, optionally filter by `Server`.
+2. Select the Mod you wish to download.
+3. In the right-hand sidebar, click the Manual Download button under `Download files manually`.
+</Steps>
+
+**Uploading Mods To Your Server**
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Core Keeper server.
+2. Go to `Management > File Manager`. 
+3. Navigate to `/CoreKeeperServer_Data/StreamingAssets/` and create a folder named `Mods`.
+4. Enter Mods and create another folder named after the Mod you're installing.
+5. Open your new folder and [Upload](/getting-started/uploading-files/) your downloaded `Mod.zip` file.
+6. Once uploaded, decompress the `Mod.zip` archive.
+7. Start your server
+</Steps>
+
+The example below uses the mod [ChestLabels](https://mod.io/g/corekeeper/m/chestlabels), this mod in particular **must** be installed on both your server and local Core Keeper game to function.
+
+Here's what your server should now look like:
+<FileTree>
+  - CoreKeeperServer_Data
+    - StreamingAssets
+      - **Mods** Create me!
+        - **ChestLabels** Create me!
+          - **Mod.zip** Decompress/Extract me!
+          - **ModManifest.json**
+          - **Scripts/**
+</FileTree>
