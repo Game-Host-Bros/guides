@@ -1,0 +1,37 @@
+---
+title: How To Find Your World Seed In Valheim
+description: Learn how to find your World Seed on your Valheim dedicated server.
+sidebar:
+  label: Find World Seed
+---
+import { Steps } from '@astrojs/starlight/components'
+
+Here's a simple guide to retrieve the world seed for your [Valheim server](https://www.gamehostbros.com/valheim-server-hosting/) using console commands. World seeds allow you to explore your map on external websites, or can be used to generate new copies of your world in singleplayer.
+
+## Enabling Console
+
+The Valheim in-game console is disabled by default, here are the steps to enable console if you wish to use commands while playing on your server.
+
+<Steps>
+1. Open Steam.
+2. Navigate to `Library`.
+3. `Right-click` Valheim and enter properties.
+4. Type `-console` in launch options.
+5. Close the window and start your game.
+</Steps>
+
+## Finding Your World Seed
+
+<Steps>
+1. [Connect](https://guides.gamehostbros.com/games/valheim/connect-to-your-server/) to your Valheim Server.
+2. Press `f5` to open Console.
+3. Type `printseeds` to print your world seed. 
+</Steps>
+
+:::tip
+After running the `printseeds` command, you'll see an output that looks something like this:
+
+- -925266684/MXADgi5IxT
+
+Your world seed is the code after the /, in this example the world seed is `MXADgi5IxT`.
+:::
