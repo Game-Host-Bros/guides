@@ -11,146 +11,251 @@ In this tutorial, we will guide you through the process of uploading an existing
 
 You may also refer to this guide on how to [upload files to your game server.](/getting-started/uploading-files/)
 
-If you get stuck at any time, Game Host Bros offers free world transfers. Just reach out to a bro on [Discord](https://discord.gg/FN4XgbAwzr)
-
 :::danger
-You cannot transfer Xbox saves from the cloud to a dedicated server.
+You cannot transfer Xbox Console saves from the cloud to a dedicated server. Saves must come from a PC.
+:::
+
+:::tip
+Select the guide relevant to your platform here:
+
+- [Transfer From Another Palworld Server Provider](/games/palworld/upload-save/#transfer-from-another-palworld-server-provider)
+- [Transfer From A Steam Co-op Save](/games/palworld/upload-save/#transfer-from-a-palworld-steam-co-op-save)
+- [Transfer From A PC Game Pass Co-op Save](/games/palworld/upload-save/#transfer-from-a-pc-game-pass-co-op-save)
+
+If you get stuck at any time, Game Host Bros offers free world transfers. Just reach out to a bro on [Discord](https://discord.gg/FN4XgbAwzr)
 :::
 
 ## Transfer From Another Palworld Server Provider
+
 If you already have a Palworld server with another provider then this is how you migrate your existing save to Game Host Bros.
+
 <Steps>
 1. On your previous existing server, navigate to `Pal/Saved/SaveGames/0/` and backup the folder with random numbers and letters.
 2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Palworld server.
-3. Go to `Management > File Manager`.
-4. Once there navigate to `Pal/Saved/SaveGames/0/`.
-5. Delete the default save folder.
-6. Using [SFTP](/getting-started/uploading-files/) upload your existing save folder and copy the folder id/name. 
-7. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`.
-8. Replace the id/name with your existing folder name.
-9. Start your server.
+3. Go to `Management > File Manager`
+4. Navigate to `Pal/Saved/SaveGames/0/` and delete the default save folder.
+5. Using [SFTP](/getting-started/uploading-files/) upload your existing save folder and copy the folder id/name. 
+6. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`.
+7. Replace the id/name with your existing folder name.
+8. Start your server.
 </Steps>
 
 Here's how it should look when uploaded correctly.
 <FileTree>
 
-- PAL
-  - Save
-    - Savegame
+- Pal
+  - Saved
+    - Savegames
       - 0
         - **84B5E2264EC387DEDB43179D666031A1**
           - **Level.sav**
           - **LevelMeta.sav**
           - **Players/**
+          - WorldOption.sav Delete me!
 </FileTree>
-
-:::danger
-If you have a WorldOptions.sav file in `Pal/Saved/SaveGames/0/84B5E2264EC387DEDB43179D666031A1/`, you must delete it otherwise it will cause issues with changing settings or connecting to your server.
-:::
 
 ## Transfer From A Palworld Steam Co-op Save
+
 If you've been hosting Palworld on your PC locally, then follow this guide. This is only for Steam users.
+
 :::caution
 If you're moving from a local Co-op save file, the host will have to start fresh. The saved data only applies to the externally connected players.
+
+The only way to [transfer your host character](/games/palworld/upload-save/#transferring-your-host-character) is to use 3rd party save modification tools.
 :::
+
 <Steps>
 
-1. Press `Win + R` and paste this.
+1. Press `Windows Key + R` and paste this.
 
    ```
-   %LOCALAPPDATA%\PAL\Saved\SaveGames
+   %LOCALAPPDATA%\Pal\Saved\SaveGames
    ```
 
-2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and stop your Palworld server.
+2. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and `Stop` your Palworld server.
 3. Go to `Management > File Manager`
-4. Once there navigate to `Pal/Saved/SaveGames/0/`
-5. Delete the default save folder.
-6. Using [SFTP](/getting-started/uploading-files/) upload your existing save folder and copy the folder id/name. 
-7. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`
-8. Replace the id/name with your existing folder name.
-9. Start your server.
+4. Navigate to `Pal/Saved/SaveGames/0/` and delete the default save folder.
+5. Using [SFTP](/getting-started/uploading-files/) upload your existing save folder and copy the folder id/name. 
+6. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`
+7. Replace the id/name with your existing folder name.
+8. Start your server.
 </Steps>
 
 Here's how it should look when uploaded correctly.
 
 <FileTree>
 
-- PAL
-  - Save
-    - Savegame
+- Pal
+  - Saved
+    - SaveGames
       - 0
         - **84B5E2264EC387DEDB43179D666031A1**
           - **Level.sav**
           - **LevelMeta.sav**
           - **Players/**
+          - WorldOption.sav Delete me!
 </FileTree>
-
-:::danger
-If you have a WorldOptions.sav file in `Pal/Saved/SaveGames/0/84B5E2264EC387DEDB43179D666031A1/`, you must delete it otherwise it will cause issues with changing settings or connecting to your server.
-:::
 
 ## Transfer From A PC Game Pass Co-op Save
 
 :::caution
 If you're moving from a local Co-op save file, the host will have to start fresh. The saved data only applies to the externally connected players.
 
+The only way to [transfer your host character](/games/palworld/upload-save/#transferring-your-host-character) is to use 3rd party save modification tools.
+
 This guide will likely change based on future updates, the most up-to-date steps can be found here: https://github.com/deafdudecomputers/PalWorldSaveTools/blob/main/README.md
 :::
 
 Unlike Steam, migrating PC Game Pass Co-op saves will require additional steps and specific tools to convert your map data so all of your buildings can be loaded, here's the easiest way to do it.
 
-### Required Tools
+## Migrating A PC Game Pass Co-op Save
 
+:::danger
+Any save modifications could possibly bring unintended consequences, make a backup and do this at your own risk!
+:::
 
-Install these tools before proceeding, if you're only trying to locate your save and would like us to do this migration for you, you'll only need to install and run XGP Save Extractor to retrieve your save file.
+**Required Tools**
 
-- [XGP Save Extractor](https://github.com/Z1ni/XGP-save-extractor/releases)
+Install these tools before proceeding:
+
 - [Python](https://www.python.org/downloads/)
 - [Palworld Save Tools](https://github.com/deafdudecomputers/PalWorldSaveTools/releases)
 
 <Steps>
-
-1. Download, extract and run [XGP Save Extractor](https://github.com/Z1ni/XGP-save-extractor/releases).
-2. Locate the save you wish to upload, it should look something like this.
-
-    <FileTree>
-    
-    - palworld_43714616561_2024-09-24_00_29_56
-      - **84B5E2264EC387DEDB43179D666031A1**
-        - **Level/**
-          - **01.sav** Important! This is your level data on XGP.
-        - **Players/**
-        - **LevelMeta.sav**
-        - LocalData.sav This is not required.
-        - WorldOptions.sav Delete this.
-    </FileTree>
-    These next steps will cover renaming 01.sav to Level.sav and then using [Palworld Save Tools](https://github.com/deafdudecomputers/PalWorldSaveTools/releases) to convert your save so it can be loaded on your server.    
-
-3. Download [Palworld Save Tools](https://github.com/deafdudecomputers/PalWorldSaveTools/releases) and extract the contents.
-4. Rename your `01.sav` file to `Level.sav` then place it into the `PalWorldSave` folder inside Palworld Save Tools.
-5. In the the Save Tools main folder open `PalWorldSaveToolsMenu`, choose `1` Convert Level.sav file to Level.json.
-6. Once completed press any key, then choose `2` Convert Level.json file back to Level.sav.
-7. Delete the `Level` folder in your save files and then drag your newly converted Level.sav in.
-8. Using [SFTP](/getting-started/uploading-files/) upload your existing save folder to `Pal/Saved/SaveGames/0/` and copy the folder id/name.
-9. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`.
-10. Replace the id/name with your existing folder name.
-11. Start your server.
-    
-    This is what your server files should now look like.
-    <FileTree>
-
-     - PAL
-      - Save
-        - Savegame
-          - 0
-            - **84B5E2264EC387DEDB43179D666031A1**
-              - **Level.sav** Formerly known as Level/01.sav
-              - **LevelMeta.sav**
-              - **Players/**
-    </FileTree>
-
+1. After downloading and extracting [Palworld Save Tools](https://github.com/deafdudecomputers/PalWorldSaveTools/releases), open `menu.py` in it's extracted folder.
+2. Choose `5` convert Game Pass to Steam.
+3. Select the save you wish to convert. If you have multiple saves and don't know which to choose follow [these steps](/games/palworld/upload-save/#locating-your-pc-game-pass-save-optional).
+4. Find your converted save in the `GamePassSave` folder of Palworld Save Tools.
 </Steps>
 
+:::note
+**If you need some help from this point onwards you can reach out to us and our staff can complete the migration**
+:::
+
+<Steps>
+5. Using [SFTP](/getting-started/uploading-files/) upload your converted save folder to `Pal/Saved/SaveGames/0/` and copy the folder id/name.
+6. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`.
+7. Replace the id/name with your existing folder name.
+8. Start your server.
+</Steps>
+
+This is what your server files should now look like:
+
+<FileTree>
+
+- Pal
+  - Saved
+    - SaveGames
+      - 0
+        - **84B5E2264EC387DEDB43179D666031A1**
+          - **Level.sav**
+          - **LevelMeta.sav**
+          - **Players/**
+          - WorldOption.sav Delete me!
+</FileTree>
+
+## Solo/Co-op Host Character Transfers (Experimental)
+
 :::danger
-If you have a WorldOptions.sav file in `PAL/Save/Savegames/0/84B5E2264EC387DEDB43179D666031A1/`, you must delete it otherwise it will cause issues with changing settings or connecting to your server.
+Any save modifications could possibly bring unintended consequences, make a backup and do this at your own risk!
+:::
+
+After uploading an existing save to your server from either Steam or PC Game Pass, do the following if you want to transfer your host character data to your newly created server character.
+
+### Preparing The Transfer
+
+<Steps>
+1. [Connect](/games/palworld/connect-to-your-server/) to your Palworld server and create a new character.
+2. Wait for your server to save (4 Minutes by default).
+   - Alternatively type `save` into your server console under `System > Console` of the [Game Host Bros Game Panel](https://panel.gamehostbros.com/).
+3. After saving, `Stop` your server.
+4. Using [SFTP](/getting-started/uploading-files/) download your `Level.sav` file and `Players` folder, found in `Pal/Saved/SaveGames/0/YourSaveFile`.
+</Steps>
+
+<FileTree>
+
+- Pal
+  - Saved
+    - SaveGames
+      - 0
+        - 84B5E2264EC387DEDB43179D666031A1
+          - **Level.sav** Download me!
+          - LevelMeta.sav
+          - **Players/** Download me!
+</FileTree>
+  
+### Transferring Your Host Character 
+
+**Required Tools**
+
+Install these tools before proceeding:
+
+- [Python](https://www.python.org/downloads/)
+- [Palworld Save Tools](https://github.com/deafdudecomputers/PalWorldSaveTools/releases)
+
+After following the steps above, here's how to use Palworld Save Tools to transfer your co-op host character to your new character.
+
+Ensure your server is stopped before proceeding.
+
+<Steps>
+1. Open the extracted [Palworld Save Tools](https://github.com/deafdudecomputers/PalWorldSaveTools/releases) folder and delete the contents of the `PalworldSave` folder.
+2. Move your downloaded `Level.sav` file and `Players` folder into `PalworldSave`.
+3. Open `menu.py`.
+4. Choose `12` Character Transfer.
+5. Select your source level file `Level.sav` from the `PalworldSave` folder.
+6. In the top field, select the host character with an ID of `00000001.sav`. 
+7. In the bottom field, select your newly created character to transfer the data to and click Start Transfer.
+   - Optionally enable Keep old Guild ID after transfer.
+8. Using [SFTP](/getting-started/uploading-files/) upload `Players` and `Level.sav` to your server again, replacing any existing files.
+9. Start your server.
+</Steps>
+
+
+<FileTree>
+
+- Pal
+  - Saved
+    - SaveGames
+      - 0
+        - 84B5E2264EC387DEDB43179D666031A1
+          - **Level.sav** Post Transfer Version!
+          - LevelMeta.sav
+          - **Players/** Post Transfer Version!
+</FileTree>
+
+## Troubleshooting
+
+Here are some common issues you may encounter, and how to resolve them.
+
+### No Map Data
+
+Not having map data means the steps relating to GameUserSettings.ini were overlooked, or this data has been deleted from your local game client, the steps for GameUserSettings.ini are the following:
+
+<Steps>
+1. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and `Stop` your Palworld server.
+2. Go to `Management > File Manager`.
+3. Copy the name of your existing save folder uploaded to `Pal/Saved/SaveGames/0/`, for example `84B5E2264EC387DEDB43179D666031A1`.
+4. Navigate to `Pal/Saved/Config/WindowsServer/GameUserSettings.ini` and look for the line that starts with `DedicatedServerName=`.
+5. Replace the id/name with your existing folder name.
+6. Start your server.
+</Steps>
+
+### Locating Your PC Game Pass Save (Optional)
+
+This is optional, follow these steps if you have multiple saves and don't know which save file to convert using Palworld Save Tools.
+
+<Steps>
+1. Load into your world in Palworld.
+2. Save and exit Palworld.
+3. Press `Windows Key + R` and paste this.
+
+   ```
+   %LOCALAPPDATA%\Packages\PocketpairInc.Palworld_ad4psfrxyesvt\SystemAppData\wgs\
+   ```
+4. Open the folder with the random numbers, there you'll see even more folders with random names. 
+5. Sort by date modified, the most recently modified folder is the correct save file name to convert.
+</Steps>
+
+:::tip
+Ensure showing hidden folders is enabled under `View > Show > Hidden Items`.
 :::
