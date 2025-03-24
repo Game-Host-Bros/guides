@@ -9,12 +9,12 @@ sidebar:
     variant: tip
 ---
 
-In this guide I’ll show you the basics of running your new Game Host Bros server. Think of this as a crash course into game server hosting.
+In this guide I'll show you the basics of running your new Game Host Bros server. Think of this as a crash course into game server hosting.
 
 If you don't have a server with us yet, [click here](https://www.gamehostbros.com/) and get one now.
 
 :::danger
-**If you get stuck at any time or have questions**, don’t be afraid to reach out to a bro with a support ticket or on [Discord](https://discord.gg/FN4XgbAwzr). We are here to help you get everything set up the way you want it.
+**If you get stuck at any time or have questions**, don't be afraid to reach out to a bro with a support ticket or on [Discord](https://discord.gg/FN4XgbAwzr). We are here to help you get everything set up the way you want it.
 :::
 
 ## The Game Panel
@@ -25,7 +25,7 @@ If you don't see the `Server Installed` email in your inbox, please check your s
 ![Screenshot of the Game Host Bros Game Panel](../../../assets/guide-images/dashboard.png)
 
 ## Starting & Stopping Your Server
-Once you’re in the game panel, you can simply click the server you want to manage, and you will be brought to the server `Console`. This is where you can `Start`,`Stop`, `Restart` your server and type commands. 
+Once you're in the game panel, you can simply click the server you want to manage, and you will be brought to the server `Console`. This is where you can `Start`,`Stop`, `Restart` your server and type commands. 
 ![Game Host Bros Console](../../../assets/guide-images/console.png)
 
 ## Edit Server Settings
@@ -45,6 +45,32 @@ These settings are different for each game.
 To connect your server, you will need the IP address. We display this at the top left of every page. Simply click on it to copy. How you connect using the IP address is different for each game, but we include a "Connect to Your Server" guide for each game in the sidebar here.
 ![Game Host Bros IP Address](../../../assets/guide-images/ipaddress.png)
 
-Congratulations 🎉 you've finished the beginners guide crash course! See it wasn't that hard. Now check out the other guides we have here to find out how to do other things like adding other users to your server, game specific guides and more.
+## Game-Specific Guides
+Congratulations 🎉 you've finished the beginners guide crash course! See it wasn't that hard. Now check out our game-specific guides to find help for your particular game.
+
+import { getCollection } from 'astro:content';
+
+export const GamesList = async () => {
+  // Get all games from the content collection
+  const games = await getCollection('docs', (entry) => {
+    return entry.slug.startsWith('games/') && entry.slug.split('/').length === 2;
+  });
+  
+  return (
+    <ul>
+      {games.map((game) => (
+        <li key={game.slug}>
+          <a href={`/games/${game.slug.split('/')[1]}`}>
+            {game.data.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+<GamesList />
+
+You can also find out how to do other things like adding users to your server and more in our other guides.
 
 Remember, the bros always have your back so come and [join our Discord](https://discord.gg/FN4XgbAwzr) and let's get your server set up the way you want it.
