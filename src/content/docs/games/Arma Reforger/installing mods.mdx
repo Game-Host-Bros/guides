@@ -1,0 +1,105 @@
+---
+title: How To Install Mods On Your Arma Reforger Server
+description: Learn how to install mods to your Arma Reforger dedicated Server
+sidebar:
+  label: Install Mods
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Adding mods to Arma Reforger is a great way to mix-up the gameplay and try new things, whether it's a simple quality-of-life mod or a total overhaul, there'll likely be something that's perfect for you. 
+
+This guide will cover where to find and how to install mods on your [Arma Reforger server](https://www.gamehostbros.com/arma-reforger-server-hosting/).
+
+## Downloading And Locating Arma Reforger Mods
+
+Arma Reforger mods are downloaded through the in-game Workshop menu, after you've downloaded your desired mods and if required their listed dependencies, follow the steps below to retrieve the necessary mod data to install them on your server
+
+**Locating Arma Reforger Mods**
+
+<Steps>
+1. Press `Windows Key + R` on your keyboard.
+2. Copy and paste this:
+   ```
+   %USERPROFILE%\Documents\My Games\ArmaReforger\addons
+   ```
+   
+3. Here you will find your mods, open the folder of a mod you wish to install.
+4. Open `ServerData.json`.
+5. Copy the following data, `version`, `id`, and `name`. 
+</Steps>
+
+Here's a template that you can copy your mods version, id, and name into, this will be useful for the next steps of installing this mod on your server.
+
+```xml title="template"
+      {
+        "modId": "59674C21AA886D57",
+        "name": "BetterMuzzleFlashes 2.0",
+        "version": "2.0.8"
+      }
+   ```
+## Installing Mods On Your Arma Reforger Server
+
+<Steps>
+1. Access the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and `Stop` your Arma Reforger Server.
+2. Go to `Management > File Manager`.
+3. Open `config.json` and find the `mods` line.
+
+   - Here is an example of what this will look like without any mods:
+    ```json title="config.json"
+        "mods": [],
+      ```
+4. Add your mod `version`, `id`, and `name`, following this example:
+   ```json title="config.json"
+     "mods": [
+      {
+        "modId": "59674C21AA886D57",
+        "name": "BetterMuzzleFlashes 2.0",
+        "version": "2.0.8"
+      }
+      ],
+    "name": "Hosted By Game Host Bros",
+     ```
+
+5. Start your server.
+</Steps>
+
+<details>
+<summary>Multiple Mod Template</summary>
+
+```json title="config.json"
+     "mods": [
+    {
+      "modId": "59674C21AA886D57",
+      "name": "BetterMuzzleFlashes 2.0",
+      "version": "2.0.8"
+    },
+    {
+      "modId": "59651354B2904BA6",
+      "name": "BetterHitsEffects 3.0 Alpha",
+      "version": "3.0.1"
+    },
+    {
+      "modId": "59A30ACC02650E71",
+      "name": "Night Vision System",
+      "version": "1.1.26"
+    }
+  ],
+  "name": "Hosted By Game Host Bros",
+     ```
+</details>
+
+:::tip
+Did you know? As an alternative method:
+
+You can select the `Mod Preset` icon in the Arma Reforger main menu, then select the `JSON` tab, click `Copy to clipboard` to quickly copy the data of your locally installed mods.
+
+We recommend sorting and editing this list, especially if there are a lot of mods included.
+:::
+
+:::note
+We recommend using a json validator tool to ensure that your settings are formatted correctly, an incorrectly formatted file will cause your server to crash.
+:::
+
+
+
+
