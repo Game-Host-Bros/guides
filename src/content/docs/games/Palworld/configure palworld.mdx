@@ -32,6 +32,7 @@ Here is a list of all the settings inside of your PalWorldSettings.ini file as w
 | bAutoResetGuildNoOnlinePlayers | False | Enable disbanding Guilds when none of the member players have been online (based on duration specified by AutoResetGuildTimeNoOnlinePlayers) |
 | bBuildAreaLimit | False | Prohibit building near structures such as fast travel. |
 | bCanPickupOtherGuildDeathPenaltyDrop | False | Allow players to pick up items dropped on death by players from Guilds other than their own |
+| bCharacterRecreateInHardcore | False | Toggles whether players can create a new character after a hardcore death. |
 | bEnableAimAssistKeyboard | False | Enables keyboard aim assist |
 | bEnableAimAssistPad | True | Enables aim pad aim assist |
 | bEnableDefenseOtherGuildPlayer | False | Enables or disables the defense of other guild players |
@@ -103,10 +104,12 @@ Here is a list of all the settings inside of your PalWorldSettings.ini file as w
 ## Importing WorldOptions.sav Settings
 
 :::danger
-As of the 2nd of December, 2024, we no longer support using WorldOptions.sav on our servers. If you upload this file it will be renamed to `WorldOptions.sav.disabled`. This file is no longer supported for Xbox, and every setting is directly in the panel now so it simply causes issues using if not configured correctly.
+As of the 2nd of December, 2024, we no longer support using WorldOption.sav on our servers by default. If you upload this file it will be renamed to `WorldOption.sav.disabled`. This file is no longer supported and every setting is directly in the panel now.
+
+If you want to use WorldOption.sav you can enable the use of this file in Configuration > Startup Parameters. This file must be configured correctly otherwise it will cause issues.
 :::
 
-1. Click [here](https://palworldoptions.com/) and import your `WorldOptions.sav` file.
+1. Click [here](https://palworldoptions.com/) and import your `WorldOption.sav` file.
 2. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and once there, select your Palworld Service.
-3. Go to `Configuration > Startup Parameters` and change the settings to match your WorldOptions.sav file.
+3. Go to `Configuration > Startup Parameters` and change the settings to match your WorldOption.sav file.
 4. Restart your server.
