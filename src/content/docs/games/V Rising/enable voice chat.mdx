@@ -11,15 +11,17 @@ In this guide you will learn how to enable voice chat on your [V Rising server](
 ## Setup The Vivox DLLs
 
 <Steps>
-1. Visit [Unity Gaming Services](https://dashboard.unity3d.com/gaming/login) and create a new account. 
-2. From the Dashboard, click `Create Project`.
-3. Navigate to `Multiplayer > Voice and Text Chat (Vivox)`.
-4. Click `Setup Voice Chat`.
+1. Visit [Unity Gaming Services](https://dashboard.unity3d.com/vivox) and create a new account. 
+2. From the Dashboard, click `Projects` and create a project.
+3. After creating a project, from the Dashboard click `Products`.
+4. Search for `Vivox Voice and Text Chat` and click Launch.
 5. Navigate to the `Setup Guide`. 
-6. Click `Custom` and select `Core Windows SDK`.
-7. Extract the downloaded file and navigate to `\vivox-sdk\SDK\Libraries\Release\x64`
-8. Using [SFTP](/getting-started/uploading-files/), upload the files to `/VRisingServer_data/Plugins/x86_64` overwriting any existing files.
+6. Click `Overview` and then `Next` to go through the setup process.
+7. Click `Packages & SDKs` and download `Core Windows SDK`.
+8. Extract the downloaded file and navigate to `\vivox-sdk\SDK\Libraries\Release\x64`
+9. Using [SFTP](/getting-started/uploading-files/), upload the files to `/VRisingServer_data/Plugins/x86_64` overwriting any existing files.
 </Steps>
+
 ## Creating ServerVoipSettings.json
 <Steps>
 1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your V Rising server.
@@ -45,7 +47,8 @@ In this guide you will learn how to enable voice chat on your [V Rising server](
 
 ## Getting your Vivox credentials
 <Steps>
-1. In the left-hand side bar click `Credentials`.
+
+1. In the left-hand side bar of the Vivox Voice and Text Chat product click `Credentials`.
 2. Edit your `ServerVoiceSettings.json` file with the credentials provided.
    - **VOIPIssuer** = Token Issuer
    - **VOIPSecret** = Token Key
