@@ -12,7 +12,9 @@ In this tutorial, we will guide you through the process of uploading an existing
 If you get stuck at any time, Game Host Bros offers free save transfers. Just reach out to a bro on [Discord](https://discord.gg/FN4XgbAwzr)
 
 :::danger
-You **MUST** convert any single player save to a multiplayer save on your local PC first before uploading it to your server. Doing this means the host doesn't keep their inventory so store your items or give them to a friend first.
+You **MUST** convert any single player save to a multiplayer save on your local PC before uploading it to your server. 
+
+The host character doesn't migrate, so we recommend storing items or transferring them to a friend first.
 :::
 
 ## Locating Your Existing SOTF Save Files
@@ -21,7 +23,7 @@ To start, we first need to locate your existing save file on your local PC.
 
 <Steps>
 1. Press `Windows Key + R` on your keyboard.
-2. Copy and paste this, and then navigate to `{YOUR-STEAM-ID}\SinglePlayer` or `\Multiplayer`.
+2. Copy and paste this, and then navigate to `{YOUR-STEAM-ID}\Multiplayer` or `\Singleplayer`.
    ```
    %USERPROFILE%\AppData\LocalLow\Endnight\SonsOfTheForest\Saves\
    ```
@@ -33,46 +35,18 @@ To start, we first need to locate your existing save file on your local PC.
          - SonsOfTheForest
            - Saves
              - STEAMID64/
-               - Singleplayer
+               - Multiplayer
                  - **1922034134** Get this folder
                    - **SaveData.zip**
     </FileTree>
 
-## Converting Your Single Player Save To A Multiplayer Save.
 
-:::note
-If you're migrating a save that is already from a co-op server and found in your Multiplayer folder, you can skip these steps and move on to the next section.
-:::
-
-<Steps>
-1. After you've completed the above and copied your singleplayer save folder, place a copy into `%USERPROFILE%\AppData\LocalLow\Endnight\SonsOfTheForest\Saves\{YOUR-STEAM-ID}\Multiplayer`.
-
-2. To get here, press `Windows Key + R` and enter
-
-   ```
-   %USERPROFILE%\AppData\LocalLow\Endnight\SonsOfTheForest\Saves\
-   ```
-3. Navigate to `{YOUR-STEAM-ID}\Multiplayer` and paste your copied save folder.
-
-   <FileTree>
-       - Endnight
-         - SonsOfTheForest
-           - Saves
-             - STEAMID64/ 
-               - Multiplayer
-                 - **1922034134** Copied from Singleplayer!
-                   - **SaveData.zip**             
-    </FileTree>
-2. Open Sons of the forest and click `Multiplayer > Host Game > Continue > Load Game`, select the world you want and click `Start`.
-3. In-game manually save using a Tarp or Tent and then close the game.
-4. Copy your newly updated save folder from the `Multiplayer` folder.
-</Steps>
 
 ## Uploading An Existing SOTF Save To Your Server
 
 <Steps>
 1. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and `Stop` your Sons of the forest server.
-2. Go to `Management > File Manager`.
+2. Connect to your server with [SFTP]
 3. Navigate to `/serverconfig/Saves/DedicatedServer/Multiplayer/` and [Upload](/getting-started/uploading-files/) your save folder.
 4. Go to `Configuration > Startup Parameters` and change `Save Slot` to the name of your uploaded save folder.
 5. Start your server.
@@ -90,3 +64,30 @@ Using `1922034134` as an example Save ID (The name of your save folder). This is
           - **1922034134** Set as your Save ID in Startup Parameters!
             - **SaveData.zip**            
 </FileTree>
+
+## Converting Your Single Player Save To A Multiplayer Save.
+
+:::note
+If you're migrating a save that is already from a co-op server and found in your Multiplayer folder
+:::
+
+<Steps>
+1. [Locate Your Singleplayer Save](/games/sons-of-the-forest/upload-save/#locating-your-existing-sotf-save-files) and then create a copy.
+
+2. Go back to the previous folder and enter the `Multiplayer` folder.
+3. Paste your copied save folder.
+
+   <FileTree>
+       - Endnight
+         - SonsOfTheForest
+           - Saves
+             - STEAMID64/ 
+               - Multiplayer
+                 - **1922034134** Copied from Singleplayer!
+                   - **SaveData.zip**             
+    </FileTree>
+4. Open Sons of The Forest and click `Multiplayer > Host Game > Continue > Load Game`, select the world you want and click `Start`.
+5. In-game manually save using a Tarp or Tent and then close the game.
+6. Copy your newly updated save folder from the `Multiplayer` folder.
+7. [Upload This Save To Your Server](/games/sons-of-the-forest/upload-save/#uploading-an-existing-sotf-save-to-your-server)
+</Steps>
