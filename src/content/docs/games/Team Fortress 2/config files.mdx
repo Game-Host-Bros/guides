@@ -1,0 +1,90 @@
+---
+title: How To Edit TF2 Server Config Files
+description: Learn how to edit your config files on your TF2 dedicated server.
+sidebar:
+  label: Config Files
+---
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide you will learn how to edit the different [Team Fortress 2 server](https://www.gamehostbros.com/team-fortress-2-server-hosting/) config files such as `server.cfg`, `mapcycle.txt` and exactly what each one is for.
+
+## Main Configs in TF2
+By default, **the configuration files listed below will control 99% of the things you need to do on your server**. Here is an overview of each file and what commands/convars should go where. You can edit these files by going to `Management > File Manager`.
+
+### server.cfg
+**Default location:** `/tf/cfg/server.cfg`
+
+The `server.cfg` file is the main configuration file of your tf server, this is where you add custom commands which can control things such as, round timers, map timers and much more. 
+
+Here are some examples of common settings:
+
+- mp_timelimit - Time before map rotation.
+- mp_maxrounds - Maximum rounds before map change.
+- mp_roundtime - Sets round time.
+
+If you're looking for an in-depth list of Team Fortress 2 server commands, check out [this website](https://developer.valvesoftware.com/wiki/List_of_Team_Fortress_2_console_commands_and_variables).
+
+### mapcycle.txt
+**Default location:** `/tf/cfg/mapcycle.txt`
+
+The mapcycle file is where you edit your tf server map rotation, ensure that any map added has already been uploaded to the `tf/maps` folder on your server.
+
+By default this file won't be created, instead you will have templates. The default template is `mapcycle_default.txt`, to enable a custom mapcycle create a file named `mapcycle.txt` and add your desired maps. 
+
+<details>
+<summary>Default Contents</summary>
+
+- cp_gravelpit
+- cp_dustbowl
+- cp_granary
+- cp_well
+- ctf_2fort
+- tc_hydro
+- ctf_well
+- cp_badlands
+- pl_goldrush
+- cp_fastlane
+- ctf_turbine
+- pl_badwater
+- cp_steel
+- cp_egypt_final
+- cp_junction_final
+- plr_pipeline
+- pl_hoodoo_final
+- koth_sawmill
+- koth_nucleus
+- koth_viaduct
+- ctf_sawmill
+- cp_yukon_final
+- koth_harvest_final
+- ctf_doublecross
+- cp_gorge
+- cp_freight_final1
+- pl_upward
+- plr_hightower
+- pl_thundermountain
+- cp_coldfront
+- cp_mountainlab
+- cp_degrootkeep
+- cp_5gorge
+- pl_frontier_final
+- plr_nightfall_final
+- koth_lakeside_final
+- koth_badlands
+- pl_barnblitz
+- cp_gullywash_final1
+- cp_foundry
+- sd_doomsday
+- koth_king
+- cp_process_final
+- cp_standin_final
+- cp_snakewater_final1
+- cp_sunshine
+- cp_metalworks
+- pl_swiftwater_final1
+</details>
+
+## Plugin Config Files
+**Default location:** `/tf/addons/sourcemod/configs`
+
+If you're using [TF2 plugins](/games/team-fortress-2/installing-plugins/) such as Sourcemod, each plugin you install should generate a config file inside the Sourcemod plugin folder.

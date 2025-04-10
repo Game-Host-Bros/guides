@@ -9,15 +9,18 @@ import { Steps } from '@astrojs/starlight/components';
 Installing plugins on your [Team Fortress 2 server](https://www.gamehostbros.com/team-fortress-2-server-hosting/) can enhance gameplay and add new features. Game Host Bros makes it easy to enable SourceMod, which is required for most plugins.
 
 ## How To Enable SourceMod
+
 <Steps>
 1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
-2. Navigate to `Configuration > Startup Parameters` in the left sidebar.
-3. Find the `Enable Sourcemod` option and change its value to `1`.
+2. Navigate to `Tools > Mod Manager` in the left sidebar.
+3. Install Sourcemod.
 4. Restart your server.
 </Steps>
+
 ## How To Install Plugins
 
 Once SourceMod is enabled, you can start adding plugins to your server:
+
 <Steps>
 1. In the sidebar go to `Management > File Manager`.
 2. Navigate to the `tf/addons/sourcemod/plugins/` directory.
@@ -28,10 +31,12 @@ Once SourceMod is enabled, you can start adding plugins to your server:
 ## How To Install Extensions
 
 Some plugins require additional extensions to function properly. Here's how to install them:
+
 <Steps>
 1. In the file manager, go to the `tf/addons/sourcemod/extensions/` directory.
 2. Upload the extension files (ending in .so for Linux) to this directory.
 3. If the extension came with a .cfg file, upload it to `tf/cfg/sourcemod/`.
 4. Restart your server.
 </Steps>
+
 Always make sure you're using extensions compatible with Linux and your SourceMod version.
