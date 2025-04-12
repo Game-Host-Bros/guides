@@ -23,6 +23,19 @@ This issue is also caused by the above, your server **Requires** an AUTH key to 
 
 If unsuccessful, ensure your AUTH key is correct and that you've restarted your server, otherwise there's nothing to do except wait as BeamMP may be having network issues. You can view our own network status [here](https://status.gamehostbros.com/).
 
+## Stuck On Connecting (Mod Troubleshooting)
+
+If you're having trouble connecting to a server and are stuck on "Connecting" or "Start", in most cases this is caused by an incompatible mod and is especially common right after BeamNG has updated, follow these steps to Deactivate your mods before trying to load into your server:
+
+- Restart your PC/BeamMP
+- Open BeamMP
+- Go to `Repository > Mods Manager`
+- Click `Deactivate all mods`.
+- Then only re-enable `MultiplayerBeamMP`.
+- Connect to your server.
+
+If this doesn't resolve the issue, temporarily rename the `Resources/Client` folder on your server and then restart, doing this will disable mods on your server, then try connecting to your server without mods, If successful you've confirmed it's a mod related issue. To troubleshoot mods, start by removing/disabling half of the mods on your server and then begin testing. We highly recommend using [SFTP](https://guides.gamehostbros.com/getting-started/uploading-files/) to drag multiple mods in and out of your Client folder to quickly narrow down the issue.
+
 ## BeamMP Won't Start
 
 - Restart your PC.
