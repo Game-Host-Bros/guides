@@ -10,7 +10,7 @@ Here's how you can locate the and edit the config file for your [Palworld server
 
 ## How To Change Settings On Palworld
 <Steps>
-1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/).
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Palworld server.
 2. Go to `Configuration > Startup Parameters`.
 3. Change the settings you want.
 4. Restart your server.
@@ -22,7 +22,7 @@ Here is a list of all the settings inside of your PalWorldSettings.ini file as w
 | Parameter | Default Value | Description |
 |-----------|---------------|-------------|
 | AdminPassword | "" | Password used to obtain administrative privileges on the server. |
-| AllowConnectPlatform | Steam | Specify which platforms are allowed to connect. Steam, Xbox, or Mac? (Default value is Steam). |
+| **[Legacy Setting]** AllowConnectPlatform | Steam | Specify which platforms are allowed to connect. Steam, Xbox, or Mac? (Default value is Steam). Replaced by CrossplayPlatforms |
 | AutoResetGuildTimeNoOnlinePlayers | 72.000000 | How quickly an inactive Guild will be disbanded |
 | BaseCampMaxNumInGuild | 4 | Max BaseCamp count per guild. Default is 4. (Vanilla MAX 10). Larger value will increase system load. |
 | BaseCampWorkerMaxNum | 15 | Max pals per basecamp (Vanilla MAX 50). Larger value will increase system load. |
@@ -58,6 +58,7 @@ Here is a list of all the settings inside of your PalWorldSettings.ini file as w
 | CollectionObjectHpRate | 1.000000 | Gatherable Objects Health Multiplier |
 | CollectionObjectRespawnSpeedRate | 1.000000 | Gatherable Objects Respawn Interval |
 | CoopPlayerMaxNum | 4 | Sets the maximum player count for a Cooperative game (Currently doesn't seem to do anything, but is included in the default configuration file) |
+| CrossplayPlatforms | (Steam,Xbox,PS5,Mac) | Platforms allowed to connect. |
 | DayTimeSpeedRate | 1.000000 | Day time speed |
 | DeathPenalty | All | Death Penalty: None (No drops), Item (Drop all items except equipment), ItemAndEquipment (Drop all items), All (Drop all items and all Pals on team) |
 | DropItemAliveMaxHours | 1.000000 | How long dropped items stay before they disappear |
