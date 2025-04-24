@@ -4,6 +4,7 @@ description: Learn how to change game settings and configure your Conan Exiles d
 sidebar:
   label: Configure Your Server
 ---
+import { FileTree } from '@astrojs/starlight/components';
 import { Steps } from '@astrojs/starlight/components';
 
 In this guide, we will show you how to edit every settings on your [Conan Exiles server](https://www.gamehostbros.com/conan-exiles-server-hosting/).
@@ -16,23 +17,47 @@ Basic settings such as Server Password, Server Name, PvP, Community Type and mor
 
 <Steps>
 
-1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and stop your server.
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
 2. In the sidebar, click `Configuration > Startup Parameters`.
 3. Edit the setting you want to change.
 4. Start your server.
 </Steps>
 
-## Using The In-Game Server Settings Menu
+## Using The In-Game Server Settings Menu :badge[Recommended]{variant=success}
+
+This is the recommended way to configure your server outside of basic settings directly adjusted through our panel.
 
 Before proceeding ensure that you've set an [Admin Password](/games/conan-exiles/adding-admins/) as this is required to give yourself the necessary permissions to edit your server settings in-game.
+
 <Steps>
 
-1. Connect to your Conan Exiles server.
+1. [Connect](/games/conan-exiles/connect-to-your-server/) to your Conan Exiles server.
 2. Open the menu with `Esc` and click `Settings > Server Settings`.
 3. Click `Make Me Admin` and enter your [Admin Password](/games/conan-exiles/adding-admins/).
 4. Use the sidebar to find and change settings.
 </Steps>
 
+## Manual ServerSettings.ini Configuration
+
 :::note
 If you want to configure everything only via game files or the in-game menu go to `Configuration > Startup Parameters` and disable `File Parser`, this is for advanced users who want to manually configure a server.
 :::
+
+If you want to configure your gameplay settings through your server files, this is how to find your ServerSettings.ini file. This is an advanced and alternative method of configuration.
+
+<Steps>
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your server.
+2. Go to `Management > File Manager`.
+3. Navigate to `ConanSandbox/Saved/Config/WindowsServer/ServerSettings.ini`
+4. Adjust your desired settings and then click save.
+5. Start your server.
+</Steps>
+
+<FileTree>
+  - ConanSandbox
+    - Saved
+      - Config
+        - WindowsServer
+          - **ServerSettings.ini**
+      
+   </FileTree>
