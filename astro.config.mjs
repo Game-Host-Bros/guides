@@ -31,7 +31,7 @@ export default defineConfig({
       { icon: 'github', label: 'GitHub', href: 'https://github.com/Game-Host-Bros' },
       { icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@GameHostBros' },
       { icon: 'facebook', label: 'Facebook', href: 'https://www.facebook.com/gamehostbros/' },
-      { icon: 'x', label: 'X', href: 'https://x.com/gamehostbros' },
+      { icon: 'x.com', label: 'X', href: 'https://x.com/gamehostbros' },
     ],
     components: {
       Pagination: "./src/components/CustomPagination.astro"
