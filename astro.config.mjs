@@ -26,13 +26,13 @@ export default defineConfig({
       dark: './src/assets/dark-logo.png',
       replacesTitle: true
     },
-    social: {
-      discord: 'https://discord.gg/FN4XgbAwzr',
-      github: 'https://github.com/Game-Host-Bros',
-      youtube: 'https://www.youtube.com/@GameHostBros',
-      facebook: 'https://www.facebook.com/gamehostbros/',
-      'x.com': 'https://x.com/gamehostbros',
-    },
+    social: [
+      { icon: 'discord', label: 'Discord', href: 'https://discord.gg/FN4XgbAwzr' },
+      { icon: 'github', label: 'GitHub', href: 'https://github.com/Game-Host-Bros' },
+      { icon: 'youtube', label: 'YouTube', href: 'https://www.youtube.com/@GameHostBros' },
+      { icon: 'facebook', label: 'Facebook', href: 'https://www.facebook.com/gamehostbros/' },
+      { icon: 'x', label: 'X', href: 'https://x.com/gamehostbros' },
+    ],
     components: {
       Pagination: "./src/components/CustomPagination.astro"
     },
