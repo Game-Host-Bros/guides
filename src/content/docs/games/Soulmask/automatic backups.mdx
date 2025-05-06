@@ -1,0 +1,33 @@
+---
+title: Soulmask Automatic Backups
+description: Learn how our Soulmask automatic backups work and how to restore them. 
+sidebar:
+  label: Automatic Backups
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+At Game Host Bros, we automatically take a backup snapshot of your [Soulmask](https://www.gamehostbros.com/soulmask-server-hosting/) save files every few hours the server is live. This means if there is a failed update or a bug you're able to restore to a previous time. Giving you access to saved data in case something goes wrong. 
+
+## Automatic Backup Restoration Guide
+
+Here's how to restore an automatic backup of your world.db save file for Soulmask.
+
+<Steps>
+1. Login to the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and `Stop` your Soulmask server.
+2. Go to `Management > File Manager` and download a copy of the backup you want to restore from the `Backups` folder in the home directory of your server. 
+3. Using [SFTP](/getting-started/uploading-files/) Upload your backup to `WS/Saved/Worlds/Dedicated/Level01_Main`.
+4. Delete your existing `world.db` file.
+5. Rename your restored backup to `world.db`.
+6. Start your server.
+</Steps>
+
+<FileTree>
+- WS
+  - Saved
+    - Worlds
+      - Dedicated
+        - Level01_Main
+          - **world.db** Delete existing file!
+          - **auto_0_xxxxxxxxx.db** Uploaded backup, rename me to world.db!
+</FileTree>

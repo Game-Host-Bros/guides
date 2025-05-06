@@ -1,0 +1,32 @@
+---
+title: How To Change Your CSS Server Map
+description: Learn how to change the map on your CSS dedicated server.
+sidebar:
+  label: Change Map
+---
+import { Steps } from '@astrojs/starlight/components';
+
+This is what you do if you need to change the map on your [Counter-Strike Source server](https://www.gamehostbros.com/counter-strike-source-server-hosting/).
+
+## Uploading Your Custom Map
+
+Maps are commonly found from public FastDL repositories, or sites such as GameBanana. Your server will need to be restarted so our FastDL system can automatically sync your added files, this is required as these files will not be served to connecting users until a sync is completed.
+
+<Steps>
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com) and `Stop` your CSS server.
+2. Using [SFTP](/getting-started/uploading-files/) upload your map.bsp to `cstrike/maps`.
+3. Start your server.
+</Steps>
+
+## Changing Your CSS Server Default Map
+
+<Steps>
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com) and select your CSS server.
+2. Go to `Configuration > Startup Parameters`.
+3. Find the `Default Map` setting and enter your desired map.
+4. Restart your server.
+</Steps>
+
+:::tip[Did you know?]
+You can also change maps while your server is running, simply type `map mapname` into your server console.
+:::

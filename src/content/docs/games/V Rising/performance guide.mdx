@@ -1,0 +1,56 @@
+---
+title: How To Optimize Your V Rising Server FPS
+description: Learn how to optimize your V Rising dedicated server to increase server fps and keep your server running as smooth as possible with this V Rising performance guide.
+sidebar:
+  label: Performance Guide
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Here's how to increase stability, boost Server FPS and optimize your [V Rising Server](https://www.gamehostbros.com/v-rising-server-hosting/). This guide highlights best practices you can adopt as a server owner to ensure your V Rising server runs at peak performance often resulting in a noticeable improvement in most cases.
+
+## Daily Restarts
+
+The first thing you'll want to do is create an automatic daily restart schedule, this serves to keep your resource usage under control while ensuring your server has a fresh load once every 24 hours, daily restarts are especially useful for heavily modded servers.
+
+To create a schedule follow [this guide](/getting-started/schedules/).
+
+## Optimize Configuration
+
+There are multiple V Rising server settings that will negatively impact performance, some may only a little, while others have noticable effects. 
+
+If you're having any Server FPS related issues adjust these settings accordingly, these will be the most important settings for performance especially if you're running a community server with high player counts.
+ 
+Most of these settings are changed in `Configuration > Startup Parameters` of the [Game Host Bros Panel](https://panel.gamehostbros.com/), while settings such as Floor Limit require the use of [Custom Settings](/games/v-rising/configure-your-server/#using-servergamesettingsjson).
+
+### Main Settings
+
+-------------------
+
+**Adjusted In Startup Parameters**
+
+-------------------
+| Setting Name | Default Value | Description |
+|--------------|---------------|-------------|
+| Max Connected Users | 40 | **Lower** is better for performance, this controls how many maximum players can be online on your server at any given time, reducing this is an easy way to improve performance in certain cases if you run a very popular community. |
+| Server FPS | 30 | **Lower** is better for CPU usage, for PvP servers it's recommended to set a target of 60fps, any higher may yield unexpected results and or worse performance. We recommend a minimum of 30FPS as that is the default. |
+| Auto Save Interval | 120 | **Higher** is better for performance, in modded situations Auto Saves may introduce a very brief performance blip, we recommend increasing this value in those situations. |
+
+-------------------
+
+**Requires [Custom Settings](/games/v-rising/configure-your-server/#using-servergamesettingsjson)**
+
+-------------------
+
+| Setting Name | Default Value | Description |
+|--------------|---------------|-------------|
+| FloorLimit | Varies | **Lower** is better for performance, this shouldn't be higher than 800 as it will have negative affects. The default settings are suitable for most cases, adjust this if your server has a lot of castles and high player counts. |
+| ServantLimit | Varies | **Lower** is better for performance. Defines the max amount of servants within a castle. |
+| HeightLimit | Varies | **Lower** is better for performance. Defines the max height for a castle. |
+
+There are other 
+
+:::note
+Heavy building, high player count, and modded servers will always reach a limitation at some point. Even the fastest gaming hardware isn't able to run a V Rising server without issue in those scenarios.
+:::
+
+
