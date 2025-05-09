@@ -1,0 +1,83 @@
+---
+title: How To Become An Admin On Your Avorion Server
+description: Learn how to become an Admin on your Avorion dedicated Server.
+sidebar:
+  label: Adding Admins
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Some of the things you may want to do on your [Avorion server](https://www.gamehostbros.com/avorion-server-hosting/) will require Administrator permissions, luckily it's very easy to become an Admin.
+
+Here is how you can make yourself an admin on your Avorion server.
+
+## Becoming An Admin
+
+Before beginning this guide, you should have the SteamID64 of the user you want to add as an admin/moderator. You can find your SteamID [here](https://steamid.io/).
+
+<Steps>
+  1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Avorion server.
+  2. Go to `System > Console`.
+  3. Type `/admin -add --id SteamID64`.
+     - For example: `/admin -add --id 76561198106341655`
+  4. Connect to your server.
+</Steps>
+
+## Removing An Admin
+
+<Steps>
+
+  1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Avorion server.
+  2. Go to `System > Console`.
+  3. Type `/admin -remove --id SteamID64`.
+</Steps>
+For example: `/admin -remove --id 76561198106341655`
+
+## Admin Commands
+
+| Command | Description |
+|---------|-------------|
+| `/addcrew` | Sets the current crew of a ship to the minimum required crew |
+| `/admin` | Turn on/remove administrative access |
+| `/ban` | Ban a player from the server |
+| `/banip` | Ban a player's IP from the server |
+| `/behemoths` | Enable/disable the Behemoths Event Series |
+| `/benchmark` | Records performance stats for some time and saves it to a file |
+| `/blacklist` | Restrict access via Blacklist |
+| `/colldamage` | Set game/server collision damage |
+| `/destroy` | Destroys your current target or the object with the given id |
+| `/difficulty` | Set game/server difficulty |
+| `/echo` | Echoes all given parameters to console |
+| `/give` | Gives resources/money to a player |
+| `/ground` | Block a player from using hyperspace |
+| `/groups` | Manages users of groups |
+| `/help` | Lists commands and provides help on commands |
+| `/invite` | Invite players to join your group |
+| `/join` | Confirm an invitation to a group or join an existing one |
+| `/kick` | Kick a player from the server |
+| `/kngi` | Give knowledge to a player or resets it |
+| `/leader` | Promote another player to be the leader of the group |
+| `/leave` | Leave your current group |
+| `/mute` | Mute a player |
+| `/pause` | Pauses the server |
+| `/playerinfo` | Print players and their details |
+| `/players` | List all online players |
+| `/profile` | Records performance stats for some time and saves it to a file |
+| `/run` | Executes a command |
+| `/save` | Save the current state of the server; Write all data to disk |
+| `/say` | Send chat message to all players on the server |
+| `/seed` | Display the seed of the server |
+| `/selfinfo` | Print administrative information about yourself |
+| `/status` | Display status data of the server |
+| `/stop` | Stop the server |
+| `/suicide` | Destroys your current ship |
+| `/teleport` | Teleport |
+| `/trade` | Initiate trading with another player |
+| `/unban` | Unban a player from the server |
+| `/unbanip` | Unban an ip from the server |
+| `/unground` | Re-enable hyperspace for a player |
+| `/unmute` | Unmute a player |
+| `/version` | Retrieve the version of the server |
+| `/w` | Send a private message to a player |
+| `/whisper` | Send a private message to a player |
+| `/whitelist` | Restrict access via Whitelist |
+| `/workers` | Set the amount of worker threads on the server |

@@ -1,0 +1,84 @@
+---
+title: How To Install Mods On Your Avorion Server
+description: Learn how to install mods to your Avorion dedicated Server with this easy-to-follow guide.
+sidebar:
+  label: Install Mods
+---
+import { Steps } from '@astrojs/starlight/components';
+
+Adding mods to Avorion is a great way to mix-up the gameplay and try new things, whether it's a simple quality-of-life mod or a total overhaul, there'll likely be something that's perfect for you. 
+
+This guide will cover where to find and how to install mods on your [Avorion server](https://www.gamehostbros.com/avorion-server-hosting/).
+
+## How To Get Your Workshop Mod IDs
+
+You will need to know how to get a Workshop ID for each mod you want to install. You can [view all the Avorion mods here](https://steamcommunity.com/app/445220/workshop/)
+
+Once you find the mod you want you need to copy the URL. Let's use this URL for example: [https://steamcommunity.com/sharedfiles/filedetails/?id=1819452708](https://steamcommunity.com/sharedfiles/filedetails/?id=1819452708)
+
+In this example the Workshop ID is `1819452708`.
+
+![CS2 workshop URL](../../../../assets/guide-images/cs2-workshop-screenshot.jpg)
+Go to the Steam Workshop page for Avorion, which can be found [here](https://steamcommunity.com/app/445220/workshop/)
+
+## Installing Mods On Your Avorion Server
+
+Avorion mods are downloaded from the Steam Workshop, after you've located your desired mods as shown above, and if required their listed dependencies, follow the steps below to retrieve the necessary Workshop ID's to install them on your server.
+
+<Steps>
+1. Access the [Game Host Bros Game Panel](https://panel.gamehostbros.com/) and `Stop` your Avorion Server.
+2. Go to `Management > File Manager`.
+3. Navigate to `/galaxy/Avorion/` and open a file named `modconfig.lua`.
+
+   - Here is an example of what this will look like without any mods:
+    ```lua title="modconfig.lua"
+        modLocation = ""
+       forceEnabling = false
+       
+       mods =
+       {
+         {workshopid = ""},
+         {workshopid = ""},
+       }
+       
+       -- Mods allowed to run on the client, for example UI mods.
+       
+       allowed =
+       {
+         {id = ""},
+         {id = ""},
+         {id = ""},
+       }
+      ```
+4. Add the Workshop ID's of your mods, following this example`:
+
+       ```lua title="modconfig.lua"
+        modLocation = ""
+       forceEnabling = false
+       
+      -- Mods that are installed server-side.
+
+       mods =
+       {
+         {workshopid = "1819452708"},
+         {workshopid = "1751636748"},
+       }
+       
+      -- List allowed Client-side mods here. This also uses Workshop ID's.
+       
+       allowed =
+       {
+         {id = ""},
+         {id = ""},
+         {id = ""},
+       }
+      ```
+
+5. Start your server.
+</Steps>
+
+Once your server starts the mods will automatically install, and players will automatically download these mods when connecting to your server. 
+
+We recommend installing a few mods at a time to make sure they all work as expected. 
+
+To install more mods simply create more lines of `{workshopid = "1819452708"},` and replace the ID with the mod you want to install.
