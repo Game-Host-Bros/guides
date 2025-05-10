@@ -1,0 +1,192 @@
+---
+title: How To Configure Your Avorion Server
+description: Learn how to change game settings and configure your Avorion dedicated server
+sidebar:
+  label: Configure Your Server
+---
+import { FileTree } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide, we will show you how to edit every settings on your [Avorion server](https://www.gamehostbros.com/avorion-server-hosting/).
+
+## Basic Server Configuration
+
+Basic settings such as Max Players, Server Name, Difficulty and more can be configured directly in our game panels Startup Parameters menu, here are the steps for basic configuration:
+
+<Steps>
+
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Avorion server.
+2. In the sidebar, click `Configuration > Startup Parameters`.
+3. Edit the setting you want to change.
+4. Start your server.
+</Steps>
+
+## Server.ini Configuration
+
+Here's how to configure every setting on your Avorion server, a list of all the settings and their descriptions can be found below.
+
+<Steps>
+1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Avorion server.
+2. Go to `Management > File Manager`.
+3. Navigate to `/galaxy/Avorion/` and open `server.ini`.
+4. Adjust your desired settings and then click save.
+5. Start your server.
+</Steps>
+
+<FileTree>
+  - galaxy
+    - Avorion
+      - **server.ini**
+   </FileTree>
+
+## Avorion Server Settings
+
+Here's a list of all the Avorion server.ini settings, provided by the Avorion game developers. 
+
+The most up-to-date list for each version can be found in `/galaxy/Avorion/server.ini - readme.txt`.
+
+:::note
+Basic settings found in the `Configuration > Startup Parameters` menu must be set there.
+
+Certain settings are **not** recommended to be changed on existing worlds.
+:::
+
+### Gameplay Settings
+
+| Setting | Default Value | Description |
+|---------|-------|-------------|
+| Scenario | 1 | Server scenario: Creative (0), Normal (1). Warning: changing breaks saves! |
+| Seed | sNcLR1IyrC | World generation seed. Warning: changing breaks saves! |
+| Difficulty | 0 | Game difficulty: -3 (Beginner) to 3 (Insane). |
+| HardcoreEnabled | false | Enables hardcore difficulty. |
+| InfiniteResources | false | Gives players unlimited resources. |
+| PlayTutorial | false | Forces tutorial on login (disabled for multiplayer). |
+| CollisionDamage | 1 | Collision damage scale: 0 (off) to 1 (full). |
+| SafePlayerInput | false | Deprecated. Verifies player input, may cause lag. |
+| PlayerToPlayerDamage | true | Allows players to damage each other. |
+| LogoutInvincibility | true | Makes ships invincible after logout. |
+| LogoutInvincibilityDelay | 30 | Seconds until ship becomes invincible after logout. |
+| ShipyardBoundBuilding | true | Restricts building to shipyard sectors. |
+| FullBuildingUnlocked | false | Unlocks all building knowledge for new players. |
+| RepairingAlwaysAllowed | false | Enables repairs even during combat. |
+| BlockOverlapExploit | false | Allows infinite block overlap exploits. |
+| PermaDestruction | false | Ships lost forever on destruction. |
+| DockingRestrictions | true | Restricts docking of certain objects. |
+| Barrier | true | Enables barrier to galaxy center. |
+| Storyline | true | Enables guided storyline. |
+| BehemothEvents | false | Enables Behemoth DLC events. |
+| UnlimitedProcessingPower | false | Removes ship size limits from material knowledge. |
+| UnlimitedShipSize | false | Allows oversized ships at max processing power. |
+| RelationLossFactor | 1 | Multiplier for faction relation loss. |
+| RelationGainFactor | 1 | Multiplier for faction relation gain. |
+| StartingResources | 0 | Starting resources: -4 (quick start) to 0. |
+| DamageMultiplier | 1 | Multiplier for NPC damage. |
+| InitialRelations | 0 | Initial faction relations: -3 (friendly) to 3 (hostile). |
+| MapFactions | 350 | Number of factions on the map. |
+| Rifts | 200 | Number of rifts on the map. |
+| ResourceAsteroidFactor | 1 | Multiplier for resource asteroids. |
+| ResourceWreckageFactor | 1 | Multiplier for resource wreckages. |
+| EventsFactor | 1 | Multiplier for event frequency. |
+| PreciseAIAim | false | Makes AI aim perfectly. |
+| BlockDestructionThreshold | 1 | HP % when blocks start breaking. |
+| DevMode | false | Enables developer mode. |
+| ExplicitCallables | true | Requires functions to be marked as callable. |
+| RiftMassFactor | 1 | Multiplier for mass allowed in rifts. |
+| RiftDamageFactor | 1 | Multiplier for Xsotan damage in rifts. |
+| BigWreckageDespawnTime | 1800 | Seconds until large wreckages despawn. |
+| SmallWreckageDespawnTime | 900 | Seconds until small wreckages despawn. |
+| MaximumFightersPerSectorAndPlayer | -1 | Max fighters per sector/player (-1 = unlimited). |
+| MaximumStationsPerSector | -1 | Max stations per sector (-1 = unlimited). |
+| MaximumBlocksPerCraft | -1 | Max blocks per craft (-1 = unlimited). |
+| MaximumVolumePerShip | -1 | Max volume per ship (-1 = unlimited). |
+| MaximumVolumePerStation | -1 | Max volume per station (-1 = unlimited). |
+| MaximumPlayerShips | -1 | Max ships per player (-1 = unlimited). |
+| MaximumPlayerStations | -1 | Max stations per player (-1 = unlimited). |
+| MaximumAllianceShips | -1 | Max ships per alliance (-1 = unlimited). |
+| MaximumAllianceStations | -1 | Max stations per alliance (-1 = unlimited). |
+| MaximumAllianceShipsPerMember | -1 | Max alliance ships per member (-1 = unlimited). |
+| MaximumAllianceStationsPerMember | -1 | Max alliance stations per member (-1 = unlimited). |
+| MaximumBlocksPerTurret | 250 | Max blocks per turret design (-1 = unlimited). |
+| BoardingAllowed | true | Enables ship boarding. |
+| MinimumCraftSize | 0 | Minimum ship dimension (0 = no limit). |
+| MinimumBlockSize | 0.01 | Minimum block dimension (0.00001-0.01). |
+| MaxShipVelocity | 0 | Maximum ship speed in m/s (0 = unlimited). |
+| PlayerInventorySlots | 1000 | Number of player inventory slots. |
+| AllianceInventorySlots | 1000 | Number of alliance inventory slots. |
+| Version | 2.5.7 | Game version (auto-updated). |
+| sameStartSector | true | Players start in same sector. |
+| xsotanInvasionSectors | 5 | Number of simultaneous Xsotan invasion sectors. |
+| startUpScript | data/scripts/server/server.lua | Server startup script path. |
+| startSectorScript | startsector | Start sector generator script. |
+| motd |  | Message of the day shown on login. |
+
+### System Settings
+
+| Setting | Default Value | Description |
+|---------|-------|-------------|
+| MaxTimeStep | 1 | Maximum tick length in seconds. |
+| saveInterval | 600 | Seconds between auto-saves. |
+| sectorUpdateTimeLimit | 300 | Seconds before unloading inactive sectors. |
+| emptySectorUpdateInterval | 0.5 | Seconds between empty sector updates. |
+| workerThreads | 25 | Threads for game simulation (limit to CPU cores). |
+| generatorThreads | 2 | Threads for sector generation/loading. |
+| scriptBackgroundThreads | 2 | Threads for async script tasks. |
+| aliveSectorsPerPlayer | 5 | Extra sectors kept in memory per player. |
+| weakUpdate | true | Optimizes empty sector simulation. |
+| profiling | false | Enables performance tracking. |
+| sendCrashReports | true | Sends crash reports to developers. |
+| hangDetection | true | Reports when server stops responding. |
+| backups | true | Creates hourly backups. |
+| backupsPath |  | Custom backup location (empty = default). |
+| statsLogging | true | Tracks server stats in CSV format. |
+| simulateHighLoadServer | false | Simulates high server load for testing. |
+| commandsFile |  | Path to server command file. |
+| sendSectorDelay | 2 | Delay when sending sector data to clients. |
+| placeInShipOnDeathDelay | 7 | Seconds without ship after destruction. |
+| respawnAloneDelay | 12 | Solo respawn delay after ship destruction. |
+| respawnMultiplayerDelay | 92 | Multiplayer respawn delay after ship destruction. |
+| autoSavePerformanceData | false | Auto-saves performance data on issues. |
+| performanceDataAutoSaveFiles | 10 | Max performance data files kept. |
+| timeBetweenPerformanceDataAutoSaves | 30 | Seconds between performance data saves. |
+| fileClustering | false | Aggregates small files on shutdown. |
+| clusterFileSize | 200000000 | Size in bytes of clustered files. |
+| clusteringThreads | 8 | Threads for file clustering. |
+
+### Networking Settings
+
+| Setting | Default Value | Description |
+|---------|-------|-------------|
+| port | 27000 | Server listening port. |
+| broadcastInterval | 5 | Seconds between full network updates. |
+| isMultiplayer | true | Enables multiplayer functionality. |
+| isListed | false | Lists server in public directories. |
+| vacSecure | true | Enables VAC anti-cheat (Steam only). |
+| sendStatsToAdmins | true | Sends performance stats to admins. |
+| useSteam | true | Uses Steam networking (recommended). |
+| forceSteam | false | Forces Steam networking without fallback. |
+| rconIp |  | RCON interface IP address. |
+| rconPassword |  | RCON password (empty = disabled). |
+| rconPort | 27015 | RCON interface port. |
+| maxReceivableMessageSize | 52428800 | Max message size in bytes. |
+| networkingThreads | 2 | Threads for network processing (min 2). |
+| safeBytesPerClientPerTick | 1048576 | Max bytes per client per tick. |
+| suspiciousTickHistorySize | 50 | Ticks analyzed for suspicious behavior. |
+| maxSuspiciousTicks | 30 | Suspicious ticks before client disconnection. |
+
+### Administration Settings
+
+| Setting | Default Value | Description |
+|---------|-------|-------------|
+| maxPlayers | 10 | Maximum players allowed (+1 admin). Warning: not designed as MMO! |
+| name | Avorion Server | Server name in server lists. |
+| description | An Avorion Server | Server description in server lists. |
+| password |  | Login password (empty = no password). |
+| pausable | false | Allows server to be paused. |
+| accessListMode | Blacklist | User filtering: 'whitelist' or 'blacklist'. |
+| steamIdOverride | 0 | Debug login as specific SteamID. |
+
+### Meta Settings
+
+| Setting | Default Value | Description |
+|---------|-------|-------------|
+| branch |  | Singleplayer branch identifier (ignored in server). |
