@@ -8,13 +8,20 @@ import { Steps } from '@astrojs/starlight/components';
 
 Installing plugins on your [No More Room In Hell server](https://www.gamehostbros.com/no-more-room-in-hell-server-hosting/) can enhance gameplay and add new features. Game Host Bros makes it easy to enable SourceMod, which is required for most plugins.
 
-## How To Enable SourceMod
+## How To Install SourceMod
+
 <Steps>
 1. Log in to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your server.
-2. Navigate to `Tools > Mod Manager` in the left sidebar.
-3. Find Sourcemod and click `Install`.
-4. Wait a few seconds, then restart your server.
+2. Navigate to `Configuration > Startup Parameters` in the left sidebar.
+3. Find the `Enable Sourcemod` option and change its value to `1`.
+4. Restart your server.
 </Steps>
+
+Whenever your server starts Sourcemod and Metamod will automatically stay up-to-date with the latest stable version.
+
+:::note
+If you want to manually install a specific version of Sourcemod and Metamod, keep this setting disabled to stop our system from handling these frameworks.
+:::
 
 ## How To Install Plugins
 
