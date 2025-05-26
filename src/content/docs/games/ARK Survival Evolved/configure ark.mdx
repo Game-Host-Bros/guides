@@ -6,11 +6,13 @@ sidebar:
 ---
 import { Steps } from '@astrojs/starlight/components';
 
-Here's how you can locate the and edit the most common configuration file for your [Ark Survival Evolved server](https://www.gamehostbros.com/ark-survival-evolved-server-hosting/).
+Here's how you can locate the and edit the most common configuration files for your [Ark Survival Evolved server](https://www.gamehostbros.com/ark-survival-evolved-server-hosting/).
 
-This guide covers the [GameUserSettings.ini Generator](https://ini.arkforum.de/index.php), a powerful tool available on ArkForum that simplifies ARK server configuration. Instead of manually adding and configuring every setting this tool includes an easy-to-use interface to generate your settings.
+This guide covers in-depth and detailed configuration for both the Game.ini and GameUserSettings.ini files manually, or using the [GameUserSettings.ini Generator](https://ini.arkforum.de/index.php). A powerful tool available on ArkForum that simplifies ARK server configuration. Instead of manually adding and configuring every setting this tool includes an easy-to-use interface to quickly generate your GameUserSettings.ini settings.
 
-A full breakdown of settings can also be found on the [ARK SE Server Configuration Wiki](https://ark.fandom.com/wiki/Server_configuration#GameUserSettings.ini), this page also contains details on how to configure your Game.ini file, Game.ini is used for advanced configuration of an ARK server.
+GameUserSettings.ini is the most common file for configuration, while Game.ini is for advanced users who want granular control over their servers. 
+
+A full breakdown of settings can also be found on the [ARK SE Server Configuration Wiki](https://ark.fandom.com/wiki/Server_configuration#GameUserSettings.ini).
 
 ## Using The GameUserSettings.ini Generator
 
@@ -22,7 +24,7 @@ Basic settings such as Server Name and Password are set in our game panel under 
 1. Use the [ARK GameUserSettings.ini Generator](https://ini.arkforum.de/index.php) to set your desired settings.
 2. Click `Create File` then copy everything directly under the `[ServerSettings]` section in the generated output.
 3. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Ark server.
-4. In File Manager, Navigate to `/ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini`.
+4. In `Management > File Manager`, Navigate to `/ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini`.
 5. Paste the settings you copied earlier under the header of `[ServerSettings]`, replacing what used to be there.
 6. Start your server.
 </Steps>
@@ -145,14 +147,289 @@ PersonalTamedDinosSaddleStructureCost=19
 
 ## Manually Configuring GameUserSettings.ini
 
-By default, an ARK server won't include all of the settings in your GameUserSettings.ini file. 
-
-A full breakdown of the possible settings can be found on the [ARK SE Wiki](https://ark.fandom.com/wiki/Server_configuration#GameUserSettings.ini).
+By default, an ARK: SE server won't include all of the settings in your GameUserSettings.ini file. Here's how to add them and how they're correctly formatted.
 
 <Steps>
-1. Firstly, login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Ark server.
-2. On the sidebar, go to `Management > File Manager`.
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Ark server.
+2. Go to `Management > File Manager`.
 3. Navigate to `/ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini`.
 4. After you have made the changes you want, start your server. 
 </Steps>
 
+<details>
+<summary>All GameUserSettings.ini Settings And Their Headers</summary>
+
+The following settings must be placed under their respective headers in GameUserSettings.ini, here are all of them. For example `MaxTributeDinos` must be placed under [serversettings] in your file.
+
+### [serversettings] Section
+
+| Setting (Format) | Default | Description |
+|------------------|---------|-------------|
+| AdminLogging (boolean true/false) | true | Log admin commands |
+| AllowCaveBuildingPvE (boolean true/false) | False | Cave building (PvE) |
+| AllowCaveBuildingPvP (boolean true/false) | False | Cave building (PvP) |
+| AllowFlyerCarryPvE (boolean true/false) | False | Flyer carry in PvE |
+| AllowHideDamageSourceFromLogs (boolean true/false) | false | Hide damage sources |
+| AllowSharedConnections (boolean true/false) | false | Family sharing |
+| AllowTekSuitPowersInGenesis (boolean true/false) | false | TEK suit powers |
+| allowThirdPersonPlayer (boolean true/false) | False | Enable 3rd person view |
+| alwaysNotifyPlayerJoined (boolean true/false) | False | Notify on player join |
+| alwaysNotifyPlayerLeft (boolean true/false) | False | Notify on player leave |
+| AutoSavePeriodMinutes (float) | 15.0 | Auto-save interval |
+| bAllowPlatformSaddleMultiFloors (boolean true/false) | False | Multiple platform floors |
+| bForceCanRideFliers (boolean true/false) | false | Force flyer setting |
+| ClampResourceHarvestDamage (boolean true/false) | false | Limit harvest damage |
+| CrossARKAllowForeignDinoDownloads (boolean true/false) | false | Non-native dino downloads |
+| CryopodNerfDamageMult (float) | 0.01 | Cryopod damage reduction |
+| CryopodNerfDuration (integer) | 10 | Cryosickness duration |
+| CryopodNerfIncomingDamageMultPercent (float) | 0.25 | Cryopod damage increase |
+| CustomDynamicConfigUrl (string) | None | Dynamic config URL |
+| DayCycleSpeedScale (float) | 1.0 | Day/night cycle speed |
+| DayTimeSpeedScale (float) | 1.0 | Day time speed |
+| DifficultyOffset (float) | 0.2 | Difficulty level |
+| DinoCharacterFoodDrainMultiplier (float) | 1.0 | Dino food consumption |
+| DinoCharacterHealthRecoveryMultiplier (float) | 1.0 | Dino health recovery |
+| DinoCharacterStaminaDrainMultiplier (float) | 1.0 | Dino stamina consumption |
+| DinoCountMultiplier (float) | 1.0 | Dino spawn rate |
+| DinoDamageMultiplier (float) | 1.0 | Dino damage multiplier |
+| DinoResistanceMultiplier (float) | 1.0 | Dino damage resistance |
+| DisableDinoDecayPvE (boolean true/false) | False | Disable dino ownership decay |
+| DisablePvEGamma (boolean true/false) | false | Disable gamma (PvE) |
+| DisableStructureDecayPvE (boolean true/false) | False | Disable structure decay |
+| DisableWeatherFog (boolean true/false) | false | Disable fog |
+| EnableCryopodNerf (boolean true/false) | false | Cryosickness debuff |
+| EnableCryoSicknessPVE (boolean true/false) | true | Cryopod cooldown |
+| EnablePvPGamma (boolean true/false) | false | Enable gamma (PvP) |
+| globalVoiceChat (boolean true/false) | False | Global voice chat |
+| HarvestAmountMultiplier (float) | 1.0 | Harvest yield |
+| HarvestHealthMultiplier (float) | 1.0 | Resource health |
+| ItemStackSizeMultiplier (float) | 1.0 | Stack size multiplier |
+| MaxGateFrameOnSaddles (integer) | 0 | Max gates on platforms |
+| MaxPlatformSaddleStructureLimit (integer) | - | Max platform saddles |
+| MaxTamedDinos (integer) | 4000 | Max tamed dinos |
+| MaxTributeDinos (integer) | 20 | Upload creature slots |
+| MaxTributeItems (integer) | 50 | Upload item slots |
+| NightTimeSpeedScale (float) | 1.0 | Night time speed |
+| noTributeDownloads (boolean true/false) | False | Disable character downloads |
+| PerPlatformMaxStructuresMultiplier (float) | 1.0 | Platform structure limit |
+| PlatformSaddleBuildAreaBoundsMultiplier (float) | 1.0 | Platform build area |
+| PlayerCharacterFoodDrainMultiplier (float) | 1.0 | Food consumption |
+| PlayerCharacterHealthRecoveryMultiplier (float) | 1.0 | Health recovery |
+| PlayerCharacterStaminaDrainMultiplier (float) | 1.0 | Stamina consumption |
+| PlayerCharacterWaterDrainMultiplier (float) | 1.0 | Water consumption |
+| PlayerDamageMultiplier (float) | 1.0 | Player damage multiplier |
+| PlayerResistanceMultiplier (float) | 1.0 | Player damage resistance |
+| proximityChat (boolean true/false) | False | Local chat only |
+| PvEDinoDecayPeriodMultiplier (float) | 1.0 | Dino decay multiplier |
+| PvEStructureDecayDestructionPeriod (-) | 0 | Structure decay timer - the format is unknown according to the wiki |
+| PvEStructureDecayPeriodMultiplier (float) | 1.0 | Structure decay rate |
+| PvPStructureDecay (boolean true/false) | false | Structure decay (PvP) |
+| RandomSupplyCratePoints (boolean true/false) | false | Random supply drops |
+| ResourcesRespawnPeriodMultiplier (float) | 1.0 | Resource respawn rate |
+| ServerAdminPassword (string) | None | Admin password |
+| serverHardcore (boolean true/false) | False | Hardcore mode |
+| ServerPassword (string) | None | Server password |
+| serverPVE (boolean true/false) | False | PvE mode |
+| serverForceNoHud (boolean true/false) | False | Force disable HUD |
+| ShowMapPlayerLocation (boolean true/false) | False | Show player position on map |
+| SpectatorPassword (string) | None | Spectator password |
+| StructureDamageMultiplier (float) | 1.0 | Structure damage multiplier |
+| StructureResistanceMultiplier (float) | 1.0 | Structure damage resistance |
+| TamingSpeedMultiplier (float) | 1.0 | Taming speed |
+| TheMaxStructuresInRange (integer) | 10500 | Max structures in range |
+| TributeCharacterExpirationSeconds (integer) | 86400 | Character upload expiration |
+| TributeDinoExpirationSeconds (integer) | 86400 | Dino upload expiration |
+| TributeItemExpirationSeconds (integer) | 86400 | Item upload expiration |
+| TribeNameChangeCooldown (integer) | 15 | Tribe name change cooldown |
+| XPMultiplier (float) | 1.0 | Experience multiplier |
+| AlwaysAllowStructurePickup (boolean true/false) | false | Disable pickup timer |
+| StructurePickupTimeAfterPlacement (float) | 30.0 | Pickup time limit (seconds) |
+| AllowIntegratedSPlusStructures (boolean true/false) | true | Enable S+ structures |
+| StructurePickupHoldDuration (float) | 0.5 | Pickup hold duration |
+
+### [/script/engine.gamesession] Section
+
+| Setting (Format) | Default | Description |
+|------------------|---------|-------------|
+| MaxPlayers (integer) | 70 | Max simultaneous players |
+
+### [Ragnarok] Section - Requires DLC Map
+
+| Setting (Format) | Default | Description |
+|------------------|---------|-------------|
+| AllowMultipleTamedUnicorns (boolean true/false) | false | Allow unlimited tamed unicorns |
+| UnicornSpawnInterval (integer) | 24 | Hours between unicorn spawns |
+| VolcanoIntensity (float) | 1 | Volcano eruption intensity |
+| VolcanoInterval (integer) | 0 | Time between volcano activations |
+| EnableVolcano (boolean true/false) | true | Enable/disable volcano |
+
+</details>
+
+## Advanced Configuration Using Game.ini
+
+By default, an ARK: SE server won't include any settings in your Game.ini file. Game.ini is an advanced configuration file that can be used to customize your server.
+
+<Steps>
+1. Firstly, login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Ark server.
+2. On the sidebar, go to `Management > File Manager`.
+3. Navigate to `/ShooterGame/Saved/Config/LinuxServer/Game.ini`.
+4. After you have made the changes you want, start your server. 
+</Steps>
+
+<details>
+<summary>Main Game.ini Settings And Their Headers</summary>
+
+Here are all of the main Game.ini settings, a total breakdown of them can be found [here](https://ark.fandom.com/wiki/Server_configuration#Game.ini).
+
+### [/script/shootergame.shootergamemode] Section
+
+| Setting (Format) | Default | Description |
+|------------------|---------|-------------|
+| AutoPvEStartTimeSeconds (integer 	0 to 86400) |  | PvE to PvP start time |
+| AutoPvEStopTimeSeconds (integer 0 to 86400) |  | PvP to PvE stop time |
+| bAllowCustomRecipes (boolean true/false) | false | Enable custom recipes |
+| bAllowFlyerSpeedLeveling (boolean true/false) | false | Allow flyer speed leveling |
+| bAllowUnlimitedRespecs (boolean true/false) | false | Remove mindwipe cooldown |
+| bAutoPvETimer (boolean true/false) |  | Enable auto PvE timer with `AutoPvEStartTimeSeconds` and `AutoPvEStopTimeSeconds` |
+| bAutoPvEUseSystemTime (boolean true/false) |  | Use system time for PvE timer |
+| bAutoUnlockAllEngrams (boolean true/false) | false | Unlock all engrams |
+| bDisableDefaultMapItemSets (boolean true/false) | false | Disable Genesis 2 Tek Suit spawn |
+| bDisableDinoRiding (boolean true/false) | false | Disable dino riding |
+| bDisableDinoTaming (boolean true/false) | false | Disable dino taming |
+| bDisableFriendlyFire (boolean true/false) | false | Disable friendly fire (PvP) |
+| bDisableGenesisMissions (boolean true/false) | false | Disable Genesis missions |
+| bDisableLootCrates (boolean true/false) | false | Disable loot crate spawns |
+| bDisableStructurePlacementCollision (boolean true/false) | false | Allow structure clipping |
+| bDisableWorldBuffs (boolean true/false) | false | Disable Genesis 2 world effects |
+| bEnableWorldBuffScaling (boolean true/false) | false | Scale Genesis 2 world effects |
+| bFlyerPlatformAllowUnalignedDinoBasing (boolean true/false) | false | Allow non-allied dinos on Quetz platforms |
+| bGenesisUseStructuresPreventionVolumes (boolean true/false) | true | Prevent building in Genesis mission areas |
+| bHardLimitTurretsInRange (boolean true/false) | false | Hard limit turrets in range |
+| bIgnoreStructuresPreventionVolumes (boolean true/false) | true | Allow building in Genesis mission volumes |
+| bIncreasePvPRespawnInterval (boolean true/false) |  | Enable PvP respawn penalty |
+| bOnlyAllowSpecifiedEngrams (boolean true/false) | false | Hide non-specified engrams |
+| bPassiveDefensesDamageRiderlessDinos (boolean true/false) | false | Spike walls damage wild dinos |
+| bPvEAllowTribeWar (boolean true/false) | true | Allow tribe wars in PvE |
+| bPvEAllowTribeWarCancel (boolean true/false) | false | Allow war cancellation |
+| bPvEDisableFriendlyFire (boolean true/false) | false | Disable friendly fire (PvE) |
+| bShowCreativeMode (boolean true/false) | false | Enable creative mode |
+| bUseCorpseLocator (boolean true/false) | false | Show death location beam |
+| bUseTameLimitForStructuresOnly (boolean true/false) |  | Apply tame limit to platforms only |
+| BabyCuddleGracePeriodMultiplier (float) | 1.0 | Imprint grace period |
+| BabyCuddleIntervalMultiplier (float) | 1.0 | Baby cuddle frequency |
+| BabyCuddleLoseImprintQualitySpeedMultiplier (float) | 1.0 | Imprint quality loss speed |
+| BabyFoodConsumptionSpeedMultiplier (float) | 1.0 | Baby food consumption rate |
+| BabyImprintAmountMultiplier (float) | 1.0 | Imprint percentage per cuddle |
+| BabyImprintingStatScaleMultiplier (float) | 1.0 | Imprint stat bonus scale |
+| BabyMatureSpeedMultiplier (float) | 1.0 | Baby maturation speed |
+| CraftingSkillBonusMultiplier (float) | 1.0 | Crafting skill bonus multiplier |
+| CraftXPMultiplier (float) | 1.0 | Crafting XP multiplier |
+| CropDecaySpeedMultiplier (float) | 1.0 | Crop decay speed |
+| CropGrowthSpeedMultiplier (float) | 1.0 | Crop growth speed |
+| CustomRecipeEffectivenessMultiplier (float) | 1.0 | Custom recipe effectiveness |
+| CustomRecipeSkillMultiplier (float) | 1.0 | Custom recipe skill effect |
+| DestroyTamesOverLevelClamp (integer) | 0 | Destroy tames above level |
+| DinoHarvestingDamageMultiplier (float) | 3.2 | Dino harvesting damage |
+| DinoTurretDamageMultiplier (float) | 1.0 | Turret damage to dinos |
+| EggHatchSpeedMultiplier (float) | 1.0 | Egg hatching speed |
+| ExcludeItemIndices (integer) |  | Exclude items from supply crates |
+| FastDecayInterval (integer) | 43200 | Fast decay timer (seconds) |
+| FishingLootQualityMultiplier (float) | 1.0 | Fishing loot quality |
+| FuelConsumptionIntervalMultiplier (float) | 1.0 | Fuel consumption rate |
+| GenericXPMultiplier (float) | 1.0 | Generic XP multiplier |
+| GlobalCorpseDecompositionTimeMultiplier (float) | 1.0 | Corpse decay time |
+| GlobalItemDecompositionTimeMultiplier (float) | 1.0 | Item decay time |
+| GlobalPoweredBatteryDurabilityDecreasePerSecond (float) | 3 | Battery durability loss rate |
+| GlobalSpoilingTimeMultiplier (float) | 1.0 | Food spoilage time |
+| HairGrowthSpeedMultiplier (float) | 1.0 | Hair growth speed |
+| HarvestXPMultiplier (float) | 1.0 | Harvesting XP multiplier |
+| IncreasePvPRespawnIntervalBaseAmount (float) | 60 | Base PvP respawn penalty |
+| IncreasePvPRespawnIntervalCheckPeriod (float) | 300 | PvP respawn check period |
+| IncreasePvPRespawnIntervalMultiplier (float) | 2 | PvP respawn penalty multiplier |
+| KickIdlePlayersPeriod (integer) | 3600 | Idle kick timer (seconds) |
+| KillXPMultiplier (float) | 1.0 | Kill XP multiplier |
+| LayEggIntervalMultiplier (float) | 1.0 | Egg laying frequency |
+| LimitNonPlayerDroppedItemsCount (integer) | 0 | Max dropped items in area |
+| LimitNonPlayerDroppedItemsRange (integer) | 0 | Dropped items range limit |
+| MatingIntervalMultiplier (float) | 1.0 | Mating cooldown multiplier |
+| MatingSpeedMultiplier (float) | 1.0 | Mating progress speed |
+| MaxAlliancesPerTribe (integer) |  | Max alliances per tribe |
+| MaxFallSpeedMultiplier (float) | 1.0 | Fall damage threshold |
+| MaxNumberOfPlayersInTribe (integer) | 0 | Max players per tribe |
+| MaxTribeLogs (integer) | 100 | Max tribe log entries |
+| MaxTribesPerAlliance (integer) |  | Max tribes per alliance |
+| MutagenLevelBoost[stat ID] (integer) | 5, 5, 0, 0, 0, 0, 0, 5, 5, 0, 0, 0 | Mutagen levels added to wild ancestry tames. IDs: **0=Health, 1=Stamina, 2=Torpidity, 3=Oxygen, 4=Food, 5=Water, 6=Temperature, 7=Weight, 8=Melee Damage, 9=Movement Speed, 10=Fortitude, 11=Crafting Speed** |
+| MutagenLevelBoostBred[stat ID] (integer) | 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0 | Mutagen levels added to bred dinos. IDs: **0=Health, 1=Stamina, 2=Torpidity, 3=Oxygen, 4=Food, 5=Water, 6=Temperature, 7=Weight, 8=Melee Damage, 9=Movement Speed, 10=Fortitude, 11=Crafting Speed** |
+| OverrideMaxExperiencePointsDino (integer) |  | Override max dino XP |
+| OverrideMaxExperiencePointsPlayer (integer) |  | Override max player XP |
+| OverridePlayerLevelEngramPoints (integer) |  | Engram points per level |
+| PassiveTameIntervalMultiplier (float) | 1.0 | Passive tame interval |
+| PlayerHarvestingDamageMultiplier (float) | 1.0 | Player harvesting damage |
+| PoopIntervalMultiplier (float) | 1.0 | Poop frequency |
+| PreventDinoTameClassNames (string) |  | Prevent taming by class |
+| PreventOfflinePvPConnectionInvincibleInterval (float) | 5.0 | Offline PvP protection time |
+| PreventTransferForClassName (string) |  | Prevent transfer by class |
+| PvPZoneStructureDamageMultiplier (float) | 6.0 | Cave structure damage |
+| ResourceNoReplenishRadiusPlayers (float) | 1.0 | Resource respawn radius (players) |
+| ResourceNoReplenishRadiusStructures (float) | 1.0 | Resource respawn radius (structures) |
+| SpecialXPMultiplier (float) | 1.0 | Special event XP multiplier |
+| StructureDamageRepairCooldown (integer) | 180 | Structure repair cooldown |
+| SupplyCrateLootQualityMultiplier (float) | 1.0 | Supply crate loot quality |
+| TamedDinoCharacterFoodDrainMultiplier (float) | 1.0 | Tamed dino food consumption |
+| TamedDinoTorporDrainMultiplier (float) | 1.0 | Tamed dino torpor drain |
+| TribeSlotReuseCooldown (float) | 0 | Tribe slot reuse timer |
+| UseCorpseLifeSpanMultiplier (float) |  | Corpse/bag lifespan |
+| WildDinoCharacterFoodDrainMultiplier (float) | 1.0 | Wild dino food consumption |
+| WildDinoTorporDrainMultiplier (float) | 1.0 | Wild dino torpor drain |
+| WorldBuffScalingEfficacy (float) | 1 | Genesis 2 world effect scaling |
+
+### ClassName Settings
+ClassNames target specific items or dinosaurs instead of changing everything. This configuration is for more advanced users and requires the exact file name of an Item or Dino.
+
+| SettingName | Description |
+|---------|---------|
+| ConfigOverrideItemMaxQuantity | Changes stack sizes for items |
+| HarvestResourceItemAmountClassMultipliers | Changes harvest amounts for resources |
+| PreventDinoTameClassNames | Blocks taming certain dinosaurs |
+| DinoClassDamageMultipliers | Changes wild dino damage |
+| TamedDinoClassDamageMultipliers | Changes tamed dino damage |
+| DinoClassResistanceMultipliers | Changes wild dino resistance |
+| TamedDinoClassResistanceMultipliers | Changes tamed dino resistance |
+
+Here are some examples:
+
+**ConfigOverrideItemMaxQuantity - Make arrows stack to 500**
+```ini
+ConfigOverrideItemMaxQuantity=(ItemClassString="PrimalItemAmmo_ArrowTranq_C",Quantity=(MaxItemQuantity=500, bIgnoreMultiplier=true))
+```
+
+**HarvestResourceItemAmountClassMultipliers - Get 3x wood**
+```ini
+HarvestResourceItemAmountClassMultipliers=(ClassName="PrimalItemResource_Wood_C",Multiplier=3.0)
+```
+
+**PreventDinoTameClassNames - Block taming Gigas**
+```ini
+PreventDinoTameClassNames="Gigant_Character_BP_C"
+```
+
+**DinoClassDamageMultipliers - Wild Rex does half damage**
+```ini
+DinoClassDamageMultipliers=(ClassName="Rex_Character_BP_C",Multiplier=0.5)
+```
+
+**TamedDinoClassDamageMultipliers - Tamed Rex does double damage**
+```ini
+TamedDinoClassDamageMultipliers=(ClassName="Rex_Character_BP_C",Multiplier=2.0)
+```
+
+**DinoClassResistanceMultipliers - Wild Rex takes double damage**
+```ini
+DinoClassResistanceMultipliers=(ClassName="Rex_Character_BP_C",Multiplier=0.5)
+```
+
+**TamedDinoClassResistanceMultipliers - Tamed Rex takes half damage**
+```ini
+TamedDinoClassResistanceMultipliers=(ClassName="Rex_Character_BP_C",Multiplier=2.0)
+```
+</details>
