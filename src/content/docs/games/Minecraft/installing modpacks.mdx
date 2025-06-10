@@ -25,37 +25,6 @@ To connect to modded servers we recommend using the [CurseForge App](https://www
 If you wish to keep a copy of the current World on your server, make sure to download a backup before deleting! This installer does **NOT** create a backup of your world.
 :::
 
-## Alternate Modpack Installation
-
-Don't see the Modpack you'd like listed? Use this installer instead to attempt an installation of any Modpack found on CurseForge.
-
-<Steps>
-  1. Find the link for the Modpack you want from [CurseForge](https://www.curseforge.com/minecraft/modpacks/) (example https://www.curseforge.com/minecraft/modpacks/better-mc-forge-bmc4).
-  2. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Minecraft server.
-  3. Go to `Configuration > Startup Parameters` and select the `Mods` tab.
-  4. Look for `Modpack URL` and paste in your CurseForge link and restart your server.
-</Steps>
-
-:::danger
-You may need to select `Erase Files On Modpack Change` if you're changing Modpacks. Enabling this setting **will wipe your server** but move your existing world to the `/backups` folder.
-
-If you need some help we offer free CurseForge Modpack installations, simply contact a bro!
-
-Some Modpacks are simply not compatible with dedicated servers, Modpacks that are compatible will normally have a Server Pack download available on CurseForge. If a Modpack doesn't contain a Server Pack download it may or may not work.
-:::
-
-:::tip
-To install a specific modpack version do the following:
-
-<Steps>
-1. On the Modpacks CurseForge page, select `Files`.
-2. Click the version you want to install, preference selecting server pack files first if available.
-3. Enter the new CurseForge Modpack URL: https://www.curseforge.com/minecraft/modpacks/better-mc-forge-bmc4/files/5089802
-</Steps>
-
-This example downloads the Better MC [FORGE] 1.20.1 v25 HF version.
-:::
-
 ## Manually Installing Modpacks To Your Server
 
 We recommend using CurseForge to find and install Modpacks to your server and game client. Modpacks on CurseForge normally have a separate download for servers. This guide is suitable for most cases.
@@ -71,7 +40,7 @@ We recommend using CurseForge to find and install Modpacks to your server and ga
      - For most Forge versions and Modpacks after uploading and decompressing, your server should now look something like this.
      <FileTree>
      - File-Manager
-       - **forge-wrapper.jar** 
+       - **mc-wrapper.jar** 
        - **libraries**
        - **mods**
        - **configs**
@@ -86,7 +55,7 @@ Here are the most common issues you may run into when installing mods to your Mi
 
 ### Immediate Crashing
 
-This may be because the server is using an incompatible java version, the automatic version is usually correct, but can be wrong from time to time. Try these steps to troubleshoot it:
+This may be because the server is using an incompatible java version. Try these steps to troubleshoot it:
 
 - Double check that the server .jar file is set correctly in `Configuration > Startup Parameters`.
 - In `Configuration > Startup Parameters` change the java version and restart your server, you may need to try this a couple of times, `Automatic` works for 99% of cases.
@@ -112,6 +81,7 @@ Larger mod packs **WILL** require more resources. If your server is crashing whe
 If you've just manually installed a Modpack and can't connect to your server, and your error message is just refused connection with no information, try the following:
 
 - Restart your server.
+- Make sure you've installed the modpack to your own game client.
 - Ensure you're correcting with the correct IP address.
 
 If you're still unable to connect please contact a bro on [Discord](https://discord.gg/FN4XgbAwzr)
