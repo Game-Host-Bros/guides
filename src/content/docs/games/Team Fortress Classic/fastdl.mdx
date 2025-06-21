@@ -1,16 +1,16 @@
 ---
-title: How To Setup FastDL For Your Sven Co-op Server
-description: Learn how to setup FastDL for your Sven Co-op dedicated server.
+title: How To Setup FastDL For Your Team Fortress Classic Server
+description: Learn how to setup FastDL for your Team Fortress Classic dedicated server.
 sidebar:
   label: FastDL
 ---
 import { Steps } from '@astrojs/starlight/components';
 
-At Game Host Bros, we offer FastDL for your [Sven Co-op server](https://www.gamehostbros.com/sven-co-op-server-hosting/) so players can download custom files such as maps, models and materials quickly. Everything is automatic and there is no extra configuration required on your end other than uploading your custom content. 
+At Game Host Bros, we offer FastDL for your [Team Fortress Classic server](https://www.gamehostbros.com/team-fortress-classic-server-hosting/) so players can download custom files such as maps, models and materials quickly. Everything is automatic and there is no extra configuration required on your end other than uploading your custom content. 
 
 ## How Does FastDL Work?
 While everything is automatic, there are still some things you should know about our FastDL system:
-- Files are synced (and sometimes compressed) from `/svencoop/` to `/fastdl/` when you start your server.
+- Files are synced (and compressed) to `/fastdl/` when you start your server.
 - `sv_downloadurl` is automatically updated or added to your `server.cfg`.
 - Files only get served to players after everything is compressed.
 - You can view all the files online by checking your FastDL url directly. You can get it by typing `sv_downloadurl` into your console.

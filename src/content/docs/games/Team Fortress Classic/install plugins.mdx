@@ -1,0 +1,28 @@
+---
+title: How To Install Plugins On TFC
+description: Learn how to install AMX Mod X, Metamod and plugins on your TFC dedicated server.
+sidebar:
+  label: Install Plugins
+---
+import { Steps } from '@astrojs/starlight/components';
+
+In this guide we will show you how you can install plugins on your Team Fortress Classic server. By using our 1 Click Mod Manager, we automatically install and configure [Metamod-R](https://github.com/theAsmodai/metamod-r) and [AMX Mod X](https://www.amxmodx.org/) on your server.
+
+## Installing Metamod and AMX Mod X Frameworks
+Before you install any plugins, you must install the modding frameworks.
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your Team Fortress Classic server.
+2. Go to `Tools > Mod Manager`.
+3. Find `AMX Mod X` and click Install.
+4. Restart your server.
+</Steps>
+
+## Installing AMX Mod X Plugins
+Now that Metamod and AMX Mod is installed, you can now start installing plugins.
+<Steps>
+1. Download the plugin you want from the [AMX Mod X website](https://www.amxmodx.org/compiler.php). This should be a `.amxx` file.
+2. Go to `Management File Manager`.
+3. Navigate to `/valve/addons/amxmodx/plugins` and copy in your downloaded `.amxx` file.
+4. Restart your server.
+</Steps>
+You can check the plugin is actually running by typing `amx_plugins` into the server console.
