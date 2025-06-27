@@ -1,0 +1,31 @@
+---
+title: How To Enable Crossplay On Your 7 Days To Die Server
+description: Learn how to enable crossplay for Xbox Series and PS5 players on your 7 Days To Die server
+sidebar:
+  label: Enable Crossplay
+---
+import { Steps } from '@astrojs/starlight/components';
+
+This guide will show you how to enable crossplay on your [7 Days To Die Server](https://www.gamehostbros.com/7-days-to-die-server-hosting/) to allow Xbox Series and PS5 players to connect to your server.
+
+## Enabling Crossplay
+
+<Steps>
+
+1. Login to the [Game Host Bros Panel](https://panel.gamehostbros.com/) and select your 7D2D server.
+2. Go to `Configuration > Startup Parameters`.
+3. Configure the following settings:
+   - Set `ServerMaxPlayerCount` to a maximum of **8**
+   - Set `ServerAllowCrossplay` to **True**
+   - Set `EACEnabled` to **True**
+   - Set `IgnoreEOSSanctions` to **False**
+4. Restart your server for the changes to take effect.
+</Steps>
+
+:::note
+Crossplay is limited to 8 players maximum when Xbox Series and PS5 players are connecting to your server.
+:::
+
+:::caution
+All four settings must be configured exactly as shown above for crossplay to work properly. Incorrect configuration will prevent console players from connecting.
+:::
