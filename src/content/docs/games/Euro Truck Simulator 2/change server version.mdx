@@ -1,0 +1,33 @@
+---
+title: How To Change The Version Of Your Euro Truck Simulator 2 Server
+description: Learn how to change the version of your Euro Truck Simulator 2 dedicated server.
+sidebar:
+  label: Change Server Version
+---
+import { Steps } from '@astrojs/starlight/components';
+
+If you don't want to play Euro Truck Simulator 2 on the latest public version, and would rather play a different beta branch to play older versions, here's how to change the version of your [Euro Truck Simulator 2 server](https://www.gamehostbros.com/euro-truck-simulator-2-server-hosting/). 
+
+When changing server versions, you must also change your ETS 2 game version to match the version of your server, the process for downgrading your game version can be found [here](/games/euro-truck-simulator-2/downgrade-game/).
+
+:::danger
+Changing ETS 2 server versions will reset mod files, and other non-default files on your server.
+
+Please be aware that you may experience issues with any game rollback.
+:::
+
+## Changing Steam Beta Version
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Server.
+2. Go to `Configuration > Startup Parameters`.
+3. Edit `Steam Beta Branch` with the version you want to use (A list of versions is below).
+4. Go to `Configuration > Server Actions`.
+5. Click `Reinstall Server` and wait for the install to finish.
+</Steps>
+
+Here are the currently available beta branches to choose from, they can be found here:
+
+- [Euro Truck Simulator 2 Beta Branches](https://steamdb.info/app/1948160/depots/#branches).
+
+The latest version is `public`.

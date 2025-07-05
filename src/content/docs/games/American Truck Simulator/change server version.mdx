@@ -1,0 +1,33 @@
+---
+title: How To Change The Version Of Your American Truck Simulator Server
+description: Learn how to change the version of your American Truck Simulator dedicated server.
+sidebar:
+  label: Change Server Version
+---
+import { Steps } from '@astrojs/starlight/components';
+
+If you don't want to play American Truck Simulator on the latest public version, and would rather play a different beta branch to play older versions, here's how to change the version of your [American Truck Simulator server](https://www.gamehostbros.com/american-truck-simulator-server-hosting/). 
+
+When changing server versions, you must also change your ATS game version to match the version of your server, the process for downgrading your game version can be found [here](/games/american-truck-simulator/downgrade-game/).
+
+:::danger
+Changing ATS server versions will reset mod files, and other non-default files on your server.
+
+Please be aware that you may experience issues with any game rollback.
+:::
+
+## Changing Steam Beta Version
+
+<Steps>
+1. Access the [Game Host Bros Panel](https://panel.gamehostbros.com/) and `Stop` your Server.
+2. Go to `Configuration > Startup Parameters`.
+3. Edit `Steam Beta Branch` with the version you want to use (A list of versions is below).
+4. Go to `Configuration > Server Actions`.
+5. Click `Reinstall Server` and wait for the install to finish.
+</Steps>
+
+Here are the currently available beta branches to choose from, they can be found here:
+
+- [American Truck Simulator Beta Branches](https://steamdb.info/app/2239530/depots/#branches).
+
+The latest version is `public`.
